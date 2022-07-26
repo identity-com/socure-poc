@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+  },
+  "devDependencies": {},
+  "dependencies": {
+  }
+}
