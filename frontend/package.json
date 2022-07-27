@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@solana-mobile/wallet-adapter-mobile": "^0.0.1-alpha.8",
+    "@solana/pay": "^0.2.0",
     "@solana/wallet-adapter-base": "^0.9.9",
     "@solana/wallet-adapter-react": "^0.15.8",
     "@solana/wallet-adapter-react-ui": "^0.9.10",
@@ -49,9 +50,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.6",
     "crypto": "npm:crypto-browserify",
-    "stream": "npm:stream-browserify"
+    "postcss": "^8.4.14",
+    "stream": "npm:stream-browserify",
+    "tailwindcss": "^3.1.6"
   }
 }
