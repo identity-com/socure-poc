@@ -1,0 +1,40 @@
+{
+  "id": "123456b0-129d-5774-c543-45223220659h",
+  "environmentName": "Sandbox",
+  "event": {
+    "referenceId": "246149b0-129d-5774-c543-45223220659d",
+    "customerUserId": "111-222-333",
+    "eventType": "VERIFICATION_COMPLETED",
+    "message": "Verification Completed",
+    "data": {
+      "referenceId": "66680a42-2d4d-408f-aa64-f40c8dd752d0",
+      "documentVerification": {
+        "reasonCodes": [
+          "I831",
+          "I803",
+          "I836",
+          "I835"
+        ],
+        "documentType": {
+          "type": "Drivers License",
+          "country": "US",
+          "state": "CA"
+        },
+        "decision": {
+          "name": "lenient",
+          "value": "accept"
+        },
+        "documentData": {
+          "firstName": "Bilbo",
+          "surName": "Baggins",
+          "fullName": "Bilbo Baggins",
+          "address": "The Shire",
+          "documentNumber": "9301015800082",
+          "dob": "1993-01-01",
+          "expirationDate": "2193-01-01",
+          "issueDate": "1999-01-01"
+        }
+      }
+    }
+  }
+}
