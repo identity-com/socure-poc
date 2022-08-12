@@ -4,7 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import IFrame from './iframe/Index';
+import Index from './iframe/Index';
+import Socure from './iframe/Socure';
+import Wallet from './iframe/Wallet';
+import Pay from './iframe/Pay';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -12,12 +15,18 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="iframe" element={<IFrame />} />
-            </Routes>
-        </BrowserRouter>
+        {/*<BrowserRouter>*/}
+        {/*    <div className="App w-screen h-screen">*/}
+        {/*        <Routes>*/}
+        {/*            <Route path="/" element={<App/>}/>*/}
+        {/*            <Route path="index" element={<Index/>}/>*/}
+        {/*            <Route path="wallet" element={<Wallet/>}/>*/}
+        {/*            <Route path="socure" element={<Socure/>}/>*/}
+        {/*            <Route path="pay" element={<Pay/>}/>*/}
+        {/*        </Routes>*/}
+        {/*    </div>*/}
+        {/*</BrowserRouter>*/}
+        <App/>
     </React.StrictMode>
 );
 
