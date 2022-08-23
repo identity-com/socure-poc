@@ -4,6 +4,7 @@ on:
     branches:
       - develop
       - main
+      - IDCOM-2019__socure_poc_frontend
 jobs:
   deploy:
     name: Build and deploy the Socure poc frontend on Node ${{ matrix.node }} and ${{ matrix.os }}
