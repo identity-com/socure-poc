@@ -2,6 +2,7 @@ import {createQR, encodeURL} from '@solana/pay';
 import {TransactionType} from "./transaction-generator";
 
 export default async function generateQrCode(transaction: TransactionType, qrCodeElementSelector): Promise<void> {
+    return;
     const url = encodeURL(transaction);
     const qrCode = createQR(url);
 

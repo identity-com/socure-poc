@@ -1,4 +1,4 @@
-import {PublicKey} from '@solana/web3.js';
+import {Keypair, PublicKey} from '@solana/web3.js';
 import BigNumber from 'bignumber.js';
 
 export type TransactionType = {
@@ -21,7 +21,7 @@ export async function generateTransaction(transactionConfig: {
     memo: string
 }): Promise<TransactionType> {
     let transaction: TransactionType = {
-        reference: new PublicKey(transactionConfig.reference),
+        reference: Keypair.generate().publicKey,
         recipient: new PublicKey(transactionConfig.recipient),
         amount: new BigNumber(transactionConfig.amount),
         label: transactionConfig.label,

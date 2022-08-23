@@ -31,15 +31,19 @@ const SolanaWalletPayment: FC = (config: SolanaPaymentConfigType) => {
         [network]
     );
 
+    const hasToken = true;
+
     return (
+        hasToken ?
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets} autoConnect>
                 <WalletModalProvider>
                     <WalletMultiButton/>
-                    <PaymentButton transaction={config.transaction}/>
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
+            :
+        <div style="">HELLO WORLD</div>
     );
 };
 
