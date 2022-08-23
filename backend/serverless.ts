@@ -1,6 +1,5 @@
 import type { AWS } from '@serverless/typescript';
 
-import kyc from '@functions/kyc';
 import result from '@functions/result';
 
 const serverlessConfiguration: AWS = {
@@ -20,7 +19,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { kyc, result },
+  functions: { result },
   package: { individually: true },
   custom: {
     esbuild: {

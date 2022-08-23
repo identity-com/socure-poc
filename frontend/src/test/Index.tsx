@@ -1,5 +1,5 @@
 import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
-import {clusterApiUrl, Keypair} from "@solana/web3.js";
+import {clusterApiUrl, Keypair, LAMPORTS_PER_SOL, SystemProgram, Transaction} from "@solana/web3.js";
 import {WalletAdapterNetwork} from "@solana/wallet-adapter-base";
 import {ConnectionProvider, useConnection, useWallet, WalletProvider} from "@solana/wallet-adapter-react";
 import {WalletModalProvider, WalletMultiButton} from "@solana/wallet-adapter-react-ui";
@@ -16,23 +16,42 @@ function TokenCheck() {
     const {publicKey, sendTransaction} = useWallet();
 
     const [token, setToken] = useState(TOKEN_LOADING);
+    const [payment, setPayment] = useState(false);
+
     const [showIframe, setShowIframe] = useState(false);
-    const [tokenKey, setTokenkey] = useState();
-
-    let handler: Window | null;
-
     const getToken = useCallback(() => {
-        // handler = window.open('/dummy');
         setShowIframe(true);
     }, []);
 
     useEffect(() => {
         if (publicKey) {
             // check for token here
-            console.log("useEffect: " + publicKey?.toBase58());
             setToken(TOKEN_UNAVAILABLE);
         }
     }, [publicKey])
+
+    const makePayment = useCallback(async() => {
+        if(publicKey) {
+            const transaction = new Transaction().add(
+                SystemProgram.transfer({
+                    fromPubkey: publicKey,
+                    toPubkey: Keypair.generate().publicKey,
+                    lamports: LAMPORTS_PER_SOL / 100,
+                })
+            );
+
+            const {
+                context: { slot: minContextSlot },
+                value: { blockhash, lastValidBlockHeight }
+            } = await connection.getLatestBlockhashAndContext();
+
+            const signature = await sendTransaction(transaction, connection);
+            await connection.confirmTransaction({ blockhash, lastValidBlockHeight, signature });
+
+            setPayment(true);
+        }
+    }, [])
+
 
     useEffect(() => {
         window.addEventListener("message", function (e) {
@@ -45,9 +64,12 @@ function TokenCheck() {
 
     return (
         <div>
-            {(token === TOKEN_LOADING && <div>checking for token</div>)
-                || (token === TOKEN_AVAILABLE && <div>token available</div>)
-                || (token === TOKEN_UNAVAILABLE && <div onClick={getToken}>token unavailable</div>)
+            {
+                payment && <div>Payment Complete</div>
+            }
+            {(!payment && token === TOKEN_LOADING && <div>Checking for Token</div>)
+                || (!payment && token === TOKEN_AVAILABLE && <div>Token Available: <a href="#" style={{color: "blue"}} onClick={makePayment}>Make Payment</a></div>)
+                || (!payment && token === TOKEN_UNAVAILABLE && <div>Token Unavailable: <a href="#" style={{color: "blue"}} onClick={getToken}>Start Verification</a></div>)
             }
             {
                 showIframe &&
@@ -67,7 +89,7 @@ function TokenCheck() {
                         width: "100%",
                         height: "100%"
                     }}>
-                        <iframe src="/dummy" style={{
+                        <iframe src="/verify" style={{
                             width: "90%",
                             height: "90%",
                             backgroundColor: "#fff"

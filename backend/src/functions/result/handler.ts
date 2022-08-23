@@ -7,6 +7,8 @@ const result: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) 
     // TODO: Fire up evervault cage to download, and encrypt images
     // TODO: Issue pass
 
+    console.log(event.body);
+
     return formatJSONResponse({
         // @ts-ignore
         valid: event.body.documentVerification.decision.value === 'accept',

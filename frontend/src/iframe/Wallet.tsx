@@ -55,7 +55,6 @@ export default function Wallet() {
                 <WalletModalProvider className="h-screen">
                     <WalletMultiButton />
                     <WalletDisconnectButton />
-                    <div>123</div>
                     { /* Your app's components go here, nested within the context providers. */ }
                 </WalletModalProvider>
             </WalletProvider>

@@ -4,7 +4,6 @@ import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import React from 'react';
 import TestIndex from "./test/Index";
 import Socure from "./iframe/Socure";
-import Dummy from "./iframe/Dummy";
 
 function App() {
     return (
@@ -14,7 +13,6 @@ function App() {
                     <div className="App w-screen h-screen">
                         <Routes>
                             <Route path="verify" element={<Socure/>}/>
-                            <Route path="dummy" element={<Dummy/>}/>
                             <Route path="test" element={<TestIndex/>}/>
                         </Routes>
                     </div>

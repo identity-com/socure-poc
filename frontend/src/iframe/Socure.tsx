@@ -4,19 +4,6 @@ import {Navigate} from 'react-router-dom';
 
 declare const SocureInitializer: any;
 const API_KEY = 'adcd2fe2-b49c-4d20-ba72-4fa582c2c53d';
-const key = 'c9ed4fdc-4959-4d1b-add4-ebe508003a6b';
-
-function onProgress(progress: any) {
-    // console.log(progress);
-}
-
-function onSuccess(response: any) {
-    console.log(response);
-}
-
-function onError(error: any) {
-    // console.log(error);
-}
 
 export default function Socure() {
     let [confirmed, setConfirmed] = useState(false);
@@ -33,6 +20,10 @@ export default function Socure() {
                     alert("Failed verification");
                     return;
                 }
+
+                window.parent.postMessage({
+                    target: "tokenUpdate"
+                },"*" );
 
                 setConfirmed(true);
             },
@@ -75,7 +66,7 @@ export default function Socure() {
     return (
         confirmed ? <Navigate to="/pay"/> :
             <main style={{padding: "1rem 0"}} id="socure">
-                Initializing Document Verification Proces
+                Initializing Document Verification Process
             </main>
     );
 };
