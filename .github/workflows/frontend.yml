@@ -44,8 +44,4 @@ jobs:
           aws-region: us-east-2
 
       - name: Deploy
-        run: |
-#          if [ "${{ github.ref }}" = "refs/heads/develop" ]; then
-#            STAGE=dev
-#          fi
-          STAGE=${STAGE:-prod} yarn workspace @identity.com/socure-poc-frontend deploy
+        run: STAGE=${STAGE:-prod} yarn workspace @identity.com/socure-poc-frontend deploy
