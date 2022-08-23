@@ -1,0 +1,8 @@
+version: "2.1"
+services:
+  solana-ociv-usage:
+    image: ghcr.io/identity-com/socure-poc/backend:latest
+    build: ../
+
+
+      
