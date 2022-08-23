@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
+import React, {useCallback, useEffect, useMemo, useState} from "react";
 import {clusterApiUrl, Keypair, LAMPORTS_PER_SOL, SystemProgram, Transaction} from "@solana/web3.js";
 import {WalletAdapterNetwork} from "@solana/wallet-adapter-base";
 import {ConnectionProvider, useConnection, useWallet, WalletProvider} from "@solana/wallet-adapter-react";
@@ -41,7 +41,6 @@ function TokenCheck() {
             );
 
             const {
-                context: { slot: minContextSlot },
                 value: { blockhash, lastValidBlockHeight }
             } = await connection.getLatestBlockhashAndContext();
 
@@ -50,7 +49,7 @@ function TokenCheck() {
 
             setPayment(true);
         }
-    }, [])
+    }, [connection, publicKey, sendTransaction])
 
 
     useEffect(() => {
@@ -68,8 +67,8 @@ function TokenCheck() {
                 payment && <div>Payment Complete</div>
             }
             {(!payment && token === TOKEN_LOADING && <div>Checking for Token</div>)
-                || (!payment && token === TOKEN_AVAILABLE && <div>Token Available: <a href="#" style={{color: "blue"}} onClick={makePayment}>Make Payment</a></div>)
-                || (!payment && token === TOKEN_UNAVAILABLE && <div>Token Unavailable: <a href="#" style={{color: "blue"}} onClick={getToken}>Start Verification</a></div>)
+                || (!payment && token === TOKEN_AVAILABLE && <div>Token Available: <button style={{color: "blue"}} onClick={makePayment}>Make Payment</button></div>)
+                || (!payment && token === TOKEN_UNAVAILABLE && <div>Token Unavailable: <button style={{color: "blue"}} onClick={getToken}>Start Verification</button></div>)
             }
             {
                 showIframe &&
@@ -89,7 +88,7 @@ function TokenCheck() {
                         width: "100%",
                         height: "100%"
                     }}>
-                        <iframe src="/verify" style={{
+                        <iframe title="Socure" src="/verify" style={{
                             width: "90%",
                             height: "90%",
                             backgroundColor: "#fff"
@@ -103,8 +102,7 @@ function TokenCheck() {
 
 
 function Socure() {
-    const {connection} = useConnection();
-    const {publicKey, sendTransaction} = useWallet();
+    const {publicKey} = useWallet();
 
     return (
         publicKey ?

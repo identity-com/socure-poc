@@ -10,7 +10,7 @@ export default function Socure() {
 
     const start = async () => {
         var config = {
-            onProgress: async (response: any) => {
+            onProgress: async () => {
             },
             onSuccess: async (response: any) => {
                 // TODO: Remove once Socure is working
@@ -58,6 +58,8 @@ export default function Socure() {
     let initialized = false;
     useEffect(() => {
         if (initialized) return;
+
+        // eslint-disable-next-line
         initialized = true;
 
         start();
