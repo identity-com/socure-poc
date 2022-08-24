@@ -9,3 +9,5 @@ COPY src ./src
 
 RUN yarn --pure-lockfile
 RUN yarn build
+
+CMD ['node', 'dist/index.js']

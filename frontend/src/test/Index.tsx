@@ -125,7 +125,7 @@ export default function TestIndex() {
 
     return (
         <ConnectionProvider endpoint={endpoint}>
-            <WalletProvider wallets={wallets} autoConnect>
+            <WalletProvider wallets={wallets}>
                 <WalletModalProvider>
                     <WalletMultiButton/>
                     <Socure/>

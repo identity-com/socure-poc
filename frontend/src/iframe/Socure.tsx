@@ -14,7 +14,7 @@ export default function Socure() {
             },
             onSuccess: async (response: any) => {
                 // TODO: Remove once Socure is working
-                const out = await axios.post('https://06ad3a7bdf01-eu-ngrok-io.relay.evervault.com/dev/result', response.verifyResult);
+                const out = await axios.post('https://7657ced0a601-eu-ngrok-io.relay.evervault.com/dev/result', response.verifyResult);
 
                 if (!out.data.valid) {
                     alert("Failed verification");
@@ -25,7 +25,7 @@ export default function Socure() {
                     target: "tokenUpdate"
                 },"*" );
 
-                setConfirmed(true);
+                // setConfirmed(true);
             },
             onError: async (response: any) => {
             },
