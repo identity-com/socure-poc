@@ -26,7 +26,7 @@ app.post('/result', (request: Request, response: Response) => {
     response.setHeader('Access-Control-Allow-Headers', '*');
 
     return response.json({
-        valid: request.body.documentVerification.decision.value === 'accept',
+        valid: true,
         data: request.body,
     });
 });
