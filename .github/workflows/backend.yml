@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - IDCOM-2019__socure_poc_frontend
+      - dev
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
