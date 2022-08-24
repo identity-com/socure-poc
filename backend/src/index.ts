@@ -8,6 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (request: Request, response: Response) => {
+    response.send('Identity.com');
+});
+
 app.post('/result', (request: Request, response: Response) => {
 
     // TODO: Store response body
