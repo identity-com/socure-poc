@@ -6,7 +6,7 @@ declare const SocureInitializer: any;
 const API_KEY = 'adcd2fe2-b49c-4d20-ba72-4fa582c2c53d';
 
 export default function Socure() {
-    let [confirmed, setConfirmed] = useState(false);
+    let [confirmed] = useState(false);
 
     const start = async () => {
         var config = {
