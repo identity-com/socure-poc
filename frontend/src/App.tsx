@@ -9,14 +9,14 @@ function App() {
     return (
         <div className="App w-screen h-screen">
             <nav>
-                <BrowserRouter>
+                <HashRouter>
                     <div className="App w-screen h-screen">
                         <Routes>
                             <Route path="verify" element={<Socure/>}/>
                             <Route path="test" element={<TestIndex/>}/>
                         </Routes>
                     </div>
-                </BrowserRouter>
+                </HashRouter>
             </nav>
         </div>
     );
