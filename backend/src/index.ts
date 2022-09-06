@@ -51,7 +51,9 @@ app.post('/result', async (request: Request, response: Response) => {
           .then((tx:any) => tx.confirm()); // confirm the transaction
     }
 
-    console.log("Issued token: " + token.publicKey.toBase58());
+    if(token) {
+        console.log("Issued token: " + token.publicKey.toBase58());
+    }
 
     // TODO: Store response body
     // TODO: Fire up evervault cage to download, and encrypt images
