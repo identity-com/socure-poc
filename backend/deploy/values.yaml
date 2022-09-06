@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/identity-com/socure-poc
+  repository: 146055947386.dkr.ecr.us-east-2.amazonaws.com/socure-poc
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -49,7 +49,7 @@ ingress:
     kubernetes.io/tls-acme: "true"
     ingress.kubernetes.io/force-ssl-redirect: "false"
   hosts:
-    - host: socure-backend.identity.com
+    - host: socure-demo-api.identity.com
       paths:
         - path: /
           pathType: ImplementationSpecific

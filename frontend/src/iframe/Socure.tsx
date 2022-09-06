@@ -11,32 +11,35 @@ export default function Socure() {
     const start = async () => {
         var config = {
             onProgress: async () => {
+                console.log('progress');
             },
             onSuccess: async (response: any) => {
-                // TODO: Remove once Socure is working
-                const out = await axios.post('https://7657ced0a601-eu-ngrok-io.relay.evervault.com/dev/result', response.verifyResult);
-
-                if (!out.data.valid) {
-                    alert("Failed verification");
-                    return;
-                }
+                // // TODO: Remove once Socure is working
+                // const out = await axios.post('https://7657ced0a601-eu-ngrok-io.relay.evervault.com/dev/result', response.verifyResult);
+                //
+                // if (!out.data.valid) {
+                //     alert("Failed verification");
+                //     return;
+                // }
 
                 window.parent.postMessage({
                     target: "tokenUpdate"
                 },"*" );
-
-                // setConfirmed(true);
             },
             onError: async (response: any) => {
+                console.log("error");
+                console.log(response);
             },
 
             qrCodeNeeded: true
         }
 
         SocureInitializer.init(API_KEY)
-            .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number) => Promise<any>; }) => {
+            .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number, p: { customerUserId: string }) => Promise<any>; }) => {
+                console.log("API KEY INIT");
                 lib.init(API_KEY, "#socure", config).then(function () {
-                    lib.start(2).then(function (response: any) {
+                    console.log("``lib init`")
+                    lib.start(2, {customerUserId: "123"}).then(function (response: any) {
                             console.log('response: START');
                             console.log(response);
                             console.log('response: END')

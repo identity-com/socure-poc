@@ -13,12 +13,15 @@ app.get('/', (request: Request, response: Response) => {
 });
 
 app.post('/result', (request: Request, response: Response) => {
+    if(!request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
+        return;
+    }
 
     // TODO: Store response body
     // TODO: Fire up evervault cage to download, and encrypt images
     // TODO: Issue pass
 
-    console.log(request.body);
+    console.log(JSON.stringify(request.body, null, 2));
 
     // TODO: Do we need this ?
     response.setHeader('Access-Control-Allow-Origin', '*');
