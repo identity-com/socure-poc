@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@identity.com/solana-gatekeeper-lib": "^4.0.0",
+    "@identity.com/solana-gateway-ts": "^0.8.2",
+    "@solana/web3.js": "^1.56.2",
+    "bs58": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1"

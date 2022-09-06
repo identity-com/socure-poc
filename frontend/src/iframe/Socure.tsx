@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
 import {Navigate} from 'react-router-dom';
 
 declare const SocureInitializer: any;
@@ -14,14 +13,7 @@ export default function Socure() {
                 console.log('progress');
             },
             onSuccess: async (response: any) => {
-                // // TODO: Remove once Socure is working
-                // const out = await axios.post('https://7657ced0a601-eu-ngrok-io.relay.evervault.com/dev/result', response.verifyResult);
-                //
-                // if (!out.data.valid) {
-                //     alert("Failed verification");
-                //     return;
-                // }
-
+                console.log(response);
                 window.parent.postMessage({
                     target: "tokenUpdate"
                 },"*" );

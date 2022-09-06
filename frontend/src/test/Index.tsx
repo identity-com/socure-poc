@@ -1,11 +1,25 @@
 import React, {useCallback, useEffect, useMemo, useState} from "react";
-import {clusterApiUrl, Keypair, LAMPORTS_PER_SOL, SystemProgram, Transaction} from "@solana/web3.js";
+import {
+    clusterApiUrl,
+    Connection,
+    Keypair,
+    LAMPORTS_PER_SOL,
+    PublicKey,
+    SystemProgram,
+    Transaction
+} from "@solana/web3.js";
 import {WalletAdapterNetwork} from "@solana/wallet-adapter-base";
 import {ConnectionProvider, useConnection, useWallet, WalletProvider} from "@solana/wallet-adapter-react";
 import {WalletModalProvider, WalletMultiButton} from "@solana/wallet-adapter-react-ui";
 import {PhantomWalletAdapter} from "@solana/wallet-adapter-wallets";
+import {findGatewayToken} from "@identity.com/solana-gateway-ts";
+
 
 require('@solana/wallet-adapter-react-ui/styles.css');
+
+// TODO: Move to config
+const gatekeeperNetwork = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
+const SOLANA_CLUSTER = 'devnet';
 
 const TOKEN_LOADING = "loading";
 const TOKEN_UNAVAILABLE = "unavailable";
@@ -24,10 +38,14 @@ function TokenCheck() {
     }, []);
 
     useEffect(() => {
-        if (publicKey) {
-            // check for token here
-            setToken(TOKEN_UNAVAILABLE);
-        }
+        (async() => {
+            if (publicKey) {
+                const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
+                const token = await findGatewayToken(connection,publicKey, gatekeeperNetwork);
+                if(token) console.log("found token: " + JSON.stringify(token, null, 2))
+                setToken(token ? TOKEN_AVAILABLE : TOKEN_UNAVAILABLE);
+            }
+        })();
     }, [publicKey])
 
     const makePayment = useCallback(async() => {
