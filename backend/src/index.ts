@@ -3,6 +3,7 @@ import cors from "cors";
 const {Keypair, PublicKey, Connection, clusterApiUrl} = require('@solana/web3.js');
 const {GatekeeperService} = require('@identity.com/solana-gatekeeper-lib');
 import {findGatewayToken} from "@identity.com/solana-gateway-ts";
+import Storage from "./lib/Storage";
 
 const bs58 = require('bs58');
 
@@ -55,7 +56,10 @@ app.post('/result', async (request: Request, response: Response) => {
         console.log("Issued token: " + token.publicKey.toBase58());
     }
 
-    // TODO: Store response body
+    // store plain text PII
+    const storage = new Storage('us-east-2', 'socure-pii-storage');
+    await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
+
     // TODO: Fire up evervault cage to download, and encrypt images
 
     // // TODO: Do we need this ?
