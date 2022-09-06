@@ -13,7 +13,7 @@ app.get('/', (request: Request, response: Response) => {
 });
 
 app.post('/result', (request: Request, response: Response) => {
-    if(!request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
+    if(request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
         return;
     }
 
