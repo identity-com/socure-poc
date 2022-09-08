@@ -27,7 +27,7 @@ app.post('/result', async (request: Request, response: Response) => {
     console.log(JSON.stringify(request.body, null, 2));
 
     // Ignore other progress events
-    if(request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
+    if(!request.body.event || request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
         return;
     }
 
