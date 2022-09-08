@@ -24,55 +24,63 @@ app.get('/', (request: Request, response: Response) => {
 });
 
 app.post('/result', async (request: Request, response: Response) => {
-    console.log(JSON.stringify(request.body, null, 2));
+    try {
+        console.log(JSON.stringify(request.body, null, 2));
 
-    // Ignore other progress events
-    if(!request.body.event || request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
-        return;
+        // Ignore other progress events
+        if (!request.body.event || request.body.event.eventType !== 'VERIFICATION_COMPLETED') {
+            return;
+        }
+
+        // TODO: Handle unhappy path (could be client side)?
+        if (request.body.event.data.documentVerification.decision.value !== 'accept') {
+            console.log("Validation failed");
+            return;
+        }
+
+        const address = new PublicKey(request.body.event.customerUserId);
+        const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
+        let token = await findGatewayToken(connection, address, gatekeeperNetwork);
+
+        // If the token is found, something may have gone wrong in the process. Ignore token creation ?
+        if (!token) {
+            const service = new GatekeeperService(
+              connection,
+              gatekeeperNetwork,
+              gatekeeperAuthority,
+            );
+
+            token = await service.issue(address) // create the transaction
+              .then((tx: any) => tx.send()) // send the transaction
+              .then((tx: any) => tx.confirm()); // confirm the transaction
+        }
+
+        if (token) {
+            console.log("Issued token: " + token.publicKey.toBase58());
+        }
+
+        // store plain text PII
+        const storage = new Storage('us-east-2', 'socure-pii-storage');
+        await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
+
+        // TODO: Fire up evervault cage to download, and encrypt images
+
+        // // TODO: Do we need this ?
+        // response.setHeader('Access-Control-Allow-Origin', '*');
+        // response.setHeader('Access-Control-Allow-Methods', '*');
+        // response.setHeader('Access-Control-Allow-Headers', '*');
+
+        return response.json({
+            valid: true,
+            data: request.body,
+        });
+    } catch(e) {
+        console.log(e);
+        return response.json({
+            valid: false,
+            data: request.body,
+        });
     }
-
-    // TODO: Handle unhappy path (could be client side)?
-    if(request.body.event.data.documentVerification.decision.value !== 'accept') {
-        console.log("Validation failed");
-        return;
-    }
-
-    const address = new PublicKey(request.body.event.customerUserId);
-    const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
-    let token = await findGatewayToken(connection,address, gatekeeperNetwork);
-
-    // If the token is found, something may have gone wrong in the process. Ignore token creation ?
-    if(!token) {
-        const service = new GatekeeperService(
-          connection,
-          gatekeeperNetwork,
-          gatekeeperAuthority,
-        );
-
-        token = await service.issue(address) // create the transaction
-          .then((tx:any) => tx.send()) // send the transaction
-          .then((tx:any) => tx.confirm()); // confirm the transaction
-    }
-
-    if(token) {
-        console.log("Issued token: " + token.publicKey.toBase58());
-    }
-
-    // store plain text PII
-    const storage = new Storage('us-east-2', 'socure-pii-storage');
-    await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
-
-    // TODO: Fire up evervault cage to download, and encrypt images
-
-    // // TODO: Do we need this ?
-    // response.setHeader('Access-Control-Allow-Origin', '*');
-    // response.setHeader('Access-Control-Allow-Methods', '*');
-    // response.setHeader('Access-Control-Allow-Headers', '*');
-
-    return response.json({
-        valid: true,
-        data: request.body,
-    });
 });
 
 app.listen(PORT, () => {
