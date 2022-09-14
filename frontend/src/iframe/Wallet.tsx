@@ -45,6 +45,8 @@ export default function Wallet() {
             new SlopeWalletAdapter(),
             new SolflareWalletAdapter({ network }),
             new TorusWalletAdapter(),
+            new SolletWalletAdapter(),
+          new SolletExtensionWalletAdapter()
         ],
         [network]
     );

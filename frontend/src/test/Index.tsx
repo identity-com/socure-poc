@@ -106,7 +106,7 @@ function TokenCheck() {
                         width: "100%",
                         height: "100%"
                     }}>
-                        <iframe title="Socure" src="/#/verify" style={{
+                        <iframe title="Socure" src={`/#/verify/${publicKey ? publicKey.toBase58() : ''}`} style={{
                             width: "90%",
                             height: "90%",
                             backgroundColor: "#fff"

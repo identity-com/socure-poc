@@ -1,10 +1,12 @@
 import {useEffect, useState} from "react";
-import {Navigate} from 'react-router-dom';
+import {Navigate, useParams} from 'react-router-dom';
 
 declare const SocureInitializer: any;
 const API_KEY = 'adcd2fe2-b49c-4d20-ba72-4fa582c2c53d';
 
 export default function Socure() {
+    let { token } = useParams();
+
     let [confirmed] = useState(false);
 
     const start = async () => {
@@ -27,11 +29,11 @@ export default function Socure() {
         }
 
         SocureInitializer.init(API_KEY)
-            .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number, p: { customerUserId: string }) => Promise<any>; }) => {
+            .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number, p?: { customerUserId: string | undefined }) => Promise<any>; }) => {
                 console.log("API KEY INIT");
                 lib.init(API_KEY, "#socure", config).then(function () {
                     console.log("``lib init`")
-                    lib.start(2, {customerUserId: "123"}).then(function (response: any) {
+                    lib.start(2, {customerUserId: token}).then(function (response: any) {
                             console.log('response: START');
                             console.log(response);
                             console.log('response: END')
