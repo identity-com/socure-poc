@@ -102,7 +102,7 @@ Resources:
       Name: !Ref WebsiteAddress
       AliasTarget:
         DNSName: !GetAtt CFDistribution.DomainName
-        HostedZoneId: !Ref HostedZoneID
+        HostedZoneId: "Z2FDTNDATAQYW2"
   CFDistribution:
     Type: "AWS::CloudFront::Distribution"
     DependsOn: "S3Bucket"

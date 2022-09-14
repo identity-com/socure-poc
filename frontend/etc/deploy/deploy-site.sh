@@ -3,8 +3,8 @@ set -e
 set -u
 
 if [ "${STAGE}" == "prod" ]; then
-  DISTRIBUTION=E26IVVHGVZDG6G
-  BUCKET=socure-poc.identity.com
+  DISTRIBUTION=EMWE186ES689R
+  BUCKET=socure-demo.identity.com
 elif [ ${STAGE} == "preprod" ]; then
   DISTRIBUTION=???
   BUCKET=???

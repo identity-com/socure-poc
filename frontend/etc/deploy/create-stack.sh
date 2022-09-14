@@ -14,7 +14,7 @@ set -e
 set -u
 
 STAGE=$1
-
+AWS_REGION=us-east-2
 # the ARN of the *.identity.com certificate in prod
 #PROD_ACCOUNT_CERTIFICATE_ARN="arn:aws:acm:us-east-1:146055947386:certificate/23b59743-d806-4899-ab04-9a807238a4d4"
 PROD_ACCOUNT_CERTIFICATE_ARN="arn:aws:acm:us-east-1:146055947386:certificate/23b59743-d806-4899-ab04-9a807238a4d4"
