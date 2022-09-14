@@ -70,6 +70,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
 }
 
 app.post('/result', async (request: Request, response: Response) => {
+  console.log(request.body);
   try {
     if (!request.body.event || !request.body.event.eventType) {
       return;
