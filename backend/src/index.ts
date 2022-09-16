@@ -1,6 +1,5 @@
 import express, {Request, Response} from "express";
 import Evervault from '@evervault/sdk';
-
 import cors from "cors";
 
 import {Keypair, PublicKey, Connection, clusterApiUrl} from '@solana/web3.js';
@@ -43,7 +42,7 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
         })
     );
 
-    await storage.store(request.body.event.customerUserId, 'image.zip.enc', result.result.data);
+    await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
 
     return response.json({
         valid: true
