@@ -37,9 +37,6 @@ function TokenCheck() {
     }, []);
 
     const checkForToken = () => {
-        console.log("CHECKING");
-        console.log(publicKey);
-        console.log(token + " === " + TOKEN_CHECKING);
         if (publicKey && token === TOKEN_CHECKING) {
             setTimeout(async () => {
                 const token = await findGatewayToken(connection, publicKey, gatekeeperNetwork);
