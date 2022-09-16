@@ -1,4 +1,5 @@
 import express, {Request, Response} from "express";
+import axios from "axios";
 import cors from "cors";
 
 import {Keypair, PublicKey, Connection, clusterApiUrl} from '@solana/web3.js';
@@ -23,8 +24,23 @@ app.get('/', (request: Request, response: Response) => {
     response.send('Identity.com');
 });
 
-const handleDocumentUpload = (request: Request, response: Response) => {
+const handleDocumentUpload = async (request: Request, response: Response) => {
+    return response.json({
+        valid: false,
+        data: request.body,
+    });;
+
+    console.log("Handling document upload");
     const documentUuid = request.body.event.data.uuid;
+console.log(`https://upload.socure.com/api/3.0/documents/${documentUuid}`);
+    const result = await axios.get(`https://upload.socure.com/api/3.0/documents/${documentUuid}`, {
+        headers: {
+            Authorization: 'SocureApiKey c9ed4fdc-4959-4d1b-add4-ebe508003a6b',
+            "Content-Type": "application/json"
+        }
+    });
+
+    console.log(result);
 
     return response.json({
         valid: false,
@@ -57,10 +73,10 @@ const handleVerificationComplete = async (request: Request, response: Response) 
             .then((tx: any) => tx.send()) // send the transaction
             .then((tx: any) => tx.confirm()); // confirm the transaction
     }
-
+console.log(process.env);
     // store plain text PII
-    // const storage = new Storage('us-east-2', 'socure-pii-storage');
-    // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
+    const storage = new Storage('us-east-2', 'socure-pii-storage');
+    await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
     return response.json({
         valid: true,
@@ -70,6 +86,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
 
 app.post('/result', async (request: Request, response: Response) => {
     console.log(JSON.stringify(request.body, null, 2));
+
     try {
         if (!request.body.event || !request.body.event.eventType) {
             return response.json({
