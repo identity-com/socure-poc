@@ -10,9 +10,8 @@ import {
 import {WalletAdapterNetwork} from "@solana/wallet-adapter-base";
 import {ConnectionProvider, useConnection, useWallet, WalletProvider} from "@solana/wallet-adapter-react";
 import {WalletModalProvider, WalletMultiButton} from "@solana/wallet-adapter-react-ui";
-import {PhantomWalletAdapter} from "@solana/wallet-adapter-wallets";
+import {PhantomWalletAdapter, SolletWalletAdapter, SolflareWalletAdapter, SolletExtensionWalletAdapter} from "@solana/wallet-adapter-wallets";
 import {findGatewayToken} from "@identity.com/solana-gateway-ts";
-
 
 require('@solana/wallet-adapter-react-ui/styles.css');
 
@@ -33,6 +32,8 @@ function TokenCheck() {
 
     const [showIframe, setShowIframe] = useState(false);
     const getToken = useCallback(() => {
+        sessionStorage.clear();
+
         setShowIframe(true);
     }, []);
 
@@ -61,17 +62,20 @@ function TokenCheck() {
 
     const makePayment = useCallback(async () => {
         if (publicKey) {
-            const transaction = new Transaction().add(
+            const {
+                value: {blockhash, lastValidBlockHeight}
+            } = await connection.getLatestBlockhashAndContext();
+
+            const transaction = new Transaction({
+                recentBlockhash: blockhash,
+                feePayer: publicKey
+            }).add(
                 SystemProgram.transfer({
                     fromPubkey: publicKey,
                     toPubkey: Keypair.generate().publicKey,
                     lamports: LAMPORTS_PER_SOL / 100,
                 })
             );
-
-            const {
-                value: {blockhash, lastValidBlockHeight}
-            } = await connection.getLatestBlockhashAndContext();
 
             const signature = await sendTransaction(transaction, connection);
             await connection.confirmTransaction({blockhash, lastValidBlockHeight, signature});
@@ -91,7 +95,6 @@ function TokenCheck() {
             setShowIframe(false);
         }
     });
-
 
     const cancelChecking = () => {
         setToken(TOKEN_UNAVAILABLE);
@@ -162,6 +165,9 @@ export default function TestIndex() {
     const wallets = useMemo(
         () => [
             new PhantomWalletAdapter(),
+            new SolletWalletAdapter(),
+            new SolflareWalletAdapter(),
+            new SolletExtensionWalletAdapter()
         ],
         []
     );

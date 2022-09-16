@@ -46,9 +46,6 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
-    console.log(request.body);
-
-    // TODO: Handle unhappy path (could be client side)?
     if (request.body.event.data.documentVerification.decision.value !== 'accept') {
         console.log("Validation failed");
         return;
@@ -57,6 +54,8 @@ const handleVerificationComplete = async (request: Request, response: Response) 
     const address = new PublicKey(request.body.event.customerUserId);
     const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
     let token = await findGatewayToken(connection, address, gatekeeperNetwork);
+
+    await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
     // If the token is found, something may have gone wrong in the process. Ignore token creation ?
     if (!token) {
@@ -72,7 +71,6 @@ const handleVerificationComplete = async (request: Request, response: Response) 
     }
 
     // store plain text PII
-    await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 }
 
 app.post('/result', async (request: Request, response: Response) => {
