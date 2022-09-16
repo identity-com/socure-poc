@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {Navigate, useParams} from 'react-router-dom';
+import axios from "axios";
 
 declare const SocureInitializer: any;
 const API_KEY = 'adcd2fe2-b49c-4d20-ba72-4fa582c2c53d';
@@ -11,11 +12,20 @@ export default function Socure() {
 
     const start = async () => {
         var config = {
-            onProgress: async () => {
-                console.log('progress');
+            onProgress: async (response: any) => {
+                // axios.post('https://socure-demo-api-identity-com.relay.evervault.com/result', response);
+                console.log("=== onProgress: Start");
+                console.log(response);
+                console.log("=== onProgress: Start");
             },
             onSuccess: async (response: any) => {
+                response.token = token;
+
+                // await axios.post('https://localhost:3030/result', response);
+                console.log("=== onSuccess: Start");
                 console.log(response);
+                console.log("=== onSuccess: End");
+
                 window.parent.postMessage({
                     target: "tokenUpdate"
                 },"*" );
