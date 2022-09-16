@@ -1,16 +1,15 @@
 import express, {Request, Response} from "express";
 import cors from "cors";
 
-const {Keypair, PublicKey, Connection, clusterApiUrl} = require('@solana/web3.js');
-const {GatekeeperService} = require('@identity.com/solana-gatekeeper-lib');
+import {Keypair, PublicKey, Connection, clusterApiUrl} from '@solana/web3.js';
+import {GatekeeperService} from '@identity.com/solana-gatekeeper-lib';
 import {findGatewayToken} from "@identity.com/solana-gateway-ts";
 import Storage from "./lib/Storage";
 
 const bs58 = require('bs58');
 
-
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 80;
-// TODO: Mpve to config
+// TODO: Move to config
 const gatekeeperAuthority = Keypair.fromSecretKey(bs58.decode('QzSdRKirjb3Dq64ZoWkxyNwmNVgefWNrAcUGwJF6pVx9ZeiXYCWWc4eBFBYwgP5qBnwmX3nA6PYQqLuqSuuuFsx'));
 const gatekeeperNetwork = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
 const SOLANA_CLUSTER = 'devnet';
@@ -26,9 +25,11 @@ app.get('/', (request: Request, response: Response) => {
 
 const handleDocumentUpload = (request: Request, response: Response) => {
   const documentUuid = request.body.event.data.uuid;
-  console.log("Got document UUID: " + documentUuid);
 
-
+  return response.json({
+    valid: false,
+    data: request.body,
+  });
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
@@ -55,10 +56,6 @@ const handleVerificationComplete = async (request: Request, response: Response) 
       .then((tx: any) => tx.confirm()); // confirm the transaction
   }
 
-  if (token) {
-    console.log("Issued token: " + token.publicKey.toBase58());
-  }
-
   // store plain text PII
   // const storage = new Storage('us-east-2', 'socure-pii-storage');
   // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
@@ -70,10 +67,12 @@ const handleVerificationComplete = async (request: Request, response: Response) 
 }
 
 app.post('/result', async (request: Request, response: Response) => {
-  console.log(request.body);
   try {
     if (!request.body.event || !request.body.event.eventType) {
-      return;
+      return response.json({
+        valid: false,
+        data: request.body,
+      });;
     }
 
     switch (request.body.event.eventType as String) {
