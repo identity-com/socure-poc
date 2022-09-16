@@ -13,9 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.163.0",
+    "@evervault/sdk": "^3.2.0",
     "@identity.com/solana-gatekeeper-lib": "^4.0.0",
     "@identity.com/solana-gateway-ts": "^0.8.2",
     "@solana/web3.js": "^1.56.2",
+    "axios": "^0.27.2",
     "bs58": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
