@@ -55,6 +55,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
     const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
     let token = await findGatewayToken(connection, address, gatekeeperNetwork);
 
+    // Store PII
     await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
     // If the token is found, something may have gone wrong in the process. Ignore token creation ?
@@ -70,7 +71,6 @@ const handleVerificationComplete = async (request: Request, response: Response) 
             .then((tx: any) => tx.confirm()); // confirm the transaction
     }
 
-    // store plain text PII
 }
 
 app.post('/result', async (request: Request, response: Response) => {
