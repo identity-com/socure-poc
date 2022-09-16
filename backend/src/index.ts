@@ -69,7 +69,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
 }
 
 app.post('/result', async (request: Request, response: Response) => {
-    console.log(request.body);
+    console.log(JSON.stringify(request.body, null, 2));
     try {
         if (!request.body.event || !request.body.event.eventType) {
             return response.json({
