@@ -28,7 +28,7 @@ function TokenCheck() {
     const {connection} = useConnection();
     const {publicKey, sendTransaction} = useWallet();
 
-    const [token, setToken] = useState(TOKEN_LOADING);
+    let [token, setToken] = useState(TOKEN_LOADING);
     const [payment, setPayment] = useState(false);
 
     const [showIframe, setShowIframe] = useState(false);
@@ -37,6 +37,9 @@ function TokenCheck() {
     }, []);
 
     const checkForToken = () => {
+        console.log("CHECKING");
+        console.log(publicKey);
+        console.log(token + " === " + TOKEN_CHECKING);
         if (publicKey && token === TOKEN_CHECKING) {
             setTimeout(async () => {
                 const token = await findGatewayToken(connection, publicKey, gatekeeperNetwork);
@@ -84,6 +87,7 @@ function TokenCheck() {
     window.addEventListener("message", function (e) {
         if (e.data.target === 'tokenUpdate') {
             setToken(TOKEN_CHECKING);
+            token = TOKEN_CHECKING;
 
             checkForToken();
 
