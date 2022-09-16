@@ -20,78 +20,79 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (request: Request, response: Response) => {
-  response.send('Identity.com');
+    response.send('Identity.com');
 });
 
 const handleDocumentUpload = (request: Request, response: Response) => {
-  const documentUuid = request.body.event.data.uuid;
+    const documentUuid = request.body.event.data.uuid;
 
-  return response.json({
-    valid: false,
-    data: request.body,
-  });
+    return response.json({
+        valid: false,
+        data: request.body,
+    });
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
-  console.log(request.body);
+    console.log(request.body);
 
-  // TODO: Handle unhappy path (could be client side)?
-  if (request.body.event.data.documentVerification.decision.value !== 'accept') {
-    console.log("Validation failed");
-    return;
-  }
+    // TODO: Handle unhappy path (could be client side)?
+    if (request.body.event.data.documentVerification.decision.value !== 'accept') {
+        console.log("Validation failed");
+        return;
+    }
 
-  const address = new PublicKey(request.body.event.customerUserId);
-  const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
-  let token = await findGatewayToken(connection, address, gatekeeperNetwork);
+    const address = new PublicKey(request.body.event.customerUserId);
+    const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
+    let token = await findGatewayToken(connection, address, gatekeeperNetwork);
 
-  // If the token is found, something may have gone wrong in the process. Ignore token creation ?
-  if (!token) {
-    const service = new GatekeeperService(
-      connection,
-      gatekeeperNetwork,
-      gatekeeperAuthority,
-    );
+    // If the token is found, something may have gone wrong in the process. Ignore token creation ?
+    if (!token) {
+        const service = new GatekeeperService(
+            connection,
+            gatekeeperNetwork,
+            gatekeeperAuthority,
+        );
 
-    token = await service.issue(address) // create the transaction
-      .then((tx: any) => tx.send()) // send the transaction
-      .then((tx: any) => tx.confirm()); // confirm the transaction
-  }
+        token = await service.issue(address) // create the transaction
+            .then((tx: any) => tx.send()) // send the transaction
+            .then((tx: any) => tx.confirm()); // confirm the transaction
+    }
 
-  // store plain text PII
-  // const storage = new Storage('us-east-2', 'socure-pii-storage');
-  // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
+    // store plain text PII
+    // const storage = new Storage('us-east-2', 'socure-pii-storage');
+    // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
-  return response.json({
-    valid: true,
-    data: request.body,
-  });
+    return response.json({
+        valid: true,
+        data: request.body,
+    });
 }
 
 app.post('/result', async (request: Request, response: Response) => {
-  try {
-    if (!request.body.event || !request.body.event.eventType) {
-      return response.json({
-        valid: false,
-        data: request.body,
-      });;
-    }
+    console.log(request.body);
+    try {
+        if (!request.body.event || !request.body.event.eventType) {
+            return response.json({
+                valid: false,
+                data: request.body,
+            });
+        }
 
-    switch (request.body.event.eventType as String) {
-      case 'VERIFICATION_COMPLETED':
-        return await handleVerificationComplete(request, response);
-      case 'DOCUMENTS_UPLOADED':
-        return await handleDocumentUpload(request, response);
+        switch (request.body.event.eventType as String) {
+            case 'VERIFICATION_COMPLETED':
+                return await handleVerificationComplete(request, response);
+            case 'DOCUMENTS_UPLOADED':
+                return await handleDocumentUpload(request, response);
+        }
+    } catch (e) {
+        console.log(e);
+        return response.json({
+            valid: false,
+            data: request.body,
+        });
     }
-  } catch (e) {
-    console.log(e);
-    return response.json({
-      valid: false,
-      data: request.body,
-    });
-  }
 });
 
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+    console.log(`Listening on port ${PORT}`);
 });
