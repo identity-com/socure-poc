@@ -1,5 +1,5 @@
 import express, {Request, Response} from "express";
-import axios from "axios";
+// import axios from "axios";
 import cors from "cors";
 
 import {Keypair, PublicKey, Connection, clusterApiUrl} from '@solana/web3.js';
@@ -32,15 +32,14 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
 
     console.log("Handling document upload");
     const documentUuid = request.body.event.data.uuid;
-console.log(`https://upload.socure.com/api/3.0/documents/${documentUuid}`);
-    const result = await axios.get(`https://upload.socure.com/api/3.0/documents/${documentUuid}`, {
-        headers: {
-            Authorization: 'SocureApiKey c9ed4fdc-4959-4d1b-add4-ebe508003a6b',
-            "Content-Type": "application/json"
-        }
-    });
 
-    console.log(result);
+    // const result = await axios.get(`https://upload.socure.com/api/3.0/documents/${documentUuid}`, {
+    //     headers: {
+    //         Authorization: 'SocureApiKey c9ed4fdc-4959-4d1b-add4-ebe508003a6b',
+    //         "Content-Type": "application/json"
+    //     }
+    // });
+
 
     return response.json({
         valid: false,
