@@ -43,10 +43,6 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
     );
 
     await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
-
-    return response.json({
-        valid: true
-    });
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
@@ -77,11 +73,6 @@ const handleVerificationComplete = async (request: Request, response: Response) 
 
     // store plain text PII
     await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
-
-    return response.json({
-        valid: true,
-        data: request.body,
-    });
 }
 
 app.post('/result', async (request: Request, response: Response) => {
