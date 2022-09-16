@@ -38,12 +38,12 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
 
     await storage.store(request.body.event.customerUserId, 'image-data.json',
         JSON.stringify({
-            iv: result.iv,
-            key: result.key
+            iv: result.result.iv,
+            key: result.result.key
         })
     );
 
-    await storage.store(request.body.event.customerUserId, 'image.zip.enc', result.data);
+    await storage.store(request.body.event.customerUserId, 'image.zip.enc', result.result.data);
 
     return response.json({
         valid: true
