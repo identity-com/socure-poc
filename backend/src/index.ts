@@ -98,9 +98,9 @@ app.post('/result', async (request: Request, response: Response) => {
 
         switch (request.body.event.eventType as String) {
             case 'VERIFICATION_COMPLETED':
-                return await handleVerificationComplete(request, response);
+                await handleVerificationComplete(request, response);
             case 'DOCUMENTS_UPLOADED':
-                return await handleDocumentUpload(request, response);
+                await handleDocumentUpload(request, response);
         }
     } catch (e) {
         console.log(e);
@@ -109,6 +109,11 @@ app.post('/result', async (request: Request, response: Response) => {
             data: request.body,
         });
     }
+
+    return response.json({
+        valid: true,
+        data: request.body,
+    });
 });
 
 app.listen(PORT, () => {
