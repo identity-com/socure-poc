@@ -33,6 +33,8 @@ const handleDocumentUpload = (request: Request, response: Response) => {
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
+  console.log(request.body);
+
   // TODO: Handle unhappy path (could be client side)?
   if (request.body.event.data.documentVerification.decision.value !== 'accept') {
     console.log("Validation failed");
