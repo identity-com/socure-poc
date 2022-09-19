@@ -174,8 +174,8 @@ export default function TestIndex() {
 
     return (
         <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
-            <ConnectionProvider endpoint={endpoint}>
-                <WalletProvider wallets={wallets}>
+            <ConnectionProvider endpoint={endpoint} >
+                <WalletProvider wallets={wallets} autoConnect={true}>
                     <WalletModalProvider>
                         <WalletMultiButton/>
                         <Socure/>

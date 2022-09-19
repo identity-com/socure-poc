@@ -13,7 +13,7 @@ function App() {
                     <div className="App w-screen h-screen">
                         <Routes>
                             <Route path="verify/:token" element={<Socure/>}/>
-                            <Route path="test" element={<TestIndex/>}/>
+                            <Route path="/" element={<TestIndex/>}/>
                         </Routes>
                     </div>
                 </HashRouter>
