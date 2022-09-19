@@ -1,8 +1,8 @@
 import express, {Request, Response} from "express";
-import Evervault from '@evervault/sdk';
+// import Evervault from '@evervault/sdk';
 import cors from "cors";
 
-import {Keypair, PublicKey, Connection, clusterApiUrl} from '@solana/web3.js';
+import {Keypair, PublicKey, Connection, clusterApiUrl, LAMPORTS_PER_SOL} from '@solana/web3.js';
 import {GatekeeperService} from '@identity.com/solana-gatekeeper-lib';
 import {findGatewayToken} from "@identity.com/solana-gateway-ts";
 import Storage from "./lib/Storage";
@@ -30,20 +30,20 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
     console.log("Encrypting and uploading documents")
     const documentUuid = request.body.event.data.uuid;
 
-    const evervault = new Evervault(process.env.EVERVAULT_API_KEY);
+    // const evervault = new Evervault(process.env.EVERVAULT_API_KEY);
+    //
+    // const result = await evervault.run('socure-poc-cage', {
+    //     documentUuid
+    // });
+    //
+    // await storage.store(request.body.event.customerUserId, 'image-data.json',
+    //     JSON.stringify({
+    //         iv: result.result.iv,
+    //         key: result.result.key
+    //     })
+    // );
 
-    const result = await evervault.run('socure-poc-cage', {
-        documentUuid
-    });
-
-    await storage.store(request.body.event.customerUserId, 'image-data.json',
-        JSON.stringify({
-            iv: result.result.iv,
-            key: result.result.key
-        })
-    );
-
-    await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
+    // await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
@@ -108,6 +108,60 @@ app.post('/result', async (request: Request, response: Response) => {
         valid: true,
         data: request.body,
     });
+});
+
+app.post("/verify", async (request: Request, response: Response) => {
+    const failed = (message: string) => {
+        return response.json({
+            valid: false,
+            message
+        });
+    }
+
+    try {
+        const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
+
+        const signatures = await connection.getSignaturesForAddress(new PublicKey(request.body.reference));
+        const transactionInfo = await connection.getParsedConfirmedTransaction(signatures[0].signature);
+
+        if (transactionInfo === null) {
+            return failed("Invalid reference");
+        }
+
+        if (transactionInfo !== null) {
+            const instruction = transactionInfo.transaction.message.instructions[0];
+
+            // @ts-ignore
+            const foundDestination: string = instruction?.parsed.info.destination;
+            // @ts-ignore
+            const foundSource: string = instruction.parsed.info.source;
+            // @ts-ignore
+            const foundLamports: number = instruction.parsed.info.lamports;
+
+            if (foundDestination !== request.body.recipient) {
+                return failed("Invalid recipient address");
+            }
+
+            if (foundSource !== request.body.sender) {
+                return failed("Invalid sender address");
+            }
+
+            if (foundLamports !== request.body.amount * LAMPORTS_PER_SOL) {
+                return failed("Invalid amount");
+            }
+
+            let token = await findGatewayToken(connection, new PublicKey(foundSource), gatekeeperNetwork);
+            if (token === null) {
+                return failed("Identity token not found");
+            }
+        }
+
+        return response.json({
+            valid: true,
+        });
+    } catch(e) {
+        return failed("Unknown");
+    }
 });
 
 app.listen(PORT, () => {
