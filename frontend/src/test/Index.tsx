@@ -40,7 +40,13 @@ function TokenCheck() {
     const checkForToken = () => {
         if (publicKey && token === TOKEN_CHECKING) {
             setTimeout(async () => {
-                const token = await findGatewayToken(connection, publicKey, gatekeeperNetwork);
+                let token;
+                try {
+                    token = await findGatewayToken(connection, publicKey, gatekeeperNetwork);
+                } catch(e) {
+                    console.log("Error fetching token", e);
+                }
+
                 if (token) {
                     setToken(TOKEN_AVAILABLE);
                 } else {
