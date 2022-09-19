@@ -36,9 +36,6 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
         documentUuid
     });
 
-    console.log("Evervault result: ");
-    console.log(JSON.stringify(result, null, 2))
-
     await storage.store(request.body.event.customerUserId, 'image-data.json',
         JSON.stringify({
             iv: result.result.iv,
@@ -94,8 +91,10 @@ app.post('/result', async (request: Request, response: Response) => {
         switch (request.body.event.eventType as String) {
             case 'VERIFICATION_COMPLETED':
                 await handleVerificationComplete(request, response);
+                break;
             case 'DOCUMENTS_UPLOADED':
                 await handleDocumentUpload(request, response);
+                break;
         }
     } catch (e) {
         console.log(e);
