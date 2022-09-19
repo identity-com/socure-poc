@@ -27,6 +27,7 @@ app.get('/', (request: Request, response: Response) => {
 });
 
 const handleDocumentUpload = async (request: Request, response: Response) => {
+    console.log("Encrypting and uploading documents")
     const documentUuid = request.body.event.data.uuid;
 
     const evervault = new Evervault(process.env.EVERVAULT_API_KEY);
@@ -34,6 +35,9 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
     const result = await evervault.run('socure-poc-cage', {
         documentUuid
     });
+
+    console.log("Evervault result: ");
+    console.log(JSON.stringify(result, null, 2))
 
     await storage.store(request.body.event.customerUserId, 'image-data.json',
         JSON.stringify({
@@ -46,6 +50,8 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
+    console.log("Uploading PII and issuing token");
+
     if (request.body.event.data.documentVerification.decision.value !== 'accept') {
         console.log("Validation failed");
         return;
