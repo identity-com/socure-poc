@@ -83,10 +83,16 @@ function TokenCheck() {
                 })
             );
 
-            const signature = await sendTransaction(transaction, connection);
-            await connection.confirmTransaction({blockhash, lastValidBlockHeight, signature});
+            try {
+                const signature = await sendTransaction(transaction, connection);
+                await connection.confirmTransaction({blockhash, lastValidBlockHeight, signature});
 
-            setPayment(true);
+                setPayment(true);
+            } catch(e) {
+                console.log(e);
+                alert("Payment failed: " + e);
+                setToken(TOKEN_AVAILABLE);
+            }
         }
     }, [connection, publicKey, sendTransaction])
 
