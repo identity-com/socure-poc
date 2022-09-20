@@ -234,7 +234,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
         $order = wc_get_order( $orderWithReference[0]->ID );
 
 
-        $response = wp_remote_post( 'http://localhost:3030/verify', [
+        $response = wp_remote_post( 'https://socure-demo-api.identity.com/poc/verify', [
             'headers'   => [ 'Content-Type' => 'application/json' ],
             'body'       => wp_json_encode([
             'reference' => $reference,
@@ -272,7 +272,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
 
             $order->payment_complete( $transactionId );
 
-            wp_send_json( [ 'redirectUrl' => $order->get_checkout_order_received_url() ] );
+            wp_send_json( [ 'redirectUrl' => $order->get_view_order_url() ] );
 
             return;
         }

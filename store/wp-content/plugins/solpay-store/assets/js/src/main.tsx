@@ -22,9 +22,16 @@ type IFrameProps = {
 }
 
 function IFrame({publicKey, showIframe}: IFrameProps) {
+    alert("???");
     if (!publicKey) {
         return (<></>);
     }
+
+    // setTimeout(() => {
+    //     window.parent.postMessage({
+    //         target: "tokenUpdate"
+    //     },"*" );
+    // }, 1000)
 
     // Required to force socure not to "remember" previous validations
     sessionStorage.clear();
@@ -41,12 +48,13 @@ function ConnectedApp() {
     const [token, setToken] = useState<GatewayToken | null | undefined>(undefined);
     const [showIframe, setShowIframe] = useState(false);
     let [tokenCheck, setTokenCheck] = useState<boolean | undefined>(undefined);
+    let [paying, setPaying] = useState<boolean>(false);
 
     const {publicKey, sendTransaction} = useWallet();
     const {connection} = useConnection();
 
     const checkForToken = () => {
-        if (publicKey && tokenCheck === undefined) {
+        if (publicKey && tokenCheck === false) {
             setTimeout(async () => {
                 console.log("Checking for token");
 
@@ -89,83 +97,91 @@ function ConnectedApp() {
     const makePayment = async () => {
         if (!publicKey) throw new WalletNotConnectedError();
 
-        const instruction = SystemProgram.transfer({
-            fromPubkey: publicKey,
-            toPubkey: new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.recipient),
-            lamports: window.SOLANA_PAYMENT_CONFIG.transaction.amount * LAMPORTS_PER_SOL,
-        });
-        instruction.keys.push({
-            pubkey: new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.reference),
-            isWritable: false,
-            isSigner: false
-        });
+        try {
+            setPaying(true);
 
-        const transaction = new Transaction().add(instruction);
+            const instruction = SystemProgram.transfer({
+                fromPubkey: publicKey,
+                toPubkey: new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.recipient),
+                lamports: window.SOLANA_PAYMENT_CONFIG.transaction.amount * LAMPORTS_PER_SOL,
+            });
+            instruction.keys.push({
+                pubkey: new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.reference),
+                isWritable: false,
+                isSigner: false
+            });
 
-        const {
-            context: {slot: minContextSlot},
-            value: {blockhash, lastValidBlockHeight}
-        } = await connection.getLatestBlockhashAndContext();
+            const transaction = new Transaction().add(instruction);
 
-        const signature = await sendTransaction(transaction, connection, {minContextSlot});
+            const {
+                context: {slot: minContextSlot},
+                value: {blockhash, lastValidBlockHeight}
+            } = await connection.getLatestBlockhashAndContext();
 
-        const result = await connection.confirmTransaction({blockhash, lastValidBlockHeight, signature});
-        // TODO: Disable UI
-        if (result.value.err === null) {
-            const transaction = window.SOLANA_PAYMENT_CONFIG.transaction;
+            const signature = await sendTransaction(transaction, connection, {minContextSlot});
 
-            let params: any = {
-                reference: transaction.reference,
-                recipient: transaction.recipient,
-                amount: transaction.amount,
-                label: transaction.label,
-                message: transaction.message,
-                memo: transaction.memo,
-                cluster: window.SOLANA_PAYMENT_CONFIG.cluster,
-                sender: publicKey.toBase58()
+            const result = await connection.confirmTransaction({blockhash, lastValidBlockHeight, signature});
+            // TODO: Disable UI
+            if (result.value.err === null) {
+                const transaction = window.SOLANA_PAYMENT_CONFIG.transaction;
+
+                let params: any = {
+                    reference: transaction.reference,
+                    recipient: transaction.recipient,
+                    amount: transaction.amount,
+                    label: transaction.label,
+                    message: transaction.message,
+                    memo: transaction.memo,
+                    cluster: window.SOLANA_PAYMENT_CONFIG.cluster,
+                    sender: publicKey.toBase58()
+                }
+
+                if (transaction.splToken) {
+                    params.splToken = transaction.splToken.toString();
+                }
+
+
+                const formData = new FormData();
+
+                for (let key in params) {
+                    formData.append(key, params[key]);
+                }
+
+                formData.append('security', window.SOLANA_PAY_WC_NONCE_CONFIG.nonce);
+
+                const response = await fetch(window.SOLANA_PAYMENT_CONFIG.paymentNotificationEndpoint, {
+                    method: 'POST',
+                    body: formData
+                }).then(response => response.json());
+
+                if (response.errors) {
+                    console.log(response.errors);
+                    setPaying(false);
+                    return;
+                }
+
+                if (response.redirectUrl) {
+                    window.location.href = response.redirectUrl;
+                }
             }
-
-            if (transaction.splToken) {
-                params.splToken = transaction.splToken.toString();
-            }
-
-
-            const formData = new FormData();
-
-            for (let key in params) {
-                formData.append(key, params[key]);
-            }
-
-            formData.append('security', window.SOLANA_PAY_WC_NONCE_CONFIG.nonce);
-
-            const response = await fetch(window.SOLANA_PAYMENT_CONFIG.paymentNotificationEndpoint, {
-                method: 'POST',
-                body: formData
-            }).then(response => response.json());
-
-            if (response.errors) {
-                console.log(response.errors);
-
-                return;
-            }
-
-            if (response.redirectUrl) {
-                window.location.href = response.redirectUrl;
-            }
+        } catch(e) {
+            alert(e);
+            console.log(e);
+            setPaying(false);
         }
     }
 
     return (
         !publicKey && <></> ||
         showIframe && <IFrame publicKey={publicKey} showIframe={setShowIframe}/> ||
-        tokenCheck === false && <div>Checking for token</div> ||
+        tokenCheck === false && <div className="status-text">Checking for token</div> ||
         (
             token === undefined && <div className="status-text">Checking For Pass</div> ||
             token === null &&
             <button onClick={() => setShowIframe(true)}
                     className="wallet-adapter-button wallet-adapter-button-trigger verify-button">Verify
                 Identity</button> ||
-            <button onClick={makePayment}
+            <button onClick={makePayment} disabled={paying}
                     className="wallet-adapter-button wallet-adapter-button-trigger">Make Payment</button>
         )
     )
