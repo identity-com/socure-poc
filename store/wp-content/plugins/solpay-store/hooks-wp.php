@@ -67,3 +67,11 @@ function solana_pay_wc_register_required_plugins()
 
     tgmpa( $plugins, $config );
 }
+
+
+add_action("wp_ajax_solana_pay_create_transaction", "solana_pay_create_transaction");
+add_action("wp_ajax_nopriv_solana_pay_create_transaction", "solana_pay_create_transaction");
+
+function solana_pay_create_transaction() {
+echo json_encode(["hello"]);
+}

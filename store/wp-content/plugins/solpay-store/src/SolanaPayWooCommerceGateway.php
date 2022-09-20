@@ -212,6 +212,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
         $message   = sanitize_text_field( $_POST['message'] );
         $memo      = sanitize_text_field( $_POST['memo'] );
         $cluster   = sanitize_text_field( $_POST['cluster'] );
+        $sender   = sanitize_text_field( $_POST['sender'] );
 
         $orderWithReference = get_posts(
             [
@@ -232,21 +233,17 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
         /** @var WC_Order $order */
         $order = wc_get_order( $orderWithReference[0]->ID );
 
-        $response = wp_remote_get(
-            add_query_arg(
-                [
-                    'reference' => $reference,
-                    'recipient' => $recipient,
-                    'splToken'  => $splToken,
-                    'amount'    => $amount,
-                    'label'     => $label,
-                    'message'   => $message,
-                    'memo'      => $memo,
-                    'cluster'   => $cluster,
-                ],
-                $this->get_option( 'verification_service_url' )
-            )
-        );
+
+        $response = wp_remote_post( 'http://localhost:3030/verify', [
+            'headers'   => [ 'Content-Type' => 'application/json' ],
+            'body'       => wp_json_encode([
+            'reference' => $reference,
+            'recipient' => $recipient,
+            'sender' =>$sender,
+            'amount' => $amount
+            ]),
+            'data_format' => 'body'
+        ] );
 
         if ( $response instanceof WP_Error ) {
             wp_send_json(
@@ -263,7 +260,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
 
         $decodedBody = json_decode( $response['body'], true, 512, JSON_THROW_ON_ERROR );
 
-        if ( array_key_exists( 'success', $decodedBody ) && $decodedBody['success'] === true ) {
+        if ( array_key_exists( 'valid', $decodedBody ) && $decodedBody['valid'] === true ) {
             $transactionId = '';
 
             if ( array_key_exists( 'signature', $decodedBody )
@@ -275,13 +272,13 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
 
             $order->payment_complete( $transactionId );
 
-            wp_send_json( [ 'redirectUrl' => $order->get_view_order_url() ] );
+            wp_send_json( [ 'redirectUrl' => $order->get_checkout_order_received_url() ] );
 
             return;
         }
 
-        if ( array_key_exists( 'error', $decodedBody ) ) {
-            wp_send_json( [ 'errors' => [ $decodedBody['error'] ] ] );
+        if ( array_key_exists( 'message', $decodedBody ) ) {
+            wp_send_json( [ 'errors' => [ $decodedBody['message'] ] ] );
 
             return;
         }
@@ -325,6 +322,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway {
 
         // TODO: Consider creating custom '/wc-api/solana-transaction-data' endpoint for fetching transaction data.
         return [
+        'adminUrl' =>  admin_url( 'admin-ajax.php' ),
             'transaction'                      => [
                 'reference' => $reference,
                 'recipient' => $merchantWallet,

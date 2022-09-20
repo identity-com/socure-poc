@@ -1,8 +1,7 @@
 import {Cluster} from "@solana/web3.js";
-import SolanaPaymentVerifier from "./solana-payment-verifier";
-import SolanaErrorPresenter from "./solana-error-presenter";
-
+//
 export type SolanaPaymentConfigType = {
+    adminUrl: string,
     transaction: {
         reference: string,
         recipient: string,
@@ -12,7 +11,7 @@ export type SolanaPaymentConfigType = {
         message: string,
         memo: string,
     },
-    cluster: Cluster | string,
+    cluster: Cluster | undefined,
     verificationServiceUrl: string,
     verificationServiceInterval: number,
     verificationServiceTimeout: number,
@@ -28,8 +27,8 @@ export type SolanaPaymentConfigType = {
 }
 
 export interface SolanaPaymentWindow extends Window {
-    SOLANA_ERROR_PRESENTER: SolanaErrorPresenter;
+    // SOLANA_ERROR_PRESENTER: SolanaErrorPresenter;
     SOLANA_PAYMENT_CONFIG: SolanaPaymentConfigType;
-    SOLANA_PAYMENT_VERIFIER: SolanaPaymentVerifier;
+    // SOLANA_PAYMENT_VERIFIER: SolanaPaymentVerifier;
     SOLANA_PAY_WC_NONCE_CONFIG: { nonce: string };
 }

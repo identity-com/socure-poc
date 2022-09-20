@@ -1,16 +1,17 @@
 {
     "dependencies": {
-        "@solana/pay": "0.1.0",
-        "@solana/wallet-adapter-base": "0.9.3",
-        "@solana/wallet-adapter-react": "0.15.3",
-        "@solana/wallet-adapter-react-ui": "0.9.5",
-        "@solana/wallet-adapter-wallets": "0.15.4",
-        "@solana/web3.js": "1.34.0",
-        "@strata-foundation/web3-token-auth": "3.5.4",
+        "@identity.com/solana-gateway-ts": "^0.8.2",
+        "@solana/wallet-adapter-base": "^0.9.17",
+        "@solana/wallet-adapter-react": "^0.15.19",
+        "@solana/wallet-adapter-react-ui": "^0.9.17",
+        "@solana/wallet-adapter-wallets": "^0.18.10",
+        "@solana/web3.js": "1.62.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
         "bignumber.js": "9.0.2",
         "crypto-browserify": "^3.12.0",
-        "react": "17.0.2",
-        "react-dom": "17.0.2"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "scripts": {
         "prod": "npm run production",

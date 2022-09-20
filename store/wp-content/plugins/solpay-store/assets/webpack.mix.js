@@ -1,4 +1,4 @@
-const mix = require( 'laravel-mix' );
+const mix = require('laravel-mix');
 let distPath = 'dist';
 
 mix
@@ -10,6 +10,16 @@ mix
                     "crypto": require.resolve("crypto-browserify")
                 }
             },
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        resolve: {
+                            fullySpecified: false,
+                        },
+                    },
+                ]
+            },
             plugins: [
                 new webpack.optimize.LimitChunkCountPlugin({
                     maxChunks: 1,
@@ -17,4 +27,4 @@ mix
             ],
         };
     })
-    .typeScript('js/index.ts', distPath + '/js/solana-payment-gateway.js');
+    .typeScript('js/index.tsx', distPath + '/js/solana-payment-gateway.js');
