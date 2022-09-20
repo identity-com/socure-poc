@@ -1,5 +1,5 @@
 import express, {Request, Response} from "express";
-// import Evervault from '@evervault/sdk';
+import Evervault from '@evervault/sdk';
 import cors from "cors";
 
 import {Keypair, PublicKey, Connection, clusterApiUrl, LAMPORTS_PER_SOL} from '@solana/web3.js';
@@ -30,20 +30,20 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
     console.log("Encrypting and uploading documents")
     const documentUuid = request.body.event.data.uuid;
 
-    // const evervault = new Evervault(process.env.EVERVAULT_API_KEY);
-    //
-    // const result = await evervault.run('socure-poc-cage', {
-    //     documentUuid
-    // });
-    //
-    // await storage.store(request.body.event.customerUserId, 'image-data.json',
-    //     JSON.stringify({
-    //         iv: result.result.iv,
-    //         key: result.result.key
-    //     })
-    // );
+    const evervault = new Evervault(process.env.EVERVAULT_API_KEY);
 
-    // await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
+    const result = await evervault.run('socure-poc-cage', {
+        documentUuid
+    });
+
+    await storage.store(request.body.event.customerUserId, 'image-data.json',
+        JSON.stringify({
+            iv: result.result.iv,
+            key: result.result.key
+        })
+    );
+
+    await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
 }
 
 const handleVerificationComplete = async (request: Request, response: Response) => {
