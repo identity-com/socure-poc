@@ -40,3 +40,10 @@ Import data (default pass is `root`). From the repo root:
 
 Browse to http://localhost:8888/socure
 
+### Frontend Development
+
+```bash
+cd store/wp-content/plugins/solpay-store/assets
+yarn
+yarn watch
+```
