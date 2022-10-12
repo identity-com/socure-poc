@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { PAYMENT_URL } from "./constants";
-import { PaymentSession, PaymentStatus } from "./types";
+import { PaymentInfo, PaymentSession, PaymentStatus } from "./types";
 import SolanaPayQR from "./SolanaPayQR";
 import SolanaPaySteps from "./SolanaPaySteps";
 import { useInterval } from "../../utils/utils";
@@ -9,11 +9,16 @@ import { PublicKey } from "@solana/web3.js";
 
 // const API_URL = PAYMENT_URL;
 // TODO: for local testing
-const API_URL = 'https://a875-2600-4040-9734-e200-f047-6703-5eab-3d68.ngrok.io' + PAYMENT_URL;
+const API_URL = 'https://67f2-2600-4040-9734-e200-f047-6703-5eab-3d68.ngrok.io' + PAYMENT_URL;
+
+interface SolanaPayModalProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  paymentInfo: PaymentInfo;
+}
 
 // TODO: Split up this monster of a class
-export default function SolanaPay() {
-  const [open, setOpen] = useState(false)
+export default function SolanaPayModal({open, setOpen, paymentInfo}: SolanaPayModalProps) {
   const [paymentSession, setPaymentSession] = useState<PaymentSession | null>(null)
 
   useEffect(() => {
@@ -22,7 +27,13 @@ export default function SolanaPay() {
     }
 
     // fetch data
-    fetch(API_URL, {method: 'POST'})
+    fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(paymentInfo),
+    })
       .then(response => response.json())
       .then(data => setPaymentSession(data));
 
@@ -40,14 +51,6 @@ export default function SolanaPay() {
 
   return (
     <>
-      <button
-        type="button"
-        className="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        onClick={() => setOpen(true)}
-      >
-        Start Payment Flow
-      </button>
-
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <Transition.Child

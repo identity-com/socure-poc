@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "PORT=3001 ts-node ./src/index.ts",
-    "start:prod": "npm run build && node ./dist/src/server.js",
+    "start:prod": "npm run build && node ./dist/index.js",
     "build": "npx tsc"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@identity.com/solana-gateway-ts": "^0.10.0",
+    "@solana/spl-token": "^0.3.5",
     "@solana/web3.js": "^1.64.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
