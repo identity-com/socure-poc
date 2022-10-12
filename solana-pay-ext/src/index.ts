@@ -1,8 +1,14 @@
 import express, {Request, Response} from "express";
 import {Keypair, PublicKey, Connection, clusterApiUrl, Transaction, SystemProgram} from '@solana/web3.js';
 import cors from "cors";
+import { PaymentSession } from "./types";
+import { v4 as uuidv4 } from 'uuid';
+import { paymentSessionStore, purgeOldSessions } from "./simple-store";
+
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
+const PAYMENTS_PATH = '/payments';
+const SOLANA_URL_SUFFIX = '/solana';
 const REQUEST_PATH = '/request';
 
 // const bs58 = require('bs58');
@@ -24,18 +30,47 @@ app.use(express.json());
 /**
  * Generates a new payment session and returns the given URL
  */
-app.get('/create', (request: Request, response: Response) => {
-  const requestUrl = request.protocol + '://' + request.get('host') + REQUEST_PATH;
+app.post(PAYMENTS_PATH, (request: Request, response: Response) => {
+  // purge if more then 1000 sessions
+  if (paymentSessionStore.size > 1000) {
+    purgeOldSessions();
+  }
+  const uuid = uuidv4();
+  const url = `${request.protocol}://${request.get('host')}${PAYMENTS_PATH}/${uuid}${SOLANA_URL_SUFFIX}`;
+
+  // add session to store
+  const session: PaymentSession = {
+    id: uuid,
+    url,
+    createdAt: new Date(),
+  };
+  paymentSessionStore.set(uuid, session);
+
+
+  response.status(200).send(session);
+})
+
+/**
+ * Get Session State
+ */
+app.get(`${PAYMENTS_PATH}/:id`, (request: Request, response: Response) => {
+  const session = paymentSessionStore.get(request.params.id);
+  if (!session) {
+    response.status(404).send({
+      message: 'Session not found',
+    });
+    return;
+  }
 
   response.status(200).send({
-    requestUrl,
+    session,
   });
-})
+});
 
 /**
  * Get the Store Info
  */
-app.get(REQUEST_PATH, (request: Request, response: Response) => {
+app.get(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, (request: Request, response: Response) => {
   console.log("Received initial GET request");
 
   const label = 'Identity.com Solana Pay Sample';
@@ -47,7 +82,7 @@ app.get(REQUEST_PATH, (request: Request, response: Response) => {
   });
 });
 
-app.post(REQUEST_PATH, async(request : Request, response: Response) => {
+app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, response: Response) => {
   console.log(JSON.stringify(request.headers));
   console.log(JSON.stringify(request.body));
   console.log(`Received POST request for account ${request.body.account}`);
