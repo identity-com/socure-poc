@@ -1,5 +1,5 @@
 
-** Frontend
+## Frontend
 The frontend launches the iframe for the socure backend. The iframe accepts an account as a parameter, and passes
 it through to the socure validation process and included in all backend callbacks.
 
@@ -8,7 +8,7 @@ Start the frontend:
 yarn workspace @identity.com/socure-poc-frontend start
 ```
 
-** Backend
+## Backend
 The backend is mainly responsible for handling callbacks from the socure process. The endpoint `/result` is responsible
 for handling all callbacks.
 
@@ -20,12 +20,12 @@ Start the backend:
 yarn workspace @identity.com/socure-poc-backend start
 ```
 
-** Store
+## Store
 
 The store is a standard Woocommerce site. The main plugin for handling the payment process is a modified version of
 an existing plugin, located here: `store/wp-content/plugins/solpay-store`
 
-*** Environment setup
+### Environment setup
 Download MAMP https://www.mamp.info/en/downloads/
 After install, the default settings are probably fine
 
