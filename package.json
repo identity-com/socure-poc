@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": [
     "frontend",
-    "backend"
+    "backend",
+    "solana-pay-ext-ui"
   ],
   "scripts": {
   },
