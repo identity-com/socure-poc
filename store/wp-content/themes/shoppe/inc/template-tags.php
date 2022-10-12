@@ -208,6 +208,8 @@ if ( ! function_exists( 'shoppe_show_header_icons' ) ) {
 				'shoppe' ) . '" class="c-header__link o-search-btn js-search-btn"><svg class="c-header__link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M229.651 218.344l-43.222-43.223a92.112 92.112 0 1 0-11.315 11.314l43.223 43.223a8 8 0 1 0 11.314-11.314zM40 116a76 76 0 1 1 76 76a76.086 76.086 0 0 1-76-76z" /></svg></button>';
 		$shoppe_cart_icon     = '<svg class="c-header__link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M217.065 146.862l13.091-72A16 16 0 0 0 214.414 56H46.677l-4.884-26.862A15.992 15.992 0 0 0 26.051 16H8a8 8 0 0 0 0 16h18.05l26.703 146.862a16.003 16.003 0 0 0 1.187 3.765A27.993 27.993 0 1 0 97.293 192h69.414A27.997 27.997 0 1 0 192 176H68.495l-2.91-16h135.738a15.992 15.992 0 0 0 15.742-13.138zM84 204a12 12 0 1 1-12-12a12.013 12.013 0 0 1 12 12zm120 0a12 12 0 1 1-12-12a12.013 12.013 0 0 1 12 12zM49.586 72h164.828l-13.09 72H62.676z" /></svg><path d="M229.651 218.344l-43.222-43.223a92.112 92.112 0 1 0-11.315 11.314l43.223 43.223a8 8 0 1 0 11.314-11.314zM40 116a76 76 0 1 1 76 76a76.086 76.086 0 0 1-76-76z" /></svg>';
 		$shoppe_user_icon     = '<svg class="c-header__link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M231.937 211.986a120.486 120.486 0 0 0-67.12-54.142a72 72 0 1 0-73.633 0a120.488 120.488 0 0 0-67.12 54.14a8 8 0 1 0 13.85 8.013a104.037 104.037 0 0 1 180.174.002a8 8 0 1 0 13.849-8.013zM72 96a56 56 0 1 1 56 56a56.064 56.064 0 0 1-56-56z" /></svg>';
+		$shoppe_dollar_icon   = '<svg class="c-header__link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/></svg>';
+
 		$shoppe_svg_args      = array(
 			'svg'   => array(
 				'class'           => true,
@@ -249,6 +251,15 @@ if ( ! function_exists( 'shoppe_show_header_icons' ) ) {
 				$shoppe_allowed_tags );
 			echo wp_kses( $shoppe_user_icon, $shoppe_allowed_tags );
 			echo wp_kses( "</a>", $shoppe_allowed_tags );
+		}
+
+		{ // USDC Airdrop
+		    echo wp_kses( sprintf( '<a class="c-header__link" href="%s" aria-label="%s" target="_facet">',
+                    'https://usdcfaucet.com/',
+                    __( 'Account', 'shoppe' ) ),
+                    $shoppe_allowed_tags );
+                echo wp_kses( $shoppe_dollar_icon, $shoppe_allowed_tags );
+                echo wp_kses( "</a>", $shoppe_allowed_tags );
 		}
 
 		echo '<button aria-label="Menu Toggle" class="c-header__menu-toggle menu-toggle hamburger--spin js-header-menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
