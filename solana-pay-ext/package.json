@@ -6,7 +6,7 @@
   "author": "Martin Riedel",
   "license": "MIT",
   "scripts": {
-    "start": "PORT=3031 ts-node ./src/index.ts",
+    "start": "PORT=3001 ts-node ./src/index.ts",
     "start:prod": "npm run build && node ./dist/src/server.js",
     "build": "npx tsc"
   },
@@ -19,6 +19,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "@identity.com/solana-gateway-ts": "^0.10.0",
     "@solana/web3.js": "^1.64.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",

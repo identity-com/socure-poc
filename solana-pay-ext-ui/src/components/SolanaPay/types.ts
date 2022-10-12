@@ -4,7 +4,7 @@ export const enum PaymentStatus {
   QR = "qr",
   SCANNED = "scanned",
   TX_SEND = "tx_send",
-  TX_CONFIRMED = "tx_confirmed",
+  TX_CONFIRMED = "tx_confirmed", // TODO: Backend should poll the chain for this.
   ERROR = "error", // see errorMessage
 }
 
