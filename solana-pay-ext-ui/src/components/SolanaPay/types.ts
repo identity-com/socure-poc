@@ -18,6 +18,7 @@ export type PaymentInfo = {
   mint: string // base58
   fromWallet?: string // base58
   toWallet: string // base58
+  gatekeeperNetwork?: string // base58
   amount: number | bigint,
 }
 

@@ -18,6 +18,7 @@ export type PaymentInfo = {
   mint: PublicKey,
   fromWallet?: PublicKey,
   toWallet: PublicKey,
+  gatekeeperNetwork?: PublicKey,
   amount: number | bigint,
   toTokenAccount: PublicKey,
   toTokenAccountBalanceBefore: number | bigint,

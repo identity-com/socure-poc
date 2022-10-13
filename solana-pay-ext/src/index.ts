@@ -41,7 +41,7 @@ app.use(express.json());
 
 
 const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
-const GATEKEPPER_NETWORK = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
+// const GATEKEPPER_NETWORK = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
 
 /**
  * Generates a new payment session and returns the given URL
@@ -57,6 +57,8 @@ app.post(PAYMENTS_PATH, async (request: Request, response: Response) => {
 
   const mint = new PublicKey(request.body.mint);
   const toWallet = new PublicKey(request.body.toWallet);
+  const gatekeeperNetwork = request.body.gatekeeperNetwork ? new PublicKey(request.body.gatekeeperNetwork) : undefined;
+
 
   const toTokenAccount = await getAssociatedTokenAddress(
     mint,
@@ -74,6 +76,7 @@ app.post(PAYMENTS_PATH, async (request: Request, response: Response) => {
     amount: request.body.amount,
     toTokenAccount,
     toTokenAccountBalanceBefore,
+    gatekeeperNetwork,
   };
 
 
@@ -162,17 +165,19 @@ app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, re
 
   // TODO: Implement Gateway V2
   // check if Account has a valid Gatekeeper token.
-  const token = await findGatewayToken(connection, account, GATEKEPPER_NETWORK);
-  // no Gateway Token
-  // if (!token) {
-  //   session.status = PaymentStatus.ERROR;
-  //   session.errorMessage = 'No valid Gateway Token found';
-  //   paymentSessionStore.set(session.id, session);
-  //   response.status(400).send({
-  //     message: 'No valid Gateway Token found',
-  //   });
-  //   return;
-  // }
+  if (session.paymentInfo.gatekeeperNetwork) {
+    const token = await findGatewayToken(connection, account, session.paymentInfo.gatekeeperNetwork);
+    // no Gateway Token
+    if (!token) {
+      session.status = PaymentStatus.ERROR;
+      session.errorMessage = 'No valid Gateway Token found';
+      paymentSessionStore.set(session.id, session);
+      response.status(400).send({
+        message: 'No valid Gateway Token found',
+      });
+      return;
+    }
+  }
 
   const fromTokenAccount = await getAssociatedTokenAddress(
     session.paymentInfo.mint,

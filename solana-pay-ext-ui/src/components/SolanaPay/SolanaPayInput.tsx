@@ -8,6 +8,12 @@ interface SolanaPayInputProps {
 
 export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayInputProps) {
 
+  const setGatekeeperNetwork = (checked: boolean) => {
+    const gatekeeperNetwork = checked ? 'tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf' : undefined;
+    setPaymentInfo({...paymentInfo, gatekeeperNetwork});
+  }
+
+
   const setToWallet = (value: string) => {
     try {
       const toWallet = new PublicKey(value);
@@ -74,17 +80,31 @@ export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayI
                 />
             </dd>
           </div>
+          {/*<div className="bg-white px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">*/}
+          {/*  <dt className="text-sm font-medium text-gray-500">Mint</dt>*/}
+          {/*  <dd className="mt-1 text-sm text-gray-900 sm:col-span-4 sm:mt-0">*/}
+          {/*    <input*/}
+          {/*      type="text"*/}
+          {/*      name="mint"*/}
+          {/*      id="mint"*/}
+          {/*      className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"*/}
+          {/*      // value={Number(paymentInfo.amount) / 1000000}*/}
+          {/*      defaultValue={paymentInfo.mint}*/}
+          {/*      onChange={(e) => setMint(e.target.value)}*/}
+          {/*    />*/}
+          {/*  </dd>*/}
+          {/*</div>*/}
           <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Mint:</dt>
+            <dt className="text-sm font-medium text-gray-500">Gatekeeper</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-4 sm:mt-0">
               <input
-                type="text"
-                name="mint"
-                id="mint"
-                className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                // value={Number(paymentInfo.amount) / 1000000}
-                defaultValue={paymentInfo.mint}
-                onChange={(e) => setMint(e.target.value)}
+                id="gatekeeperNetwork"
+                aria-describedby="comments-description"
+                name="gatekeeperNetwork"
+                type="checkbox"
+                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                defaultChecked={!!paymentInfo.gatekeeperNetwork}
+                onChange={(e) => setGatekeeperNetwork(e.target.checked)}
               />
             </dd>
           </div>

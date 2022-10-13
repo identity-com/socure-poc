@@ -25,9 +25,13 @@ export default function SolanaPayInfo({ paymentInfo }: SolanaPayInfoProps) {
             <dt className="text-sm font-medium text-gray-500">Amount</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{(Number(paymentInfo.amount) / 1000000)}</dd>
           </div>
+          {/*<div className="bg-white px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">*/}
+          {/*  <dt className="text-sm font-medium text-gray-500">Mint</dt>*/}
+          {/*  <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{paymentInfo.mint}</dd>*/}
+          {/*</div>*/}
           <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Mint:</dt>
-            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{paymentInfo.mint}</dd>
+            <dt className="text-sm font-medium text-gray-500">Gatekeeper</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{paymentInfo.gatekeeperNetwork ? "Yes" : "No"}</dd>
           </div>
         </dl>
       </div>
