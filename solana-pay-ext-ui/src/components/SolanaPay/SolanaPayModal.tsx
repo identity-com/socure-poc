@@ -4,7 +4,6 @@ import { PaymentSession, PaymentStatus } from "./types";
 import SolanaPayQR from "./SolanaPayQR";
 import SolanaPaySteps from "./SolanaPaySteps";
 import { useInterval } from "../../utils/utils";
-import { PublicKey } from "@solana/web3.js";
 import { API_URL } from "./constants";
 import Spinner from "../Various/Spinner";
 import SolanaPayInfo from "./SolanaPayInfo";

@@ -4,22 +4,32 @@ import SolanaPayModal from "./components/SolanaPay/SolanaPayModal";
 import { PaymentInfo, PaymentSession, PaymentType } from "./components/SolanaPay/types";
 import { PublicKey } from "@solana/web3.js";
 import { API_URL } from "./components/SolanaPay/constants";
+import SolanaPayInput from "./components/SolanaPay/SolanaPayInput";
+
+// @ts-ignore
+BigInt.prototype.toJSON = function() {
+  return this.toString()
+}
 
 function App() {
-  const [paymentSession, setPaymentSession] = useState<PaymentSession | undefined>()
-
-
-  const paymentInfo: PaymentInfo = {
-    amount: 100000, // 0.1 USDC
+  const defaultPaymentInfo: PaymentInfo = {
+    amount: 100_000, // 0.1 USDC
     type: PaymentType.SPL,
     mint: '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU', // USDC mint
     toWallet: 'EPPGP2j7o2epEh3YP5ee3Y17KQK3nWvFu1MoSi1WBH9c', // my wallet
   }
 
+  const [paymentInfo, setPaymentInfo] = useState<PaymentInfo>(defaultPaymentInfo)
+  const [paymentSession, setPaymentSession] = useState<PaymentSession | undefined>()
+
+
   const onClick = () => {
     if (!!paymentSession) {
       return
     }
+
+    console.log('Posting');
+    console.log(JSON.stringify(paymentInfo, null, 2));
 
     // fetch data
     fetch(API_URL, {
@@ -37,6 +47,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
+
+      <SolanaPayInput paymentInfo={paymentInfo} setPaymentInfo={setPaymentInfo} />
 
         <button
           type="button"
