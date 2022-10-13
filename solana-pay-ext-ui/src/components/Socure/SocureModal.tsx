@@ -7,6 +7,13 @@ interface SocureFrameProps {
 }
 
 export default function SocureModal({verificationPublicKey, setVerificationPublicKey}: SocureFrameProps) {
+
+  window.addEventListener("message", function (e) {
+    if (e.data.target === 'tokenUpdate') {
+      setVerificationPublicKey(undefined);
+    }
+  });
+
   return (
     <Transition.Root show={!!verificationPublicKey} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={() => setVerificationPublicKey(undefined)}>

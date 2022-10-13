@@ -125,8 +125,8 @@ app.get(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, (request: Request, response:
 
 
   const label = 'Identity.com Zero Day Shopping';
-  // TODO: William: update link
-  const icon = 'https://zerodayshopping.identity.com/wp-content/uploads/2022/09/cropped-image-2.png';
+
+  const icon = 'https://zerodayshopping.identity.com/wp-content/uploads/2022/10/identity.png';
 
   response.status(200).send({
     label,
