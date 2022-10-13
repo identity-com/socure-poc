@@ -16,6 +16,7 @@ export const enum PaymentType  {
 export type PaymentInfo = {
   type: PaymentType,
   mint: PublicKey,
+  fromWallet?: PublicKey,
   toWallet: PublicKey,
   amount: number | bigint,
   toTokenAccount: PublicKey,
@@ -27,7 +28,7 @@ export type PaymentSession = {
   url: string // solana pay url
   paymentInfo: PaymentInfo,
   status: PaymentStatus
-  account?: PublicKey
+  // account?: PublicKey
   createdAt: Date
   errorMessage?: string // English Error Message on Error
 }

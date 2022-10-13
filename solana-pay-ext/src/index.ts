@@ -157,7 +157,7 @@ app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, re
   }
   const account = new PublicKey(request.body.account);
 
-  session.account = account;
+  session.paymentInfo.fromWallet = account;
   paymentSessionStore.set(session.id, session);
 
   // TODO: Implement Gateway V2

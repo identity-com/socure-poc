@@ -1,58 +1,48 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { PAYMENT_URL } from "./constants";
-import { PaymentInfo, PaymentSession, PaymentStatus } from "./types";
+import { PaymentSession, PaymentStatus } from "./types";
 import SolanaPayQR from "./SolanaPayQR";
 import SolanaPaySteps from "./SolanaPaySteps";
 import { useInterval } from "../../utils/utils";
 import { PublicKey } from "@solana/web3.js";
+import { API_URL } from "./constants";
+import Spinner from "../Various/Spinner";
+import SolanaPayInfo from "./SolanaPayInfo";
+import { CheckIcon } from "@heroicons/react/24/solid";
 
-// const API_URL = PAYMENT_URL;
-// TODO: for local testing
-const API_URL = 'https://67f2-2600-4040-9734-e200-f047-6703-5eab-3d68.ngrok.io' + PAYMENT_URL;
+
 
 interface SolanaPayModalProps {
-  open: boolean;
-  setOpen: (open: boolean) => void;
-  paymentInfo: PaymentInfo;
+  paymentSession?: PaymentSession;
+  setPaymentSession: (paymentId?: PaymentSession) => void;
 }
 
 // TODO: Split up this monster of a class
-export default function SolanaPayModal({open, setOpen, paymentInfo}: SolanaPayModalProps) {
-  const [paymentSession, setPaymentSession] = useState<PaymentSession | null>(null)
+export default function SolanaPayModal({paymentSession, setPaymentSession}: SolanaPayModalProps) {
+
+  // Poll Status
+  useInterval(() => {
+    if (paymentSession?.id) {
+      fetch(`${API_URL}/${paymentSession.id}`)
+        .then(response => response.json())
+        // Map string to publicKey
+        .then(data => setPaymentSession(data));
+    }
+  }, 1000 * 5);
 
   useEffect(() => {
-    if (!open) {
-      return
+    // close modal after 3s
+    if (paymentSession?.status === PaymentStatus.TX_CONFIRMED) {
+      setTimeout(() => {
+        setPaymentSession(undefined)
+      }, 3000);
     }
-
-    // fetch data
-    fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(paymentInfo),
-    })
-      .then(response => response.json())
-      .then(data => setPaymentSession(data));
-
-  }, [open]);
-
-    // Poll Status
-    useInterval(() => {
-      if (paymentSession?.id) {
-        fetch(`${API_URL}/${paymentSession.id}`)
-          .then(response => response.json())
-          // Map string to publicKey
-          .then(data => setPaymentSession(Object.assign({}, data, {account: data.account ? new PublicKey(data.account) : undefined})));
-      }
-    }, 1000 * 5);
+  }, [paymentSession])
 
   return (
     <>
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Transition.Root show={!!paymentSession} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={() => setPaymentSession(undefined)}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -78,28 +68,44 @@ export default function SolanaPayModal({open, setOpen, paymentInfo}: SolanaPayMo
               >
                 <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6">
                   <div>
-                    {/*<Dialog.Title as="h4" className="text-lg font-medium leading-6 text-gray-900">*/}
-                    {/*  Step*/}
-                    {/*</Dialog.Title>*/}
-                    {/*<div className="mx-auto flex items-center justify-center w-full">*/}
-                    {/*  {paymentSession?.status && <p>{paymentSession.status}</p>}*/}
-                    {/*</div>*/}
-                    {paymentSession?.status && <SolanaPaySteps currentStatus={paymentSession?.status} />}
+                    <div className="mt-3 text-center sm:mt-5">
+                      <Dialog.Title as="h4" className="text-lg font-medium leading-6 text-gray-900">
+                        Solana Pay (with KYC)
+                      </Dialog.Title>
+                    </div>
 
-                    <div className="mx-auto flex items-center justify-center">
-                      {paymentSession?.url && paymentSession.status === PaymentStatus.QR && <SolanaPayQR url={paymentSession?.url} />}
+                    {/* Step 1: QR Code */}
+                    <div className="mx-auto flex items-center justify-center p-1">
+                      {paymentSession?.status === PaymentStatus.QR && <SolanaPayQR url={paymentSession.url} />}
                     </div>
-                    <div className="mx-auto flex items-center justify-center">
-                    { paymentSession?.account &&
-                      <p className="text-sm text-gray-500">Account: {paymentSession.account.toBase58()}</p>}
+
+                    {/* Step 2/3/4: Scanning */}
+                    { paymentSession && paymentSession.status !== PaymentStatus.QR && paymentSession.status !== PaymentStatus.ERROR && <>
+                        <div className="mx-auto flex items-center justify-center p-5">
+                          <SolanaPayInfo paymentInfo={paymentSession.paymentInfo} />
+                      </div>
+                        <div className="mx-auto flex items-center justify-center p-5">
+                          {paymentSession.status !== PaymentStatus.TX_CONFIRMED && <Spinner />}
+                          {paymentSession.status === PaymentStatus.TX_CONFIRMED && <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                              <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
+                            </div>}
+                        </div>
+                    </>}
+
+                    {/* ERROR! */}
+                    { paymentSession?.status === PaymentStatus.ERROR &&
+                    <div className="mx-auto flex items-center justify-center p-5">
+                        <h1>An error occured!</h1>
+                        <p className="text-lg text-red-500">
+                          {paymentSession.errorMessage}
+                        </p>
+                    </div>}
+
+
+                    <div className="mx-auto flex items-center justify-center w-full p-1">
+                      {paymentSession?.status && <SolanaPaySteps currentStatus={paymentSession?.status} />}
                     </div>
-                    <div className="mx-auto flex items-center justify-center">
-                      { paymentSession?.status === PaymentStatus.ERROR && <div>
-                          <h1>An error occured!</h1>
-                          <p className="text-lg text-red-500">
-                            {paymentSession.errorMessage}
-                          </p></div>}
-                    </div>
+
 
                     {/*  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">*/}
                   {/*    <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />*/}
