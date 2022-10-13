@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import SolanaPayModal from "./components/SolanaPay/SolanaPayModal";
-import { PaymentInfo, PaymentSession, PaymentType } from "./components/SolanaPay/types";
-import { PublicKey } from "@solana/web3.js";
+import { PaymentInfo, PaymentSession, PaymentStatus, PaymentType } from "./components/SolanaPay/types";
 import { API_URL } from "./components/SolanaPay/constants";
 import SolanaPayInput from "./components/SolanaPay/SolanaPayInput";
+import SocureModal from "./components/Socure/SocureModal";
 
 // @ts-ignore
 BigInt.prototype.toJSON = function() {
@@ -21,7 +21,7 @@ function App() {
 
   const [paymentInfo, setPaymentInfo] = useState<PaymentInfo>(defaultPaymentInfo)
   const [paymentSession, setPaymentSession] = useState<PaymentSession | undefined>()
-
+  const [verificationPublicKey, setVerificationPublicKey] = useState<string|undefined>()
 
   const onClick = () => {
     if (!!paymentSession) {
@@ -58,7 +58,8 @@ function App() {
         >
           Start Payment Flow
         </button>
-        <SolanaPayModal paymentSession={paymentSession} setPaymentSession={setPaymentSession} />
+        <SolanaPayModal paymentSession={paymentSession} setPaymentSession={setPaymentSession} setVerificationPublicKey={setVerificationPublicKey} />
+        <SocureModal verificationPublicKey={verificationPublicKey} setVerificationPublicKey={setVerificationPublicKey} />
       </header>
     </div>
   );

@@ -14,10 +14,11 @@ import { CheckIcon, XCircleIcon } from "@heroicons/react/24/solid";
 interface SolanaPayModalProps {
   paymentSession?: PaymentSession;
   setPaymentSession: (paymentId?: PaymentSession) => void;
+  setVerificationPublicKey: (verificationPublicKey?: string) => void;
 }
 
 // TODO: Split up this monster of a class
-export default function SolanaPayModal({paymentSession, setPaymentSession}: SolanaPayModalProps) {
+export default function SolanaPayModal({paymentSession, setPaymentSession, setVerificationPublicKey}: SolanaPayModalProps) {
 
   // Poll Status
   useInterval(() => {
@@ -37,6 +38,11 @@ export default function SolanaPayModal({paymentSession, setPaymentSession}: Sola
       }, 3000);
     }
   }, [paymentSession])
+
+  const onVerificationClick = () => {
+    setVerificationPublicKey(paymentSession?.paymentInfo.fromWallet)
+    setPaymentSession(undefined);
+  }
 
   return (
     <>
@@ -103,11 +109,23 @@ export default function SolanaPayModal({paymentSession, setPaymentSession}: Sola
                               {paymentSession.errorMessage}
                             </p>
                         </div>
+
                         <div className="mx-auto flex items-center justify-center p-5">
                             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
                                 <XCircleIcon className="h-6 w-6 text-red-600" aria-hidden="true" />
                             </div>
                         </div>
+                        {/*  Start Verification */}
+                        <div className="mt-5 sm:mt-6">
+                            <button
+                                type="button"
+                                className="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"
+                                onClick={onVerificationClick}
+                            >
+                                Verify me now!
+                            </button>
+                        </div>
+
                         </>}
 
 
