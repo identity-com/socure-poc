@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { PaymentSession, PaymentStatus } from "./types";
 import SolanaPayQR from "./SolanaPayQR";
@@ -7,7 +7,7 @@ import { useInterval } from "../../utils/utils";
 import { API_URL } from "./constants";
 import Spinner from "../Various/Spinner";
 import SolanaPayInfo from "./SolanaPayInfo";
-import { CheckIcon } from "@heroicons/react/24/solid";
+import { CheckIcon, XCircleIcon } from "@heroicons/react/24/solid";
 
 
 
@@ -93,12 +93,22 @@ export default function SolanaPayModal({paymentSession, setPaymentSession}: Sola
 
                     {/* ERROR! */}
                     { paymentSession?.status === PaymentStatus.ERROR &&
-                    <div className="mx-auto flex items-center justify-center p-5">
-                        <h1>An error occured!</h1>
-                        <p className="text-lg text-red-500">
-                          {paymentSession.errorMessage}
-                        </p>
-                    </div>}
+                      <>
+                        <div className="mx-auto flex items-center justify-center p-5">
+                            <h1>An error occured!</h1>
+                        </div>
+                          <div className="mx-auto flex items-center justify-center p-5">
+
+                          <p className="text-lg text-red-500">
+                              {paymentSession.errorMessage}
+                            </p>
+                        </div>
+                        <div className="mx-auto flex items-center justify-center p-5">
+                            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
+                                <XCircleIcon className="h-6 w-6 text-red-600" aria-hidden="true" />
+                            </div>
+                        </div>
+                        </>}
 
 
                     <div className="mx-auto flex items-center justify-center w-full p-1">
