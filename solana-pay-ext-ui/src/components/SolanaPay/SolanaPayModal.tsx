@@ -116,6 +116,7 @@ export default function SolanaPayModal({paymentSession, setPaymentSession, setVe
                             </div>
                         </div>
                         {/*  Start Verification */}
+                        {paymentSession.errorMessage?.includes("Gateway Token") &&
                         <div className="mt-5 sm:mt-6">
                             <button
                                 type="button"
@@ -124,7 +125,7 @@ export default function SolanaPayModal({paymentSession, setPaymentSession, setVe
                             >
                                 Verify me now!
                             </button>
-                        </div>
+                        </div>}
 
                         </>}
 

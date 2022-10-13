@@ -33,9 +33,6 @@ export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayI
   const setAmount = (value: string) => {
     const valueAsNumber = parseFloat(value);
     if (!isNaN(valueAsNumber)) {
-      console.log(`Changing amount to ${valueAsNumber}`);
-      console.log(`Changing amount to ${BigInt(valueAsNumber * 1_000_000)}`);
-
       setPaymentInfo({
         ...paymentInfo,
         amount: BigInt(valueAsNumber * 1_000_000),
