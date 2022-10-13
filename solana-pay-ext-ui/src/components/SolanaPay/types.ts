@@ -1,5 +1,3 @@
-import { PublicKey } from "@solana/web3.js";
-
 export const enum PaymentStatus {
   QR = "qr",
   SCANNED = "scanned",

@@ -17,22 +17,11 @@ import { createAssociatedTokenAccountInstructionIfNeeded, getTokenBalance } from
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
 const PAYMENTS_PATH = '/payments';
 const SOLANA_URL_SUFFIX = '/solana';
-const REQUEST_PATH = '/request';
 
 // @ts-ignore
 BigInt.prototype.toJSON = function() {
   return this.toString()
 }
-
-// const bs58 = require('bs58');
-// const {BigNumber} = require('bignumber.js');
-
-
-// const gatekeeperAuthority = Keypair.fromSecretKey(bs58.decode('QzSdRKirjb3Dq64ZoWkxyNwmNVgefWNrAcUGwJF6pVx9ZeiXYCWWc4eBFBYwgP5qBnwmX3nA6PYQqLuqSuuuFsx'));
-// const gatekeeperNetwork = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
-const usdcSPLAddress = new PublicKey('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v');
-const shopAddress = new PublicKey('identv2kHTqjCU1tsgs83b1GgQBU4ukwv34QTctxS8x');
-
 
 const app = express();
 
@@ -41,7 +30,6 @@ app.use(express.json());
 
 
 const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
-// const GATEKEPPER_NETWORK = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
 
 /**
  * Generates a new payment session and returns the given URL
