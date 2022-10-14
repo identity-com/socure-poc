@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "solana-pay-api.fullname" . }}-test-connection"
+  labels:
+    {{- include "solana-pay-api.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "solana-pay-api.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
