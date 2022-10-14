@@ -33,6 +33,19 @@ app.use(express.json());
 
 const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
 
+
+/**
+ * Health response
+ */
+app.get('/', async (request: Request, response: Response) => {
+  response.status(200).send({
+    payments: {
+      status: 'ok',
+      activeSessions: paymentSessionStore.size
+    }
+  });
+});
+
 /**
  * Generates a new payment session and returns the given URL
  */
