@@ -111,7 +111,7 @@ app.get(`${PAYMENTS_PATH}/:id`, async (request: Request, response: Response) => 
  * Get the Store Info
  */
 app.get(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, (request: Request, response: Response) => {
-  console.log("Received initial GET request");
+  // console.log("Received initial GET request");
   const session = paymentSessionStore.get(request.params.id);
   if (!session) {
     response.status(404).send({
@@ -135,9 +135,9 @@ app.get(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, (request: Request, response:
 });
 
 app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, response: Response) => {
-  console.log(JSON.stringify(request.headers));
-  console.log(JSON.stringify(request.body));
-  console.log(`Received POST request for account ${request.body.account}`);
+  // console.log(JSON.stringify(request.headers));
+  // console.log(JSON.stringify(request.body));
+  // console.log(`Received POST request for account ${request.body.account}`);
 
   const session = paymentSessionStore.get(request.params.id);
   if (!session) {

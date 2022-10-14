@@ -1,0 +1,9 @@
+version: "2.3"
+services:
+  solana-pay-ext-api:
+    image: identity-com/solana-pay-ext-api:latest
+    build: .
+    ports:
+      - "3001:80"
+
+
