@@ -25,8 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:prod": "STAGE=prod ./deploy/deploy-site.sh"
+    "deploy:prod": "yarn build && STAGE=prod ./deploy/deploy-site.sh"
   },
+  "homepage": "http://demo.identity.com/solana-pay",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -35,9 +36,11 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
