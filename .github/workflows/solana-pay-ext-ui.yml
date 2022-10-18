@@ -1,13 +1,13 @@
-name: Socure POC Frontend
+name: Solana Pay Sample Frontend
 on:
   push:
     branches:
       - develop
       - main
-      - IDCOM-2019__socure_poc_frontend
+
 jobs:
-  deploy:
-    name: Build and deploy the Socure poc frontend on Node ${{ matrix.node }} and ${{ matrix.os }}
+  frontend:
+    name: Build and deploy the Solana Pay frontend on Node ${{ matrix.node }} and ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}
     strategy:
@@ -33,8 +33,8 @@ jobs:
       - name: Install
         run: yarn install --ignore-scripts --frozen-lockfile
 
-      - name: Build Frontend
-        run: yarn workspace @identity.com/socure-poc-frontend build
+      - name: Build
+        run: yarn workspace solana-pay-ext-ui build
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -44,4 +44,4 @@ jobs:
           aws-region: us-east-2
 
       - name: Deploy
-        run: STAGE=${STAGE:-prod} yarn workspace @identity.com/socure-poc-frontend deploy
+        run: yarn workspace solana-pay-ext-ui deploy:prod

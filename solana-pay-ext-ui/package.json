@@ -1,6 +1,7 @@
 {
   "name": "solana-pay-ext-ui",
   "version": "0.1.0",
+  "license": "MIT",
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
@@ -23,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:prod": "STAGE=prod ./deploy/deploy-site.sh"
   },
   "eslintConfig": {
     "extends": [
