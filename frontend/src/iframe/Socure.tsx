@@ -23,8 +23,15 @@ export default function Socure() {
                 console.log(response);
                 console.log("=== onSuccess: End");
 
+                console.log("POSTING SUCCESS MESSAGE!");
                 window.parent.postMessage({
                     target: "tokenUpdate"
+                },"*" );
+
+                window.parent.postMessage({
+                    target: "socure",
+                    status: 'success',
+                    wallet: token
                 },"*" );
             },
             onError: async (response: any) => {
@@ -35,6 +42,8 @@ export default function Socure() {
 
             qrCodeNeeded: true
         }
+        // await new Promise(r => setTimeout(() => config.onSuccess({}), 2000));
+
 
         SocureInitializer.init(API_KEY)
             .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number, p?: { customerUserId: string | undefined }) => Promise<any>; }) => {
