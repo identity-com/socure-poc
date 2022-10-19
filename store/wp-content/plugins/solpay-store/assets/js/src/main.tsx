@@ -9,8 +9,6 @@ declare const window: SolanaPaymentWindow;
 function Main() {
   return (
       <div id="socure-process">
-        <h2 className="woocommerce-order-details__title">Make Payment</h2>
-
         <div style={{paddingBottom: '1em'}}>
           <SolanaWalet/>
         </div>

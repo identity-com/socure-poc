@@ -14,7 +14,7 @@ import {
   getAssociatedTokenAddress,
   TOKEN_PROGRAM_ID
 } from "@solana/spl-token";
-import {createAssociatedTokenAccountInstructionIfNeeded} from "../lib/utils";
+import {confirmAndRedirect, createAssociatedTokenAccountInstructionIfNeeded} from "../lib/utils";
 import SocureModal from "./solpay/components/Socure/SocureModal";
 
 declare const window: SolanaPaymentWindow;
@@ -127,46 +127,7 @@ function ConnectedApp() {
       const result = await connection.confirmTransaction({blockhash, lastValidBlockHeight, signature});
       // TODO: Disable UI
       if (result.value.err === null) {
-        const transaction = window.SOLANA_PAYMENT_CONFIG.transaction;
-
-        let params: any = {
-          reference: transaction.reference,
-          recipient: transaction.recipient,
-          amount: transaction.amount,
-          label: transaction.label,
-          message: transaction.message,
-          memo: transaction.memo,
-          cluster: window.SOLANA_PAYMENT_CONFIG.cluster,
-          sender: publicKey.toBase58()
-        }
-
-        if (transaction.splToken) {
-          params.splToken = transaction.splToken.toString();
-        }
-
-
-        const formData = new FormData();
-
-        for (let key in params) {
-          formData.append(key, params[key]);
-        }
-
-        formData.append('security', window.SOLANA_PAY_WC_NONCE_CONFIG.nonce);
-
-        const response = await fetch(window.SOLANA_PAYMENT_CONFIG.paymentNotificationEndpoint, {
-          method: 'POST',
-          body: formData
-        }).then(response => response.json());
-
-        if (response.errors) {
-          console.log(response.errors);
-          setPaying(false);
-          return;
-        }
-
-        if (response.redirectUrl) {
-          window.location.href = response.redirectUrl;
-        }
+        confirmAndRedirect(toTokenAccount);
       }
     } catch (e) {
       alert(e);
@@ -177,7 +138,8 @@ function ConnectedApp() {
 
   return (
       !publicKey && <></> ||
-s                                              setVerificationPublicKey={setVerificationPublicKey}
+      !!verificationPublicKey && <SocureModal verificationPublicKey={verificationPublicKey}
+                                              setVerificationPublicKey={setVerificationPublicKey}
                                               onComplete={setToken}
                                               connection={connection}/> ||
       tokenCheck === false && <div className="status-text">Checking for token</div> ||

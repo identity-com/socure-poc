@@ -14,6 +14,7 @@
         "@types/react-dom": "^18.0.0",
         "bignumber.js": "9.0.2",
         "crypto-browserify": "^3.12.0",
+        "jquery": "^3.6.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
@@ -27,6 +28,7 @@
         "css": "npx tailwindcss -i ./js/src/input.css -o ./js/src/output.css --watch"
     },
     "devDependencies": {
+        "@types/jquery": "^3.5.14",
         "cross-env": "^7.0.3",
         "laravel-mix": "^6.0.41",
         "resolve-url-loader": "^5.0.0",

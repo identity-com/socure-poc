@@ -1098,6 +1098,27 @@ video {
   background-color: #fff;
 }
 
+.wallet-adapter-button-trigger {
+  background-color: #512da8 !important;
+}
+
+.o-page__title {
+  font: 16px/1.563 "DM Sans", Arial !important;
+  font-size: 2.0625rem !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.woocommerce-order-details__title {
+  font: 16px/1.563 "DM Sans", Arial !important;
+  font-size: 1.625rem !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  max-width: 100% !important;
+}
+
 .hover\:bg-indigo-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));

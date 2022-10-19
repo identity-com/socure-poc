@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {PaymentInfo, PaymentSession, PaymentType} from "./solpay/components/SolanaPay/types";
 import SolanaPayModal from "./solpay/components/SolanaPay/SolanaPayModal";
 import {API_URL} from "./solpay/components/SolanaPay/constants";
 import SocureModal from "./solpay/components/Socure/SocureModal";
-import {clusterApiUrl, Connection} from "@solana/web3.js";
+import {clusterApiUrl, Connection, PublicKey} from "@solana/web3.js";
+import {confirmAndRedirect} from "../lib/utils";
 
 export type SolanaPayProps = {
   amount: number,
@@ -18,7 +19,7 @@ export default function SolanaPay({
                                     amount,
                                     toWallet,
                                     reference,
-                                    mint = '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU'
+                                    mint = '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU',
                                   }: SolanaPayProps) {
   const providedPaymentInfo: PaymentInfo = {
     amount,
@@ -49,15 +50,47 @@ export default function SolanaPay({
   }
 
   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+  // {
+  //   "id": "84ec7a73-3e45-4764-9053-e0cc7940337c",
+  //     "url": "https://pay-demo-api.identity.com/payments/84ec7a73-3e45-4764-9053-e0cc7940337c/solana",
+  //     "paymentInfo": {
+  //   "type": "spl",
+  //       "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+  //       "toWallet": "FuRbm4WDM83to4w25ZwiYfVz1f5TNwkZiMHV8cH9hDtR",
+  //       "amount": 900,
+  //       "toTokenAccount": "FJQDsHW4JCo36cWiAB6BDbdCjdJ4DT46yXQrZhjt7g6q",
+  //       "toTokenAccountBalanceBefore": "709127",
+  //       "gatekeeperNetwork": "tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf",
+  //       "fromWallet": "8tYN1Msbk2rnoeGSAAHQKDEJzjU3BsjR2ZUeR7ud7tHd"
+  // },
+  //   "status": "tx_confirmed",
+  //     "createdAt": "2022-10-19T20:39:05.188Z"
+  // }
+  const statusUpdate = (session: PaymentSession) => {
+    if (session.status === 'tx_confirmed' && session.paymentInfo.fromWallet) {
+      confirmAndRedirect(new PublicKey(session.paymentInfo.fromWallet));
+    }
+  }
 
   return (
       <>
-        <button className="wallet-adapter-button wallet-adapter-button-trigger"
-                onClick={onClick}>Pay with Solana Pay
+        <button type="button" className="wallet-adapter-button wallet-adapter-button-trigger"
+                onClick={onClick}>
+          <svg width="16px" height="16px" viewBox="0 0 39 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="logo-wide-SVG" fill="#FFFFFF">
+                <path
+                    d="M38.8499225,6.80908008e-05 L38.849,9.264 L16.8611385,9.26474022 L15.5371385,10.5877402 L38.849,10.588 L38.8493861,17.21 L26.0513861,29.999 L0.000454204384,30 L0,20.735 L22.0744294,20.7353151 L23.3984294,19.4123151 L0,19.411 L0.000386067935,12.696 L12.7053861,0 L38.8499225,6.80908008e-05 Z"
+                    id="Combined-Shape"></path>
+              </g>
+            </g>
+          </svg>
+          &nbsp; Pay with Solana Pay
         </button>
 
         <SolanaPayModal paymentSession={paymentSession} setPaymentSession={setPaymentSession}
-                        setVerificationPublicKey={setVerificationPublicKey}/>
+                        setVerificationPublicKey={setVerificationPublicKey}
+                        onStatus={statusUpdate}/>
 
         <SocureModal verificationPublicKey={verificationPublicKey}
                      setVerificationPublicKey={setVerificationPublicKey}
