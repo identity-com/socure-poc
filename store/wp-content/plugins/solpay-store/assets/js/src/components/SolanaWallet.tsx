@@ -15,15 +15,16 @@ import {
   TOKEN_PROGRAM_ID
 } from "@solana/spl-token";
 import {createAssociatedTokenAccountInstructionIfNeeded} from "../lib/utils";
+import SocureModal from "./solpay/components/Socure/SocureModal";
 
 declare const window: SolanaPaymentWindow;
 
 
 function ConnectedApp() {
   const [token, setToken] = useState<GatewayToken | null | undefined>(undefined);
-  const [showIframe, setShowIframe] = useState(false);
   let [tokenCheck, setTokenCheck] = useState<boolean | undefined>(undefined);
   let [paying, setPaying] = useState<boolean>(false);
+  const [verificationPublicKey, setVerificationPublicKey] = useState<string | undefined>()
 
   const {publicKey, sendTransaction} = useWallet();
   const {connection} = useConnection();
@@ -50,15 +51,15 @@ function ConnectedApp() {
     }
   }
 
-  window.addEventListener("message", function (e) {
-    if (e.data.target === 'tokenUpdate') {
-      setTokenCheck(false);
-      tokenCheck = false; // ?!?
-      setShowIframe(false);
-
-      checkForToken();
-    }
-  });
+  // window.addEventListener("message", function (e) {
+  //   if (e.data.target === 'tokenUpdate') {
+  //     setTokenCheck(false);
+  //     tokenCheck = false; // ?!?
+  //     setShowIframe(false);
+  //
+  //     checkForToken();
+  //   }
+  // });
 
   useEffect(() => {
     (async () => {
@@ -111,22 +112,10 @@ function ConnectedApp() {
         isSigner: false
       });
 
-      const transaction = new Transaction({
-      }).add(
+      const transaction = new Transaction({}).add(
           ...optionalCreateAssociatedTokenAccountInstructions,
           transferInstruction
       )
-
-      // const instruction = SystemProgram.transfer({
-      //   fromPubkey: publicKey,
-      //   toPubkey: new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.recipient),
-      //   lamports: window.SOLANA_PAYMENT_CONFIG.transaction.amount * LAMPORTS_PER_SOL,
-      // });
-      // instruction.keys.push({
-      //   pubkey: new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.reference),
-      //   isWritable: false,
-      //   isSigner: false
-      // });
 
       const {
         context: {slot: minContextSlot},
@@ -188,13 +177,14 @@ function ConnectedApp() {
 
   return (
       !publicKey && <></> ||
-      showIframe && <IFrameContainer visible={showIframe} hide={() => setShowIframe(false)}
-                                     source={`${SOCURE_UI_BASE_URL}${publicKey?.toBase58()}`}/> ||
+s                                              setVerificationPublicKey={setVerificationPublicKey}
+                                              onComplete={setToken}
+                                              connection={connection}/> ||
       tokenCheck === false && <div className="status-text">Checking for token</div> ||
       (
           token === undefined && <div className="status-text">Checking For Pass</div> ||
           token === null &&
-          <button onClick={() => setShowIframe(true)}
+          <button onClick={() => publicKey && setVerificationPublicKey(publicKey.toBase58())}
                   className="wallet-adapter-button wallet-adapter-button-trigger verify-button">Verify
             Identity</button> ||
           <button onClick={makePayment} disabled={paying}
@@ -203,7 +193,7 @@ function ConnectedApp() {
   )
 }
 
-export default function SolanaWalet() {
+export default function SolanaWallet() {
   const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => clusterApiUrl(window.SOLANA_PAYMENT_CONFIG.cluster), [network]);
 

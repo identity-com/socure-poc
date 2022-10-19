@@ -14503,11940 +14503,6 @@ function isObject(a) {
 
 /***/ }),
 
-/***/ "./node_modules/@solana/buffer-layout-utils/node_modules/@solana/web3.js/lib/index.browser.esm.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/@solana/buffer-layout-utils/node_modules/@solana/web3.js/lib/index.browser.esm.js ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Account": () => (/* binding */ Account),
-/* harmony export */   "AddressLookupTableAccount": () => (/* binding */ AddressLookupTableAccount),
-/* harmony export */   "AddressLookupTableInstruction": () => (/* binding */ AddressLookupTableInstruction),
-/* harmony export */   "AddressLookupTableProgram": () => (/* binding */ AddressLookupTableProgram),
-/* harmony export */   "Authorized": () => (/* binding */ Authorized),
-/* harmony export */   "BLOCKHASH_CACHE_TIMEOUT_MS": () => (/* binding */ BLOCKHASH_CACHE_TIMEOUT_MS),
-/* harmony export */   "BPF_LOADER_DEPRECATED_PROGRAM_ID": () => (/* binding */ BPF_LOADER_DEPRECATED_PROGRAM_ID),
-/* harmony export */   "BPF_LOADER_PROGRAM_ID": () => (/* binding */ BPF_LOADER_PROGRAM_ID),
-/* harmony export */   "BpfLoader": () => (/* binding */ BpfLoader),
-/* harmony export */   "COMPUTE_BUDGET_INSTRUCTION_LAYOUTS": () => (/* binding */ COMPUTE_BUDGET_INSTRUCTION_LAYOUTS),
-/* harmony export */   "ComputeBudgetInstruction": () => (/* binding */ ComputeBudgetInstruction),
-/* harmony export */   "ComputeBudgetProgram": () => (/* binding */ ComputeBudgetProgram),
-/* harmony export */   "Connection": () => (/* binding */ Connection),
-/* harmony export */   "Ed25519Program": () => (/* binding */ Ed25519Program),
-/* harmony export */   "Enum": () => (/* binding */ Enum),
-/* harmony export */   "EpochSchedule": () => (/* binding */ EpochSchedule),
-/* harmony export */   "FeeCalculatorLayout": () => (/* binding */ FeeCalculatorLayout),
-/* harmony export */   "Keypair": () => (/* binding */ Keypair),
-/* harmony export */   "LAMPORTS_PER_SOL": () => (/* binding */ LAMPORTS_PER_SOL),
-/* harmony export */   "LOOKUP_TABLE_INSTRUCTION_LAYOUTS": () => (/* binding */ LOOKUP_TABLE_INSTRUCTION_LAYOUTS),
-/* harmony export */   "Loader": () => (/* binding */ Loader),
-/* harmony export */   "Lockup": () => (/* binding */ Lockup),
-/* harmony export */   "MAX_SEED_LENGTH": () => (/* binding */ MAX_SEED_LENGTH),
-/* harmony export */   "Message": () => (/* binding */ Message),
-/* harmony export */   "MessageAccountKeys": () => (/* binding */ MessageAccountKeys),
-/* harmony export */   "MessageV0": () => (/* binding */ MessageV0),
-/* harmony export */   "NONCE_ACCOUNT_LENGTH": () => (/* binding */ NONCE_ACCOUNT_LENGTH),
-/* harmony export */   "NonceAccount": () => (/* binding */ NonceAccount),
-/* harmony export */   "PACKET_DATA_SIZE": () => (/* binding */ PACKET_DATA_SIZE),
-/* harmony export */   "PUBLIC_KEY_LENGTH": () => (/* binding */ PUBLIC_KEY_LENGTH),
-/* harmony export */   "PublicKey": () => (/* binding */ PublicKey),
-/* harmony export */   "SIGNATURE_LENGTH_IN_BYTES": () => (/* binding */ SIGNATURE_LENGTH_IN_BYTES),
-/* harmony export */   "SOLANA_SCHEMA": () => (/* binding */ SOLANA_SCHEMA),
-/* harmony export */   "STAKE_CONFIG_ID": () => (/* binding */ STAKE_CONFIG_ID),
-/* harmony export */   "STAKE_INSTRUCTION_LAYOUTS": () => (/* binding */ STAKE_INSTRUCTION_LAYOUTS),
-/* harmony export */   "SYSTEM_INSTRUCTION_LAYOUTS": () => (/* binding */ SYSTEM_INSTRUCTION_LAYOUTS),
-/* harmony export */   "SYSVAR_CLOCK_PUBKEY": () => (/* binding */ SYSVAR_CLOCK_PUBKEY),
-/* harmony export */   "SYSVAR_EPOCH_SCHEDULE_PUBKEY": () => (/* binding */ SYSVAR_EPOCH_SCHEDULE_PUBKEY),
-/* harmony export */   "SYSVAR_INSTRUCTIONS_PUBKEY": () => (/* binding */ SYSVAR_INSTRUCTIONS_PUBKEY),
-/* harmony export */   "SYSVAR_RECENT_BLOCKHASHES_PUBKEY": () => (/* binding */ SYSVAR_RECENT_BLOCKHASHES_PUBKEY),
-/* harmony export */   "SYSVAR_RENT_PUBKEY": () => (/* binding */ SYSVAR_RENT_PUBKEY),
-/* harmony export */   "SYSVAR_REWARDS_PUBKEY": () => (/* binding */ SYSVAR_REWARDS_PUBKEY),
-/* harmony export */   "SYSVAR_SLOT_HASHES_PUBKEY": () => (/* binding */ SYSVAR_SLOT_HASHES_PUBKEY),
-/* harmony export */   "SYSVAR_SLOT_HISTORY_PUBKEY": () => (/* binding */ SYSVAR_SLOT_HISTORY_PUBKEY),
-/* harmony export */   "SYSVAR_STAKE_HISTORY_PUBKEY": () => (/* binding */ SYSVAR_STAKE_HISTORY_PUBKEY),
-/* harmony export */   "Secp256k1Program": () => (/* binding */ Secp256k1Program),
-/* harmony export */   "SendTransactionError": () => (/* binding */ SendTransactionError),
-/* harmony export */   "SolanaJSONRPCError": () => (/* binding */ SolanaJSONRPCError),
-/* harmony export */   "SolanaJSONRPCErrorCode": () => (/* binding */ SolanaJSONRPCErrorCode),
-/* harmony export */   "StakeAuthorizationLayout": () => (/* binding */ StakeAuthorizationLayout),
-/* harmony export */   "StakeInstruction": () => (/* binding */ StakeInstruction),
-/* harmony export */   "StakeProgram": () => (/* binding */ StakeProgram),
-/* harmony export */   "Struct": () => (/* binding */ Struct),
-/* harmony export */   "SystemInstruction": () => (/* binding */ SystemInstruction),
-/* harmony export */   "SystemProgram": () => (/* binding */ SystemProgram),
-/* harmony export */   "Transaction": () => (/* binding */ Transaction),
-/* harmony export */   "TransactionExpiredBlockheightExceededError": () => (/* binding */ TransactionExpiredBlockheightExceededError),
-/* harmony export */   "TransactionExpiredTimeoutError": () => (/* binding */ TransactionExpiredTimeoutError),
-/* harmony export */   "TransactionInstruction": () => (/* binding */ TransactionInstruction),
-/* harmony export */   "TransactionMessage": () => (/* binding */ TransactionMessage),
-/* harmony export */   "TransactionStatus": () => (/* binding */ TransactionStatus),
-/* harmony export */   "VALIDATOR_INFO_KEY": () => (/* binding */ VALIDATOR_INFO_KEY),
-/* harmony export */   "VERSION_PREFIX_MASK": () => (/* binding */ VERSION_PREFIX_MASK),
-/* harmony export */   "VOTE_PROGRAM_ID": () => (/* binding */ VOTE_PROGRAM_ID),
-/* harmony export */   "ValidatorInfo": () => (/* binding */ ValidatorInfo),
-/* harmony export */   "VersionedMessage": () => (/* binding */ VersionedMessage),
-/* harmony export */   "VersionedTransaction": () => (/* binding */ VersionedTransaction),
-/* harmony export */   "VoteAccount": () => (/* binding */ VoteAccount),
-/* harmony export */   "VoteAuthorizationLayout": () => (/* binding */ VoteAuthorizationLayout),
-/* harmony export */   "VoteInit": () => (/* binding */ VoteInit),
-/* harmony export */   "VoteInstruction": () => (/* binding */ VoteInstruction),
-/* harmony export */   "VoteProgram": () => (/* binding */ VoteProgram),
-/* harmony export */   "clusterApiUrl": () => (/* binding */ clusterApiUrl),
-/* harmony export */   "sendAndConfirmRawTransaction": () => (/* binding */ sendAndConfirmRawTransaction),
-/* harmony export */   "sendAndConfirmTransaction": () => (/* binding */ sendAndConfirmTransaction)
-/* harmony export */ });
-/* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! buffer */ "./node_modules/@solana/buffer-layout-utils/node_modules/buffer/index.js");
-/* harmony import */ var _noble_hashes_sha512__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @noble/hashes/sha512 */ "./node_modules/@noble/hashes/esm/sha512.js");
-/* harmony import */ var _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @noble/ed25519 */ "./node_modules/@noble/ed25519/lib/esm/index.js");
-/* harmony import */ var bn_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bn.js */ "./node_modules/bn.js/lib/bn.js");
-/* harmony import */ var bn_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(bn_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var bs58__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bs58 */ "./node_modules/bs58/index.js");
-/* harmony import */ var bs58__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bs58__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _noble_hashes_sha256__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @noble/hashes/sha256 */ "./node_modules/@noble/hashes/esm/sha256.js");
-/* harmony import */ var borsh__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! borsh */ "./node_modules/borsh/lib/index.js");
-/* harmony import */ var borsh__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(borsh__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @solana/buffer-layout */ "./node_modules/@solana/buffer-layout/lib/Layout.js");
-/* harmony import */ var bigint_buffer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bigint-buffer */ "./node_modules/bigint-buffer/dist/browser.js");
-/* harmony import */ var superstruct__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! superstruct */ "./node_modules/superstruct/lib/index.es.js");
-/* harmony import */ var rpc_websockets__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rpc-websockets */ "./node_modules/rpc-websockets/dist/index.browser.js");
-/* harmony import */ var jayson_lib_client_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! jayson/lib/client/browser */ "./node_modules/jayson/lib/client/browser/index.js");
-/* harmony import */ var jayson_lib_client_browser__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(jayson_lib_client_browser__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _noble_hashes_sha3__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @noble/hashes/sha3 */ "./node_modules/@noble/hashes/esm/sha3.js");
-/* harmony import */ var _noble_hashes_hmac__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @noble/hashes/hmac */ "./node_modules/@noble/hashes/esm/hmac.js");
-/* harmony import */ var _noble_secp256k1__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @noble/secp256k1 */ "./node_modules/@noble/secp256k1/lib/esm/index.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * A 64 byte secret key, the first 32 bytes of which is the
- * private scalar and the last 32 bytes is the public key.
- * Read more: https://blog.mozilla.org/warner/2011/11/29/ed25519-keys/
- */
-
-_noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.utils.sha512Sync = (...m) => (0,_noble_hashes_sha512__WEBPACK_IMPORTED_MODULE_1__.sha512)(_noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.utils.concatBytes(...m));
-
-const generatePrivateKey = _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.utils.randomPrivateKey;
-const generateKeypair = () => {
-  const privateScalar = _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.utils.randomPrivateKey();
-  const publicKey = getPublicKey(privateScalar);
-  const secretKey = new Uint8Array(64);
-  secretKey.set(privateScalar);
-  secretKey.set(publicKey, 32);
-  return {
-    publicKey,
-    secretKey
-  };
-};
-const getPublicKey = _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.sync.getPublicKey;
-function isOnCurve(publicKey) {
-  try {
-    _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.Point.fromHex(publicKey, true
-    /* strict */
-    );
-    return true;
-  } catch {
-    return false;
-  }
-}
-const sign = (message, secretKey) => _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.sync.sign(message, secretKey.slice(0, 32));
-const verify = _noble_ed25519__WEBPACK_IMPORTED_MODULE_2__.sync.verify;
-
-const toBuffer = arr => {
-  if (buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.isBuffer(arr)) {
-    return arr;
-  } else if (arr instanceof Uint8Array) {
-    return buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength);
-  } else {
-    return buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(arr);
-  }
-};
-
-class Struct {
-  constructor(properties) {
-    Object.assign(this, properties);
-  }
-
-  encode() {
-    return buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from((0,borsh__WEBPACK_IMPORTED_MODULE_6__.serialize)(SOLANA_SCHEMA, this));
-  }
-
-  static decode(data) {
-    return (0,borsh__WEBPACK_IMPORTED_MODULE_6__.deserialize)(SOLANA_SCHEMA, this, data);
-  }
-
-  static decodeUnchecked(data) {
-    return (0,borsh__WEBPACK_IMPORTED_MODULE_6__.deserializeUnchecked)(SOLANA_SCHEMA, this, data);
-  }
-
-} // Class representing a Rust-compatible enum, since enums are only strings or
-// numbers in pure JS
-
-class Enum extends Struct {
-  constructor(properties) {
-    super(properties);
-    this.enum = '';
-
-    if (Object.keys(properties).length !== 1) {
-      throw new Error('Enum can only take single value');
-    }
-
-    Object.keys(properties).map(key => {
-      this.enum = key;
-    });
-  }
-
-}
-const SOLANA_SCHEMA = new Map();
-
-/**
- * Maximum length of derived pubkey seed
- */
-
-const MAX_SEED_LENGTH = 32;
-/**
- * Size of public key in bytes
- */
-
-const PUBLIC_KEY_LENGTH = 32;
-/**
- * Value to be converted into public key
- */
-
-function isPublicKeyData(value) {
-  return value._bn !== undefined;
-} // local counter used by PublicKey.unique()
-
-
-let uniquePublicKeyCounter = 1;
-/**
- * A public key
- */
-
-class PublicKey extends Struct {
-  /** @internal */
-
-  /**
-   * Create a new PublicKey object
-   * @param value ed25519 public key as buffer or base-58 encoded string
-   */
-  constructor(value) {
-    super({});
-    this._bn = void 0;
-
-    if (isPublicKeyData(value)) {
-      this._bn = value._bn;
-    } else {
-      if (typeof value === 'string') {
-        // assume base 58 encoding by default
-        const decoded = bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(value);
-
-        if (decoded.length != PUBLIC_KEY_LENGTH) {
-          throw new Error(`Invalid public key input`);
-        }
-
-        this._bn = new (bn_js__WEBPACK_IMPORTED_MODULE_3___default())(decoded);
-      } else {
-        this._bn = new (bn_js__WEBPACK_IMPORTED_MODULE_3___default())(value);
-      }
-
-      if (this._bn.byteLength() > 32) {
-        throw new Error(`Invalid public key input`);
-      }
-    }
-  }
-  /**
-   * Returns a unique PublicKey for tests and benchmarks using acounter
-   */
-
-
-  static unique() {
-    const key = new PublicKey(uniquePublicKeyCounter);
-    uniquePublicKeyCounter += 1;
-    return new PublicKey(key.toBuffer());
-  }
-  /**
-   * Default public key value. (All zeros)
-   */
-
-
-  /**
-   * Checks if two publicKeys are equal
-   */
-  equals(publicKey) {
-    return this._bn.eq(publicKey._bn);
-  }
-  /**
-   * Return the base-58 representation of the public key
-   */
-
-
-  toBase58() {
-    return bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(this.toBytes());
-  }
-
-  toJSON() {
-    return this.toBase58();
-  }
-  /**
-   * Return the byte array representation of the public key
-   */
-
-
-  toBytes() {
-    return this.toBuffer();
-  }
-  /**
-   * Return the Buffer representation of the public key
-   */
-
-
-  toBuffer() {
-    const b = this._bn.toArrayLike(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer);
-
-    if (b.length === PUBLIC_KEY_LENGTH) {
-      return b;
-    }
-
-    const zeroPad = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(32);
-    b.copy(zeroPad, 32 - b.length);
-    return zeroPad;
-  }
-  /**
-   * Return the base-58 representation of the public key
-   */
-
-
-  toString() {
-    return this.toBase58();
-  }
-  /**
-   * Derive a public key from another key, a seed, and a program ID.
-   * The program ID will also serve as the owner of the public key, giving
-   * it permission to write data to the account.
-   */
-
-  /* eslint-disable require-await */
-
-
-  static async createWithSeed(fromPublicKey, seed, programId) {
-    const buffer = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.concat([fromPublicKey.toBuffer(), buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(seed), programId.toBuffer()]);
-    const publicKeyBytes = (0,_noble_hashes_sha256__WEBPACK_IMPORTED_MODULE_5__.sha256)(buffer);
-    return new PublicKey(publicKeyBytes);
-  }
-  /**
-   * Derive a program address from seeds and a program ID.
-   */
-
-  /* eslint-disable require-await */
-
-
-  static createProgramAddressSync(seeds, programId) {
-    let buffer = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(0);
-    seeds.forEach(function (seed) {
-      if (seed.length > MAX_SEED_LENGTH) {
-        throw new TypeError(`Max seed length exceeded`);
-      }
-
-      buffer = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.concat([buffer, toBuffer(seed)]);
-    });
-    buffer = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.concat([buffer, programId.toBuffer(), buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from('ProgramDerivedAddress')]);
-    const publicKeyBytes = (0,_noble_hashes_sha256__WEBPACK_IMPORTED_MODULE_5__.sha256)(buffer);
-
-    if (isOnCurve(publicKeyBytes)) {
-      throw new Error(`Invalid seeds, address must fall off the curve`);
-    }
-
-    return new PublicKey(publicKeyBytes);
-  }
-  /**
-   * Async version of createProgramAddressSync
-   * For backwards compatibility
-   */
-
-  /* eslint-disable require-await */
-
-
-  static async createProgramAddress(seeds, programId) {
-    return this.createProgramAddressSync(seeds, programId);
-  }
-  /**
-   * Find a valid program address
-   *
-   * Valid program addresses must fall off the ed25519 curve.  This function
-   * iterates a nonce until it finds one that when combined with the seeds
-   * results in a valid program address.
-   */
-
-
-  static findProgramAddressSync(seeds, programId) {
-    let nonce = 255;
-    let address;
-
-    while (nonce != 0) {
-      try {
-        const seedsWithNonce = seeds.concat(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from([nonce]));
-        address = this.createProgramAddressSync(seedsWithNonce, programId);
-      } catch (err) {
-        if (err instanceof TypeError) {
-          throw err;
-        }
-
-        nonce--;
-        continue;
-      }
-
-      return [address, nonce];
-    }
-
-    throw new Error(`Unable to find a viable program address nonce`);
-  }
-  /**
-   * Async version of findProgramAddressSync
-   * For backwards compatibility
-   */
-
-
-  static async findProgramAddress(seeds, programId) {
-    return this.findProgramAddressSync(seeds, programId);
-  }
-  /**
-   * Check that a pubkey is on the ed25519 curve.
-   */
-
-
-  static isOnCurve(pubkeyData) {
-    const pubkey = new PublicKey(pubkeyData);
-    return isOnCurve(pubkey.toBytes());
-  }
-
-}
-PublicKey.default = new PublicKey('11111111111111111111111111111111');
-SOLANA_SCHEMA.set(PublicKey, {
-  kind: 'struct',
-  fields: [['_bn', 'u256']]
-});
-
-/**
- * An account key pair (public and secret keys).
- *
- * @deprecated since v1.10.0, please use {@link Keypair} instead.
- */
-
-class Account {
-  /** @internal */
-
-  /** @internal */
-
-  /**
-   * Create a new Account object
-   *
-   * If the secretKey parameter is not provided a new key pair is randomly
-   * created for the account
-   *
-   * @param secretKey Secret key for the account
-   */
-  constructor(secretKey) {
-    this._publicKey = void 0;
-    this._secretKey = void 0;
-
-    if (secretKey) {
-      const secretKeyBuffer = toBuffer(secretKey);
-
-      if (secretKey.length !== 64) {
-        throw new Error('bad secret key size');
-      }
-
-      this._publicKey = secretKeyBuffer.slice(32, 64);
-      this._secretKey = secretKeyBuffer.slice(0, 32);
-    } else {
-      this._secretKey = toBuffer(generatePrivateKey());
-      this._publicKey = toBuffer(getPublicKey(this._secretKey));
-    }
-  }
-  /**
-   * The public key for this account
-   */
-
-
-  get publicKey() {
-    return new PublicKey(this._publicKey);
-  }
-  /**
-   * The **unencrypted** secret key for this account. The first 32 bytes
-   * is the private scalar and the last 32 bytes is the public key.
-   * Read more: https://blog.mozilla.org/warner/2011/11/29/ed25519-keys/
-   */
-
-
-  get secretKey() {
-    return buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.concat([this._secretKey, this._publicKey], 64);
-  }
-
-}
-
-const BPF_LOADER_DEPRECATED_PROGRAM_ID = new PublicKey('BPFLoader1111111111111111111111111111111111');
-
-/**
- * Maximum over-the-wire size of a Transaction
- *
- * 1280 is IPv6 minimum MTU
- * 40 bytes is the size of the IPv6 header
- * 8 bytes is the size of the fragment header
- */
-const PACKET_DATA_SIZE = 1280 - 40 - 8;
-const VERSION_PREFIX_MASK = 0x7f;
-const SIGNATURE_LENGTH_IN_BYTES = 64;
-
-class TransactionExpiredBlockheightExceededError extends Error {
-  constructor(signature) {
-    super(`Signature ${signature} has expired: block height exceeded.`);
-    this.signature = void 0;
-    this.signature = signature;
-  }
-
-}
-Object.defineProperty(TransactionExpiredBlockheightExceededError.prototype, 'name', {
-  value: 'TransactionExpiredBlockheightExceededError'
-});
-class TransactionExpiredTimeoutError extends Error {
-  constructor(signature, timeoutSeconds) {
-    super(`Transaction was not confirmed in ${timeoutSeconds.toFixed(2)} seconds. It is ` + 'unknown if it succeeded or failed. Check signature ' + `${signature} using the Solana Explorer or CLI tools.`);
-    this.signature = void 0;
-    this.signature = signature;
-  }
-
-}
-Object.defineProperty(TransactionExpiredTimeoutError.prototype, 'name', {
-  value: 'TransactionExpiredTimeoutError'
-});
-
-class MessageAccountKeys {
-  constructor(staticAccountKeys, accountKeysFromLookups) {
-    this.staticAccountKeys = void 0;
-    this.accountKeysFromLookups = void 0;
-    this.staticAccountKeys = staticAccountKeys;
-    this.accountKeysFromLookups = accountKeysFromLookups;
-  }
-
-  keySegments() {
-    const keySegments = [this.staticAccountKeys];
-
-    if (this.accountKeysFromLookups) {
-      keySegments.push(this.accountKeysFromLookups.writable);
-      keySegments.push(this.accountKeysFromLookups.readonly);
-    }
-
-    return keySegments;
-  }
-
-  get(index) {
-    for (const keySegment of this.keySegments()) {
-      if (index < keySegment.length) {
-        return keySegment[index];
-      } else {
-        index -= keySegment.length;
-      }
-    }
-
-    return;
-  }
-
-  get length() {
-    return this.keySegments().flat().length;
-  }
-
-  compileInstructions(instructions) {
-    // Bail early if any account indexes would overflow a u8
-    const U8_MAX = 255;
-
-    if (this.length > U8_MAX + 1) {
-      throw new Error('Account index overflow encountered during compilation');
-    }
-
-    const keyIndexMap = new Map();
-    this.keySegments().flat().forEach((key, index) => {
-      keyIndexMap.set(key.toBase58(), index);
-    });
-
-    const findKeyIndex = key => {
-      const keyIndex = keyIndexMap.get(key.toBase58());
-      if (keyIndex === undefined) throw new Error('Encountered an unknown instruction account key during compilation');
-      return keyIndex;
-    };
-
-    return instructions.map(instruction => {
-      return {
-        programIdIndex: findKeyIndex(instruction.programId),
-        accountKeyIndexes: instruction.keys.map(meta => findKeyIndex(meta.pubkey)),
-        data: instruction.data
-      };
-    });
-  }
-
-}
-
-/**
- * Layout for a public key
- */
-const publicKey = (property = 'publicKey') => {
-  return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(32, property);
-};
-/**
- * Layout for a signature
- */
-
-const signature = (property = 'signature') => {
-  return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(64, property);
-};
-
-/**
- * Layout for a Rust String type
- */
-const rustString = (property = 'string') => {
-  const rsl = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('length'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('lengthPadding'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32(), -8), 'chars')], property);
-
-  const _decode = rsl.decode.bind(rsl);
-
-  const _encode = rsl.encode.bind(rsl);
-
-  const rslShim = rsl;
-
-  rslShim.decode = (b, offset) => {
-    const data = _decode(b, offset);
-
-    return data['chars'].toString();
-  };
-
-  rslShim.encode = (str, b, offset) => {
-    const data = {
-      chars: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(str, 'utf8')
-    };
-    return _encode(data, b, offset);
-  };
-
-  rslShim.alloc = str => {
-    return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32().span + _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32().span + buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(str, 'utf8').length;
-  };
-
-  return rslShim;
-};
-/**
- * Layout for an Authorized object
- */
-
-const authorized = (property = 'authorized') => {
-  return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([publicKey('staker'), publicKey('withdrawer')], property);
-};
-/**
- * Layout for a Lockup object
- */
-
-const lockup = (property = 'lockup') => {
-  return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('unixTimestamp'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('epoch'), publicKey('custodian')], property);
-};
-/**
- *  Layout for a VoteInit object
- */
-
-const voteInit = (property = 'voteInit') => {
-  return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([publicKey('nodePubkey'), publicKey('authorizedVoter'), publicKey('authorizedWithdrawer'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('commission')], property);
-};
-/**
- *  Layout for a VoteAuthorizeWithSeedArgs object
- */
-
-const voteAuthorizeWithSeedArgs = (property = 'voteAuthorizeWithSeedArgs') => {
-  return _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('voteAuthorizationType'), publicKey('currentAuthorityDerivedKeyOwnerPubkey'), rustString('currentAuthorityDerivedKeySeed'), publicKey('newAuthorized')], property);
-};
-function getAlloc(type, fields) {
-  const getItemAlloc = item => {
-    if (item.span >= 0) {
-      return item.span;
-    } else if (typeof item.alloc === 'function') {
-      return item.alloc(fields[item.property]);
-    } else if ('count' in item && 'elementLayout' in item) {
-      const field = fields[item.property];
-
-      if (Array.isArray(field)) {
-        return field.length * getItemAlloc(item.elementLayout);
-      }
-    } else if ('fields' in item) {
-      // This is a `Structure` whose size needs to be recursively measured.
-      return getAlloc({
-        layout: item
-      }, fields[item.property]);
-    } // Couldn't determine allocated size of layout
-
-
-    return 0;
-  };
-
-  let alloc = 0;
-  type.layout.fields.forEach(item => {
-    alloc += getItemAlloc(item);
-  });
-  return alloc;
-}
-
-function decodeLength(bytes) {
-  let len = 0;
-  let size = 0;
-
-  for (;;) {
-    let elem = bytes.shift();
-    len |= (elem & 0x7f) << size * 7;
-    size += 1;
-
-    if ((elem & 0x80) === 0) {
-      break;
-    }
-  }
-
-  return len;
-}
-function encodeLength(bytes, len) {
-  let rem_len = len;
-
-  for (;;) {
-    let elem = rem_len & 0x7f;
-    rem_len >>= 7;
-
-    if (rem_len == 0) {
-      bytes.push(elem);
-      break;
-    } else {
-      elem |= 0x80;
-      bytes.push(elem);
-    }
-  }
-}
-
-function assert (condition, message) {
-  if (!condition) {
-    throw new Error(message || 'Assertion failed');
-  }
-}
-
-class CompiledKeys {
-  constructor(payer, keyMetaMap) {
-    this.payer = void 0;
-    this.keyMetaMap = void 0;
-    this.payer = payer;
-    this.keyMetaMap = keyMetaMap;
-  }
-
-  static compile(instructions, payer) {
-    const keyMetaMap = new Map();
-
-    const getOrInsertDefault = pubkey => {
-      const address = pubkey.toBase58();
-      let keyMeta = keyMetaMap.get(address);
-
-      if (keyMeta === undefined) {
-        keyMeta = {
-          isSigner: false,
-          isWritable: false,
-          isInvoked: false
-        };
-        keyMetaMap.set(address, keyMeta);
-      }
-
-      return keyMeta;
-    };
-
-    const payerKeyMeta = getOrInsertDefault(payer);
-    payerKeyMeta.isSigner = true;
-    payerKeyMeta.isWritable = true;
-
-    for (const ix of instructions) {
-      getOrInsertDefault(ix.programId).isInvoked = true;
-
-      for (const accountMeta of ix.keys) {
-        const keyMeta = getOrInsertDefault(accountMeta.pubkey);
-        keyMeta.isSigner || (keyMeta.isSigner = accountMeta.isSigner);
-        keyMeta.isWritable || (keyMeta.isWritable = accountMeta.isWritable);
-      }
-    }
-
-    return new CompiledKeys(payer, keyMetaMap);
-  }
-
-  getMessageComponents() {
-    const mapEntries = [...this.keyMetaMap.entries()];
-    assert(mapEntries.length <= 256, 'Max static account keys length exceeded');
-    const writableSigners = mapEntries.filter(([, meta]) => meta.isSigner && meta.isWritable);
-    const readonlySigners = mapEntries.filter(([, meta]) => meta.isSigner && !meta.isWritable);
-    const writableNonSigners = mapEntries.filter(([, meta]) => !meta.isSigner && meta.isWritable);
-    const readonlyNonSigners = mapEntries.filter(([, meta]) => !meta.isSigner && !meta.isWritable);
-    const header = {
-      numRequiredSignatures: writableSigners.length + readonlySigners.length,
-      numReadonlySignedAccounts: readonlySigners.length,
-      numReadonlyUnsignedAccounts: readonlyNonSigners.length
-    }; // sanity checks
-
-    {
-      assert(writableSigners.length > 0, 'Expected at least one writable signer key');
-      const [payerAddress] = writableSigners[0];
-      assert(payerAddress === this.payer.toBase58(), 'Expected first writable signer key to be the fee payer');
-    }
-    const staticAccountKeys = [...writableSigners.map(([address]) => new PublicKey(address)), ...readonlySigners.map(([address]) => new PublicKey(address)), ...writableNonSigners.map(([address]) => new PublicKey(address)), ...readonlyNonSigners.map(([address]) => new PublicKey(address))];
-    return [header, staticAccountKeys];
-  }
-
-  extractTableLookup(lookupTable) {
-    const [writableIndexes, drainedWritableKeys] = this.drainKeysFoundInLookupTable(lookupTable.state.addresses, keyMeta => !keyMeta.isSigner && !keyMeta.isInvoked && keyMeta.isWritable);
-    const [readonlyIndexes, drainedReadonlyKeys] = this.drainKeysFoundInLookupTable(lookupTable.state.addresses, keyMeta => !keyMeta.isSigner && !keyMeta.isInvoked && !keyMeta.isWritable); // Don't extract lookup if no keys were found
-
-    if (writableIndexes.length === 0 && readonlyIndexes.length === 0) {
-      return;
-    }
-
-    return [{
-      accountKey: lookupTable.key,
-      writableIndexes,
-      readonlyIndexes
-    }, {
-      writable: drainedWritableKeys,
-      readonly: drainedReadonlyKeys
-    }];
-  }
-  /** @internal */
-
-
-  drainKeysFoundInLookupTable(lookupTableEntries, keyMetaFilter) {
-    const lookupTableIndexes = new Array();
-    const drainedKeys = new Array();
-
-    for (const [address, keyMeta] of this.keyMetaMap.entries()) {
-      if (keyMetaFilter(keyMeta)) {
-        const key = new PublicKey(address);
-        const lookupTableIndex = lookupTableEntries.findIndex(entry => entry.equals(key));
-
-        if (lookupTableIndex >= 0) {
-          assert(lookupTableIndex < 256, 'Max lookup table index exceeded');
-          lookupTableIndexes.push(lookupTableIndex);
-          drainedKeys.push(key);
-          this.keyMetaMap.delete(address);
-        }
-      }
-    }
-
-    return [lookupTableIndexes, drainedKeys];
-  }
-
-}
-
-/**
- * An instruction to execute by a program
- *
- * @property {number} programIdIndex
- * @property {number[]} accounts
- * @property {string} data
- */
-
-/**
- * List of instructions to be processed atomically
- */
-class Message {
-  constructor(args) {
-    this.header = void 0;
-    this.accountKeys = void 0;
-    this.recentBlockhash = void 0;
-    this.instructions = void 0;
-    this.indexToProgramIds = new Map();
-    this.header = args.header;
-    this.accountKeys = args.accountKeys.map(account => new PublicKey(account));
-    this.recentBlockhash = args.recentBlockhash;
-    this.instructions = args.instructions;
-    this.instructions.forEach(ix => this.indexToProgramIds.set(ix.programIdIndex, this.accountKeys[ix.programIdIndex]));
-  }
-
-  get version() {
-    return 'legacy';
-  }
-
-  get staticAccountKeys() {
-    return this.accountKeys;
-  }
-
-  get compiledInstructions() {
-    return this.instructions.map(ix => ({
-      programIdIndex: ix.programIdIndex,
-      accountKeyIndexes: ix.accounts,
-      data: bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(ix.data)
-    }));
-  }
-
-  get addressTableLookups() {
-    return [];
-  }
-
-  getAccountKeys() {
-    return new MessageAccountKeys(this.staticAccountKeys);
-  }
-
-  static compile(args) {
-    const compiledKeys = CompiledKeys.compile(args.instructions, args.payerKey);
-    const [header, staticAccountKeys] = compiledKeys.getMessageComponents();
-    const accountKeys = new MessageAccountKeys(staticAccountKeys);
-    const instructions = accountKeys.compileInstructions(args.instructions).map(ix => ({
-      programIdIndex: ix.programIdIndex,
-      accounts: ix.accountKeyIndexes,
-      data: bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(ix.data)
-    }));
-    return new Message({
-      header,
-      accountKeys: staticAccountKeys,
-      recentBlockhash: args.recentBlockhash,
-      instructions
-    });
-  }
-
-  isAccountSigner(index) {
-    return index < this.header.numRequiredSignatures;
-  }
-
-  isAccountWritable(index) {
-    const numSignedAccounts = this.header.numRequiredSignatures;
-
-    if (index >= this.header.numRequiredSignatures) {
-      const unsignedAccountIndex = index - numSignedAccounts;
-      const numUnsignedAccounts = this.accountKeys.length - numSignedAccounts;
-      const numWritableUnsignedAccounts = numUnsignedAccounts - this.header.numReadonlyUnsignedAccounts;
-      return unsignedAccountIndex < numWritableUnsignedAccounts;
-    } else {
-      const numWritableSignedAccounts = numSignedAccounts - this.header.numReadonlySignedAccounts;
-      return index < numWritableSignedAccounts;
-    }
-  }
-
-  isProgramId(index) {
-    return this.indexToProgramIds.has(index);
-  }
-
-  programIds() {
-    return [...this.indexToProgramIds.values()];
-  }
-
-  nonProgramIds() {
-    return this.accountKeys.filter((_, index) => !this.isProgramId(index));
-  }
-
-  serialize() {
-    const numKeys = this.accountKeys.length;
-    let keyCount = [];
-    encodeLength(keyCount, numKeys);
-    const instructions = this.instructions.map(instruction => {
-      const {
-        accounts,
-        programIdIndex
-      } = instruction;
-      const data = Array.from(bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(instruction.data));
-      let keyIndicesCount = [];
-      encodeLength(keyIndicesCount, accounts.length);
-      let dataCount = [];
-      encodeLength(dataCount, data.length);
-      return {
-        programIdIndex,
-        keyIndicesCount: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(keyIndicesCount),
-        keyIndices: accounts,
-        dataLength: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(dataCount),
-        data
-      };
-    });
-    let instructionCount = [];
-    encodeLength(instructionCount, instructions.length);
-    let instructionBuffer = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(PACKET_DATA_SIZE);
-    buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(instructionCount).copy(instructionBuffer);
-    let instructionBufferLength = instructionCount.length;
-    instructions.forEach(instruction => {
-      const instructionLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('programIdIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(instruction.keyIndicesCount.length, 'keyIndicesCount'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('keyIndex'), instruction.keyIndices.length, 'keyIndices'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(instruction.dataLength.length, 'dataLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('userdatum'), instruction.data.length, 'data')]);
-      const length = instructionLayout.encode(instruction, instructionBuffer, instructionBufferLength);
-      instructionBufferLength += length;
-    });
-    instructionBuffer = instructionBuffer.slice(0, instructionBufferLength);
-    const signDataLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(1, 'numRequiredSignatures'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(1, 'numReadonlySignedAccounts'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(1, 'numReadonlyUnsignedAccounts'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(keyCount.length, 'keyCount'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(publicKey('key'), numKeys, 'keys'), publicKey('recentBlockhash')]);
-    const transaction = {
-      numRequiredSignatures: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from([this.header.numRequiredSignatures]),
-      numReadonlySignedAccounts: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from([this.header.numReadonlySignedAccounts]),
-      numReadonlyUnsignedAccounts: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from([this.header.numReadonlyUnsignedAccounts]),
-      keyCount: buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(keyCount),
-      keys: this.accountKeys.map(key => toBuffer(key.toBytes())),
-      recentBlockhash: bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(this.recentBlockhash)
-    };
-    let signData = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(2048);
-    const length = signDataLayout.encode(transaction, signData);
-    instructionBuffer.copy(signData, length);
-    return signData.slice(0, length + instructionBuffer.length);
-  }
-  /**
-   * Decode a compiled message into a Message object.
-   */
-
-
-  static from(buffer) {
-    // Slice up wire data
-    let byteArray = [...buffer];
-    const numRequiredSignatures = byteArray.shift();
-
-    if (numRequiredSignatures !== (numRequiredSignatures & VERSION_PREFIX_MASK)) {
-      throw new Error('Versioned messages must be deserialized with VersionedMessage.deserialize()');
-    }
-
-    const numReadonlySignedAccounts = byteArray.shift();
-    const numReadonlyUnsignedAccounts = byteArray.shift();
-    const accountCount = decodeLength(byteArray);
-    let accountKeys = [];
-
-    for (let i = 0; i < accountCount; i++) {
-      const account = byteArray.slice(0, PUBLIC_KEY_LENGTH);
-      byteArray = byteArray.slice(PUBLIC_KEY_LENGTH);
-      accountKeys.push(new PublicKey(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(account)));
-    }
-
-    const recentBlockhash = byteArray.slice(0, PUBLIC_KEY_LENGTH);
-    byteArray = byteArray.slice(PUBLIC_KEY_LENGTH);
-    const instructionCount = decodeLength(byteArray);
-    let instructions = [];
-
-    for (let i = 0; i < instructionCount; i++) {
-      const programIdIndex = byteArray.shift();
-      const accountCount = decodeLength(byteArray);
-      const accounts = byteArray.slice(0, accountCount);
-      byteArray = byteArray.slice(accountCount);
-      const dataLength = decodeLength(byteArray);
-      const dataSlice = byteArray.slice(0, dataLength);
-      const data = bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(dataSlice));
-      byteArray = byteArray.slice(dataLength);
-      instructions.push({
-        programIdIndex,
-        accounts,
-        data
-      });
-    }
-
-    const messageArgs = {
-      header: {
-        numRequiredSignatures,
-        numReadonlySignedAccounts,
-        numReadonlyUnsignedAccounts
-      },
-      recentBlockhash: bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(recentBlockhash)),
-      accountKeys,
-      instructions
-    };
-    return new Message(messageArgs);
-  }
-
-}
-
-/**
- * Message constructor arguments
- */
-
-class MessageV0 {
-  constructor(args) {
-    this.header = void 0;
-    this.staticAccountKeys = void 0;
-    this.recentBlockhash = void 0;
-    this.compiledInstructions = void 0;
-    this.addressTableLookups = void 0;
-    this.header = args.header;
-    this.staticAccountKeys = args.staticAccountKeys;
-    this.recentBlockhash = args.recentBlockhash;
-    this.compiledInstructions = args.compiledInstructions;
-    this.addressTableLookups = args.addressTableLookups;
-  }
-
-  get version() {
-    return 0;
-  }
-
-  get numAccountKeysFromLookups() {
-    let count = 0;
-
-    for (const lookup of this.addressTableLookups) {
-      count += lookup.readonlyIndexes.length + lookup.writableIndexes.length;
-    }
-
-    return count;
-  }
-
-  getAccountKeys(args) {
-    let accountKeysFromLookups;
-
-    if (args && 'accountKeysFromLookups' in args && args.accountKeysFromLookups) {
-      if (this.numAccountKeysFromLookups != args.accountKeysFromLookups.writable.length + args.accountKeysFromLookups.readonly.length) {
-        throw new Error('Failed to get account keys because of a mismatch in the number of account keys from lookups');
-      }
-
-      accountKeysFromLookups = args.accountKeysFromLookups;
-    } else if (args && 'addressLookupTableAccounts' in args && args.addressLookupTableAccounts) {
-      accountKeysFromLookups = this.resolveAddressTableLookups(args.addressLookupTableAccounts);
-    } else if (this.addressTableLookups.length > 0) {
-      throw new Error('Failed to get account keys because address table lookups were not resolved');
-    }
-
-    return new MessageAccountKeys(this.staticAccountKeys, accountKeysFromLookups);
-  }
-
-  isAccountSigner(index) {
-    return index < this.header.numRequiredSignatures;
-  }
-
-  isAccountWritable(index) {
-    const numSignedAccounts = this.header.numRequiredSignatures;
-    const numStaticAccountKeys = this.staticAccountKeys.length;
-
-    if (index >= numStaticAccountKeys) {
-      const lookupAccountKeysIndex = index - numStaticAccountKeys;
-      const numWritableLookupAccountKeys = this.addressTableLookups.reduce((count, lookup) => count + lookup.writableIndexes.length, 0);
-      return lookupAccountKeysIndex < numWritableLookupAccountKeys;
-    } else if (index >= this.header.numRequiredSignatures) {
-      const unsignedAccountIndex = index - numSignedAccounts;
-      const numUnsignedAccounts = numStaticAccountKeys - numSignedAccounts;
-      const numWritableUnsignedAccounts = numUnsignedAccounts - this.header.numReadonlyUnsignedAccounts;
-      return unsignedAccountIndex < numWritableUnsignedAccounts;
-    } else {
-      const numWritableSignedAccounts = numSignedAccounts - this.header.numReadonlySignedAccounts;
-      return index < numWritableSignedAccounts;
-    }
-  }
-
-  resolveAddressTableLookups(addressLookupTableAccounts) {
-    const accountKeysFromLookups = {
-      writable: [],
-      readonly: []
-    };
-
-    for (const tableLookup of this.addressTableLookups) {
-      const tableAccount = addressLookupTableAccounts.find(account => account.key.equals(tableLookup.accountKey));
-
-      if (!tableAccount) {
-        throw new Error(`Failed to find address lookup table account for table key ${tableLookup.accountKey.toBase58()}`);
-      }
-
-      for (const index of tableLookup.writableIndexes) {
-        if (index < tableAccount.state.addresses.length) {
-          accountKeysFromLookups.writable.push(tableAccount.state.addresses[index]);
-        } else {
-          throw new Error(`Failed to find address for index ${index} in address lookup table ${tableLookup.accountKey.toBase58()}`);
-        }
-      }
-
-      for (const index of tableLookup.readonlyIndexes) {
-        if (index < tableAccount.state.addresses.length) {
-          accountKeysFromLookups.readonly.push(tableAccount.state.addresses[index]);
-        } else {
-          throw new Error(`Failed to find address for index ${index} in address lookup table ${tableLookup.accountKey.toBase58()}`);
-        }
-      }
-    }
-
-    return accountKeysFromLookups;
-  }
-
-  static compile(args) {
-    const compiledKeys = CompiledKeys.compile(args.instructions, args.payerKey);
-    const addressTableLookups = new Array();
-    const accountKeysFromLookups = {
-      writable: new Array(),
-      readonly: new Array()
-    };
-    const lookupTableAccounts = args.addressLookupTableAccounts || [];
-
-    for (const lookupTable of lookupTableAccounts) {
-      const extractResult = compiledKeys.extractTableLookup(lookupTable);
-
-      if (extractResult !== undefined) {
-        const [addressTableLookup, {
-          writable,
-          readonly
-        }] = extractResult;
-        addressTableLookups.push(addressTableLookup);
-        accountKeysFromLookups.writable.push(...writable);
-        accountKeysFromLookups.readonly.push(...readonly);
-      }
-    }
-
-    const [header, staticAccountKeys] = compiledKeys.getMessageComponents();
-    const accountKeys = new MessageAccountKeys(staticAccountKeys, accountKeysFromLookups);
-    const compiledInstructions = accountKeys.compileInstructions(args.instructions);
-    return new MessageV0({
-      header,
-      staticAccountKeys,
-      recentBlockhash: args.recentBlockhash,
-      compiledInstructions,
-      addressTableLookups
-    });
-  }
-
-  serialize() {
-    const encodedStaticAccountKeysLength = Array();
-    encodeLength(encodedStaticAccountKeysLength, this.staticAccountKeys.length);
-    const serializedInstructions = this.serializeInstructions();
-    const encodedInstructionsLength = Array();
-    encodeLength(encodedInstructionsLength, this.compiledInstructions.length);
-    const serializedAddressTableLookups = this.serializeAddressTableLookups();
-    const encodedAddressTableLookupsLength = Array();
-    encodeLength(encodedAddressTableLookupsLength, this.addressTableLookups.length);
-    const messageLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('prefix'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('numRequiredSignatures'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('numReadonlySignedAccounts'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('numReadonlyUnsignedAccounts')], 'header'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedStaticAccountKeysLength.length, 'staticAccountKeysLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(publicKey(), this.staticAccountKeys.length, 'staticAccountKeys'), publicKey('recentBlockhash'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedInstructionsLength.length, 'instructionsLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(serializedInstructions.length, 'serializedInstructions'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedAddressTableLookupsLength.length, 'addressTableLookupsLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(serializedAddressTableLookups.length, 'serializedAddressTableLookups')]);
-    const serializedMessage = new Uint8Array(PACKET_DATA_SIZE);
-    const MESSAGE_VERSION_0_PREFIX = 1 << 7;
-    const serializedMessageLength = messageLayout.encode({
-      prefix: MESSAGE_VERSION_0_PREFIX,
-      header: this.header,
-      staticAccountKeysLength: new Uint8Array(encodedStaticAccountKeysLength),
-      staticAccountKeys: this.staticAccountKeys.map(key => key.toBytes()),
-      recentBlockhash: bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(this.recentBlockhash),
-      instructionsLength: new Uint8Array(encodedInstructionsLength),
-      serializedInstructions,
-      addressTableLookupsLength: new Uint8Array(encodedAddressTableLookupsLength),
-      serializedAddressTableLookups
-    }, serializedMessage);
-    return serializedMessage.slice(0, serializedMessageLength);
-  }
-
-  serializeInstructions() {
-    let serializedLength = 0;
-    const serializedInstructions = new Uint8Array(PACKET_DATA_SIZE);
-
-    for (const instruction of this.compiledInstructions) {
-      const encodedAccountKeyIndexesLength = Array();
-      encodeLength(encodedAccountKeyIndexesLength, instruction.accountKeyIndexes.length);
-      const encodedDataLength = Array();
-      encodeLength(encodedDataLength, instruction.data.length);
-      const instructionLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('programIdIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedAccountKeyIndexesLength.length, 'encodedAccountKeyIndexesLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8(), instruction.accountKeyIndexes.length, 'accountKeyIndexes'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedDataLength.length, 'encodedDataLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(instruction.data.length, 'data')]);
-      serializedLength += instructionLayout.encode({
-        programIdIndex: instruction.programIdIndex,
-        encodedAccountKeyIndexesLength: new Uint8Array(encodedAccountKeyIndexesLength),
-        accountKeyIndexes: instruction.accountKeyIndexes,
-        encodedDataLength: new Uint8Array(encodedDataLength),
-        data: instruction.data
-      }, serializedInstructions, serializedLength);
-    }
-
-    return serializedInstructions.slice(0, serializedLength);
-  }
-
-  serializeAddressTableLookups() {
-    let serializedLength = 0;
-    const serializedAddressTableLookups = new Uint8Array(PACKET_DATA_SIZE);
-
-    for (const lookup of this.addressTableLookups) {
-      const encodedWritableIndexesLength = Array();
-      encodeLength(encodedWritableIndexesLength, lookup.writableIndexes.length);
-      const encodedReadonlyIndexesLength = Array();
-      encodeLength(encodedReadonlyIndexesLength, lookup.readonlyIndexes.length);
-      const addressTableLookupLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([publicKey('accountKey'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedWritableIndexesLength.length, 'encodedWritableIndexesLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8(), lookup.writableIndexes.length, 'writableIndexes'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedReadonlyIndexesLength.length, 'encodedReadonlyIndexesLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8(), lookup.readonlyIndexes.length, 'readonlyIndexes')]);
-      serializedLength += addressTableLookupLayout.encode({
-        accountKey: lookup.accountKey.toBytes(),
-        encodedWritableIndexesLength: new Uint8Array(encodedWritableIndexesLength),
-        writableIndexes: lookup.writableIndexes,
-        encodedReadonlyIndexesLength: new Uint8Array(encodedReadonlyIndexesLength),
-        readonlyIndexes: lookup.readonlyIndexes
-      }, serializedAddressTableLookups, serializedLength);
-    }
-
-    return serializedAddressTableLookups.slice(0, serializedLength);
-  }
-
-  static deserialize(serializedMessage) {
-    let byteArray = [...serializedMessage];
-    const prefix = byteArray.shift();
-    const maskedPrefix = prefix & VERSION_PREFIX_MASK;
-    assert(prefix !== maskedPrefix, `Expected versioned message but received legacy message`);
-    const version = maskedPrefix;
-    assert(version === 0, `Expected versioned message with version 0 but found version ${version}`);
-    const header = {
-      numRequiredSignatures: byteArray.shift(),
-      numReadonlySignedAccounts: byteArray.shift(),
-      numReadonlyUnsignedAccounts: byteArray.shift()
-    };
-    const staticAccountKeys = [];
-    const staticAccountKeysLength = decodeLength(byteArray);
-
-    for (let i = 0; i < staticAccountKeysLength; i++) {
-      staticAccountKeys.push(new PublicKey(byteArray.splice(0, PUBLIC_KEY_LENGTH)));
-    }
-
-    const recentBlockhash = bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(byteArray.splice(0, PUBLIC_KEY_LENGTH));
-    const instructionCount = decodeLength(byteArray);
-    const compiledInstructions = [];
-
-    for (let i = 0; i < instructionCount; i++) {
-      const programIdIndex = byteArray.shift();
-      const accountKeyIndexesLength = decodeLength(byteArray);
-      const accountKeyIndexes = byteArray.splice(0, accountKeyIndexesLength);
-      const dataLength = decodeLength(byteArray);
-      const data = new Uint8Array(byteArray.splice(0, dataLength));
-      compiledInstructions.push({
-        programIdIndex,
-        accountKeyIndexes,
-        data
-      });
-    }
-
-    const addressTableLookupsCount = decodeLength(byteArray);
-    const addressTableLookups = [];
-
-    for (let i = 0; i < addressTableLookupsCount; i++) {
-      const accountKey = new PublicKey(byteArray.splice(0, PUBLIC_KEY_LENGTH));
-      const writableIndexesLength = decodeLength(byteArray);
-      const writableIndexes = byteArray.splice(0, writableIndexesLength);
-      const readonlyIndexesLength = decodeLength(byteArray);
-      const readonlyIndexes = byteArray.splice(0, readonlyIndexesLength);
-      addressTableLookups.push({
-        accountKey,
-        writableIndexes,
-        readonlyIndexes
-      });
-    }
-
-    return new MessageV0({
-      header,
-      staticAccountKeys,
-      recentBlockhash,
-      compiledInstructions,
-      addressTableLookups
-    });
-  }
-
-}
-
-// eslint-disable-next-line no-redeclare
-const VersionedMessage = {
-  deserializeMessageVersion(serializedMessage) {
-    const prefix = serializedMessage[0];
-    const maskedPrefix = prefix & VERSION_PREFIX_MASK; // if the highest bit of the prefix is not set, the message is not versioned
-
-    if (maskedPrefix === prefix) {
-      return 'legacy';
-    } // the lower 7 bits of the prefix indicate the message version
-
-
-    return maskedPrefix;
-  },
-
-  deserialize: serializedMessage => {
-    const version = VersionedMessage.deserializeMessageVersion(serializedMessage);
-
-    if (version === 'legacy') {
-      return Message.from(serializedMessage);
-    }
-
-    if (version === 0) {
-      return MessageV0.deserialize(serializedMessage);
-    } else {
-      throw new Error(`Transaction message version ${version} deserialization is not supported`);
-    }
-  }
-};
-
-/**
- * Transaction signature as base-58 encoded string
- */
-
-let TransactionStatus;
-/**
- * Default (empty) signature
- */
-
-(function (TransactionStatus) {
-  TransactionStatus[TransactionStatus["BLOCKHEIGHT_EXCEEDED"] = 0] = "BLOCKHEIGHT_EXCEEDED";
-  TransactionStatus[TransactionStatus["PROCESSED"] = 1] = "PROCESSED";
-  TransactionStatus[TransactionStatus["TIMED_OUT"] = 2] = "TIMED_OUT";
-})(TransactionStatus || (TransactionStatus = {}));
-
-const DEFAULT_SIGNATURE = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(SIGNATURE_LENGTH_IN_BYTES).fill(0);
-/**
- * Account metadata used to define instructions
- */
-
-/**
- * Transaction Instruction class
- */
-class TransactionInstruction {
-  /**
-   * Public keys to include in this transaction
-   * Boolean represents whether this pubkey needs to sign the transaction
-   */
-
-  /**
-   * Program Id to execute
-   */
-
-  /**
-   * Program input
-   */
-  constructor(opts) {
-    this.keys = void 0;
-    this.programId = void 0;
-    this.data = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(0);
-    this.programId = opts.programId;
-    this.keys = opts.keys;
-
-    if (opts.data) {
-      this.data = opts.data;
-    }
-  }
-  /**
-   * @internal
-   */
-
-
-  toJSON() {
-    return {
-      keys: this.keys.map(({
-        pubkey,
-        isSigner,
-        isWritable
-      }) => ({
-        pubkey: pubkey.toJSON(),
-        isSigner,
-        isWritable
-      })),
-      programId: this.programId.toJSON(),
-      data: [...this.data]
-    };
-  }
-
-}
-/**
- * Pair of signature and corresponding public key
- */
-
-/**
- * Transaction class
- */
-class Transaction {
-  /**
-   * Signatures for the transaction.  Typically created by invoking the
-   * `sign()` method
-   */
-
-  /**
-   * The first (payer) Transaction signature
-   */
-  get signature() {
-    if (this.signatures.length > 0) {
-      return this.signatures[0].signature;
-    }
-
-    return null;
-  }
-  /**
-   * The transaction fee payer
-   */
-
-
-  /**
-   * Construct an empty Transaction
-   */
-  constructor(opts) {
-    this.signatures = [];
-    this.feePayer = void 0;
-    this.instructions = [];
-    this.recentBlockhash = void 0;
-    this.lastValidBlockHeight = void 0;
-    this.nonceInfo = void 0;
-    this._message = void 0;
-    this._json = void 0;
-
-    if (!opts) {
-      return;
-    }
-
-    if (opts.feePayer) {
-      this.feePayer = opts.feePayer;
-    }
-
-    if (opts.signatures) {
-      this.signatures = opts.signatures;
-    }
-
-    if (Object.prototype.hasOwnProperty.call(opts, 'lastValidBlockHeight')) {
-      const {
-        blockhash,
-        lastValidBlockHeight
-      } = opts;
-      this.recentBlockhash = blockhash;
-      this.lastValidBlockHeight = lastValidBlockHeight;
-    } else {
-      const {
-        recentBlockhash,
-        nonceInfo
-      } = opts;
-
-      if (nonceInfo) {
-        this.nonceInfo = nonceInfo;
-      }
-
-      this.recentBlockhash = recentBlockhash;
-    }
-  }
-  /**
-   * @internal
-   */
-
-
-  toJSON() {
-    return {
-      recentBlockhash: this.recentBlockhash || null,
-      feePayer: this.feePayer ? this.feePayer.toJSON() : null,
-      nonceInfo: this.nonceInfo ? {
-        nonce: this.nonceInfo.nonce,
-        nonceInstruction: this.nonceInfo.nonceInstruction.toJSON()
-      } : null,
-      instructions: this.instructions.map(instruction => instruction.toJSON()),
-      signers: this.signatures.map(({
-        publicKey
-      }) => {
-        return publicKey.toJSON();
-      })
-    };
-  }
-  /**
-   * Add one or more instructions to this Transaction
-   */
-
-
-  add(...items) {
-    if (items.length === 0) {
-      throw new Error('No instructions');
-    }
-
-    items.forEach(item => {
-      if ('instructions' in item) {
-        this.instructions = this.instructions.concat(item.instructions);
-      } else if ('data' in item && 'programId' in item && 'keys' in item) {
-        this.instructions.push(item);
-      } else {
-        this.instructions.push(new TransactionInstruction(item));
-      }
-    });
-    return this;
-  }
-  /**
-   * Compile transaction data
-   */
-
-
-  compileMessage() {
-    if (this._message && JSON.stringify(this.toJSON()) === JSON.stringify(this._json)) {
-      return this._message;
-    }
-
-    let recentBlockhash;
-    let instructions;
-
-    if (this.nonceInfo) {
-      recentBlockhash = this.nonceInfo.nonce;
-
-      if (this.instructions[0] != this.nonceInfo.nonceInstruction) {
-        instructions = [this.nonceInfo.nonceInstruction, ...this.instructions];
-      } else {
-        instructions = this.instructions;
-      }
-    } else {
-      recentBlockhash = this.recentBlockhash;
-      instructions = this.instructions;
-    }
-
-    if (!recentBlockhash) {
-      throw new Error('Transaction recentBlockhash required');
-    }
-
-    if (instructions.length < 1) {
-      console.warn('No instructions provided');
-    }
-
-    let feePayer;
-
-    if (this.feePayer) {
-      feePayer = this.feePayer;
-    } else if (this.signatures.length > 0 && this.signatures[0].publicKey) {
-      // Use implicit fee payer
-      feePayer = this.signatures[0].publicKey;
-    } else {
-      throw new Error('Transaction fee payer required');
-    }
-
-    for (let i = 0; i < instructions.length; i++) {
-      if (instructions[i].programId === undefined) {
-        throw new Error(`Transaction instruction index ${i} has undefined program id`);
-      }
-    }
-
-    const programIds = [];
-    const accountMetas = [];
-    instructions.forEach(instruction => {
-      instruction.keys.forEach(accountMeta => {
-        accountMetas.push({ ...accountMeta
-        });
-      });
-      const programId = instruction.programId.toString();
-
-      if (!programIds.includes(programId)) {
-        programIds.push(programId);
-      }
-    }); // Append programID account metas
-
-    programIds.forEach(programId => {
-      accountMetas.push({
-        pubkey: new PublicKey(programId),
-        isSigner: false,
-        isWritable: false
-      });
-    }); // Cull duplicate account metas
-
-    const uniqueMetas = [];
-    accountMetas.forEach(accountMeta => {
-      const pubkeyString = accountMeta.pubkey.toString();
-      const uniqueIndex = uniqueMetas.findIndex(x => {
-        return x.pubkey.toString() === pubkeyString;
-      });
-
-      if (uniqueIndex > -1) {
-        uniqueMetas[uniqueIndex].isWritable = uniqueMetas[uniqueIndex].isWritable || accountMeta.isWritable;
-        uniqueMetas[uniqueIndex].isSigner = uniqueMetas[uniqueIndex].isSigner || accountMeta.isSigner;
-      } else {
-        uniqueMetas.push(accountMeta);
-      }
-    }); // Sort. Prioritizing first by signer, then by writable
-
-    uniqueMetas.sort(function (x, y) {
-      if (x.isSigner !== y.isSigner) {
-        // Signers always come before non-signers
-        return x.isSigner ? -1 : 1;
-      }
-
-      if (x.isWritable !== y.isWritable) {
-        // Writable accounts always come before read-only accounts
-        return x.isWritable ? -1 : 1;
-      } // Otherwise, sort by pubkey, stringwise.
-
-
-      return x.pubkey.toBase58().localeCompare(y.pubkey.toBase58());
-    }); // Move fee payer to the front
-
-    const feePayerIndex = uniqueMetas.findIndex(x => {
-      return x.pubkey.equals(feePayer);
-    });
-
-    if (feePayerIndex > -1) {
-      const [payerMeta] = uniqueMetas.splice(feePayerIndex, 1);
-      payerMeta.isSigner = true;
-      payerMeta.isWritable = true;
-      uniqueMetas.unshift(payerMeta);
-    } else {
-      uniqueMetas.unshift({
-        pubkey: feePayer,
-        isSigner: true,
-        isWritable: true
-      });
-    } // Disallow unknown signers
-
-
-    for (const signature of this.signatures) {
-      const uniqueIndex = uniqueMetas.findIndex(x => {
-        return x.pubkey.equals(signature.publicKey);
-      });
-
-      if (uniqueIndex > -1) {
-        if (!uniqueMetas[uniqueIndex].isSigner) {
-          uniqueMetas[uniqueIndex].isSigner = true;
-          console.warn('Transaction references a signature that is unnecessary, ' + 'only the fee payer and instruction signer accounts should sign a transaction. ' + 'This behavior is deprecated and will throw an error in the next major version release.');
-        }
-      } else {
-        throw new Error(`unknown signer: ${signature.publicKey.toString()}`);
-      }
-    }
-
-    let numRequiredSignatures = 0;
-    let numReadonlySignedAccounts = 0;
-    let numReadonlyUnsignedAccounts = 0; // Split out signing from non-signing keys and count header values
-
-    const signedKeys = [];
-    const unsignedKeys = [];
-    uniqueMetas.forEach(({
-      pubkey,
-      isSigner,
-      isWritable
-    }) => {
-      if (isSigner) {
-        signedKeys.push(pubkey.toString());
-        numRequiredSignatures += 1;
-
-        if (!isWritable) {
-          numReadonlySignedAccounts += 1;
-        }
-      } else {
-        unsignedKeys.push(pubkey.toString());
-
-        if (!isWritable) {
-          numReadonlyUnsignedAccounts += 1;
-        }
-      }
-    });
-    const accountKeys = signedKeys.concat(unsignedKeys);
-    const compiledInstructions = instructions.map(instruction => {
-      const {
-        data,
-        programId
-      } = instruction;
-      return {
-        programIdIndex: accountKeys.indexOf(programId.toString()),
-        accounts: instruction.keys.map(meta => accountKeys.indexOf(meta.pubkey.toString())),
-        data: bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(data)
-      };
-    });
-    compiledInstructions.forEach(instruction => {
-      assert(instruction.programIdIndex >= 0);
-      instruction.accounts.forEach(keyIndex => assert(keyIndex >= 0));
-    });
-    return new Message({
-      header: {
-        numRequiredSignatures,
-        numReadonlySignedAccounts,
-        numReadonlyUnsignedAccounts
-      },
-      accountKeys,
-      recentBlockhash,
-      instructions: compiledInstructions
-    });
-  }
-  /**
-   * @internal
-   */
-
-
-  _compile() {
-    const message = this.compileMessage();
-    const signedKeys = message.accountKeys.slice(0, message.header.numRequiredSignatures);
-
-    if (this.signatures.length === signedKeys.length) {
-      const valid = this.signatures.every((pair, index) => {
-        return signedKeys[index].equals(pair.publicKey);
-      });
-      if (valid) return message;
-    }
-
-    this.signatures = signedKeys.map(publicKey => ({
-      signature: null,
-      publicKey
-    }));
-    return message;
-  }
-  /**
-   * Get a buffer of the Transaction data that need to be covered by signatures
-   */
-
-
-  serializeMessage() {
-    return this._compile().serialize();
-  }
-  /**
-   * Get the estimated fee associated with a transaction
-   */
-
-
-  async getEstimatedFee(connection) {
-    return (await connection.getFeeForMessage(this.compileMessage())).value;
-  }
-  /**
-   * Specify the public keys which will be used to sign the Transaction.
-   * The first signer will be used as the transaction fee payer account.
-   *
-   * Signatures can be added with either `partialSign` or `addSignature`
-   *
-   * @deprecated Deprecated since v0.84.0. Only the fee payer needs to be
-   * specified and it can be set in the Transaction constructor or with the
-   * `feePayer` property.
-   */
-
-
-  setSigners(...signers) {
-    if (signers.length === 0) {
-      throw new Error('No signers');
-    }
-
-    const seen = new Set();
-    this.signatures = signers.filter(publicKey => {
-      const key = publicKey.toString();
-
-      if (seen.has(key)) {
-        return false;
-      } else {
-        seen.add(key);
-        return true;
-      }
-    }).map(publicKey => ({
-      signature: null,
-      publicKey
-    }));
-  }
-  /**
-   * Sign the Transaction with the specified signers. Multiple signatures may
-   * be applied to a Transaction. The first signature is considered "primary"
-   * and is used identify and confirm transactions.
-   *
-   * If the Transaction `feePayer` is not set, the first signer will be used
-   * as the transaction fee payer account.
-   *
-   * Transaction fields should not be modified after the first call to `sign`,
-   * as doing so may invalidate the signature and cause the Transaction to be
-   * rejected.
-   *
-   * The Transaction must be assigned a valid `recentBlockhash` before invoking this method
-   */
-
-
-  sign(...signers) {
-    if (signers.length === 0) {
-      throw new Error('No signers');
-    } // Dedupe signers
-
-
-    const seen = new Set();
-    const uniqueSigners = [];
-
-    for (const signer of signers) {
-      const key = signer.publicKey.toString();
-
-      if (seen.has(key)) {
-        continue;
-      } else {
-        seen.add(key);
-        uniqueSigners.push(signer);
-      }
-    }
-
-    this.signatures = uniqueSigners.map(signer => ({
-      signature: null,
-      publicKey: signer.publicKey
-    }));
-
-    const message = this._compile();
-
-    this._partialSign(message, ...uniqueSigners);
-  }
-  /**
-   * Partially sign a transaction with the specified accounts. All accounts must
-   * correspond to either the fee payer or a signer account in the transaction
-   * instructions.
-   *
-   * All the caveats from the `sign` method apply to `partialSign`
-   */
-
-
-  partialSign(...signers) {
-    if (signers.length === 0) {
-      throw new Error('No signers');
-    } // Dedupe signers
-
-
-    const seen = new Set();
-    const uniqueSigners = [];
-
-    for (const signer of signers) {
-      const key = signer.publicKey.toString();
-
-      if (seen.has(key)) {
-        continue;
-      } else {
-        seen.add(key);
-        uniqueSigners.push(signer);
-      }
-    }
-
-    const message = this._compile();
-
-    this._partialSign(message, ...uniqueSigners);
-  }
-  /**
-   * @internal
-   */
-
-
-  _partialSign(message, ...signers) {
-    const signData = message.serialize();
-    signers.forEach(signer => {
-      const signature = sign(signData, signer.secretKey);
-
-      this._addSignature(signer.publicKey, toBuffer(signature));
-    });
-  }
-  /**
-   * Add an externally created signature to a transaction. The public key
-   * must correspond to either the fee payer or a signer account in the transaction
-   * instructions.
-   */
-
-
-  addSignature(pubkey, signature) {
-    this._compile(); // Ensure signatures array is populated
-
-
-    this._addSignature(pubkey, signature);
-  }
-  /**
-   * @internal
-   */
-
-
-  _addSignature(pubkey, signature) {
-    assert(signature.length === 64);
-    const index = this.signatures.findIndex(sigpair => pubkey.equals(sigpair.publicKey));
-
-    if (index < 0) {
-      throw new Error(`unknown signer: ${pubkey.toString()}`);
-    }
-
-    this.signatures[index].signature = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(signature);
-  }
-  /**
-   * Verify signatures of a complete, signed Transaction
-   */
-
-
-  verifySignatures() {
-    return this._verifySignatures(this.serializeMessage(), true);
-  }
-  /**
-   * @internal
-   */
-
-
-  _verifySignatures(signData, requireAllSignatures) {
-    for (const {
-      signature,
-      publicKey
-    } of this.signatures) {
-      if (signature === null) {
-        if (requireAllSignatures) {
-          return false;
-        }
-      } else {
-        if (!verify(signature, signData, publicKey.toBuffer())) {
-          return false;
-        }
-      }
-    }
-
-    return true;
-  }
-  /**
-   * Serialize the Transaction in the wire format.
-   */
-
-
-  serialize(config) {
-    const {
-      requireAllSignatures,
-      verifySignatures
-    } = Object.assign({
-      requireAllSignatures: true,
-      verifySignatures: true
-    }, config);
-    const signData = this.serializeMessage();
-
-    if (verifySignatures && !this._verifySignatures(signData, requireAllSignatures)) {
-      throw new Error('Signature verification failed');
-    }
-
-    return this._serialize(signData);
-  }
-  /**
-   * @internal
-   */
-
-
-  _serialize(signData) {
-    const {
-      signatures
-    } = this;
-    const signatureCount = [];
-    encodeLength(signatureCount, signatures.length);
-    const transactionLength = signatureCount.length + signatures.length * 64 + signData.length;
-    const wireTransaction = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(transactionLength);
-    assert(signatures.length < 256);
-    buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(signatureCount).copy(wireTransaction, 0);
-    signatures.forEach(({
-      signature
-    }, index) => {
-      if (signature !== null) {
-        assert(signature.length === 64, `signature has invalid length`);
-        buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(signature).copy(wireTransaction, signatureCount.length + index * 64);
-      }
-    });
-    signData.copy(wireTransaction, signatureCount.length + signatures.length * 64);
-    assert(wireTransaction.length <= PACKET_DATA_SIZE, `Transaction too large: ${wireTransaction.length} > ${PACKET_DATA_SIZE}`);
-    return wireTransaction;
-  }
-  /**
-   * Deprecated method
-   * @internal
-   */
-
-
-  get keys() {
-    assert(this.instructions.length === 1);
-    return this.instructions[0].keys.map(keyObj => keyObj.pubkey);
-  }
-  /**
-   * Deprecated method
-   * @internal
-   */
-
-
-  get programId() {
-    assert(this.instructions.length === 1);
-    return this.instructions[0].programId;
-  }
-  /**
-   * Deprecated method
-   * @internal
-   */
-
-
-  get data() {
-    assert(this.instructions.length === 1);
-    return this.instructions[0].data;
-  }
-  /**
-   * Parse a wire transaction into a Transaction object.
-   */
-
-
-  static from(buffer) {
-    // Slice up wire data
-    let byteArray = [...buffer];
-    const signatureCount = decodeLength(byteArray);
-    let signatures = [];
-
-    for (let i = 0; i < signatureCount; i++) {
-      const signature = byteArray.slice(0, SIGNATURE_LENGTH_IN_BYTES);
-      byteArray = byteArray.slice(SIGNATURE_LENGTH_IN_BYTES);
-      signatures.push(bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(signature)));
-    }
-
-    return Transaction.populate(Message.from(byteArray), signatures);
-  }
-  /**
-   * Populate Transaction object from message and signatures
-   */
-
-
-  static populate(message, signatures = []) {
-    const transaction = new Transaction();
-    transaction.recentBlockhash = message.recentBlockhash;
-
-    if (message.header.numRequiredSignatures > 0) {
-      transaction.feePayer = message.accountKeys[0];
-    }
-
-    signatures.forEach((signature, index) => {
-      const sigPubkeyPair = {
-        signature: signature == bs58__WEBPACK_IMPORTED_MODULE_4___default().encode(DEFAULT_SIGNATURE) ? null : bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(signature),
-        publicKey: message.accountKeys[index]
-      };
-      transaction.signatures.push(sigPubkeyPair);
-    });
-    message.instructions.forEach(instruction => {
-      const keys = instruction.accounts.map(account => {
-        const pubkey = message.accountKeys[account];
-        return {
-          pubkey,
-          isSigner: transaction.signatures.some(keyObj => keyObj.publicKey.toString() === pubkey.toString()) || message.isAccountSigner(account),
-          isWritable: message.isAccountWritable(account)
-        };
-      });
-      transaction.instructions.push(new TransactionInstruction({
-        keys,
-        programId: message.accountKeys[instruction.programIdIndex],
-        data: bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(instruction.data)
-      }));
-    });
-    transaction._message = message;
-    transaction._json = transaction.toJSON();
-    return transaction;
-  }
-
-}
-
-class TransactionMessage {
-  constructor(args) {
-    this.payerKey = void 0;
-    this.instructions = void 0;
-    this.recentBlockhash = void 0;
-    this.payerKey = args.payerKey;
-    this.instructions = args.instructions;
-    this.recentBlockhash = args.recentBlockhash;
-  }
-
-  static decompile(message, args) {
-    const {
-      header,
-      compiledInstructions,
-      recentBlockhash
-    } = message;
-    const {
-      numRequiredSignatures,
-      numReadonlySignedAccounts,
-      numReadonlyUnsignedAccounts
-    } = header;
-    const numWritableSignedAccounts = numRequiredSignatures - numReadonlySignedAccounts;
-    assert(numWritableSignedAccounts > 0, 'Message header is invalid');
-    const numWritableUnsignedAccounts = message.staticAccountKeys.length - numReadonlyUnsignedAccounts;
-    assert(numWritableUnsignedAccounts >= 0, 'Message header is invalid');
-    const accountKeys = message.getAccountKeys(args);
-    const payerKey = accountKeys.get(0);
-
-    if (payerKey === undefined) {
-      throw new Error('Failed to decompile message because no account keys were found');
-    }
-
-    const instructions = [];
-
-    for (const compiledIx of compiledInstructions) {
-      const keys = [];
-
-      for (const keyIndex of compiledIx.accountKeyIndexes) {
-        const pubkey = accountKeys.get(keyIndex);
-
-        if (pubkey === undefined) {
-          throw new Error(`Failed to find key for account key index ${keyIndex}`);
-        }
-
-        const isSigner = keyIndex < numRequiredSignatures;
-        let isWritable;
-
-        if (isSigner) {
-          isWritable = keyIndex < numWritableSignedAccounts;
-        } else if (keyIndex < accountKeys.staticAccountKeys.length) {
-          isWritable = keyIndex - numRequiredSignatures < numWritableUnsignedAccounts;
-        } else {
-          isWritable = keyIndex - accountKeys.staticAccountKeys.length < // accountKeysFromLookups cannot be undefined because we already found a pubkey for this index above
-          accountKeys.accountKeysFromLookups.writable.length;
-        }
-
-        keys.push({
-          pubkey,
-          isSigner: keyIndex < header.numRequiredSignatures,
-          isWritable
-        });
-      }
-
-      const programId = accountKeys.get(compiledIx.programIdIndex);
-
-      if (programId === undefined) {
-        throw new Error(`Failed to find program id for program id index ${compiledIx.programIdIndex}`);
-      }
-
-      instructions.push(new TransactionInstruction({
-        programId,
-        data: toBuffer(compiledIx.data),
-        keys
-      }));
-    }
-
-    return new TransactionMessage({
-      payerKey,
-      instructions,
-      recentBlockhash
-    });
-  }
-
-  compileToLegacyMessage() {
-    return Message.compile({
-      payerKey: this.payerKey,
-      recentBlockhash: this.recentBlockhash,
-      instructions: this.instructions
-    });
-  }
-
-  compileToV0Message(addressLookupTableAccounts) {
-    return MessageV0.compile({
-      payerKey: this.payerKey,
-      recentBlockhash: this.recentBlockhash,
-      instructions: this.instructions,
-      addressLookupTableAccounts
-    });
-  }
-
-}
-
-/**
- * Versioned transaction class
- */
-class VersionedTransaction {
-  get version() {
-    return this.message.version;
-  }
-
-  constructor(message, signatures) {
-    this.signatures = void 0;
-    this.message = void 0;
-
-    if (signatures !== undefined) {
-      assert(signatures.length === message.header.numRequiredSignatures, 'Expected signatures length to be equal to the number of required signatures');
-      this.signatures = signatures;
-    } else {
-      const defaultSignatures = [];
-
-      for (let i = 0; i < message.header.numRequiredSignatures; i++) {
-        defaultSignatures.push(new Uint8Array(SIGNATURE_LENGTH_IN_BYTES));
-      }
-
-      this.signatures = defaultSignatures;
-    }
-
-    this.message = message;
-  }
-
-  serialize() {
-    const serializedMessage = this.message.serialize();
-    const encodedSignaturesLength = Array();
-    encodeLength(encodedSignaturesLength, this.signatures.length);
-    const transactionLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(encodedSignaturesLength.length, 'encodedSignaturesLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(signature(), this.signatures.length, 'signatures'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(serializedMessage.length, 'serializedMessage')]);
-    const serializedTransaction = new Uint8Array(2048);
-    const serializedTransactionLength = transactionLayout.encode({
-      encodedSignaturesLength: new Uint8Array(encodedSignaturesLength),
-      signatures: this.signatures,
-      serializedMessage
-    }, serializedTransaction);
-    return serializedTransaction.slice(0, serializedTransactionLength);
-  }
-
-  static deserialize(serializedTransaction) {
-    let byteArray = [...serializedTransaction];
-    const signatures = [];
-    const signaturesLength = decodeLength(byteArray);
-
-    for (let i = 0; i < signaturesLength; i++) {
-      signatures.push(new Uint8Array(byteArray.splice(0, SIGNATURE_LENGTH_IN_BYTES)));
-    }
-
-    const message = VersionedMessage.deserialize(new Uint8Array(byteArray));
-    return new VersionedTransaction(message, signatures);
-  }
-
-  sign(signers) {
-    const messageData = this.message.serialize();
-    const signerPubkeys = this.message.staticAccountKeys.slice(0, this.message.header.numRequiredSignatures);
-
-    for (const signer of signers) {
-      const signerIndex = signerPubkeys.findIndex(pubkey => pubkey.equals(signer.publicKey));
-      assert(signerIndex >= 0, `Cannot sign with non signer key ${signer.publicKey.toBase58()}`);
-      this.signatures[signerIndex] = sign(messageData, signer.secretKey);
-    }
-  }
-
-  addSignature(publicKey, signature) {
-    assert(signature.byteLength === 64, 'Signature must be 64 bytes long');
-    const signerPubkeys = this.message.staticAccountKeys.slice(0, this.message.header.numRequiredSignatures);
-    const signerIndex = signerPubkeys.findIndex(pubkey => pubkey.equals(publicKey));
-    assert(signerIndex >= 0, `Can not add signature; \`${publicKey.toBase58()}\` is not required to sign this transaction`);
-    this.signatures[signerIndex] = signature;
-  }
-
-}
-
-const SYSVAR_CLOCK_PUBKEY = new PublicKey('SysvarC1ock11111111111111111111111111111111');
-const SYSVAR_EPOCH_SCHEDULE_PUBKEY = new PublicKey('SysvarEpochSchedu1e111111111111111111111111');
-const SYSVAR_INSTRUCTIONS_PUBKEY = new PublicKey('Sysvar1nstructions1111111111111111111111111');
-const SYSVAR_RECENT_BLOCKHASHES_PUBKEY = new PublicKey('SysvarRecentB1ockHashes11111111111111111111');
-const SYSVAR_RENT_PUBKEY = new PublicKey('SysvarRent111111111111111111111111111111111');
-const SYSVAR_REWARDS_PUBKEY = new PublicKey('SysvarRewards111111111111111111111111111111');
-const SYSVAR_SLOT_HASHES_PUBKEY = new PublicKey('SysvarS1otHashes111111111111111111111111111');
-const SYSVAR_SLOT_HISTORY_PUBKEY = new PublicKey('SysvarS1otHistory11111111111111111111111111');
-const SYSVAR_STAKE_HISTORY_PUBKEY = new PublicKey('SysvarStakeHistory1111111111111111111111111');
-
-/**
- * Sign, send and confirm a transaction.
- *
- * If `commitment` option is not specified, defaults to 'max' commitment.
- *
- * @param {Connection} connection
- * @param {Transaction} transaction
- * @param {Array<Signer>} signers
- * @param {ConfirmOptions} [options]
- * @returns {Promise<TransactionSignature>}
- */
-async function sendAndConfirmTransaction(connection, transaction, signers, options) {
-  const sendOptions = options && {
-    skipPreflight: options.skipPreflight,
-    preflightCommitment: options.preflightCommitment || options.commitment,
-    maxRetries: options.maxRetries,
-    minContextSlot: options.minContextSlot
-  };
-  const signature = await connection.sendTransaction(transaction, signers, sendOptions);
-  const status = transaction.recentBlockhash != null && transaction.lastValidBlockHeight != null ? (await connection.confirmTransaction({
-    signature: signature,
-    blockhash: transaction.recentBlockhash,
-    lastValidBlockHeight: transaction.lastValidBlockHeight
-  }, options && options.commitment)).value : (await connection.confirmTransaction(signature, options && options.commitment)).value;
-
-  if (status.err) {
-    throw new Error(`Transaction ${signature} failed (${JSON.stringify(status)})`);
-  }
-
-  return signature;
-}
-
-// zzz
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-/**
- * Populate a buffer of instruction data using an InstructionType
- * @internal
- */
-function encodeData(type, fields) {
-  const allocLength = type.layout.span >= 0 ? type.layout.span : getAlloc(type, fields);
-  const data = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(allocLength);
-  const layoutFields = Object.assign({
-    instruction: type.index
-  }, fields);
-  type.layout.encode(layoutFields, data);
-  return data;
-}
-/**
- * Decode instruction data buffer using an InstructionType
- * @internal
- */
-
-function decodeData$1(type, buffer) {
-  let data;
-
-  try {
-    data = type.layout.decode(buffer);
-  } catch (err) {
-    throw new Error('invalid instruction; ' + err);
-  }
-
-  if (data.instruction !== type.index) {
-    throw new Error(`invalid instruction; instruction index mismatch ${data.instruction} != ${type.index}`);
-  }
-
-  return data;
-}
-
-/**
- * https://github.com/solana-labs/solana/blob/90bedd7e067b5b8f3ddbb45da00a4e9cabb22c62/sdk/src/fee_calculator.rs#L7-L11
- *
- * @internal
- */
-
-const FeeCalculatorLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('lamportsPerSignature');
-/**
- * Calculator for transaction fees.
- *
- * @deprecated Deprecated since Solana v1.8.0.
- */
-
-/**
- * See https://github.com/solana-labs/solana/blob/0ea2843ec9cdc517572b8e62c959f41b55cf4453/sdk/src/nonce_state.rs#L29-L32
- *
- * @internal
- */
-
-const NonceAccountLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('version'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('state'), publicKey('authorizedPubkey'), publicKey('nonce'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([FeeCalculatorLayout], 'feeCalculator')]);
-const NONCE_ACCOUNT_LENGTH = NonceAccountLayout.span;
-
-/**
- * NonceAccount class
- */
-class NonceAccount {
-  /**
-   * @internal
-   */
-  constructor(args) {
-    this.authorizedPubkey = void 0;
-    this.nonce = void 0;
-    this.feeCalculator = void 0;
-    this.authorizedPubkey = args.authorizedPubkey;
-    this.nonce = args.nonce;
-    this.feeCalculator = args.feeCalculator;
-  }
-  /**
-   * Deserialize NonceAccount from the account data.
-   *
-   * @param buffer account data
-   * @return NonceAccount
-   */
-
-
-  static fromAccountData(buffer) {
-    const nonceAccount = NonceAccountLayout.decode(toBuffer(buffer), 0);
-    return new NonceAccount({
-      authorizedPubkey: new PublicKey(nonceAccount.authorizedPubkey),
-      nonce: new PublicKey(nonceAccount.nonce).toString(),
-      feeCalculator: nonceAccount.feeCalculator
-    });
-  }
-
-}
-
-const encodeDecode = layout => {
-  const decode = layout.decode.bind(layout);
-  const encode = layout.encode.bind(layout);
-  return {
-    decode,
-    encode
-  };
-};
-
-const bigInt = length => property => {
-  const layout = (0,_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob)(length, property);
-  const {
-    encode,
-    decode
-  } = encodeDecode(layout);
-  const bigIntLayout = layout;
-
-  bigIntLayout.decode = (buffer, offset) => {
-    const src = decode(buffer, offset);
-    return (0,bigint_buffer__WEBPACK_IMPORTED_MODULE_8__.toBigIntLE)(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(src));
-  };
-
-  bigIntLayout.encode = (bigInt, buffer, offset) => {
-    const src = (0,bigint_buffer__WEBPACK_IMPORTED_MODULE_8__.toBufferLE)(bigInt, length);
-    return encode(src, buffer, offset);
-  };
-
-  return bigIntLayout;
-};
-
-const u64 = bigInt(8);
-
-/**
- * Create account system transaction params
- */
-
-/**
- * System Instruction class
- */
-class SystemInstruction {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Decode a system instruction and retrieve the instruction type.
-   */
-
-
-  static decodeInstructionType(instruction) {
-    this.checkProgramId(instruction.programId);
-    const instructionTypeLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction');
-    const typeIndex = instructionTypeLayout.decode(instruction.data);
-    let type;
-
-    for (const [ixType, layout] of Object.entries(SYSTEM_INSTRUCTION_LAYOUTS)) {
-      if (layout.index == typeIndex) {
-        type = ixType;
-        break;
-      }
-    }
-
-    if (!type) {
-      throw new Error('Instruction type incorrect; not a SystemInstruction');
-    }
-
-    return type;
-  }
-  /**
-   * Decode a create account system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeCreateAccount(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 2);
-    const {
-      lamports,
-      space,
-      programId
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.Create, instruction.data);
-    return {
-      fromPubkey: instruction.keys[0].pubkey,
-      newAccountPubkey: instruction.keys[1].pubkey,
-      lamports,
-      space,
-      programId: new PublicKey(programId)
-    };
-  }
-  /**
-   * Decode a transfer system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeTransfer(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 2);
-    const {
-      lamports
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.Transfer, instruction.data);
-    return {
-      fromPubkey: instruction.keys[0].pubkey,
-      toPubkey: instruction.keys[1].pubkey,
-      lamports
-    };
-  }
-  /**
-   * Decode a transfer with seed system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeTransferWithSeed(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      lamports,
-      seed,
-      programId
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.TransferWithSeed, instruction.data);
-    return {
-      fromPubkey: instruction.keys[0].pubkey,
-      basePubkey: instruction.keys[1].pubkey,
-      toPubkey: instruction.keys[2].pubkey,
-      lamports,
-      seed,
-      programId: new PublicKey(programId)
-    };
-  }
-  /**
-   * Decode an allocate system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAllocate(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 1);
-    const {
-      space
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.Allocate, instruction.data);
-    return {
-      accountPubkey: instruction.keys[0].pubkey,
-      space
-    };
-  }
-  /**
-   * Decode an allocate with seed system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAllocateWithSeed(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 1);
-    const {
-      base,
-      seed,
-      space,
-      programId
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.AllocateWithSeed, instruction.data);
-    return {
-      accountPubkey: instruction.keys[0].pubkey,
-      basePubkey: new PublicKey(base),
-      seed,
-      space,
-      programId: new PublicKey(programId)
-    };
-  }
-  /**
-   * Decode an assign system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAssign(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 1);
-    const {
-      programId
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.Assign, instruction.data);
-    return {
-      accountPubkey: instruction.keys[0].pubkey,
-      programId: new PublicKey(programId)
-    };
-  }
-  /**
-   * Decode an assign with seed system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAssignWithSeed(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 1);
-    const {
-      base,
-      seed,
-      programId
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.AssignWithSeed, instruction.data);
-    return {
-      accountPubkey: instruction.keys[0].pubkey,
-      basePubkey: new PublicKey(base),
-      seed,
-      programId: new PublicKey(programId)
-    };
-  }
-  /**
-   * Decode a create account with seed system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeCreateWithSeed(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 2);
-    const {
-      base,
-      seed,
-      lamports,
-      space,
-      programId
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.CreateWithSeed, instruction.data);
-    return {
-      fromPubkey: instruction.keys[0].pubkey,
-      newAccountPubkey: instruction.keys[1].pubkey,
-      basePubkey: new PublicKey(base),
-      seed,
-      lamports,
-      space,
-      programId: new PublicKey(programId)
-    };
-  }
-  /**
-   * Decode a nonce initialize system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeNonceInitialize(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      authorized
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.InitializeNonceAccount, instruction.data);
-    return {
-      noncePubkey: instruction.keys[0].pubkey,
-      authorizedPubkey: new PublicKey(authorized)
-    };
-  }
-  /**
-   * Decode a nonce advance system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeNonceAdvance(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.AdvanceNonceAccount, instruction.data);
-    return {
-      noncePubkey: instruction.keys[0].pubkey,
-      authorizedPubkey: instruction.keys[2].pubkey
-    };
-  }
-  /**
-   * Decode a nonce withdraw system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeNonceWithdraw(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 5);
-    const {
-      lamports
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.WithdrawNonceAccount, instruction.data);
-    return {
-      noncePubkey: instruction.keys[0].pubkey,
-      toPubkey: instruction.keys[1].pubkey,
-      authorizedPubkey: instruction.keys[4].pubkey,
-      lamports
-    };
-  }
-  /**
-   * Decode a nonce authorize system instruction and retrieve the instruction params.
-   */
-
-
-  static decodeNonceAuthorize(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 2);
-    const {
-      authorized
-    } = decodeData$1(SYSTEM_INSTRUCTION_LAYOUTS.AuthorizeNonceAccount, instruction.data);
-    return {
-      noncePubkey: instruction.keys[0].pubkey,
-      authorizedPubkey: instruction.keys[1].pubkey,
-      newAuthorizedPubkey: new PublicKey(authorized)
-    };
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkProgramId(programId) {
-    if (!programId.equals(SystemProgram.programId)) {
-      throw new Error('invalid instruction; programId is not SystemProgram');
-    }
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkKeyLength(keys, expectedLength) {
-    if (keys.length < expectedLength) {
-      throw new Error(`invalid instruction; found ${keys.length} keys, expected at least ${expectedLength}`);
-    }
-  }
-
-}
-/**
- * An enumeration of valid SystemInstructionType's
- */
-
-/**
- * An enumeration of valid system InstructionType's
- * @internal
- */
-const SYSTEM_INSTRUCTION_LAYOUTS = Object.freeze({
-  Create: {
-    index: 0,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('lamports'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('space'), publicKey('programId')])
-  },
-  Assign: {
-    index: 1,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('programId')])
-  },
-  Transfer: {
-    index: 2,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), u64('lamports')])
-  },
-  CreateWithSeed: {
-    index: 3,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('base'), rustString('seed'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('lamports'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('space'), publicKey('programId')])
-  },
-  AdvanceNonceAccount: {
-    index: 4,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  },
-  WithdrawNonceAccount: {
-    index: 5,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('lamports')])
-  },
-  InitializeNonceAccount: {
-    index: 6,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('authorized')])
-  },
-  AuthorizeNonceAccount: {
-    index: 7,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('authorized')])
-  },
-  Allocate: {
-    index: 8,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('space')])
-  },
-  AllocateWithSeed: {
-    index: 9,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('base'), rustString('seed'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('space'), publicKey('programId')])
-  },
-  AssignWithSeed: {
-    index: 10,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('base'), rustString('seed'), publicKey('programId')])
-  },
-  TransferWithSeed: {
-    index: 11,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), u64('lamports'), rustString('seed'), publicKey('programId')])
-  },
-  UpgradeNonceAccount: {
-    index: 12,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  }
-});
-/**
- * Factory class for transactions to interact with the System program
- */
-
-class SystemProgram {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Public key that identifies the System program
-   */
-
-
-  /**
-   * Generate a transaction instruction that creates a new account
-   */
-  static createAccount(params) {
-    const type = SYSTEM_INSTRUCTION_LAYOUTS.Create;
-    const data = encodeData(type, {
-      lamports: params.lamports,
-      space: params.space,
-      programId: toBuffer(params.programId.toBuffer())
-    });
-    return new TransactionInstruction({
-      keys: [{
-        pubkey: params.fromPubkey,
-        isSigner: true,
-        isWritable: true
-      }, {
-        pubkey: params.newAccountPubkey,
-        isSigner: true,
-        isWritable: true
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction instruction that transfers lamports from one account to another
-   */
-
-
-  static transfer(params) {
-    let data;
-    let keys;
-
-    if ('basePubkey' in params) {
-      const type = SYSTEM_INSTRUCTION_LAYOUTS.TransferWithSeed;
-      data = encodeData(type, {
-        lamports: BigInt(params.lamports),
-        seed: params.seed,
-        programId: toBuffer(params.programId.toBuffer())
-      });
-      keys = [{
-        pubkey: params.fromPubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: params.basePubkey,
-        isSigner: true,
-        isWritable: false
-      }, {
-        pubkey: params.toPubkey,
-        isSigner: false,
-        isWritable: true
-      }];
-    } else {
-      const type = SYSTEM_INSTRUCTION_LAYOUTS.Transfer;
-      data = encodeData(type, {
-        lamports: BigInt(params.lamports)
-      });
-      keys = [{
-        pubkey: params.fromPubkey,
-        isSigner: true,
-        isWritable: true
-      }, {
-        pubkey: params.toPubkey,
-        isSigner: false,
-        isWritable: true
-      }];
-    }
-
-    return new TransactionInstruction({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction instruction that assigns an account to a program
-   */
-
-
-  static assign(params) {
-    let data;
-    let keys;
-
-    if ('basePubkey' in params) {
-      const type = SYSTEM_INSTRUCTION_LAYOUTS.AssignWithSeed;
-      data = encodeData(type, {
-        base: toBuffer(params.basePubkey.toBuffer()),
-        seed: params.seed,
-        programId: toBuffer(params.programId.toBuffer())
-      });
-      keys = [{
-        pubkey: params.accountPubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: params.basePubkey,
-        isSigner: true,
-        isWritable: false
-      }];
-    } else {
-      const type = SYSTEM_INSTRUCTION_LAYOUTS.Assign;
-      data = encodeData(type, {
-        programId: toBuffer(params.programId.toBuffer())
-      });
-      keys = [{
-        pubkey: params.accountPubkey,
-        isSigner: true,
-        isWritable: true
-      }];
-    }
-
-    return new TransactionInstruction({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction instruction that creates a new account at
-   *   an address generated with `from`, a seed, and programId
-   */
-
-
-  static createAccountWithSeed(params) {
-    const type = SYSTEM_INSTRUCTION_LAYOUTS.CreateWithSeed;
-    const data = encodeData(type, {
-      base: toBuffer(params.basePubkey.toBuffer()),
-      seed: params.seed,
-      lamports: params.lamports,
-      space: params.space,
-      programId: toBuffer(params.programId.toBuffer())
-    });
-    let keys = [{
-      pubkey: params.fromPubkey,
-      isSigner: true,
-      isWritable: true
-    }, {
-      pubkey: params.newAccountPubkey,
-      isSigner: false,
-      isWritable: true
-    }];
-
-    if (params.basePubkey != params.fromPubkey) {
-      keys.push({
-        pubkey: params.basePubkey,
-        isSigner: true,
-        isWritable: false
-      });
-    }
-
-    return new TransactionInstruction({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction that creates a new Nonce account
-   */
-
-
-  static createNonceAccount(params) {
-    const transaction = new Transaction();
-
-    if ('basePubkey' in params && 'seed' in params) {
-      transaction.add(SystemProgram.createAccountWithSeed({
-        fromPubkey: params.fromPubkey,
-        newAccountPubkey: params.noncePubkey,
-        basePubkey: params.basePubkey,
-        seed: params.seed,
-        lamports: params.lamports,
-        space: NONCE_ACCOUNT_LENGTH,
-        programId: this.programId
-      }));
-    } else {
-      transaction.add(SystemProgram.createAccount({
-        fromPubkey: params.fromPubkey,
-        newAccountPubkey: params.noncePubkey,
-        lamports: params.lamports,
-        space: NONCE_ACCOUNT_LENGTH,
-        programId: this.programId
-      }));
-    }
-
-    const initParams = {
-      noncePubkey: params.noncePubkey,
-      authorizedPubkey: params.authorizedPubkey
-    };
-    transaction.add(this.nonceInitialize(initParams));
-    return transaction;
-  }
-  /**
-   * Generate an instruction to initialize a Nonce account
-   */
-
-
-  static nonceInitialize(params) {
-    const type = SYSTEM_INSTRUCTION_LAYOUTS.InitializeNonceAccount;
-    const data = encodeData(type, {
-      authorized: toBuffer(params.authorizedPubkey.toBuffer())
-    });
-    const instructionData = {
-      keys: [{
-        pubkey: params.noncePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_RECENT_BLOCKHASHES_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: SYSVAR_RENT_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    };
-    return new TransactionInstruction(instructionData);
-  }
-  /**
-   * Generate an instruction to advance the nonce in a Nonce account
-   */
-
-
-  static nonceAdvance(params) {
-    const type = SYSTEM_INSTRUCTION_LAYOUTS.AdvanceNonceAccount;
-    const data = encodeData(type);
-    const instructionData = {
-      keys: [{
-        pubkey: params.noncePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_RECENT_BLOCKHASHES_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: params.authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    };
-    return new TransactionInstruction(instructionData);
-  }
-  /**
-   * Generate a transaction instruction that withdraws lamports from a Nonce account
-   */
-
-
-  static nonceWithdraw(params) {
-    const type = SYSTEM_INSTRUCTION_LAYOUTS.WithdrawNonceAccount;
-    const data = encodeData(type, {
-      lamports: params.lamports
-    });
-    return new TransactionInstruction({
-      keys: [{
-        pubkey: params.noncePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: params.toPubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_RECENT_BLOCKHASHES_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: SYSVAR_RENT_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: params.authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction instruction that authorizes a new PublicKey as the authority
-   * on a Nonce account.
-   */
-
-
-  static nonceAuthorize(params) {
-    const type = SYSTEM_INSTRUCTION_LAYOUTS.AuthorizeNonceAccount;
-    const data = encodeData(type, {
-      authorized: toBuffer(params.newAuthorizedPubkey.toBuffer())
-    });
-    return new TransactionInstruction({
-      keys: [{
-        pubkey: params.noncePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: params.authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction instruction that allocates space in an account without funding
-   */
-
-
-  static allocate(params) {
-    let data;
-    let keys;
-
-    if ('basePubkey' in params) {
-      const type = SYSTEM_INSTRUCTION_LAYOUTS.AllocateWithSeed;
-      data = encodeData(type, {
-        base: toBuffer(params.basePubkey.toBuffer()),
-        seed: params.seed,
-        space: params.space,
-        programId: toBuffer(params.programId.toBuffer())
-      });
-      keys = [{
-        pubkey: params.accountPubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: params.basePubkey,
-        isSigner: true,
-        isWritable: false
-      }];
-    } else {
-      const type = SYSTEM_INSTRUCTION_LAYOUTS.Allocate;
-      data = encodeData(type, {
-        space: params.space
-      });
-      keys = [{
-        pubkey: params.accountPubkey,
-        isSigner: true,
-        isWritable: true
-      }];
-    }
-
-    return new TransactionInstruction({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-
-}
-SystemProgram.programId = new PublicKey('11111111111111111111111111111111');
-
-// Keep program chunks under PACKET_DATA_SIZE, leaving enough room for the
-// rest of the Transaction fields
-//
-// TODO: replace 300 with a proper constant for the size of the other
-// Transaction fields
-const CHUNK_SIZE = PACKET_DATA_SIZE - 300;
-/**
- * Program loader interface
- */
-
-class Loader {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Amount of program data placed in each load Transaction
-   */
-
-
-  /**
-   * Minimum number of signatures required to load a program not including
-   * retries
-   *
-   * Can be used to calculate transaction fees
-   */
-  static getMinNumSignatures(dataLength) {
-    return 2 * ( // Every transaction requires two signatures (payer + program)
-    Math.ceil(dataLength / Loader.chunkSize) + 1 + // Add one for Create transaction
-    1) // Add one for Finalize transaction
-    ;
-  }
-  /**
-   * Loads a generic program
-   *
-   * @param connection The connection to use
-   * @param payer System account that pays to load the program
-   * @param program Account to load the program into
-   * @param programId Public key that identifies the loader
-   * @param data Program octets
-   * @return true if program was loaded successfully, false if program was already loaded
-   */
-
-
-  static async load(connection, payer, program, programId, data) {
-    {
-      const balanceNeeded = await connection.getMinimumBalanceForRentExemption(data.length); // Fetch program account info to check if it has already been created
-
-      const programInfo = await connection.getAccountInfo(program.publicKey, 'confirmed');
-      let transaction = null;
-
-      if (programInfo !== null) {
-        if (programInfo.executable) {
-          console.error('Program load failed, account is already executable');
-          return false;
-        }
-
-        if (programInfo.data.length !== data.length) {
-          transaction = transaction || new Transaction();
-          transaction.add(SystemProgram.allocate({
-            accountPubkey: program.publicKey,
-            space: data.length
-          }));
-        }
-
-        if (!programInfo.owner.equals(programId)) {
-          transaction = transaction || new Transaction();
-          transaction.add(SystemProgram.assign({
-            accountPubkey: program.publicKey,
-            programId
-          }));
-        }
-
-        if (programInfo.lamports < balanceNeeded) {
-          transaction = transaction || new Transaction();
-          transaction.add(SystemProgram.transfer({
-            fromPubkey: payer.publicKey,
-            toPubkey: program.publicKey,
-            lamports: balanceNeeded - programInfo.lamports
-          }));
-        }
-      } else {
-        transaction = new Transaction().add(SystemProgram.createAccount({
-          fromPubkey: payer.publicKey,
-          newAccountPubkey: program.publicKey,
-          lamports: balanceNeeded > 0 ? balanceNeeded : 1,
-          space: data.length,
-          programId
-        }));
-      } // If the account is already created correctly, skip this step
-      // and proceed directly to loading instructions
-
-
-      if (transaction !== null) {
-        await sendAndConfirmTransaction(connection, transaction, [payer, program], {
-          commitment: 'confirmed'
-        });
-      }
-    }
-    const dataLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('offset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('bytesLength'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('bytesLengthPadding'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('byte'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32(), -8), 'bytes')]);
-    const chunkSize = Loader.chunkSize;
-    let offset = 0;
-    let array = data;
-    let transactions = [];
-
-    while (array.length > 0) {
-      const bytes = array.slice(0, chunkSize);
-      const data = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(chunkSize + 16);
-      dataLayout.encode({
-        instruction: 0,
-        // Load instruction
-        offset,
-        bytes: bytes,
-        bytesLength: 0,
-        bytesLengthPadding: 0
-      }, data);
-      const transaction = new Transaction().add({
-        keys: [{
-          pubkey: program.publicKey,
-          isSigner: true,
-          isWritable: true
-        }],
-        programId,
-        data
-      });
-      transactions.push(sendAndConfirmTransaction(connection, transaction, [payer, program], {
-        commitment: 'confirmed'
-      })); // Delay between sends in an attempt to reduce rate limit errors
-
-      if (connection._rpcEndpoint.includes('solana.com')) {
-        const REQUESTS_PER_SECOND = 4;
-        await sleep(1000 / REQUESTS_PER_SECOND);
-      }
-
-      offset += chunkSize;
-      array = array.slice(chunkSize);
-    }
-
-    await Promise.all(transactions); // Finalize the account loaded with program data for execution
-
-    {
-      const dataLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')]);
-      const data = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(dataLayout.span);
-      dataLayout.encode({
-        instruction: 1 // Finalize instruction
-
-      }, data);
-      const transaction = new Transaction().add({
-        keys: [{
-          pubkey: program.publicKey,
-          isSigner: true,
-          isWritable: true
-        }, {
-          pubkey: SYSVAR_RENT_PUBKEY,
-          isSigner: false,
-          isWritable: false
-        }],
-        programId,
-        data
-      });
-      await sendAndConfirmTransaction(connection, transaction, [payer, program], {
-        commitment: 'confirmed'
-      });
-    } // success
-
-    return true;
-  }
-
-}
-Loader.chunkSize = CHUNK_SIZE;
-
-const BPF_LOADER_PROGRAM_ID = new PublicKey('BPFLoader2111111111111111111111111111111111');
-/**
- * Factory class for transactions to interact with a program loader
- */
-
-class BpfLoader {
-  /**
-   * Minimum number of signatures required to load a program not including
-   * retries
-   *
-   * Can be used to calculate transaction fees
-   */
-  static getMinNumSignatures(dataLength) {
-    return Loader.getMinNumSignatures(dataLength);
-  }
-  /**
-   * Load a BPF program
-   *
-   * @param connection The connection to use
-   * @param payer Account that will pay program loading fees
-   * @param program Account to load the program into
-   * @param elf The entire ELF containing the BPF program
-   * @param loaderProgramId The program id of the BPF loader to use
-   * @return true if program was loaded successfully, false if program was already loaded
-   */
-
-
-  static load(connection, payer, program, elf, loaderProgramId) {
-    return Loader.load(connection, payer, program, loaderProgramId, elf);
-  }
-
-}
-
-var objToString = Object.prototype.toString;
-var objKeys = Object.keys || function(obj) {
-		var keys = [];
-		for (var name in obj) {
-			keys.push(name);
-		}
-		return keys;
-	};
-
-function stringify(val, isArrayProp) {
-	var i, max, str, keys, key, propVal, toStr;
-	if (val === true) {
-		return "true";
-	}
-	if (val === false) {
-		return "false";
-	}
-	switch (typeof val) {
-		case "object":
-			if (val === null) {
-				return null;
-			} else if (val.toJSON && typeof val.toJSON === "function") {
-				return stringify(val.toJSON(), isArrayProp);
-			} else {
-				toStr = objToString.call(val);
-				if (toStr === "[object Array]") {
-					str = '[';
-					max = val.length - 1;
-					for(i = 0; i < max; i++) {
-						str += stringify(val[i], true) + ',';
-					}
-					if (max > -1) {
-						str += stringify(val[i], true);
-					}
-					return str + ']';
-				} else if (toStr === "[object Object]") {
-					// only object is left
-					keys = objKeys(val).sort();
-					max = keys.length;
-					str = "";
-					i = 0;
-					while (i < max) {
-						key = keys[i];
-						propVal = stringify(val[key], false);
-						if (propVal !== undefined) {
-							if (str) {
-								str += ',';
-							}
-							str += JSON.stringify(key) + ':' + propVal;
-						}
-						i++;
-					}
-					return '{' + str + '}';
-				} else {
-					return JSON.stringify(val);
-				}
-			}
-		case "function":
-		case "undefined":
-			return isArrayProp ? null : undefined;
-		case "string":
-			return JSON.stringify(val);
-		default:
-			return isFinite(val) ? val : null;
-	}
-}
-
-var fastStableStringify = function(val) {
-	var returnVal = stringify(val, false);
-	if (returnVal !== undefined) {
-		return ''+ returnVal;
-	}
-};
-
-var fastStableStringify$1 = fastStableStringify;
-
-const MINIMUM_SLOT_PER_EPOCH = 32; // Returns the number of trailing zeros in the binary representation of self.
-
-function trailingZeros(n) {
-  let trailingZeros = 0;
-
-  while (n > 1) {
-    n /= 2;
-    trailingZeros++;
-  }
-
-  return trailingZeros;
-} // Returns the smallest power of two greater than or equal to n
-
-
-function nextPowerOfTwo(n) {
-  if (n === 0) return 1;
-  n--;
-  n |= n >> 1;
-  n |= n >> 2;
-  n |= n >> 4;
-  n |= n >> 8;
-  n |= n >> 16;
-  n |= n >> 32;
-  return n + 1;
-}
-/**
- * Epoch schedule
- * (see https://docs.solana.com/terminology#epoch)
- * Can be retrieved with the {@link connection.getEpochSchedule} method
- */
-
-
-class EpochSchedule {
-  /** The maximum number of slots in each epoch */
-
-  /** The number of slots before beginning of an epoch to calculate a leader schedule for that epoch */
-
-  /** Indicates whether epochs start short and grow */
-
-  /** The first epoch with `slotsPerEpoch` slots */
-
-  /** The first slot of `firstNormalEpoch` */
-  constructor(slotsPerEpoch, leaderScheduleSlotOffset, warmup, firstNormalEpoch, firstNormalSlot) {
-    this.slotsPerEpoch = void 0;
-    this.leaderScheduleSlotOffset = void 0;
-    this.warmup = void 0;
-    this.firstNormalEpoch = void 0;
-    this.firstNormalSlot = void 0;
-    this.slotsPerEpoch = slotsPerEpoch;
-    this.leaderScheduleSlotOffset = leaderScheduleSlotOffset;
-    this.warmup = warmup;
-    this.firstNormalEpoch = firstNormalEpoch;
-    this.firstNormalSlot = firstNormalSlot;
-  }
-
-  getEpoch(slot) {
-    return this.getEpochAndSlotIndex(slot)[0];
-  }
-
-  getEpochAndSlotIndex(slot) {
-    if (slot < this.firstNormalSlot) {
-      const epoch = trailingZeros(nextPowerOfTwo(slot + MINIMUM_SLOT_PER_EPOCH + 1)) - trailingZeros(MINIMUM_SLOT_PER_EPOCH) - 1;
-      const epochLen = this.getSlotsInEpoch(epoch);
-      const slotIndex = slot - (epochLen - MINIMUM_SLOT_PER_EPOCH);
-      return [epoch, slotIndex];
-    } else {
-      const normalSlotIndex = slot - this.firstNormalSlot;
-      const normalEpochIndex = Math.floor(normalSlotIndex / this.slotsPerEpoch);
-      const epoch = this.firstNormalEpoch + normalEpochIndex;
-      const slotIndex = normalSlotIndex % this.slotsPerEpoch;
-      return [epoch, slotIndex];
-    }
-  }
-
-  getFirstSlotInEpoch(epoch) {
-    if (epoch <= this.firstNormalEpoch) {
-      return (Math.pow(2, epoch) - 1) * MINIMUM_SLOT_PER_EPOCH;
-    } else {
-      return (epoch - this.firstNormalEpoch) * this.slotsPerEpoch + this.firstNormalSlot;
-    }
-  }
-
-  getLastSlotInEpoch(epoch) {
-    return this.getFirstSlotInEpoch(epoch) + this.getSlotsInEpoch(epoch) - 1;
-  }
-
-  getSlotsInEpoch(epoch) {
-    if (epoch < this.firstNormalEpoch) {
-      return Math.pow(2, epoch + trailingZeros(MINIMUM_SLOT_PER_EPOCH));
-    } else {
-      return this.slotsPerEpoch;
-    }
-  }
-
-}
-
-class SendTransactionError extends Error {
-  constructor(message, logs) {
-    super(message);
-    this.logs = void 0;
-    this.logs = logs;
-  }
-
-} // Keep in sync with client/src/rpc_custom_errors.rs
-// Typescript `enums` thwart tree-shaking. See https://bargsten.org/jsts/enums/
-
-const SolanaJSONRPCErrorCode = {
-  JSON_RPC_SERVER_ERROR_BLOCK_CLEANED_UP: -32001,
-  JSON_RPC_SERVER_ERROR_SEND_TRANSACTION_PREFLIGHT_FAILURE: -32002,
-  JSON_RPC_SERVER_ERROR_TRANSACTION_SIGNATURE_VERIFICATION_FAILURE: -32003,
-  JSON_RPC_SERVER_ERROR_BLOCK_NOT_AVAILABLE: -32004,
-  JSON_RPC_SERVER_ERROR_NODE_UNHEALTHY: -32005,
-  JSON_RPC_SERVER_ERROR_TRANSACTION_PRECOMPILE_VERIFICATION_FAILURE: -32006,
-  JSON_RPC_SERVER_ERROR_SLOT_SKIPPED: -32007,
-  JSON_RPC_SERVER_ERROR_NO_SNAPSHOT: -32008,
-  JSON_RPC_SERVER_ERROR_LONG_TERM_STORAGE_SLOT_SKIPPED: -32009,
-  JSON_RPC_SERVER_ERROR_KEY_EXCLUDED_FROM_SECONDARY_INDEX: -32010,
-  JSON_RPC_SERVER_ERROR_TRANSACTION_HISTORY_NOT_AVAILABLE: -32011,
-  JSON_RPC_SCAN_ERROR: -32012,
-  JSON_RPC_SERVER_ERROR_TRANSACTION_SIGNATURE_LEN_MISMATCH: -32013,
-  JSON_RPC_SERVER_ERROR_BLOCK_STATUS_NOT_AVAILABLE_YET: -32014,
-  JSON_RPC_SERVER_ERROR_UNSUPPORTED_TRANSACTION_VERSION: -32015,
-  JSON_RPC_SERVER_ERROR_MIN_CONTEXT_SLOT_NOT_REACHED: -32016
-};
-class SolanaJSONRPCError extends Error {
-  constructor({
-    code,
-    message,
-    data
-  }, customMessage) {
-    super(customMessage != null ? `${customMessage}: ${message}` : message);
-    this.code = void 0;
-    this.data = void 0;
-    this.code = code;
-    this.data = data;
-    this.name = 'SolanaJSONRPCError';
-  }
-
-}
-
-var fetchImpl = globalThis.fetch;
-
-// TODO: These constants should be removed in favor of reading them out of a
-// Syscall account
-
-/**
- * @internal
- */
-const NUM_TICKS_PER_SECOND = 160;
-/**
- * @internal
- */
-
-const DEFAULT_TICKS_PER_SLOT = 64;
-/**
- * @internal
- */
-
-const NUM_SLOTS_PER_SECOND = NUM_TICKS_PER_SECOND / DEFAULT_TICKS_PER_SLOT;
-/**
- * @internal
- */
-
-const MS_PER_SLOT = 1000 / NUM_SLOTS_PER_SECOND;
-
-/**
- * @internal
- */
-
-/**
- * Decode account data buffer using an AccountType
- * @internal
- */
-function decodeData(type, data) {
-  let decoded;
-
-  try {
-    decoded = type.layout.decode(data);
-  } catch (err) {
-    throw new Error('invalid instruction; ' + err);
-  }
-
-  if (decoded.typeIndex !== type.index) {
-    throw new Error(`invalid account data; account type mismatch ${decoded.typeIndex} != ${type.index}`);
-  }
-
-  return decoded;
-}
-
-/// The serialized size of lookup table metadata
-const LOOKUP_TABLE_META_SIZE = 56;
-class AddressLookupTableAccount {
-  constructor(args) {
-    this.key = void 0;
-    this.state = void 0;
-    this.key = args.key;
-    this.state = args.state;
-  }
-
-  isActive() {
-    const U64_MAX = BigInt('0xffffffffffffffff');
-    return this.state.deactivationSlot === U64_MAX;
-  }
-
-  static deserialize(accountData) {
-    const meta = decodeData(LookupTableMetaLayout, accountData);
-    const serializedAddressesLen = accountData.length - LOOKUP_TABLE_META_SIZE;
-    assert(serializedAddressesLen >= 0, 'lookup table is invalid');
-    assert(serializedAddressesLen % 32 === 0, 'lookup table is invalid');
-    const numSerializedAddresses = serializedAddressesLen / 32;
-    const {
-      addresses
-    } = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(publicKey(), numSerializedAddresses, 'addresses')]).decode(accountData.slice(LOOKUP_TABLE_META_SIZE));
-    return {
-      deactivationSlot: meta.deactivationSlot,
-      lastExtendedSlot: meta.lastExtendedSlot,
-      lastExtendedSlotStartIndex: meta.lastExtendedStartIndex,
-      authority: meta.authority.length !== 0 ? new PublicKey(meta.authority[0]) : undefined,
-      addresses: addresses.map(address => new PublicKey(address))
-    };
-  }
-
-}
-const LookupTableMetaLayout = {
-  index: 1,
-  layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('typeIndex'), u64('deactivationSlot'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('lastExtendedSlot'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('lastExtendedStartIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8(), // option
-  _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(publicKey(), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8(), -1), 'authority')])
-};
-
-const URL_RE = /^[^:]+:\/\/([^:[]+|\[[^\]]+\])(:\d+)?(.*)/i;
-function makeWebsocketUrl(endpoint) {
-  const matches = endpoint.match(URL_RE);
-
-  if (matches == null) {
-    throw TypeError(`Failed to validate endpoint URL \`${endpoint}\``);
-  }
-
-  const [_, // eslint-disable-line @typescript-eslint/no-unused-vars
-  hostish, portWithColon, rest] = matches;
-  const protocol = endpoint.startsWith('https:') ? 'wss:' : 'ws:';
-  const startPort = portWithColon == null ? null : parseInt(portWithColon.slice(1), 10);
-  const websocketPort = // Only shift the port by +1 as a convention for ws(s) only if given endpoint
-  // is explictly specifying the endpoint port (HTTP-based RPC), assuming
-  // we're directly trying to connect to solana-validator's ws listening port.
-  // When the endpoint omits the port, we're connecting to the protocol
-  // default ports: http(80) or https(443) and it's assumed we're behind a reverse
-  // proxy which manages WebSocket upgrade and backend port redirection.
-  startPort == null ? '' : `:${startPort + 1}`;
-  return `${protocol}//${hostish}${websocketPort}${rest}`;
-}
-
-var _process$env$npm_pack;
-const PublicKeyFromString = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.coerce)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.instance)(PublicKey), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(), value => new PublicKey(value));
-const RawAccountDataResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.tuple)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('base64')]);
-const BufferFromRawAccountData = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.coerce)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.instance)(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer), RawAccountDataResult, value => buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(value[0], 'base64'));
-/**
- * Attempt to use a recent blockhash for up to 30 seconds
- * @internal
- */
-
-const BLOCKHASH_CACHE_TIMEOUT_MS = 30 * 1000;
-/**
- * HACK.
- * Copied from rpc-websockets/dist/lib/client.
- * Otherwise, `yarn build` fails with:
- * https://gist.github.com/steveluscher/c057eca81d479ef705cdb53162f9971d
- */
-
-/* @internal */
-function assertEndpointUrl(putativeUrl) {
-  if (/^https?:/.test(putativeUrl) === false) {
-    throw new TypeError('Endpoint URL must start with `http:` or `https:`.');
-  }
-
-  return putativeUrl;
-}
-/** @internal */
-
-
-function extractCommitmentFromConfig(commitmentOrConfig) {
-  let commitment;
-  let config;
-
-  if (typeof commitmentOrConfig === 'string') {
-    commitment = commitmentOrConfig;
-  } else if (commitmentOrConfig) {
-    const {
-      commitment: specifiedCommitment,
-      ...specifiedConfig
-    } = commitmentOrConfig;
-    commitment = specifiedCommitment;
-    config = specifiedConfig;
-  }
-
-  return {
-    commitment,
-    config
-  };
-}
-/**
- * @internal
- */
-
-
-function createRpcResult(result) {
-  return (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    jsonrpc: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('2.0'),
-    id: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    result
-  }), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    jsonrpc: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('2.0'),
-    id: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    error: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      code: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.unknown)(),
-      message: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-      data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.any)())
-    })
-  })]);
-}
-
-const UnknownRpcResult = createRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.unknown)());
-/**
- * @internal
- */
-
-function jsonRpcResult(schema) {
-  return (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.coerce)(createRpcResult(schema), UnknownRpcResult, value => {
-    if ('error' in value) {
-      return value;
-    } else {
-      return { ...value,
-        result: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(value.result, schema)
-      };
-    }
-  });
-}
-/**
- * @internal
- */
-
-
-function jsonRpcResultAndContext(value) {
-  return jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    context: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-    }),
-    value
-  }));
-}
-/**
- * @internal
- */
-
-
-function notificationResultAndContext(value) {
-  return (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    context: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-    }),
-    value
-  });
-}
-/**
- * @internal
- */
-
-
-function versionedMessageFromResponse(version, response) {
-  if (version === 0) {
-    return new MessageV0({
-      header: response.header,
-      staticAccountKeys: response.accountKeys.map(accountKey => new PublicKey(accountKey)),
-      recentBlockhash: response.recentBlockhash,
-      compiledInstructions: response.instructions.map(ix => ({
-        programIdIndex: ix.programIdIndex,
-        accountKeyIndexes: ix.accounts,
-        data: bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(ix.data)
-      })),
-      addressTableLookups: response.addressTableLookups
-    });
-  } else {
-    return new Message(response);
-  }
-}
-/**
- * The level of commitment desired when querying state
- * <pre>
- *   'processed': Query the most recent block which has reached 1 confirmation by the connected node
- *   'confirmed': Query the most recent block which has reached 1 confirmation by the cluster
- *   'finalized': Query the most recent block which has been finalized by the cluster
- * </pre>
- */
-
-
-const GetInflationGovernorResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  foundation: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  foundationTerm: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  initial: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  taper: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  terminal: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * The inflation reward for an epoch
- */
-
-/**
- * Expected JSON RPC response for the "getInflationReward" message
- */
-const GetInflationRewardResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  epoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  effectiveSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  amount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  postBalance: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-}))));
-/**
- * Information about the current epoch
- */
-
-const GetEpochInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  epoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  slotIndex: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  slotsInEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  absoluteSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  blockHeight: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  transactionCount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-});
-const GetEpochScheduleResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  slotsPerEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  leaderScheduleSlotOffset: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  warmup: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-  firstNormalEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  firstNormalSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * Leader schedule
- * (see https://docs.solana.com/terminology#leader-schedule)
- */
-
-const GetLeaderScheduleResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.record)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-/**
- * Transaction error or null
- */
-
-const TransactionErrorResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({}), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()]));
-/**
- * Signature status for a transaction
- */
-
-const SignatureStatusResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  err: TransactionErrorResult
-});
-/**
- * Transaction signature received notification
- */
-
-const SignatureReceivedResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('receivedSignature');
-/**
- * Version info for a node
- */
-
-const VersionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  'solana-core': (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  'feature-set': (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-});
-const SimulatedTransactionResponseStruct = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  err: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({}), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()])),
-  logs: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())),
-  accounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    executable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-    owner: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-    rentEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-  }))))),
-  unitsConsumed: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  returnData: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    programId: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.tuple)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('base64')])
-  })))
-}));
-
-/**
- * Expected JSON RPC response for the "getBlockProduction" message
- */
-const BlockProductionResponseStruct = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  byIdentity: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.record)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())),
-  range: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    firstSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    lastSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-  })
-}));
-/**
- * A performance sample
- */
-
-function createRpcClient(url, httpHeaders, customFetch, fetchMiddleware, disableRetryOnRateLimit) {
-  const fetch = customFetch ? customFetch : fetchImpl;
-
-  let fetchWithMiddleware;
-
-  if (fetchMiddleware) {
-    fetchWithMiddleware = async (info, init) => {
-      const modifiedFetchArgs = await new Promise((resolve, reject) => {
-        try {
-          fetchMiddleware(info, init, (modifiedInfo, modifiedInit) => resolve([modifiedInfo, modifiedInit]));
-        } catch (error) {
-          reject(error);
-        }
-      });
-      return await fetch(...modifiedFetchArgs);
-    };
-  }
-
-  const clientBrowser = new (jayson_lib_client_browser__WEBPACK_IMPORTED_MODULE_10___default())(async (request, callback) => {
-    const agent = undefined;
-    const options = {
-      method: 'POST',
-      body: request,
-      agent,
-      headers: Object.assign({
-        'Content-Type': 'application/json'
-      }, httpHeaders || {}, COMMON_HTTP_HEADERS)
-    };
-
-    try {
-      let too_many_requests_retries = 5;
-      let res;
-      let waitTime = 500;
-
-      for (;;) {
-        if (fetchWithMiddleware) {
-          res = await fetchWithMiddleware(url, options);
-        } else {
-          res = await fetch(url, options);
-        }
-
-        if (res.status !== 429
-        /* Too many requests */
-        ) {
-          break;
-        }
-
-        if (disableRetryOnRateLimit === true) {
-          break;
-        }
-
-        too_many_requests_retries -= 1;
-
-        if (too_many_requests_retries === 0) {
-          break;
-        }
-
-        console.log(`Server responded with ${res.status} ${res.statusText}.  Retrying after ${waitTime}ms delay...`);
-        await sleep(waitTime);
-        waitTime *= 2;
-      }
-
-      const text = await res.text();
-
-      if (res.ok) {
-        callback(null, text);
-      } else {
-        callback(new Error(`${res.status} ${res.statusText}: ${text}`));
-      }
-    } catch (err) {
-      if (err instanceof Error) callback(err);
-    } finally {
-    }
-  }, {});
-  return clientBrowser;
-}
-
-function createRpcRequest(client) {
-  return (method, args) => {
-    return new Promise((resolve, reject) => {
-      client.request(method, args, (err, response) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        resolve(response);
-      });
-    });
-  };
-}
-
-function createRpcBatchRequest(client) {
-  return requests => {
-    return new Promise((resolve, reject) => {
-      // Do nothing if requests is empty
-      if (requests.length === 0) resolve([]);
-      const batch = requests.map(params => {
-        return client.request(params.methodName, params.args);
-      });
-      client.request(batch, (err, response) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        resolve(response);
-      });
-    });
-  };
-}
-/**
- * Expected JSON RPC response for the "getInflationGovernor" message
- */
-
-
-const GetInflationGovernorRpcResult = jsonRpcResult(GetInflationGovernorResult);
-/**
- * Expected JSON RPC response for the "getEpochInfo" message
- */
-
-const GetEpochInfoRpcResult = jsonRpcResult(GetEpochInfoResult);
-/**
- * Expected JSON RPC response for the "getEpochSchedule" message
- */
-
-const GetEpochScheduleRpcResult = jsonRpcResult(GetEpochScheduleResult);
-/**
- * Expected JSON RPC response for the "getLeaderSchedule" message
- */
-
-const GetLeaderScheduleRpcResult = jsonRpcResult(GetLeaderScheduleResult);
-/**
- * Expected JSON RPC response for the "minimumLedgerSlot" and "getFirstAvailableBlock" messages
- */
-
-const SlotRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)());
-/**
- * Supply
- */
-
-/**
- * Expected JSON RPC response for the "getSupply" message
- */
-const GetSupplyRpcResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  total: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  circulating: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  nonCirculating: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  nonCirculatingAccounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(PublicKeyFromString)
-}));
-/**
- * Token amount object which returns a token amount in different formats
- * for various client use cases.
- */
-
-/**
- * Expected JSON RPC structure for token amounts
- */
-const TokenAmountResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  amount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  uiAmount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  decimals: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  uiAmountString: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-});
-/**
- * Token address and balance.
- */
-
-/**
- * Expected JSON RPC response for the "getTokenLargestAccounts" message
- */
-const GetTokenLargestAccountsResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  address: PublicKeyFromString,
-  amount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  uiAmount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  decimals: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  uiAmountString: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-})));
-/**
- * Expected JSON RPC response for the "getTokenAccountsByOwner" message
- */
-
-const GetTokenAccountsByOwner = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  pubkey: PublicKeyFromString,
-  account: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    executable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-    owner: PublicKeyFromString,
-    lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    data: BufferFromRawAccountData,
-    rentEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-  })
-})));
-const ParsedAccountDataResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  program: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  parsed: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.unknown)(),
-  space: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * Expected JSON RPC response for the "getTokenAccountsByOwner" message with parsed data
- */
-
-const GetParsedTokenAccountsByOwner = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  pubkey: PublicKeyFromString,
-  account: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    executable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-    owner: PublicKeyFromString,
-    lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    data: ParsedAccountDataResult,
-    rentEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-  })
-})));
-/**
- * Pair of an account address and its balance
- */
-
-/**
- * Expected JSON RPC response for the "getLargestAccounts" message
- */
-const GetLargestAccountsRpcResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  address: PublicKeyFromString
-})));
-/**
- * @internal
- */
-
-const AccountInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  executable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-  owner: PublicKeyFromString,
-  lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  data: BufferFromRawAccountData,
-  rentEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * @internal
- */
-
-const KeyedAccountInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  pubkey: PublicKeyFromString,
-  account: AccountInfoResult
-});
-const ParsedOrRawAccountData = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.coerce)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.instance)(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer), ParsedAccountDataResult]), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([RawAccountDataResult, ParsedAccountDataResult]), value => {
-  if (Array.isArray(value)) {
-    return (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(value, BufferFromRawAccountData);
-  } else {
-    return value;
-  }
-});
-/**
- * @internal
- */
-
-const ParsedAccountInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  executable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-  owner: PublicKeyFromString,
-  lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  data: ParsedOrRawAccountData,
-  rentEpoch: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-const KeyedParsedAccountInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  pubkey: PublicKeyFromString,
-  account: ParsedAccountInfoResult
-});
-/**
- * @internal
- */
-
-const StakeActivationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  state: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('active'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('inactive'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('activating'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('deactivating')]),
-  active: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  inactive: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * Expected JSON RPC response for the "getConfirmedSignaturesForAddress2" message
- */
-
-const GetConfirmedSignaturesForAddress2RpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  signature: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  err: TransactionErrorResult,
-  memo: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()))
-})));
-/**
- * Expected JSON RPC response for the "getSignaturesForAddress" message
- */
-
-const GetSignaturesForAddressRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  signature: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  err: TransactionErrorResult,
-  memo: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()))
-})));
-/***
- * Expected JSON RPC response for the "accountNotification" message
- */
-
-const AccountNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  result: notificationResultAndContext(AccountInfoResult)
-});
-/**
- * @internal
- */
-
-const ProgramAccountInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  pubkey: PublicKeyFromString,
-  account: AccountInfoResult
-});
-/***
- * Expected JSON RPC response for the "programNotification" message
- */
-
-const ProgramAccountNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  result: notificationResultAndContext(ProgramAccountInfoResult)
-});
-/**
- * @internal
- */
-
-const SlotInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  parent: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  root: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * Expected JSON RPC response for the "slotNotification" message
- */
-
-const SlotNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  result: SlotInfoResult
-});
-/**
- * Slot updates which can be used for tracking the live progress of a cluster.
- * - `"firstShredReceived"`: connected node received the first shred of a block.
- * Indicates that a new block that is being produced.
- * - `"completed"`: connected node has received all shreds of a block. Indicates
- * a block was recently produced.
- * - `"optimisticConfirmation"`: block was optimistically confirmed by the
- * cluster. It is not guaranteed that an optimistic confirmation notification
- * will be sent for every finalized blocks.
- * - `"root"`: the connected node rooted this block.
- * - `"createdBank"`: the connected node has started validating this block.
- * - `"frozen"`: the connected node has validated this block.
- * - `"dead"`: the connected node failed to validate this block.
- */
-
-/**
- * @internal
- */
-const SlotUpdateResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  type: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('firstShredReceived'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('completed'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('optimisticConfirmation'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('root')]),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  timestamp: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-}), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  type: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('createdBank'),
-  parent: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  timestamp: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-}), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  type: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('frozen'),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  timestamp: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  stats: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    numTransactionEntries: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    numSuccessfulTransactions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    numFailedTransactions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    maxTransactionsPerEntry: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-  })
-}), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  type: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('dead'),
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  timestamp: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  err: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()
-})]);
-/**
- * Expected JSON RPC response for the "slotsUpdatesNotification" message
- */
-
-const SlotUpdateNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  result: SlotUpdateResult
-});
-/**
- * Expected JSON RPC response for the "signatureNotification" message
- */
-
-const SignatureNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  result: notificationResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([SignatureStatusResult, SignatureReceivedResult]))
-});
-/**
- * Expected JSON RPC response for the "rootNotification" message
- */
-
-const RootNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  result: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-const ContactInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  pubkey: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  gossip: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  tpu: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  rpc: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  version: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-});
-const VoteAccountInfoResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  votePubkey: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  nodePubkey: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  activatedStake: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  epochVoteAccount: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-  epochCredits: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.tuple)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()])),
-  commission: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  lastVote: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  rootSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-});
-/**
- * Expected JSON RPC response for the "getVoteAccounts" message
- */
-
-const GetVoteAccounts = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  current: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(VoteAccountInfoResult),
-  delinquent: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(VoteAccountInfoResult)
-}));
-const ConfirmationStatus = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('processed'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('confirmed'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('finalized')]);
-const SignatureStatusResponse = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  confirmations: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  err: TransactionErrorResult,
-  confirmationStatus: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(ConfirmationStatus)
-});
-/**
- * Expected JSON RPC response for the "getSignatureStatuses" message
- */
-
-const GetSignatureStatusesRpcResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(SignatureStatusResponse)));
-/**
- * Expected JSON RPC response for the "getMinimumBalanceForRentExemption" message
- */
-
-const GetMinimumBalanceForRentExemptionRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)());
-const AddressTableLookupStruct = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  accountKey: PublicKeyFromString,
-  writableIndexes: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  readonlyIndexes: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-});
-const ConfirmedTransactionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  signatures: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  message: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    accountKeys: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-    header: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      numRequiredSignatures: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-      numReadonlySignedAccounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-      numReadonlyUnsignedAccounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-    }),
-    instructions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      accounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-      data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-      programIdIndex: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-    })),
-    recentBlockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    addressTableLookups: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(AddressTableLookupStruct))
-  })
-});
-const ParsedInstructionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  parsed: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.unknown)(),
-  program: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  programId: PublicKeyFromString
-});
-const RawInstructionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  accounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(PublicKeyFromString),
-  data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  programId: PublicKeyFromString
-});
-const InstructionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([RawInstructionResult, ParsedInstructionResult]);
-const UnknownInstructionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  parsed: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.unknown)(),
-  program: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  programId: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()
-}), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  accounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  programId: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()
-})]);
-const ParsedOrRawInstruction = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.coerce)(InstructionResult, UnknownInstructionResult, value => {
-  if ('accounts' in value) {
-    return (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(value, RawInstructionResult);
-  } else {
-    return (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(value, ParsedInstructionResult);
-  }
-});
-/**
- * @internal
- */
-
-const ParsedConfirmedTransactionResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  signatures: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  message: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    accountKeys: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      pubkey: PublicKeyFromString,
-      signer: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-      writable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.boolean)(),
-      source: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('transaction'), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('lookupTable')]))
-    })),
-    instructions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(ParsedOrRawInstruction),
-    recentBlockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    addressTableLookups: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(AddressTableLookupStruct)))
-  })
-});
-const TokenBalanceResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  accountIndex: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  mint: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  owner: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  uiTokenAmount: TokenAmountResult
-});
-const LoadedAddressesResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  writable: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(PublicKeyFromString),
-  readonly: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(PublicKeyFromString)
-});
-/**
- * @internal
- */
-
-const ConfirmedTransactionMetaResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  err: TransactionErrorResult,
-  fee: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  innerInstructions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    index: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    instructions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-      accounts: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-      data: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-      programIdIndex: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-    }))
-  })))),
-  preBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  postBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  logMessages: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()))),
-  preTokenBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(TokenBalanceResult))),
-  postTokenBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(TokenBalanceResult))),
-  loadedAddresses: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(LoadedAddressesResult),
-  computeUnitsConsumed: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-});
-/**
- * @internal
- */
-
-const ParsedConfirmedTransactionMetaResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  err: TransactionErrorResult,
-  fee: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  innerInstructions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    index: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    instructions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(ParsedOrRawInstruction)
-  })))),
-  preBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  postBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  logMessages: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()))),
-  preTokenBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(TokenBalanceResult))),
-  postTokenBalances: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(TokenBalanceResult))),
-  loadedAddresses: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(LoadedAddressesResult),
-  computeUnitsConsumed: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-});
-const TransactionVersionStruct = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.union)([(0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)(0), (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.literal)('legacy')]);
-/**
- * Expected JSON RPC response for the "getBlock" message
- */
-
-const GetBlockRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  blockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  previousBlockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  parentSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  transactions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    transaction: ConfirmedTransactionResult,
-    meta: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(ConfirmedTransactionMetaResult),
-    version: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(TransactionVersionStruct)
-  })),
-  rewards: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    pubkey: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    postBalance: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-    rewardType: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-  }))),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  blockHeight: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-})));
-/**
- * Expected parsed JSON RPC response for the "getBlock" message
- */
-
-const GetParsedBlockRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  blockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  previousBlockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  parentSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  transactions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    transaction: ParsedConfirmedTransactionResult,
-    meta: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(ParsedConfirmedTransactionMetaResult),
-    version: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(TransactionVersionStruct)
-  })),
-  rewards: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    pubkey: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    postBalance: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-    rewardType: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-  }))),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-  blockHeight: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-})));
-/**
- * Expected JSON RPC response for the "getConfirmedBlock" message
- *
- * @deprecated Deprecated since Solana v1.8.0. Please use {@link GetBlockRpcResult} instead.
- */
-
-const GetConfirmedBlockRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  blockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  previousBlockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  parentSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  transactions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    transaction: ConfirmedTransactionResult,
-    meta: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(ConfirmedTransactionMetaResult)
-  })),
-  rewards: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    pubkey: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-    lamports: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-    postBalance: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()),
-    rewardType: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-  }))),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-})));
-/**
- * Expected JSON RPC response for the "getBlock" message
- */
-
-const GetBlockSignaturesRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  blockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  previousBlockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  parentSlot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  signatures: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())
-})));
-/**
- * Expected JSON RPC response for the "getTransaction" message
- */
-
-const GetTransactionRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  meta: ConfirmedTransactionMetaResult,
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())),
-  transaction: ConfirmedTransactionResult,
-  version: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(TransactionVersionStruct)
-})));
-/**
- * Expected parsed JSON RPC response for the "getTransaction" message
- */
-
-const GetParsedTransactionRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  transaction: ParsedConfirmedTransactionResult,
-  meta: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(ParsedConfirmedTransactionMetaResult),
-  blockTime: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())),
-  version: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)(TransactionVersionStruct)
-})));
-/**
- * Expected JSON RPC response for the "getRecentBlockhash" message
- *
- * @deprecated Deprecated since Solana v1.8.0. Please use {@link GetLatestBlockhashRpcResult} instead.
- */
-
-const GetRecentBlockhashAndContextRpcResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  blockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  feeCalculator: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    lamportsPerSignature: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-  })
-}));
-/**
- * Expected JSON RPC response for the "getLatestBlockhash" message
- */
-
-const GetLatestBlockhashRpcResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  blockhash: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  lastValidBlockHeight: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-}));
-const PerfSampleResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  slot: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  numTransactions: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  numSlots: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)(),
-  samplePeriodSecs: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/*
- * Expected JSON RPC response for "getRecentPerformanceSamples" message
- */
-
-const GetRecentPerformanceSamplesRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(PerfSampleResult));
-/**
- * Expected JSON RPC response for the "getFeeCalculatorForBlockhash" message
- */
-
-const GetFeeCalculatorRpcResult = jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  feeCalculator: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-    lamportsPerSignature: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-  })
-})));
-/**
- * Expected JSON RPC response for the "requestAirdrop" message
- */
-
-const RequestAirdropRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)());
-/**
- * Expected JSON RPC response for the "sendTransaction" message
- */
-
-const SendTransactionRpcResult = jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)());
-/**
- * Information about the latest slot being processed by a node
- */
-
-/**
- * @internal
- */
-const LogsResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  err: TransactionErrorResult,
-  logs: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  signature: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()
-});
-/**
- * Logs result.
- */
-
-/**
- * Expected JSON RPC response for the "logsNotification" message.
- */
-const LogsNotificationResult = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  result: notificationResultAndContext(LogsResult),
-  subscription: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()
-});
-/**
- * Filter for log subscriptions.
- */
-
-/** @internal */
-const COMMON_HTTP_HEADERS = {
-  'solana-client': `js/${(_process$env$npm_pack = "0.0.0-development") !== null && _process$env$npm_pack !== void 0 ? _process$env$npm_pack : 'UNKNOWN'}`
-};
-/**
- * A connection to a fullnode JSON RPC endpoint
- */
-
-class Connection {
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal
-   * A number that we increment every time an active connection closes.
-   * Used to determine whether the same socket connection that was open
-   * when an async operation started is the same one that's active when
-   * its continuation fires.
-   *
-   */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /** @internal */
-
-  /**
-   * Special case.
-   * After a signature is processed, RPCs automatically dispose of the
-   * subscription on the server side. We need to track which of these
-   * subscriptions have been disposed in such a way, so that we know
-   * whether the client is dealing with a not-yet-processed signature
-   * (in which case we must tear down the server subscription) or an
-   * already-processed signature (in which case the client can simply
-   * clear out the subscription locally without telling the server).
-   *
-   * NOTE: There is a proposal to eliminate this special case, here:
-   * https://github.com/solana-labs/solana/issues/18892
-   */
-
-  /** @internal */
-
-  /**
-   * Establish a JSON RPC connection
-   *
-   * @param endpoint URL to the fullnode JSON RPC endpoint
-   * @param commitmentOrConfig optional default commitment level or optional ConnectionConfig configuration object
-   */
-  constructor(endpoint, commitmentOrConfig) {
-    this._commitment = void 0;
-    this._confirmTransactionInitialTimeout = void 0;
-    this._rpcEndpoint = void 0;
-    this._rpcWsEndpoint = void 0;
-    this._rpcClient = void 0;
-    this._rpcRequest = void 0;
-    this._rpcBatchRequest = void 0;
-    this._rpcWebSocket = void 0;
-    this._rpcWebSocketConnected = false;
-    this._rpcWebSocketHeartbeat = null;
-    this._rpcWebSocketIdleTimeout = null;
-    this._rpcWebSocketGeneration = 0;
-    this._disableBlockhashCaching = false;
-    this._pollingBlockhash = false;
-    this._blockhashInfo = {
-      latestBlockhash: null,
-      lastFetch: 0,
-      transactionSignatures: [],
-      simulatedSignatures: []
-    };
-    this._nextClientSubscriptionId = 0;
-    this._subscriptionDisposeFunctionsByClientSubscriptionId = {};
-    this._subscriptionCallbacksByServerSubscriptionId = {};
-    this._subscriptionsByHash = {};
-    this._subscriptionsAutoDisposedByRpc = new Set();
-    let wsEndpoint;
-    let httpHeaders;
-    let fetch;
-    let fetchMiddleware;
-    let disableRetryOnRateLimit;
-
-    if (commitmentOrConfig && typeof commitmentOrConfig === 'string') {
-      this._commitment = commitmentOrConfig;
-    } else if (commitmentOrConfig) {
-      this._commitment = commitmentOrConfig.commitment;
-      this._confirmTransactionInitialTimeout = commitmentOrConfig.confirmTransactionInitialTimeout;
-      wsEndpoint = commitmentOrConfig.wsEndpoint;
-      httpHeaders = commitmentOrConfig.httpHeaders;
-      fetch = commitmentOrConfig.fetch;
-      fetchMiddleware = commitmentOrConfig.fetchMiddleware;
-      disableRetryOnRateLimit = commitmentOrConfig.disableRetryOnRateLimit;
-    }
-
-    this._rpcEndpoint = assertEndpointUrl(endpoint);
-    this._rpcWsEndpoint = wsEndpoint || makeWebsocketUrl(endpoint);
-    this._rpcClient = createRpcClient(endpoint, httpHeaders, fetch, fetchMiddleware, disableRetryOnRateLimit);
-    this._rpcRequest = createRpcRequest(this._rpcClient);
-    this._rpcBatchRequest = createRpcBatchRequest(this._rpcClient);
-    this._rpcWebSocket = new rpc_websockets__WEBPACK_IMPORTED_MODULE_9__.Client(this._rpcWsEndpoint, {
-      autoconnect: false,
-      max_reconnects: Infinity
-    });
-
-    this._rpcWebSocket.on('open', this._wsOnOpen.bind(this));
-
-    this._rpcWebSocket.on('error', this._wsOnError.bind(this));
-
-    this._rpcWebSocket.on('close', this._wsOnClose.bind(this));
-
-    this._rpcWebSocket.on('accountNotification', this._wsOnAccountNotification.bind(this));
-
-    this._rpcWebSocket.on('programNotification', this._wsOnProgramAccountNotification.bind(this));
-
-    this._rpcWebSocket.on('slotNotification', this._wsOnSlotNotification.bind(this));
-
-    this._rpcWebSocket.on('slotsUpdatesNotification', this._wsOnSlotUpdatesNotification.bind(this));
-
-    this._rpcWebSocket.on('signatureNotification', this._wsOnSignatureNotification.bind(this));
-
-    this._rpcWebSocket.on('rootNotification', this._wsOnRootNotification.bind(this));
-
-    this._rpcWebSocket.on('logsNotification', this._wsOnLogsNotification.bind(this));
-  }
-  /**
-   * The default commitment used for requests
-   */
-
-
-  get commitment() {
-    return this._commitment;
-  }
-  /**
-   * The RPC endpoint
-   */
-
-
-  get rpcEndpoint() {
-    return this._rpcEndpoint;
-  }
-  /**
-   * Fetch the balance for the specified public key, return with context
-   */
-
-
-  async getBalanceAndContext(publicKey, commitmentOrConfig) {
-    /** @internal */
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([publicKey.toBase58()], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getBalance', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get balance for ${publicKey.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the balance for the specified public key
-   */
-
-
-  async getBalance(publicKey, commitmentOrConfig) {
-    return await this.getBalanceAndContext(publicKey, commitmentOrConfig).then(x => x.value).catch(e => {
-      throw new Error('failed to get balance of account ' + publicKey.toBase58() + ': ' + e);
-    });
-  }
-  /**
-   * Fetch the estimated production time of a block
-   */
-
-
-  async getBlockTime(slot) {
-    const unsafeRes = await this._rpcRequest('getBlockTime', [slot]);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get block time for slot ${slot}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the lowest slot that the node has information about in its ledger.
-   * This value may increase over time if the node is configured to purge older ledger data
-   */
-
-
-  async getMinimumLedgerSlot() {
-    const unsafeRes = await this._rpcRequest('minimumLedgerSlot', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get minimum ledger slot');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the slot of the lowest confirmed block that has not been purged from the ledger
-   */
-
-
-  async getFirstAvailableBlock() {
-    const unsafeRes = await this._rpcRequest('getFirstAvailableBlock', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, SlotRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get first available block');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch information about the current supply
-   */
-
-
-  async getSupply(config) {
-    let configArg = {};
-
-    if (typeof config === 'string') {
-      configArg = {
-        commitment: config
-      };
-    } else if (config) {
-      configArg = { ...config,
-        commitment: config && config.commitment || this.commitment
-      };
-    } else {
-      configArg = {
-        commitment: this.commitment
-      };
-    }
-
-    const unsafeRes = await this._rpcRequest('getSupply', [configArg]);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetSupplyRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get supply');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current supply of a token mint
-   */
-
-
-  async getTokenSupply(tokenMintAddress, commitment) {
-    const args = this._buildArgs([tokenMintAddress.toBase58()], commitment);
-
-    const unsafeRes = await this._rpcRequest('getTokenSupply', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext(TokenAmountResult));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get token supply');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current balance of a token account
-   */
-
-
-  async getTokenAccountBalance(tokenAddress, commitment) {
-    const args = this._buildArgs([tokenAddress.toBase58()], commitment);
-
-    const unsafeRes = await this._rpcRequest('getTokenAccountBalance', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext(TokenAmountResult));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get token account balance');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch all the token accounts owned by the specified account
-   *
-   * @return {Promise<RpcResponseAndContext<Array<{pubkey: PublicKey, account: AccountInfo<Buffer>}>>>}
-   */
-
-
-  async getTokenAccountsByOwner(ownerAddress, filter, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-    let _args = [ownerAddress.toBase58()];
-
-    if ('mint' in filter) {
-      _args.push({
-        mint: filter.mint.toBase58()
-      });
-    } else {
-      _args.push({
-        programId: filter.programId.toBase58()
-      });
-    }
-
-    const args = this._buildArgs(_args, commitment, 'base64', config);
-
-    const unsafeRes = await this._rpcRequest('getTokenAccountsByOwner', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetTokenAccountsByOwner);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get token accounts owned by account ${ownerAddress.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch parsed token accounts owned by the specified account
-   *
-   * @return {Promise<RpcResponseAndContext<Array<{pubkey: PublicKey, account: AccountInfo<ParsedAccountData>}>>>}
-   */
-
-
-  async getParsedTokenAccountsByOwner(ownerAddress, filter, commitment) {
-    let _args = [ownerAddress.toBase58()];
-
-    if ('mint' in filter) {
-      _args.push({
-        mint: filter.mint.toBase58()
-      });
-    } else {
-      _args.push({
-        programId: filter.programId.toBase58()
-      });
-    }
-
-    const args = this._buildArgs(_args, commitment, 'jsonParsed');
-
-    const unsafeRes = await this._rpcRequest('getTokenAccountsByOwner', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetParsedTokenAccountsByOwner);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get token accounts owned by account ${ownerAddress.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the 20 largest accounts with their current balances
-   */
-
-
-  async getLargestAccounts(config) {
-    const arg = { ...config,
-      commitment: config && config.commitment || this.commitment
-    };
-    const args = arg.filter || arg.commitment ? [arg] : [];
-    const unsafeRes = await this._rpcRequest('getLargestAccounts', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetLargestAccountsRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get largest accounts');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the 20 largest token accounts with their current balances
-   * for a given mint.
-   */
-
-
-  async getTokenLargestAccounts(mintAddress, commitment) {
-    const args = this._buildArgs([mintAddress.toBase58()], commitment);
-
-    const unsafeRes = await this._rpcRequest('getTokenLargestAccounts', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetTokenLargestAccountsResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get token largest accounts');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch all the account info for the specified public key, return with context
-   */
-
-
-  async getAccountInfoAndContext(publicKey, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([publicKey.toBase58()], commitment, 'base64', config);
-
-    const unsafeRes = await this._rpcRequest('getAccountInfo', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(AccountInfoResult)));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get info about account ${publicKey.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch parsed account info for the specified public key
-   */
-
-
-  async getParsedAccountInfo(publicKey, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([publicKey.toBase58()], commitment, 'jsonParsed', config);
-
-    const unsafeRes = await this._rpcRequest('getAccountInfo', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(ParsedAccountInfoResult)));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get info about account ${publicKey.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch all the account info for the specified public key
-   */
-
-
-  async getAccountInfo(publicKey, commitmentOrConfig) {
-    try {
-      const res = await this.getAccountInfoAndContext(publicKey, commitmentOrConfig);
-      return res.value;
-    } catch (e) {
-      throw new Error('failed to get info about account ' + publicKey.toBase58() + ': ' + e);
-    }
-  }
-  /**
-   * Fetch all the account info for multiple accounts specified by an array of public keys, return with context
-   */
-
-
-  async getMultipleAccountsInfoAndContext(publicKeys, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-    const keys = publicKeys.map(key => key.toBase58());
-
-    const args = this._buildArgs([keys], commitment, 'base64', config);
-
-    const unsafeRes = await this._rpcRequest('getMultipleAccounts', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)(AccountInfoResult))));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get info for accounts ${keys}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch all the account info for multiple accounts specified by an array of public keys
-   */
-
-
-  async getMultipleAccountsInfo(publicKeys, commitmentOrConfig) {
-    const res = await this.getMultipleAccountsInfoAndContext(publicKeys, commitmentOrConfig);
-    return res.value;
-  }
-  /**
-   * Returns epoch activation information for a stake account that has been delegated
-   */
-
-
-  async getStakeActivation(publicKey, commitmentOrConfig, epoch) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([publicKey.toBase58()], commitment, undefined
-    /* encoding */
-    , { ...config,
-      epoch: epoch != null ? epoch : config === null || config === void 0 ? void 0 : config.epoch
-    });
-
-    const unsafeRes = await this._rpcRequest('getStakeActivation', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult(StakeActivationResult));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get Stake Activation ${publicKey.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch all the accounts owned by the specified program id
-   *
-   * @return {Promise<Array<{pubkey: PublicKey, account: AccountInfo<Buffer>}>>}
-   */
-
-
-  async getProgramAccounts(programId, configOrCommitment) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(configOrCommitment);
-    const {
-      encoding,
-      ...configWithoutEncoding
-    } = config || {};
-
-    const args = this._buildArgs([programId.toBase58()], commitment, encoding || 'base64', configWithoutEncoding);
-
-    const unsafeRes = await this._rpcRequest('getProgramAccounts', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(KeyedAccountInfoResult)));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get accounts owned by program ${programId.toBase58()}`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch and parse all the accounts owned by the specified program id
-   *
-   * @return {Promise<Array<{pubkey: PublicKey, account: AccountInfo<Buffer | ParsedAccountData>}>>}
-   */
-
-
-  async getParsedProgramAccounts(programId, configOrCommitment) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(configOrCommitment);
-
-    const args = this._buildArgs([programId.toBase58()], commitment, 'jsonParsed', config);
-
-    const unsafeRes = await this._rpcRequest('getProgramAccounts', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(KeyedParsedAccountInfoResult)));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get accounts owned by program ${programId.toBase58()}`);
-    }
-
-    return res.result;
-  }
-
-  // eslint-disable-next-line no-dupe-class-members
-  async confirmTransaction(strategy, commitment) {
-    let rawSignature;
-
-    if (typeof strategy == 'string') {
-      rawSignature = strategy;
-    } else {
-      const config = strategy;
-      rawSignature = config.signature;
-    }
-
-    let decodedSignature;
-
-    try {
-      decodedSignature = bs58__WEBPACK_IMPORTED_MODULE_4___default().decode(rawSignature);
-    } catch (err) {
-      throw new Error('signature must be base58 encoded: ' + rawSignature);
-    }
-
-    assert(decodedSignature.length === 64, 'signature has invalid length');
-    const subscriptionCommitment = commitment || this.commitment;
-    let timeoutId;
-    let subscriptionId;
-    let done = false;
-    const confirmationPromise = new Promise((resolve, reject) => {
-      try {
-        subscriptionId = this.onSignature(rawSignature, (result, context) => {
-          subscriptionId = undefined;
-          const response = {
-            context,
-            value: result
-          };
-          done = true;
-          resolve({
-            __type: TransactionStatus.PROCESSED,
-            response
-          });
-        }, subscriptionCommitment);
-      } catch (err) {
-        reject(err);
-      }
-    });
-    const expiryPromise = new Promise(resolve => {
-      if (typeof strategy === 'string') {
-        let timeoutMs = this._confirmTransactionInitialTimeout || 60 * 1000;
-
-        switch (subscriptionCommitment) {
-          case 'processed':
-          case 'recent':
-          case 'single':
-          case 'confirmed':
-          case 'singleGossip':
-            {
-              timeoutMs = this._confirmTransactionInitialTimeout || 30 * 1000;
-              break;
-            }
-        }
-
-        timeoutId = setTimeout(() => resolve({
-          __type: TransactionStatus.TIMED_OUT,
-          timeoutMs
-        }), timeoutMs);
-      } else {
-        let config = strategy;
-
-        const checkBlockHeight = async () => {
-          try {
-            const blockHeight = await this.getBlockHeight(commitment);
-            return blockHeight;
-          } catch (_e) {
-            return -1;
-          }
-        };
-
-        (async () => {
-          let currentBlockHeight = await checkBlockHeight();
-          if (done) return;
-
-          while (currentBlockHeight <= config.lastValidBlockHeight) {
-            await sleep(1000);
-            if (done) return;
-            currentBlockHeight = await checkBlockHeight();
-            if (done) return;
-          }
-
-          resolve({
-            __type: TransactionStatus.BLOCKHEIGHT_EXCEEDED
-          });
-        })();
-      }
-    });
-    let result;
-
-    try {
-      const outcome = await Promise.race([confirmationPromise, expiryPromise]);
-
-      switch (outcome.__type) {
-        case TransactionStatus.BLOCKHEIGHT_EXCEEDED:
-          throw new TransactionExpiredBlockheightExceededError(rawSignature);
-
-        case TransactionStatus.PROCESSED:
-          result = outcome.response;
-          break;
-
-        case TransactionStatus.TIMED_OUT:
-          throw new TransactionExpiredTimeoutError(rawSignature, outcome.timeoutMs / 1000);
-      }
-    } finally {
-      clearTimeout(timeoutId);
-
-      if (subscriptionId) {
-        this.removeSignatureListener(subscriptionId);
-      }
-    }
-
-    return result;
-  }
-  /**
-   * Return the list of nodes that are currently participating in the cluster
-   */
-
-
-  async getClusterNodes() {
-    const unsafeRes = await this._rpcRequest('getClusterNodes', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(ContactInfoResult)));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get cluster nodes');
-    }
-
-    return res.result;
-  }
-  /**
-   * Return the list of nodes that are currently participating in the cluster
-   */
-
-
-  async getVoteAccounts(commitment) {
-    const args = this._buildArgs([], commitment);
-
-    const unsafeRes = await this._rpcRequest('getVoteAccounts', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetVoteAccounts);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get vote accounts');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current slot that the node is processing
-   */
-
-
-  async getSlot(commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getSlot', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get slot');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current slot leader of the cluster
-   */
-
-
-  async getSlotLeader(commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getSlotLeader', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get slot leader');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch `limit` number of slot leaders starting from `startSlot`
-   *
-   * @param startSlot fetch slot leaders starting from this slot
-   * @param limit number of slot leaders to return
-   */
-
-
-  async getSlotLeaders(startSlot, limit) {
-    const args = [startSlot, limit];
-    const unsafeRes = await this._rpcRequest('getSlotLeaders', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)(PublicKeyFromString)));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get slot leaders');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current status of a signature
-   */
-
-
-  async getSignatureStatus(signature, config) {
-    const {
-      context,
-      value: values
-    } = await this.getSignatureStatuses([signature], config);
-    assert(values.length === 1);
-    const value = values[0];
-    return {
-      context,
-      value
-    };
-  }
-  /**
-   * Fetch the current statuses of a batch of signatures
-   */
-
-
-  async getSignatureStatuses(signatures, config) {
-    const params = [signatures];
-
-    if (config) {
-      params.push(config);
-    }
-
-    const unsafeRes = await this._rpcRequest('getSignatureStatuses', params);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetSignatureStatusesRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get signature status');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current transaction count of the cluster
-   */
-
-
-  async getTransactionCount(commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getTransactionCount', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get transaction count');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the current total currency supply of the cluster in lamports
-   *
-   * @deprecated Deprecated since v1.2.8. Please use {@link getSupply} instead.
-   */
-
-
-  async getTotalSupply(commitment) {
-    const result = await this.getSupply({
-      commitment,
-      excludeNonCirculatingAccountsList: true
-    });
-    return result.value.total;
-  }
-  /**
-   * Fetch the cluster InflationGovernor parameters
-   */
-
-
-  async getInflationGovernor(commitment) {
-    const args = this._buildArgs([], commitment);
-
-    const unsafeRes = await this._rpcRequest('getInflationGovernor', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetInflationGovernorRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get inflation');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the inflation reward for a list of addresses for an epoch
-   */
-
-
-  async getInflationReward(addresses, epoch, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([addresses.map(pubkey => pubkey.toBase58())], commitment, undefined
-    /* encoding */
-    , { ...config,
-      epoch: epoch != null ? epoch : config === null || config === void 0 ? void 0 : config.epoch
-    });
-
-    const unsafeRes = await this._rpcRequest('getInflationReward', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetInflationRewardResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get inflation reward');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the Epoch Info parameters
-   */
-
-
-  async getEpochInfo(commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getEpochInfo', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetEpochInfoRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get epoch info');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the Epoch Schedule parameters
-   */
-
-
-  async getEpochSchedule() {
-    const unsafeRes = await this._rpcRequest('getEpochSchedule', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetEpochScheduleRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get epoch schedule');
-    }
-
-    const epochSchedule = res.result;
-    return new EpochSchedule(epochSchedule.slotsPerEpoch, epochSchedule.leaderScheduleSlotOffset, epochSchedule.warmup, epochSchedule.firstNormalEpoch, epochSchedule.firstNormalSlot);
-  }
-  /**
-   * Fetch the leader schedule for the current epoch
-   * @return {Promise<RpcResponseAndContext<LeaderSchedule>>}
-   */
-
-
-  async getLeaderSchedule() {
-    const unsafeRes = await this._rpcRequest('getLeaderSchedule', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetLeaderScheduleRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get leader schedule');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the minimum balance needed to exempt an account of `dataLength`
-   * size from rent
-   */
-
-
-  async getMinimumBalanceForRentExemption(dataLength, commitment) {
-    const args = this._buildArgs([dataLength], commitment);
-
-    const unsafeRes = await this._rpcRequest('getMinimumBalanceForRentExemption', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetMinimumBalanceForRentExemptionRpcResult);
-
-    if ('error' in res) {
-      console.warn('Unable to fetch minimum balance for rent exemption');
-      return 0;
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch a recent blockhash from the cluster, return with context
-   * @return {Promise<RpcResponseAndContext<{blockhash: Blockhash, feeCalculator: FeeCalculator}>>}
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getLatestBlockhash} instead.
-   */
-
-
-  async getRecentBlockhashAndContext(commitment) {
-    const args = this._buildArgs([], commitment);
-
-    const unsafeRes = await this._rpcRequest('getRecentBlockhash', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetRecentBlockhashAndContextRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get recent blockhash');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch recent performance samples
-   * @return {Promise<Array<PerfSample>>}
-   */
-
-
-  async getRecentPerformanceSamples(limit) {
-    const unsafeRes = await this._rpcRequest('getRecentPerformanceSamples', limit ? [limit] : []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetRecentPerformanceSamplesRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get recent performance samples');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the fee calculator for a recent blockhash from the cluster, return with context
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getFeeForMessage} instead.
-   */
-
-
-  async getFeeCalculatorForBlockhash(blockhash, commitment) {
-    const args = this._buildArgs([blockhash], commitment);
-
-    const unsafeRes = await this._rpcRequest('getFeeCalculatorForBlockhash', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetFeeCalculatorRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get fee calculator');
-    }
-
-    const {
-      context,
-      value
-    } = res.result;
-    return {
-      context,
-      value: value !== null ? value.feeCalculator : null
-    };
-  }
-  /**
-   * Fetch the fee for a message from the cluster, return with context
-   */
-
-
-  async getFeeForMessage(message, commitment) {
-    const wireMessage = message.serialize().toString('base64');
-
-    const args = this._buildArgs([wireMessage], commitment);
-
-    const unsafeRes = await this._rpcRequest('getFeeForMessage', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.nullable)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get slot');
-    }
-
-    if (res.result === null) {
-      throw new Error('invalid blockhash');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch a recent blockhash from the cluster
-   * @return {Promise<{blockhash: Blockhash, feeCalculator: FeeCalculator}>}
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getLatestBlockhash} instead.
-   */
-
-
-  async getRecentBlockhash(commitment) {
-    try {
-      const res = await this.getRecentBlockhashAndContext(commitment);
-      return res.value;
-    } catch (e) {
-      throw new Error('failed to get recent blockhash: ' + e);
-    }
-  }
-  /**
-   * Fetch the latest blockhash from the cluster
-   * @return {Promise<BlockhashWithExpiryBlockHeight>}
-   */
-
-
-  async getLatestBlockhash(commitmentOrConfig) {
-    try {
-      const res = await this.getLatestBlockhashAndContext(commitmentOrConfig);
-      return res.value;
-    } catch (e) {
-      throw new Error('failed to get recent blockhash: ' + e);
-    }
-  }
-  /**
-   * Fetch the latest blockhash from the cluster
-   * @return {Promise<BlockhashWithExpiryBlockHeight>}
-   */
-
-
-  async getLatestBlockhashAndContext(commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getLatestBlockhash', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetLatestBlockhashRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get latest blockhash');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the node version
-   */
-
-
-  async getVersion() {
-    const unsafeRes = await this._rpcRequest('getVersion', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult(VersionResult));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get version');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch the genesis hash
-   */
-
-
-  async getGenesisHash() {
-    const unsafeRes = await this._rpcRequest('getGenesisHash', []);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get genesis hash');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch a processed block from the cluster.
-   *
-   * @deprecated Instead, call `getBlock` using a `GetVersionedBlockConfig` by
-   * setting the `maxSupportedTransactionVersion` property.
-   */
-
-
-  /**
-   * Fetch a processed block from the cluster.
-   */
-  // eslint-disable-next-line no-dupe-class-members
-  async getBlock(slot, rawConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(rawConfig);
-
-    const args = this._buildArgsAtLeastConfirmed([slot], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getBlock', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetBlockRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get confirmed block');
-    }
-
-    const result = res.result;
-    if (!result) return result;
-    return { ...result,
-      transactions: result.transactions.map(({
-        transaction,
-        meta,
-        version
-      }) => ({
-        meta,
-        transaction: { ...transaction,
-          message: versionedMessageFromResponse(version, transaction.message)
-        },
-        version
-      }))
-    };
-  }
-  /**
-   * Fetch parsed transaction details for a confirmed or finalized block
-   */
-
-
-  async getParsedBlock(slot, rawConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(rawConfig);
-
-    const args = this._buildArgsAtLeastConfirmed([slot], commitment, 'jsonParsed', config);
-
-    const unsafeRes = await this._rpcRequest('getBlock', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetParsedBlockRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get block');
-    }
-
-    return res.result;
-  }
-  /*
-   * Returns the current block height of the node
-   */
-
-
-  async getBlockHeight(commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgs([], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getBlockHeight', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get block height information');
-    }
-
-    return res.result;
-  }
-  /*
-   * Returns recent block production information from the current or previous epoch
-   */
-
-
-  async getBlockProduction(configOrCommitment) {
-    let extra;
-    let commitment;
-
-    if (typeof configOrCommitment === 'string') {
-      commitment = configOrCommitment;
-    } else if (configOrCommitment) {
-      const {
-        commitment: c,
-        ...rest
-      } = configOrCommitment;
-      commitment = c;
-      extra = rest;
-    }
-
-    const args = this._buildArgs([], commitment, 'base64', extra);
-
-    const unsafeRes = await this._rpcRequest('getBlockProduction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, BlockProductionResponseStruct);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get block production information');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch a confirmed or finalized transaction from the cluster.
-   *
-   * @deprecated Instead, call `getTransaction` using a
-   * `GetVersionedTransactionConfig` by setting the
-   * `maxSupportedTransactionVersion` property.
-   */
-
-
-  /**
-   * Fetch a confirmed or finalized transaction from the cluster.
-   */
-  // eslint-disable-next-line no-dupe-class-members
-  async getTransaction(signature, rawConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(rawConfig);
-
-    const args = this._buildArgsAtLeastConfirmed([signature], commitment, undefined
-    /* encoding */
-    , config);
-
-    const unsafeRes = await this._rpcRequest('getTransaction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetTransactionRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get transaction');
-    }
-
-    const result = res.result;
-    if (!result) return result;
-    return { ...result,
-      transaction: { ...result.transaction,
-        message: versionedMessageFromResponse(result.version, result.transaction.message)
-      }
-    };
-  }
-  /**
-   * Fetch parsed transaction details for a confirmed or finalized transaction
-   */
-
-
-  async getParsedTransaction(signature, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-
-    const args = this._buildArgsAtLeastConfirmed([signature], commitment, 'jsonParsed', config);
-
-    const unsafeRes = await this._rpcRequest('getTransaction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetParsedTransactionRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get transaction');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch parsed transaction details for a batch of confirmed transactions
-   */
-
-
-  async getParsedTransactions(signatures, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-    const batch = signatures.map(signature => {
-      const args = this._buildArgsAtLeastConfirmed([signature], commitment, 'jsonParsed', config);
-
-      return {
-        methodName: 'getTransaction',
-        args
-      };
-    });
-    const unsafeRes = await this._rpcBatchRequest(batch);
-    const res = unsafeRes.map(unsafeRes => {
-      const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetParsedTransactionRpcResult);
-
-      if ('error' in res) {
-        throw new SolanaJSONRPCError(res.error, 'failed to get transactions');
-      }
-
-      return res.result;
-    });
-    return res;
-  }
-  /**
-   * Fetch transaction details for a batch of confirmed transactions.
-   * Similar to {@link getParsedTransactions} but returns a {@link TransactionResponse}.
-   *
-   * @deprecated Instead, call `getTransactions` using a
-   * `GetVersionedTransactionConfig` by setting the
-   * `maxSupportedTransactionVersion` property.
-   */
-
-
-  /**
-   * Fetch transaction details for a batch of confirmed transactions.
-   * Similar to {@link getParsedTransactions} but returns a {@link
-   * VersionedTransactionResponse}.
-   */
-  // eslint-disable-next-line no-dupe-class-members
-  async getTransactions(signatures, commitmentOrConfig) {
-    const {
-      commitment,
-      config
-    } = extractCommitmentFromConfig(commitmentOrConfig);
-    const batch = signatures.map(signature => {
-      const args = this._buildArgsAtLeastConfirmed([signature], commitment, undefined
-      /* encoding */
-      , config);
-
-      return {
-        methodName: 'getTransaction',
-        args
-      };
-    });
-    const unsafeRes = await this._rpcBatchRequest(batch);
-    const res = unsafeRes.map(unsafeRes => {
-      const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetTransactionRpcResult);
-
-      if ('error' in res) {
-        throw new SolanaJSONRPCError(res.error, 'failed to get transactions');
-      }
-
-      const result = res.result;
-      if (!result) return result;
-      return { ...result,
-        transaction: { ...result.transaction,
-          message: versionedMessageFromResponse(result.version, result.transaction.message)
-        }
-      };
-    });
-    return res;
-  }
-  /**
-   * Fetch a list of Transactions and transaction statuses from the cluster
-   * for a confirmed block.
-   *
-   * @deprecated Deprecated since v1.13.0. Please use {@link getBlock} instead.
-   */
-
-
-  async getConfirmedBlock(slot, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([slot], commitment);
-
-    const unsafeRes = await this._rpcRequest('getConfirmedBlock', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetConfirmedBlockRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get confirmed block');
-    }
-
-    const result = res.result;
-
-    if (!result) {
-      throw new Error('Confirmed block ' + slot + ' not found');
-    }
-
-    const block = { ...result,
-      transactions: result.transactions.map(({
-        transaction,
-        meta
-      }) => {
-        const message = new Message(transaction.message);
-        return {
-          meta,
-          transaction: { ...transaction,
-            message
-          }
-        };
-      })
-    };
-    return { ...block,
-      transactions: block.transactions.map(({
-        transaction,
-        meta
-      }) => {
-        return {
-          meta,
-          transaction: Transaction.populate(transaction.message, transaction.signatures)
-        };
-      })
-    };
-  }
-  /**
-   * Fetch confirmed blocks between two slots
-   */
-
-
-  async getBlocks(startSlot, endSlot, commitment) {
-    const args = this._buildArgsAtLeastConfirmed(endSlot !== undefined ? [startSlot, endSlot] : [startSlot], commitment);
-
-    const unsafeRes = await this._rpcRequest('getBlocks', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResult((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.array)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)())));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get blocks');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch a list of Signatures from the cluster for a block, excluding rewards
-   */
-
-
-  async getBlockSignatures(slot, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([slot], commitment, undefined, {
-      transactionDetails: 'signatures',
-      rewards: false
-    });
-
-    const unsafeRes = await this._rpcRequest('getBlock', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetBlockSignaturesRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get block');
-    }
-
-    const result = res.result;
-
-    if (!result) {
-      throw new Error('Block ' + slot + ' not found');
-    }
-
-    return result;
-  }
-  /**
-   * Fetch a list of Signatures from the cluster for a confirmed block, excluding rewards
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getBlockSignatures} instead.
-   */
-
-
-  async getConfirmedBlockSignatures(slot, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([slot], commitment, undefined, {
-      transactionDetails: 'signatures',
-      rewards: false
-    });
-
-    const unsafeRes = await this._rpcRequest('getConfirmedBlock', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetBlockSignaturesRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get confirmed block');
-    }
-
-    const result = res.result;
-
-    if (!result) {
-      throw new Error('Confirmed block ' + slot + ' not found');
-    }
-
-    return result;
-  }
-  /**
-   * Fetch a transaction details for a confirmed transaction
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getTransaction} instead.
-   */
-
-
-  async getConfirmedTransaction(signature, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([signature], commitment);
-
-    const unsafeRes = await this._rpcRequest('getConfirmedTransaction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetTransactionRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get transaction');
-    }
-
-    const result = res.result;
-    if (!result) return result;
-    const message = new Message(result.transaction.message);
-    const signatures = result.transaction.signatures;
-    return { ...result,
-      transaction: Transaction.populate(message, signatures)
-    };
-  }
-  /**
-   * Fetch parsed transaction details for a confirmed transaction
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getParsedTransaction} instead.
-   */
-
-
-  async getParsedConfirmedTransaction(signature, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([signature], commitment, 'jsonParsed');
-
-    const unsafeRes = await this._rpcRequest('getConfirmedTransaction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetParsedTransactionRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get confirmed transaction');
-    }
-
-    return res.result;
-  }
-  /**
-   * Fetch parsed transaction details for a batch of confirmed transactions
-   *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getParsedTransactions} instead.
-   */
-
-
-  async getParsedConfirmedTransactions(signatures, commitment) {
-    const batch = signatures.map(signature => {
-      const args = this._buildArgsAtLeastConfirmed([signature], commitment, 'jsonParsed');
-
-      return {
-        methodName: 'getConfirmedTransaction',
-        args
-      };
-    });
-    const unsafeRes = await this._rpcBatchRequest(batch);
-    const res = unsafeRes.map(unsafeRes => {
-      const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetParsedTransactionRpcResult);
-
-      if ('error' in res) {
-        throw new SolanaJSONRPCError(res.error, 'failed to get confirmed transactions');
-      }
-
-      return res.result;
-    });
-    return res;
-  }
-  /**
-   * Fetch a list of all the confirmed signatures for transactions involving an address
-   * within a specified slot range. Max range allowed is 10,000 slots.
-   *
-   * @deprecated Deprecated since v1.3. Please use {@link getConfirmedSignaturesForAddress2} instead.
-   *
-   * @param address queried address
-   * @param startSlot start slot, inclusive
-   * @param endSlot end slot, inclusive
-   */
-
-
-  async getConfirmedSignaturesForAddress(address, startSlot, endSlot) {
-    let options = {};
-    let firstAvailableBlock = await this.getFirstAvailableBlock();
-
-    while (!('until' in options)) {
-      startSlot--;
-
-      if (startSlot <= 0 || startSlot < firstAvailableBlock) {
-        break;
-      }
-
-      try {
-        const block = await this.getConfirmedBlockSignatures(startSlot, 'finalized');
-
-        if (block.signatures.length > 0) {
-          options.until = block.signatures[block.signatures.length - 1].toString();
-        }
-      } catch (err) {
-        if (err instanceof Error && err.message.includes('skipped')) {
-          continue;
-        } else {
-          throw err;
-        }
-      }
-    }
-
-    let highestConfirmedRoot = await this.getSlot('finalized');
-
-    while (!('before' in options)) {
-      endSlot++;
-
-      if (endSlot > highestConfirmedRoot) {
-        break;
-      }
-
-      try {
-        const block = await this.getConfirmedBlockSignatures(endSlot);
-
-        if (block.signatures.length > 0) {
-          options.before = block.signatures[block.signatures.length - 1].toString();
-        }
-      } catch (err) {
-        if (err instanceof Error && err.message.includes('skipped')) {
-          continue;
-        } else {
-          throw err;
-        }
-      }
-    }
-
-    const confirmedSignatureInfo = await this.getConfirmedSignaturesForAddress2(address, options);
-    return confirmedSignatureInfo.map(info => info.signature);
-  }
-  /**
-   * Returns confirmed signatures for transactions involving an
-   * address backwards in time from the provided signature or most recent confirmed block
-   *
-   *
-   * @param address queried address
-   * @param options
-   */
-
-
-  async getConfirmedSignaturesForAddress2(address, options, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([address.toBase58()], commitment, undefined, options);
-
-    const unsafeRes = await this._rpcRequest('getConfirmedSignaturesForAddress2', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetConfirmedSignaturesForAddress2RpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get confirmed signatures for address');
-    }
-
-    return res.result;
-  }
-  /**
-   * Returns confirmed signatures for transactions involving an
-   * address backwards in time from the provided signature or most recent confirmed block
-   *
-   *
-   * @param address queried address
-   * @param options
-   */
-
-
-  async getSignaturesForAddress(address, options, commitment) {
-    const args = this._buildArgsAtLeastConfirmed([address.toBase58()], commitment, undefined, options);
-
-    const unsafeRes = await this._rpcRequest('getSignaturesForAddress', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, GetSignaturesForAddressRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, 'failed to get signatures for address');
-    }
-
-    return res.result;
-  }
-
-  async getAddressLookupTable(accountKey, config) {
-    const {
-      context,
-      value: accountInfo
-    } = await this.getAccountInfoAndContext(accountKey, config);
-    let value = null;
-
-    if (accountInfo !== null) {
-      value = new AddressLookupTableAccount({
-        key: accountKey,
-        state: AddressLookupTableAccount.deserialize(accountInfo.data)
-      });
-    }
-
-    return {
-      context,
-      value
-    };
-  }
-  /**
-   * Fetch the contents of a Nonce account from the cluster, return with context
-   */
-
-
-  async getNonceAndContext(nonceAccount, commitment) {
-    const {
-      context,
-      value: accountInfo
-    } = await this.getAccountInfoAndContext(nonceAccount, commitment);
-    let value = null;
-
-    if (accountInfo !== null) {
-      value = NonceAccount.fromAccountData(accountInfo.data);
-    }
-
-    return {
-      context,
-      value
-    };
-  }
-  /**
-   * Fetch the contents of a Nonce account from the cluster
-   */
-
-
-  async getNonce(nonceAccount, commitment) {
-    return await this.getNonceAndContext(nonceAccount, commitment).then(x => x.value).catch(e => {
-      throw new Error('failed to get nonce for account ' + nonceAccount.toBase58() + ': ' + e);
-    });
-  }
-  /**
-   * Request an allocation of lamports to the specified address
-   *
-   * ```typescript
-   * import { Connection, PublicKey, LAMPORTS_PER_SOL } from "@solana/web3.js";
-   *
-   * (async () => {
-   *   const connection = new Connection("https://api.testnet.solana.com", "confirmed");
-   *   const myAddress = new PublicKey("2nr1bHFT86W9tGnyvmYW4vcHKsQB3sVQfnddasz4kExM");
-   *   const signature = await connection.requestAirdrop(myAddress, LAMPORTS_PER_SOL);
-   *   await connection.confirmTransaction(signature);
-   * })();
-   * ```
-   */
-
-
-  async requestAirdrop(to, lamports) {
-    const unsafeRes = await this._rpcRequest('requestAirdrop', [to.toBase58(), lamports]);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, RequestAirdropRpcResult);
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `airdrop to ${to.toBase58()} failed`);
-    }
-
-    return res.result;
-  }
-  /**
-   * @internal
-   */
-
-
-  async _blockhashWithExpiryBlockHeight(disableCache) {
-    if (!disableCache) {
-      // Wait for polling to finish
-      while (this._pollingBlockhash) {
-        await sleep(100);
-      }
-
-      const timeSinceFetch = Date.now() - this._blockhashInfo.lastFetch;
-
-      const expired = timeSinceFetch >= BLOCKHASH_CACHE_TIMEOUT_MS;
-
-      if (this._blockhashInfo.latestBlockhash !== null && !expired) {
-        return this._blockhashInfo.latestBlockhash;
-      }
-    }
-
-    return await this._pollNewBlockhash();
-  }
-  /**
-   * @internal
-   */
-
-
-  async _pollNewBlockhash() {
-    this._pollingBlockhash = true;
-
-    try {
-      const startTime = Date.now();
-      const cachedLatestBlockhash = this._blockhashInfo.latestBlockhash;
-      const cachedBlockhash = cachedLatestBlockhash ? cachedLatestBlockhash.blockhash : null;
-
-      for (let i = 0; i < 50; i++) {
-        const latestBlockhash = await this.getLatestBlockhash('finalized');
-
-        if (cachedBlockhash !== latestBlockhash.blockhash) {
-          this._blockhashInfo = {
-            latestBlockhash,
-            lastFetch: Date.now(),
-            transactionSignatures: [],
-            simulatedSignatures: []
-          };
-          return latestBlockhash;
-        } // Sleep for approximately half a slot
-
-
-        await sleep(MS_PER_SLOT / 2);
-      }
-
-      throw new Error(`Unable to obtain a new blockhash after ${Date.now() - startTime}ms`);
-    } finally {
-      this._pollingBlockhash = false;
-    }
-  }
-  /**
-   * get the stake minimum delegation
-   */
-
-
-  async getStakeMinimumDelegation(config) {
-    const {
-      commitment,
-      config: configArg
-    } = extractCommitmentFromConfig(config);
-
-    const args = this._buildArgs([], commitment, 'base64', configArg);
-
-    const unsafeRes = await this._rpcRequest('getStakeMinimumDelegation', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, jsonRpcResultAndContext((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.number)()));
-
-    if ('error' in res) {
-      throw new SolanaJSONRPCError(res.error, `failed to get stake minimum delegation`);
-    }
-
-    return res.result;
-  }
-  /**
-   * Simulate a transaction
-   *
-   * @deprecated Instead, call {@link simulateTransaction} with {@link
-   * VersionedTransaction} and {@link SimulateTransactionConfig} parameters
-   */
-
-
-  /**
-   * Simulate a transaction
-   */
-  // eslint-disable-next-line no-dupe-class-members
-  async simulateTransaction(transactionOrMessage, configOrSigners, includeAccounts) {
-    if ('message' in transactionOrMessage) {
-      const versionedTx = transactionOrMessage;
-      const wireTransaction = versionedTx.serialize();
-      const encodedTransaction = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(wireTransaction).toString('base64');
-
-      if (Array.isArray(configOrSigners) || includeAccounts !== undefined) {
-        throw new Error('Invalid arguments');
-      }
-
-      const config = configOrSigners || {};
-      config.encoding = 'base64';
-
-      if (!('commitment' in config)) {
-        config.commitment = this.commitment;
-      }
-
-      const args = [encodedTransaction, config];
-      const unsafeRes = await this._rpcRequest('simulateTransaction', args);
-      const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, SimulatedTransactionResponseStruct);
-
-      if ('error' in res) {
-        throw new Error('failed to simulate transaction: ' + res.error.message);
-      }
-
-      return res.result;
-    }
-
-    let transaction;
-
-    if (transactionOrMessage instanceof Transaction) {
-      let originalTx = transactionOrMessage;
-      transaction = new Transaction();
-      transaction.feePayer = originalTx.feePayer;
-      transaction.instructions = transactionOrMessage.instructions;
-      transaction.nonceInfo = originalTx.nonceInfo;
-      transaction.signatures = originalTx.signatures;
-    } else {
-      transaction = Transaction.populate(transactionOrMessage); // HACK: this function relies on mutating the populated transaction
-
-      transaction._message = transaction._json = undefined;
-    }
-
-    if (configOrSigners !== undefined && !Array.isArray(configOrSigners)) {
-      throw new Error('Invalid arguments');
-    }
-
-    const signers = configOrSigners;
-
-    if (transaction.nonceInfo && signers) {
-      transaction.sign(...signers);
-    } else {
-      let disableCache = this._disableBlockhashCaching;
-
-      for (;;) {
-        const latestBlockhash = await this._blockhashWithExpiryBlockHeight(disableCache);
-        transaction.lastValidBlockHeight = latestBlockhash.lastValidBlockHeight;
-        transaction.recentBlockhash = latestBlockhash.blockhash;
-        if (!signers) break;
-        transaction.sign(...signers);
-
-        if (!transaction.signature) {
-          throw new Error('!signature'); // should never happen
-        }
-
-        const signature = transaction.signature.toString('base64');
-
-        if (!this._blockhashInfo.simulatedSignatures.includes(signature) && !this._blockhashInfo.transactionSignatures.includes(signature)) {
-          // The signature of this transaction has not been seen before with the
-          // current recentBlockhash, all done. Let's break
-          this._blockhashInfo.simulatedSignatures.push(signature);
-
-          break;
-        } else {
-          // This transaction would be treated as duplicate (its derived signature
-          // matched to one of already recorded signatures).
-          // So, we must fetch a new blockhash for a different signature by disabling
-          // our cache not to wait for the cache expiration (BLOCKHASH_CACHE_TIMEOUT_MS).
-          disableCache = true;
-        }
-      }
-    }
-
-    const message = transaction._compile();
-
-    const signData = message.serialize();
-
-    const wireTransaction = transaction._serialize(signData);
-
-    const encodedTransaction = wireTransaction.toString('base64');
-    const config = {
-      encoding: 'base64',
-      commitment: this.commitment
-    };
-
-    if (includeAccounts) {
-      const addresses = (Array.isArray(includeAccounts) ? includeAccounts : message.nonProgramIds()).map(key => key.toBase58());
-      config['accounts'] = {
-        encoding: 'base64',
-        addresses
-      };
-    }
-
-    if (signers) {
-      config.sigVerify = true;
-    }
-
-    const args = [encodedTransaction, config];
-    const unsafeRes = await this._rpcRequest('simulateTransaction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, SimulatedTransactionResponseStruct);
-
-    if ('error' in res) {
-      let logs;
-
-      if ('data' in res.error) {
-        logs = res.error.data.logs;
-
-        if (logs && Array.isArray(logs)) {
-          const traceIndent = '\n    ';
-          const logTrace = traceIndent + logs.join(traceIndent);
-          console.error(res.error.message, logTrace);
-        }
-      }
-
-      throw new SendTransactionError('failed to simulate transaction: ' + res.error.message, logs);
-    }
-
-    return res.result;
-  }
-  /**
-   * Sign and send a transaction
-   *
-   * @deprecated Instead, call {@link sendTransaction} with a {@link
-   * VersionedTransaction}
-   */
-
-
-  /**
-   * Sign and send a transaction
-   */
-  // eslint-disable-next-line no-dupe-class-members
-  async sendTransaction(transaction, signersOrOptions, options) {
-    if ('version' in transaction) {
-      if (signersOrOptions && Array.isArray(signersOrOptions)) {
-        throw new Error('Invalid arguments');
-      }
-
-      const wireTransaction = transaction.serialize();
-      return await this.sendRawTransaction(wireTransaction, options);
-    }
-
-    if (signersOrOptions === undefined || !Array.isArray(signersOrOptions)) {
-      throw new Error('Invalid arguments');
-    }
-
-    const signers = signersOrOptions;
-
-    if (transaction.nonceInfo) {
-      transaction.sign(...signers);
-    } else {
-      let disableCache = this._disableBlockhashCaching;
-
-      for (;;) {
-        const latestBlockhash = await this._blockhashWithExpiryBlockHeight(disableCache);
-        transaction.lastValidBlockHeight = latestBlockhash.lastValidBlockHeight;
-        transaction.recentBlockhash = latestBlockhash.blockhash;
-        transaction.sign(...signers);
-
-        if (!transaction.signature) {
-          throw new Error('!signature'); // should never happen
-        }
-
-        const signature = transaction.signature.toString('base64');
-
-        if (!this._blockhashInfo.transactionSignatures.includes(signature)) {
-          // The signature of this transaction has not been seen before with the
-          // current recentBlockhash, all done. Let's break
-          this._blockhashInfo.transactionSignatures.push(signature);
-
-          break;
-        } else {
-          // This transaction would be treated as duplicate (its derived signature
-          // matched to one of already recorded signatures).
-          // So, we must fetch a new blockhash for a different signature by disabling
-          // our cache not to wait for the cache expiration (BLOCKHASH_CACHE_TIMEOUT_MS).
-          disableCache = true;
-        }
-      }
-    }
-
-    const wireTransaction = transaction.serialize();
-    return await this.sendRawTransaction(wireTransaction, options);
-  }
-  /**
-   * Send a transaction that has already been signed and serialized into the
-   * wire format
-   */
-
-
-  async sendRawTransaction(rawTransaction, options) {
-    const encodedTransaction = toBuffer(rawTransaction).toString('base64');
-    const result = await this.sendEncodedTransaction(encodedTransaction, options);
-    return result;
-  }
-  /**
-   * Send a transaction that has already been signed, serialized into the
-   * wire format, and encoded as a base64 string
-   */
-
-
-  async sendEncodedTransaction(encodedTransaction, options) {
-    const config = {
-      encoding: 'base64'
-    };
-    const skipPreflight = options && options.skipPreflight;
-    const preflightCommitment = options && options.preflightCommitment || this.commitment;
-
-    if (options && options.maxRetries != null) {
-      config.maxRetries = options.maxRetries;
-    }
-
-    if (options && options.minContextSlot != null) {
-      config.minContextSlot = options.minContextSlot;
-    }
-
-    if (skipPreflight) {
-      config.skipPreflight = skipPreflight;
-    }
-
-    if (preflightCommitment) {
-      config.preflightCommitment = preflightCommitment;
-    }
-
-    const args = [encodedTransaction, config];
-    const unsafeRes = await this._rpcRequest('sendTransaction', args);
-    const res = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(unsafeRes, SendTransactionRpcResult);
-
-    if ('error' in res) {
-      let logs;
-
-      if ('data' in res.error) {
-        logs = res.error.data.logs;
-      }
-
-      throw new SendTransactionError('failed to send transaction: ' + res.error.message, logs);
-    }
-
-    return res.result;
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnOpen() {
-    this._rpcWebSocketConnected = true;
-    this._rpcWebSocketHeartbeat = setInterval(() => {
-      // Ping server every 5s to prevent idle timeouts
-      this._rpcWebSocket.notify('ping').catch(() => {});
-    }, 5000);
-
-    this._updateSubscriptions();
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnError(err) {
-    this._rpcWebSocketConnected = false;
-    console.error('ws error:', err.message);
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnClose(code) {
-    this._rpcWebSocketConnected = false;
-    this._rpcWebSocketGeneration++;
-
-    if (this._rpcWebSocketIdleTimeout) {
-      clearTimeout(this._rpcWebSocketIdleTimeout);
-      this._rpcWebSocketIdleTimeout = null;
-    }
-
-    if (this._rpcWebSocketHeartbeat) {
-      clearInterval(this._rpcWebSocketHeartbeat);
-      this._rpcWebSocketHeartbeat = null;
-    }
-
-    if (code === 1000) {
-      // explicit close, check if any subscriptions have been made since close
-      this._updateSubscriptions();
-
-      return;
-    } // implicit close, prepare subscriptions for auto-reconnect
-
-
-    this._subscriptionCallbacksByServerSubscriptionId = {};
-    Object.entries(this._subscriptionsByHash).forEach(([hash, subscription]) => {
-      this._subscriptionsByHash[hash] = { ...subscription,
-        state: 'pending'
-      };
-    });
-  }
-  /**
-   * @internal
-   */
-
-
-  async _updateSubscriptions() {
-    if (Object.keys(this._subscriptionsByHash).length === 0) {
-      if (this._rpcWebSocketConnected) {
-        this._rpcWebSocketConnected = false;
-        this._rpcWebSocketIdleTimeout = setTimeout(() => {
-          this._rpcWebSocketIdleTimeout = null;
-
-          try {
-            this._rpcWebSocket.close();
-          } catch (err) {
-            // swallow error if socket has already been closed.
-            if (err instanceof Error) {
-              console.log(`Error when closing socket connection: ${err.message}`);
-            }
-          }
-        }, 500);
-      }
-
-      return;
-    }
-
-    if (this._rpcWebSocketIdleTimeout !== null) {
-      clearTimeout(this._rpcWebSocketIdleTimeout);
-      this._rpcWebSocketIdleTimeout = null;
-      this._rpcWebSocketConnected = true;
-    }
-
-    if (!this._rpcWebSocketConnected) {
-      this._rpcWebSocket.connect();
-
-      return;
-    }
-
-    const activeWebSocketGeneration = this._rpcWebSocketGeneration;
-
-    const isCurrentConnectionStillActive = () => {
-      return activeWebSocketGeneration === this._rpcWebSocketGeneration;
-    };
-
-    await Promise.all( // Don't be tempted to change this to `Object.entries`. We call
-    // `_updateSubscriptions` recursively when processing the state,
-    // so it's important that we look up the *current* version of
-    // each subscription, every time we process a hash.
-    Object.keys(this._subscriptionsByHash).map(async hash => {
-      const subscription = this._subscriptionsByHash[hash];
-
-      if (subscription === undefined) {
-        // This entry has since been deleted. Skip.
-        return;
-      }
-
-      switch (subscription.state) {
-        case 'pending':
-        case 'unsubscribed':
-          if (subscription.callbacks.size === 0) {
-            /**
-             * You can end up here when:
-             *
-             * - a subscription has recently unsubscribed
-             *   without having new callbacks added to it
-             *   while the unsubscribe was in flight, or
-             * - when a pending subscription has its
-             *   listeners removed before a request was
-             *   sent to the server.
-             *
-             * Being that nobody is interested in this
-             * subscription any longer, delete it.
-             */
-            delete this._subscriptionsByHash[hash];
-
-            if (subscription.state === 'unsubscribed') {
-              delete this._subscriptionCallbacksByServerSubscriptionId[subscription.serverSubscriptionId];
-            }
-
-            await this._updateSubscriptions();
-            return;
-          }
-
-          await (async () => {
-            const {
-              args,
-              method
-            } = subscription;
-
-            try {
-              this._subscriptionsByHash[hash] = { ...subscription,
-                state: 'subscribing'
-              };
-              const serverSubscriptionId = await this._rpcWebSocket.call(method, args);
-              this._subscriptionsByHash[hash] = { ...subscription,
-                serverSubscriptionId,
-                state: 'subscribed'
-              };
-              this._subscriptionCallbacksByServerSubscriptionId[serverSubscriptionId] = subscription.callbacks;
-              await this._updateSubscriptions();
-            } catch (e) {
-              if (e instanceof Error) {
-                console.error(`${method} error for argument`, args, e.message);
-              }
-
-              if (!isCurrentConnectionStillActive()) {
-                return;
-              } // TODO: Maybe add an 'errored' state or a retry limit?
-
-
-              this._subscriptionsByHash[hash] = { ...subscription,
-                state: 'pending'
-              };
-              await this._updateSubscriptions();
-            }
-          })();
-          break;
-
-        case 'subscribed':
-          if (subscription.callbacks.size === 0) {
-            // By the time we successfully set up a subscription
-            // with the server, the client stopped caring about it.
-            // Tear it down now.
-            await (async () => {
-              const {
-                serverSubscriptionId,
-                unsubscribeMethod
-              } = subscription;
-
-              if (this._subscriptionsAutoDisposedByRpc.has(serverSubscriptionId)) {
-                /**
-                 * Special case.
-                 * If we're dealing with a subscription that has been auto-
-                 * disposed by the RPC, then we can skip the RPC call to
-                 * tear down the subscription here.
-                 *
-                 * NOTE: There is a proposal to eliminate this special case, here:
-                 * https://github.com/solana-labs/solana/issues/18892
-                 */
-                this._subscriptionsAutoDisposedByRpc.delete(serverSubscriptionId);
-              } else {
-                this._subscriptionsByHash[hash] = { ...subscription,
-                  state: 'unsubscribing'
-                };
-
-                try {
-                  await this._rpcWebSocket.call(unsubscribeMethod, [serverSubscriptionId]);
-                } catch (e) {
-                  if (e instanceof Error) {
-                    console.error(`${unsubscribeMethod} error:`, e.message);
-                  }
-
-                  if (!isCurrentConnectionStillActive()) {
-                    return;
-                  } // TODO: Maybe add an 'errored' state or a retry limit?
-
-
-                  this._subscriptionsByHash[hash] = { ...subscription,
-                    state: 'subscribed'
-                  };
-                  await this._updateSubscriptions();
-                  return;
-                }
-              }
-
-              this._subscriptionsByHash[hash] = { ...subscription,
-                state: 'unsubscribed'
-              };
-              await this._updateSubscriptions();
-            })();
-          }
-
-          break;
-      }
-    }));
-  }
-  /**
-   * @internal
-   */
-
-
-  _handleServerNotification(serverSubscriptionId, callbackArgs) {
-    const callbacks = this._subscriptionCallbacksByServerSubscriptionId[serverSubscriptionId];
-
-    if (callbacks === undefined) {
-      return;
-    }
-
-    callbacks.forEach(cb => {
-      try {
-        cb( // I failed to find a way to convince TypeScript that `cb` is of type
-        // `TCallback` which is certainly compatible with `Parameters<TCallback>`.
-        // See https://github.com/microsoft/TypeScript/issues/47615
-        // @ts-ignore
-        ...callbackArgs);
-      } catch (e) {
-        console.error(e);
-      }
-    });
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnAccountNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, AccountNotificationResult);
-
-    this._handleServerNotification(subscription, [result.value, result.context]);
-  }
-  /**
-   * @internal
-   */
-
-
-  _makeSubscription(subscriptionConfig,
-  /**
-   * When preparing `args` for a call to `_makeSubscription`, be sure
-   * to carefully apply a default `commitment` property, if necessary.
-   *
-   * - If the user supplied a `commitment` use that.
-   * - Otherwise, if the `Connection::commitment` is set, use that.
-   * - Otherwise, set it to the RPC server default: `finalized`.
-   *
-   * This is extremely important to ensure that these two fundamentally
-   * identical subscriptions produce the same identifying hash:
-   *
-   * - A subscription made without specifying a commitment.
-   * - A subscription made where the commitment specified is the same
-   *   as the default applied to the subscription above.
-   *
-   * Example; these two subscriptions must produce the same hash:
-   *
-   * - An `accountSubscribe` subscription for `'PUBKEY'`
-   * - An `accountSubscribe` subscription for `'PUBKEY'` with commitment
-   *   `'finalized'`.
-   *
-   * See the 'making a subscription with defaulted params omitted' test
-   * in `connection-subscriptions.ts` for more.
-   */
-  args) {
-    const clientSubscriptionId = this._nextClientSubscriptionId++;
-    const hash = fastStableStringify$1([subscriptionConfig.method, args], true
-    /* isArrayProp */
-    );
-    const existingSubscription = this._subscriptionsByHash[hash];
-
-    if (existingSubscription === undefined) {
-      this._subscriptionsByHash[hash] = { ...subscriptionConfig,
-        args,
-        callbacks: new Set([subscriptionConfig.callback]),
-        state: 'pending'
-      };
-    } else {
-      existingSubscription.callbacks.add(subscriptionConfig.callback);
-    }
-
-    this._subscriptionDisposeFunctionsByClientSubscriptionId[clientSubscriptionId] = async () => {
-      delete this._subscriptionDisposeFunctionsByClientSubscriptionId[clientSubscriptionId];
-      const subscription = this._subscriptionsByHash[hash];
-      assert(subscription !== undefined, `Could not find a \`Subscription\` when tearing down client subscription #${clientSubscriptionId}`);
-      subscription.callbacks.delete(subscriptionConfig.callback);
-      await this._updateSubscriptions();
-    };
-
-    this._updateSubscriptions();
-
-    return clientSubscriptionId;
-  }
-  /**
-   * Register a callback to be invoked whenever the specified account changes
-   *
-   * @param publicKey Public key of the account to monitor
-   * @param callback Function to invoke whenever the account is changed
-   * @param commitment Specify the commitment level account changes must reach before notification
-   * @return subscription id
-   */
-
-
-  onAccountChange(publicKey, callback, commitment) {
-    const args = this._buildArgs([publicKey.toBase58()], commitment || this._commitment || 'finalized', // Apply connection/server default.
-    'base64');
-
-    return this._makeSubscription({
-      callback,
-      method: 'accountSubscribe',
-      unsubscribeMethod: 'accountUnsubscribe'
-    }, args);
-  }
-  /**
-   * Deregister an account notification callback
-   *
-   * @param id client subscription id to deregister
-   */
-
-
-  async removeAccountChangeListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'account change');
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnProgramAccountNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, ProgramAccountNotificationResult);
-
-    this._handleServerNotification(subscription, [{
-      accountId: result.value.pubkey,
-      accountInfo: result.value.account
-    }, result.context]);
-  }
-  /**
-   * Register a callback to be invoked whenever accounts owned by the
-   * specified program change
-   *
-   * @param programId Public key of the program to monitor
-   * @param callback Function to invoke whenever the account is changed
-   * @param commitment Specify the commitment level account changes must reach before notification
-   * @param filters The program account filters to pass into the RPC method
-   * @return subscription id
-   */
-
-
-  onProgramAccountChange(programId, callback, commitment, filters) {
-    const args = this._buildArgs([programId.toBase58()], commitment || this._commitment || 'finalized', // Apply connection/server default.
-    'base64'
-    /* encoding */
-    , filters ? {
-      filters: filters
-    } : undefined
-    /* extra */
-    );
-
-    return this._makeSubscription({
-      callback,
-      method: 'programSubscribe',
-      unsubscribeMethod: 'programUnsubscribe'
-    }, args);
-  }
-  /**
-   * Deregister an account notification callback
-   *
-   * @param id client subscription id to deregister
-   */
-
-
-  async removeProgramAccountChangeListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'program account change');
-  }
-  /**
-   * Registers a callback to be invoked whenever logs are emitted.
-   */
-
-
-  onLogs(filter, callback, commitment) {
-    const args = this._buildArgs([typeof filter === 'object' ? {
-      mentions: [filter.toString()]
-    } : filter], commitment || this._commitment || 'finalized' // Apply connection/server default.
-    );
-
-    return this._makeSubscription({
-      callback,
-      method: 'logsSubscribe',
-      unsubscribeMethod: 'logsUnsubscribe'
-    }, args);
-  }
-  /**
-   * Deregister a logs callback.
-   *
-   * @param id client subscription id to deregister.
-   */
-
-
-  async removeOnLogsListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'logs');
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnLogsNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, LogsNotificationResult);
-
-    this._handleServerNotification(subscription, [result.value, result.context]);
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnSlotNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, SlotNotificationResult);
-
-    this._handleServerNotification(subscription, [result]);
-  }
-  /**
-   * Register a callback to be invoked upon slot changes
-   *
-   * @param callback Function to invoke whenever the slot changes
-   * @return subscription id
-   */
-
-
-  onSlotChange(callback) {
-    return this._makeSubscription({
-      callback,
-      method: 'slotSubscribe',
-      unsubscribeMethod: 'slotUnsubscribe'
-    }, []
-    /* args */
-    );
-  }
-  /**
-   * Deregister a slot notification callback
-   *
-   * @param id client subscription id to deregister
-   */
-
-
-  async removeSlotChangeListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'slot change');
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnSlotUpdatesNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, SlotUpdateNotificationResult);
-
-    this._handleServerNotification(subscription, [result]);
-  }
-  /**
-   * Register a callback to be invoked upon slot updates. {@link SlotUpdate}'s
-   * may be useful to track live progress of a cluster.
-   *
-   * @param callback Function to invoke whenever the slot updates
-   * @return subscription id
-   */
-
-
-  onSlotUpdate(callback) {
-    return this._makeSubscription({
-      callback,
-      method: 'slotsUpdatesSubscribe',
-      unsubscribeMethod: 'slotsUpdatesUnsubscribe'
-    }, []
-    /* args */
-    );
-  }
-  /**
-   * Deregister a slot update notification callback
-   *
-   * @param id client subscription id to deregister
-   */
-
-
-  async removeSlotUpdateListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'slot update');
-  }
-  /**
-   * @internal
-   */
-
-
-  async _unsubscribeClientSubscription(clientSubscriptionId, subscriptionName) {
-    const dispose = this._subscriptionDisposeFunctionsByClientSubscriptionId[clientSubscriptionId];
-
-    if (dispose) {
-      await dispose();
-    } else {
-      console.warn('Ignored unsubscribe request because an active subscription with id ' + `\`${clientSubscriptionId}\` for '${subscriptionName}' events ` + 'could not be found.');
-    }
-  }
-
-  _buildArgs(args, override, encoding, extra) {
-    const commitment = override || this._commitment;
-
-    if (commitment || encoding || extra) {
-      let options = {};
-
-      if (encoding) {
-        options.encoding = encoding;
-      }
-
-      if (commitment) {
-        options.commitment = commitment;
-      }
-
-      if (extra) {
-        options = Object.assign(options, extra);
-      }
-
-      args.push(options);
-    }
-
-    return args;
-  }
-  /**
-   * @internal
-   */
-
-
-  _buildArgsAtLeastConfirmed(args, override, encoding, extra) {
-    const commitment = override || this._commitment;
-
-    if (commitment && !['confirmed', 'finalized'].includes(commitment)) {
-      throw new Error('Using Connection with default commitment: `' + this._commitment + '`, but method requires at least `confirmed`');
-    }
-
-    return this._buildArgs(args, override, encoding, extra);
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnSignatureNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, SignatureNotificationResult);
-
-    if (result.value !== 'receivedSignature') {
-      /**
-       * Special case.
-       * After a signature is processed, RPCs automatically dispose of the
-       * subscription on the server side. We need to track which of these
-       * subscriptions have been disposed in such a way, so that we know
-       * whether the client is dealing with a not-yet-processed signature
-       * (in which case we must tear down the server subscription) or an
-       * already-processed signature (in which case the client can simply
-       * clear out the subscription locally without telling the server).
-       *
-       * NOTE: There is a proposal to eliminate this special case, here:
-       * https://github.com/solana-labs/solana/issues/18892
-       */
-      this._subscriptionsAutoDisposedByRpc.add(subscription);
-    }
-
-    this._handleServerNotification(subscription, result.value === 'receivedSignature' ? [{
-      type: 'received'
-    }, result.context] : [{
-      type: 'status',
-      result: result.value
-    }, result.context]);
-  }
-  /**
-   * Register a callback to be invoked upon signature updates
-   *
-   * @param signature Transaction signature string in base 58
-   * @param callback Function to invoke on signature notifications
-   * @param commitment Specify the commitment level signature must reach before notification
-   * @return subscription id
-   */
-
-
-  onSignature(signature, callback, commitment) {
-    const args = this._buildArgs([signature], commitment || this._commitment || 'finalized' // Apply connection/server default.
-    );
-
-    const clientSubscriptionId = this._makeSubscription({
-      callback: (notification, context) => {
-        if (notification.type === 'status') {
-          callback(notification.result, context); // Signatures subscriptions are auto-removed by the RPC service
-          // so no need to explicitly send an unsubscribe message.
-
-          try {
-            this.removeSignatureListener(clientSubscriptionId); // eslint-disable-next-line no-empty
-          } catch (_err) {// Already removed.
-          }
-        }
-      },
-      method: 'signatureSubscribe',
-      unsubscribeMethod: 'signatureUnsubscribe'
-    }, args);
-
-    return clientSubscriptionId;
-  }
-  /**
-   * Register a callback to be invoked when a transaction is
-   * received and/or processed.
-   *
-   * @param signature Transaction signature string in base 58
-   * @param callback Function to invoke on signature notifications
-   * @param options Enable received notifications and set the commitment
-   *   level that signature must reach before notification
-   * @return subscription id
-   */
-
-
-  onSignatureWithOptions(signature, callback, options) {
-    const {
-      commitment,
-      ...extra
-    } = { ...options,
-      commitment: options && options.commitment || this._commitment || 'finalized' // Apply connection/server default.
-
-    };
-
-    const args = this._buildArgs([signature], commitment, undefined
-    /* encoding */
-    , extra);
-
-    const clientSubscriptionId = this._makeSubscription({
-      callback: (notification, context) => {
-        callback(notification, context); // Signatures subscriptions are auto-removed by the RPC service
-        // so no need to explicitly send an unsubscribe message.
-
-        try {
-          this.removeSignatureListener(clientSubscriptionId); // eslint-disable-next-line no-empty
-        } catch (_err) {// Already removed.
-        }
-      },
-      method: 'signatureSubscribe',
-      unsubscribeMethod: 'signatureUnsubscribe'
-    }, args);
-
-    return clientSubscriptionId;
-  }
-  /**
-   * Deregister a signature notification callback
-   *
-   * @param id client subscription id to deregister
-   */
-
-
-  async removeSignatureListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'signature result');
-  }
-  /**
-   * @internal
-   */
-
-
-  _wsOnRootNotification(notification) {
-    const {
-      result,
-      subscription
-    } = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.create)(notification, RootNotificationResult);
-
-    this._handleServerNotification(subscription, [result]);
-  }
-  /**
-   * Register a callback to be invoked upon root changes
-   *
-   * @param callback Function to invoke whenever the root changes
-   * @return subscription id
-   */
-
-
-  onRootChange(callback) {
-    return this._makeSubscription({
-      callback,
-      method: 'rootSubscribe',
-      unsubscribeMethod: 'rootUnsubscribe'
-    }, []
-    /* args */
-    );
-  }
-  /**
-   * Deregister a root notification callback
-   *
-   * @param id client subscription id to deregister
-   */
-
-
-  async removeRootChangeListener(clientSubscriptionId) {
-    await this._unsubscribeClientSubscription(clientSubscriptionId, 'root change');
-  }
-
-}
-
-/**
- * Keypair signer interface
- */
-
-/**
- * An account keypair used for signing transactions.
- */
-class Keypair {
-  /**
-   * Create a new keypair instance.
-   * Generate random keypair if no {@link Ed25519Keypair} is provided.
-   *
-   * @param keypair ed25519 keypair
-   */
-  constructor(keypair) {
-    this._keypair = void 0;
-    this._keypair = keypair !== null && keypair !== void 0 ? keypair : generateKeypair();
-  }
-  /**
-   * Generate a new random keypair
-   */
-
-
-  static generate() {
-    return new Keypair(generateKeypair());
-  }
-  /**
-   * Create a keypair from a raw secret key byte array.
-   *
-   * This method should only be used to recreate a keypair from a previously
-   * generated secret key. Generating keypairs from a random seed should be done
-   * with the {@link Keypair.fromSeed} method.
-   *
-   * @throws error if the provided secret key is invalid and validation is not skipped.
-   *
-   * @param secretKey secret key byte array
-   * @param options: skip secret key validation
-   */
-
-
-  static fromSecretKey(secretKey, options) {
-    if (secretKey.byteLength !== 64) {
-      throw new Error('bad secret key size');
-    }
-
-    const publicKey = secretKey.slice(32, 64);
-
-    if (!options || !options.skipValidation) {
-      const privateScalar = secretKey.slice(0, 32);
-      const computedPublicKey = getPublicKey(privateScalar);
-
-      for (let ii = 0; ii < 32; ii++) {
-        if (publicKey[ii] !== computedPublicKey[ii]) {
-          throw new Error('provided secretKey is invalid');
-        }
-      }
-    }
-
-    return new Keypair({
-      publicKey,
-      secretKey
-    });
-  }
-  /**
-   * Generate a keypair from a 32 byte seed.
-   *
-   * @param seed seed byte array
-   */
-
-
-  static fromSeed(seed) {
-    const publicKey = getPublicKey(seed);
-    const secretKey = new Uint8Array(64);
-    secretKey.set(seed);
-    secretKey.set(publicKey, 32);
-    return new Keypair({
-      publicKey,
-      secretKey
-    });
-  }
-  /**
-   * The public key for this keypair
-   */
-
-
-  get publicKey() {
-    return new PublicKey(this._keypair.publicKey);
-  }
-  /**
-   * The raw secret key for this keypair
-   */
-
-
-  get secretKey() {
-    return new Uint8Array(this._keypair.secretKey);
-  }
-
-}
-
-/**
- * An enumeration of valid address lookup table InstructionType's
- * @internal
- */
-const LOOKUP_TABLE_INSTRUCTION_LAYOUTS = Object.freeze({
-  CreateLookupTable: {
-    index: 0,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), u64('recentSlot'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('bumpSeed')])
-  },
-  FreezeLookupTable: {
-    index: 1,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  },
-  ExtendLookupTable: {
-    index: 2,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), u64(), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(publicKey(), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32(), -8), 'addresses')])
-  },
-  DeactivateLookupTable: {
-    index: 3,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  },
-  CloseLookupTable: {
-    index: 4,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  }
-});
-class AddressLookupTableInstruction {
-  /**
-   * @internal
-   */
-  constructor() {}
-
-  static decodeInstructionType(instruction) {
-    this.checkProgramId(instruction.programId);
-    const instructionTypeLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction');
-    const index = instructionTypeLayout.decode(instruction.data);
-    let type;
-
-    for (const [layoutType, layout] of Object.entries(LOOKUP_TABLE_INSTRUCTION_LAYOUTS)) {
-      if (layout.index == index) {
-        type = layoutType;
-        break;
-      }
-    }
-
-    if (!type) {
-      throw new Error('Invalid Instruction. Should be a LookupTable Instruction');
-    }
-
-    return type;
-  }
-
-  static decodeCreateLookupTable(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeysLength(instruction.keys, 4);
-    const {
-      recentSlot
-    } = decodeData$1(LOOKUP_TABLE_INSTRUCTION_LAYOUTS.CreateLookupTable, instruction.data);
-    return {
-      authority: instruction.keys[1].pubkey,
-      payer: instruction.keys[2].pubkey,
-      recentSlot: Number(recentSlot)
-    };
-  }
-
-  static decodeExtendLookupTable(instruction) {
-    this.checkProgramId(instruction.programId);
-
-    if (instruction.keys.length < 2) {
-      throw new Error(`invalid instruction; found ${instruction.keys.length} keys, expected at least 2`);
-    }
-
-    const {
-      addresses
-    } = decodeData$1(LOOKUP_TABLE_INSTRUCTION_LAYOUTS.ExtendLookupTable, instruction.data);
-    return {
-      lookupTable: instruction.keys[0].pubkey,
-      authority: instruction.keys[1].pubkey,
-      payer: instruction.keys.length > 2 ? instruction.keys[2].pubkey : undefined,
-      addresses: addresses.map(buffer => new PublicKey(buffer))
-    };
-  }
-
-  static decodeCloseLookupTable(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeysLength(instruction.keys, 3);
-    return {
-      lookupTable: instruction.keys[0].pubkey,
-      authority: instruction.keys[1].pubkey,
-      recipient: instruction.keys[2].pubkey
-    };
-  }
-
-  static decodeFreezeLookupTable(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeysLength(instruction.keys, 2);
-    return {
-      lookupTable: instruction.keys[0].pubkey,
-      authority: instruction.keys[1].pubkey
-    };
-  }
-
-  static decodeDeactivateLookupTable(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeysLength(instruction.keys, 2);
-    return {
-      lookupTable: instruction.keys[0].pubkey,
-      authority: instruction.keys[1].pubkey
-    };
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkProgramId(programId) {
-    if (!programId.equals(AddressLookupTableProgram.programId)) {
-      throw new Error('invalid instruction; programId is not AddressLookupTable Program');
-    }
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkKeysLength(keys, expectedLength) {
-    if (keys.length < expectedLength) {
-      throw new Error(`invalid instruction; found ${keys.length} keys, expected at least ${expectedLength}`);
-    }
-  }
-
-}
-class AddressLookupTableProgram {
-  /**
-   * @internal
-   */
-  constructor() {}
-
-  static createLookupTable(params) {
-    const [lookupTableAddress, bumpSeed] = PublicKey.findProgramAddressSync([params.authority.toBuffer(), (0,bigint_buffer__WEBPACK_IMPORTED_MODULE_8__.toBufferLE)(BigInt(params.recentSlot), 8)], this.programId);
-    const type = LOOKUP_TABLE_INSTRUCTION_LAYOUTS.CreateLookupTable;
-    const data = encodeData(type, {
-      recentSlot: BigInt(params.recentSlot),
-      bumpSeed: bumpSeed
-    });
-    const keys = [{
-      pubkey: lookupTableAddress,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: params.authority,
-      isSigner: true,
-      isWritable: false
-    }, {
-      pubkey: params.payer,
-      isSigner: true,
-      isWritable: true
-    }, {
-      pubkey: SystemProgram.programId,
-      isSigner: false,
-      isWritable: false
-    }];
-    return [new TransactionInstruction({
-      programId: this.programId,
-      keys: keys,
-      data: data
-    }), lookupTableAddress];
-  }
-
-  static freezeLookupTable(params) {
-    const type = LOOKUP_TABLE_INSTRUCTION_LAYOUTS.FreezeLookupTable;
-    const data = encodeData(type);
-    const keys = [{
-      pubkey: params.lookupTable,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: params.authority,
-      isSigner: true,
-      isWritable: false
-    }];
-    return new TransactionInstruction({
-      programId: this.programId,
-      keys: keys,
-      data: data
-    });
-  }
-
-  static extendLookupTable(params) {
-    const type = LOOKUP_TABLE_INSTRUCTION_LAYOUTS.ExtendLookupTable;
-    const data = encodeData(type, {
-      addresses: params.addresses.map(addr => addr.toBytes())
-    });
-    const keys = [{
-      pubkey: params.lookupTable,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: params.authority,
-      isSigner: true,
-      isWritable: false
-    }];
-
-    if (params.payer) {
-      keys.push({
-        pubkey: params.payer,
-        isSigner: true,
-        isWritable: true
-      }, {
-        pubkey: SystemProgram.programId,
-        isSigner: false,
-        isWritable: false
-      });
-    }
-
-    return new TransactionInstruction({
-      programId: this.programId,
-      keys: keys,
-      data: data
-    });
-  }
-
-  static deactivateLookupTable(params) {
-    const type = LOOKUP_TABLE_INSTRUCTION_LAYOUTS.DeactivateLookupTable;
-    const data = encodeData(type);
-    const keys = [{
-      pubkey: params.lookupTable,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: params.authority,
-      isSigner: true,
-      isWritable: false
-    }];
-    return new TransactionInstruction({
-      programId: this.programId,
-      keys: keys,
-      data: data
-    });
-  }
-
-  static closeLookupTable(params) {
-    const type = LOOKUP_TABLE_INSTRUCTION_LAYOUTS.CloseLookupTable;
-    const data = encodeData(type);
-    const keys = [{
-      pubkey: params.lookupTable,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: params.authority,
-      isSigner: true,
-      isWritable: false
-    }, {
-      pubkey: params.recipient,
-      isSigner: false,
-      isWritable: true
-    }];
-    return new TransactionInstruction({
-      programId: this.programId,
-      keys: keys,
-      data: data
-    });
-  }
-
-}
-AddressLookupTableProgram.programId = new PublicKey('AddressLookupTab1e1111111111111111111111111');
-
-/**
- * Compute Budget Instruction class
- */
-
-class ComputeBudgetInstruction {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Decode a compute budget instruction and retrieve the instruction type.
-   */
-
-
-  static decodeInstructionType(instruction) {
-    this.checkProgramId(instruction.programId);
-    const instructionTypeLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('instruction');
-    const typeIndex = instructionTypeLayout.decode(instruction.data);
-    let type;
-
-    for (const [ixType, layout] of Object.entries(COMPUTE_BUDGET_INSTRUCTION_LAYOUTS)) {
-      if (layout.index == typeIndex) {
-        type = ixType;
-        break;
-      }
-    }
-
-    if (!type) {
-      throw new Error('Instruction type incorrect; not a ComputeBudgetInstruction');
-    }
-
-    return type;
-  }
-  /**
-   * Decode request units compute budget instruction and retrieve the instruction params.
-   */
-
-
-  static decodeRequestUnits(instruction) {
-    this.checkProgramId(instruction.programId);
-    const {
-      units,
-      additionalFee
-    } = decodeData$1(COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.RequestUnits, instruction.data);
-    return {
-      units,
-      additionalFee
-    };
-  }
-  /**
-   * Decode request heap frame compute budget instruction and retrieve the instruction params.
-   */
-
-
-  static decodeRequestHeapFrame(instruction) {
-    this.checkProgramId(instruction.programId);
-    const {
-      bytes
-    } = decodeData$1(COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.RequestHeapFrame, instruction.data);
-    return {
-      bytes
-    };
-  }
-  /**
-   * Decode set compute unit limit compute budget instruction and retrieve the instruction params.
-   */
-
-
-  static decodeSetComputeUnitLimit(instruction) {
-    this.checkProgramId(instruction.programId);
-    const {
-      units
-    } = decodeData$1(COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.SetComputeUnitLimit, instruction.data);
-    return {
-      units
-    };
-  }
-  /**
-   * Decode set compute unit price compute budget instruction and retrieve the instruction params.
-   */
-
-
-  static decodeSetComputeUnitPrice(instruction) {
-    this.checkProgramId(instruction.programId);
-    const {
-      microLamports
-    } = decodeData$1(COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.SetComputeUnitPrice, instruction.data);
-    return {
-      microLamports
-    };
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkProgramId(programId) {
-    if (!programId.equals(ComputeBudgetProgram.programId)) {
-      throw new Error('invalid instruction; programId is not ComputeBudgetProgram');
-    }
-  }
-
-}
-/**
- * An enumeration of valid ComputeBudgetInstructionType's
- */
-
-/**
- * An enumeration of valid ComputeBudget InstructionType's
- * @internal
- */
-const COMPUTE_BUDGET_INSTRUCTION_LAYOUTS = Object.freeze({
-  RequestUnits: {
-    index: 0,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('units'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('additionalFee')])
-  },
-  RequestHeapFrame: {
-    index: 1,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('bytes')])
-  },
-  SetComputeUnitLimit: {
-    index: 2,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('units')])
-  },
-  SetComputeUnitPrice: {
-    index: 3,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('instruction'), u64('microLamports')])
-  }
-});
-/**
- * Factory class for transaction instructions to interact with the Compute Budget program
- */
-
-class ComputeBudgetProgram {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Public key that identifies the Compute Budget program
-   */
-
-
-  /**
-   * @deprecated Instead, call {@link setComputeUnitLimit} and/or {@link setComputeUnitPrice}
-   */
-  static requestUnits(params) {
-    const type = COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.RequestUnits;
-    const data = encodeData(type, params);
-    return new TransactionInstruction({
-      keys: [],
-      programId: this.programId,
-      data
-    });
-  }
-
-  static requestHeapFrame(params) {
-    const type = COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.RequestHeapFrame;
-    const data = encodeData(type, params);
-    return new TransactionInstruction({
-      keys: [],
-      programId: this.programId,
-      data
-    });
-  }
-
-  static setComputeUnitLimit(params) {
-    const type = COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.SetComputeUnitLimit;
-    const data = encodeData(type, params);
-    return new TransactionInstruction({
-      keys: [],
-      programId: this.programId,
-      data
-    });
-  }
-
-  static setComputeUnitPrice(params) {
-    const type = COMPUTE_BUDGET_INSTRUCTION_LAYOUTS.SetComputeUnitPrice;
-    const data = encodeData(type, {
-      microLamports: BigInt(params.microLamports)
-    });
-    return new TransactionInstruction({
-      keys: [],
-      programId: this.programId,
-      data
-    });
-  }
-
-}
-ComputeBudgetProgram.programId = new PublicKey('ComputeBudget111111111111111111111111111111');
-
-const PRIVATE_KEY_BYTES$1 = 64;
-const PUBLIC_KEY_BYTES$1 = 32;
-const SIGNATURE_BYTES = 64;
-/**
- * Params for creating an ed25519 instruction using a public key
- */
-
-const ED25519_INSTRUCTION_LAYOUT = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('numSignatures'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('padding'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('signatureOffset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('signatureInstructionIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('publicKeyOffset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('publicKeyInstructionIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('messageDataOffset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('messageDataSize'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('messageInstructionIndex')]);
-class Ed25519Program {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Public key that identifies the ed25519 program
-   */
-
-
-  /**
-   * Create an ed25519 instruction with a public key and signature. The
-   * public key must be a buffer that is 32 bytes long, and the signature
-   * must be a buffer of 64 bytes.
-   */
-  static createInstructionWithPublicKey(params) {
-    const {
-      publicKey,
-      message,
-      signature,
-      instructionIndex
-    } = params;
-    assert(publicKey.length === PUBLIC_KEY_BYTES$1, `Public Key must be ${PUBLIC_KEY_BYTES$1} bytes but received ${publicKey.length} bytes`);
-    assert(signature.length === SIGNATURE_BYTES, `Signature must be ${SIGNATURE_BYTES} bytes but received ${signature.length} bytes`);
-    const publicKeyOffset = ED25519_INSTRUCTION_LAYOUT.span;
-    const signatureOffset = publicKeyOffset + publicKey.length;
-    const messageDataOffset = signatureOffset + signature.length;
-    const numSignatures = 1;
-    const instructionData = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(messageDataOffset + message.length);
-    const index = instructionIndex == null ? 0xffff // An index of `u16::MAX` makes it default to the current instruction.
-    : instructionIndex;
-    ED25519_INSTRUCTION_LAYOUT.encode({
-      numSignatures,
-      padding: 0,
-      signatureOffset,
-      signatureInstructionIndex: index,
-      publicKeyOffset,
-      publicKeyInstructionIndex: index,
-      messageDataOffset,
-      messageDataSize: message.length,
-      messageInstructionIndex: index
-    }, instructionData);
-    instructionData.fill(publicKey, publicKeyOffset);
-    instructionData.fill(signature, signatureOffset);
-    instructionData.fill(message, messageDataOffset);
-    return new TransactionInstruction({
-      keys: [],
-      programId: Ed25519Program.programId,
-      data: instructionData
-    });
-  }
-  /**
-   * Create an ed25519 instruction with a private key. The private key
-   * must be a buffer that is 64 bytes long.
-   */
-
-
-  static createInstructionWithPrivateKey(params) {
-    const {
-      privateKey,
-      message,
-      instructionIndex
-    } = params;
-    assert(privateKey.length === PRIVATE_KEY_BYTES$1, `Private key must be ${PRIVATE_KEY_BYTES$1} bytes but received ${privateKey.length} bytes`);
-
-    try {
-      const keypair = Keypair.fromSecretKey(privateKey);
-      const publicKey = keypair.publicKey.toBytes();
-      const signature = sign(message, keypair.secretKey);
-      return this.createInstructionWithPublicKey({
-        publicKey,
-        message,
-        signature,
-        instructionIndex
-      });
-    } catch (error) {
-      throw new Error(`Error creating instruction; ${error}`);
-    }
-  }
-
-}
-Ed25519Program.programId = new PublicKey('Ed25519SigVerify111111111111111111111111111');
-
-// library interoperable with the synchronous APIs in web3.js.
-
-_noble_secp256k1__WEBPACK_IMPORTED_MODULE_13__.utils.hmacSha256Sync = (key, ...msgs) => {
-  const h = _noble_hashes_hmac__WEBPACK_IMPORTED_MODULE_12__.hmac.create(_noble_hashes_sha256__WEBPACK_IMPORTED_MODULE_5__.sha256, key);
-  msgs.forEach(msg => h.update(msg));
-  return h.digest();
-};
-
-const ecdsaSign = (msgHash, privKey) => _noble_secp256k1__WEBPACK_IMPORTED_MODULE_13__.signSync(msgHash, privKey, {
-  der: false,
-  recovered: true
-});
-_noble_secp256k1__WEBPACK_IMPORTED_MODULE_13__.utils.isValidPrivateKey;
-const publicKeyCreate = _noble_secp256k1__WEBPACK_IMPORTED_MODULE_13__.getPublicKey;
-
-const PRIVATE_KEY_BYTES = 32;
-const ETHEREUM_ADDRESS_BYTES = 20;
-const PUBLIC_KEY_BYTES = 64;
-const SIGNATURE_OFFSETS_SERIALIZED_SIZE = 11;
-/**
- * Params for creating an secp256k1 instruction using a public key
- */
-
-const SECP256K1_INSTRUCTION_LAYOUT = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('numSignatures'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('signatureOffset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('signatureInstructionIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('ethAddressOffset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('ethAddressInstructionIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('messageDataOffset'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u16('messageDataSize'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('messageInstructionIndex'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(20, 'ethAddress'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.blob(64, 'signature'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('recoveryId')]);
-class Secp256k1Program {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Public key that identifies the secp256k1 program
-   */
-
-
-  /**
-   * Construct an Ethereum address from a secp256k1 public key buffer.
-   * @param {Buffer} publicKey a 64 byte secp256k1 public key buffer
-   */
-  static publicKeyToEthAddress(publicKey) {
-    assert(publicKey.length === PUBLIC_KEY_BYTES, `Public key must be ${PUBLIC_KEY_BYTES} bytes but received ${publicKey.length} bytes`);
-
-    try {
-      return buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from((0,_noble_hashes_sha3__WEBPACK_IMPORTED_MODULE_11__.keccak_256)(toBuffer(publicKey))).slice(-ETHEREUM_ADDRESS_BYTES);
-    } catch (error) {
-      throw new Error(`Error constructing Ethereum address: ${error}`);
-    }
-  }
-  /**
-   * Create an secp256k1 instruction with a public key. The public key
-   * must be a buffer that is 64 bytes long.
-   */
-
-
-  static createInstructionWithPublicKey(params) {
-    const {
-      publicKey,
-      message,
-      signature,
-      recoveryId,
-      instructionIndex
-    } = params;
-    return Secp256k1Program.createInstructionWithEthAddress({
-      ethAddress: Secp256k1Program.publicKeyToEthAddress(publicKey),
-      message,
-      signature,
-      recoveryId,
-      instructionIndex
-    });
-  }
-  /**
-   * Create an secp256k1 instruction with an Ethereum address. The address
-   * must be a hex string or a buffer that is 20 bytes long.
-   */
-
-
-  static createInstructionWithEthAddress(params) {
-    const {
-      ethAddress: rawAddress,
-      message,
-      signature,
-      recoveryId,
-      instructionIndex = 0
-    } = params;
-    let ethAddress;
-
-    if (typeof rawAddress === 'string') {
-      if (rawAddress.startsWith('0x')) {
-        ethAddress = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(rawAddress.substr(2), 'hex');
-      } else {
-        ethAddress = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(rawAddress, 'hex');
-      }
-    } else {
-      ethAddress = rawAddress;
-    }
-
-    assert(ethAddress.length === ETHEREUM_ADDRESS_BYTES, `Address must be ${ETHEREUM_ADDRESS_BYTES} bytes but received ${ethAddress.length} bytes`);
-    const dataStart = 1 + SIGNATURE_OFFSETS_SERIALIZED_SIZE;
-    const ethAddressOffset = dataStart;
-    const signatureOffset = dataStart + ethAddress.length;
-    const messageDataOffset = signatureOffset + signature.length + 1;
-    const numSignatures = 1;
-    const instructionData = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.alloc(SECP256K1_INSTRUCTION_LAYOUT.span + message.length);
-    SECP256K1_INSTRUCTION_LAYOUT.encode({
-      numSignatures,
-      signatureOffset,
-      signatureInstructionIndex: instructionIndex,
-      ethAddressOffset,
-      ethAddressInstructionIndex: instructionIndex,
-      messageDataOffset,
-      messageDataSize: message.length,
-      messageInstructionIndex: instructionIndex,
-      signature: toBuffer(signature),
-      ethAddress: toBuffer(ethAddress),
-      recoveryId
-    }, instructionData);
-    instructionData.fill(toBuffer(message), SECP256K1_INSTRUCTION_LAYOUT.span);
-    return new TransactionInstruction({
-      keys: [],
-      programId: Secp256k1Program.programId,
-      data: instructionData
-    });
-  }
-  /**
-   * Create an secp256k1 instruction with a private key. The private key
-   * must be a buffer that is 32 bytes long.
-   */
-
-
-  static createInstructionWithPrivateKey(params) {
-    const {
-      privateKey: pkey,
-      message,
-      instructionIndex
-    } = params;
-    assert(pkey.length === PRIVATE_KEY_BYTES, `Private key must be ${PRIVATE_KEY_BYTES} bytes but received ${pkey.length} bytes`);
-
-    try {
-      const privateKey = toBuffer(pkey);
-      const publicKey = publicKeyCreate(privateKey, false
-      /* isCompressed */
-      ).slice(1); // throw away leading byte
-
-      const messageHash = buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from((0,_noble_hashes_sha3__WEBPACK_IMPORTED_MODULE_11__.keccak_256)(toBuffer(message)));
-      const [signature, recoveryId] = ecdsaSign(messageHash, privateKey);
-      return this.createInstructionWithPublicKey({
-        publicKey,
-        message,
-        signature,
-        recoveryId,
-        instructionIndex
-      });
-    } catch (error) {
-      throw new Error(`Error creating instruction; ${error}`);
-    }
-  }
-
-}
-Secp256k1Program.programId = new PublicKey('KeccakSecp256k11111111111111111111111111111');
-
-/**
- * Address of the stake config account which configures the rate
- * of stake warmup and cooldown as well as the slashing penalty.
- */
-
-const STAKE_CONFIG_ID = new PublicKey('StakeConfig11111111111111111111111111111111');
-/**
- * Stake account authority info
- */
-
-class Authorized {
-  /** stake authority */
-
-  /** withdraw authority */
-
-  /**
-   * Create a new Authorized object
-   * @param staker the stake authority
-   * @param withdrawer the withdraw authority
-   */
-  constructor(staker, withdrawer) {
-    this.staker = void 0;
-    this.withdrawer = void 0;
-    this.staker = staker;
-    this.withdrawer = withdrawer;
-  }
-
-}
-
-/**
- * Stake account lockup info
- */
-class Lockup {
-  /** Unix timestamp of lockup expiration */
-
-  /** Epoch of lockup expiration */
-
-  /** Lockup custodian authority */
-
-  /**
-   * Create a new Lockup object
-   */
-  constructor(unixTimestamp, epoch, custodian) {
-    this.unixTimestamp = void 0;
-    this.epoch = void 0;
-    this.custodian = void 0;
-    this.unixTimestamp = unixTimestamp;
-    this.epoch = epoch;
-    this.custodian = custodian;
-  }
-  /**
-   * Default, inactive Lockup value
-   */
-
-
-}
-Lockup.default = new Lockup(0, 0, PublicKey.default);
-
-/**
- * Stake Instruction class
- */
-class StakeInstruction {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Decode a stake instruction and retrieve the instruction type.
-   */
-
-
-  static decodeInstructionType(instruction) {
-    this.checkProgramId(instruction.programId);
-    const instructionTypeLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction');
-    const typeIndex = instructionTypeLayout.decode(instruction.data);
-    let type;
-
-    for (const [ixType, layout] of Object.entries(STAKE_INSTRUCTION_LAYOUTS)) {
-      if (layout.index == typeIndex) {
-        type = ixType;
-        break;
-      }
-    }
-
-    if (!type) {
-      throw new Error('Instruction type incorrect; not a StakeInstruction');
-    }
-
-    return type;
-  }
-  /**
-   * Decode a initialize stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeInitialize(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 2);
-    const {
-      authorized,
-      lockup
-    } = decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Initialize, instruction.data);
-    return {
-      stakePubkey: instruction.keys[0].pubkey,
-      authorized: new Authorized(new PublicKey(authorized.staker), new PublicKey(authorized.withdrawer)),
-      lockup: new Lockup(lockup.unixTimestamp, lockup.epoch, new PublicKey(lockup.custodian))
-    };
-  }
-  /**
-   * Decode a delegate stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeDelegate(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 6);
-    decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Delegate, instruction.data);
-    return {
-      stakePubkey: instruction.keys[0].pubkey,
-      votePubkey: instruction.keys[1].pubkey,
-      authorizedPubkey: instruction.keys[5].pubkey
-    };
-  }
-  /**
-   * Decode an authorize stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAuthorize(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      newAuthorized,
-      stakeAuthorizationType
-    } = decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Authorize, instruction.data);
-    const o = {
-      stakePubkey: instruction.keys[0].pubkey,
-      authorizedPubkey: instruction.keys[2].pubkey,
-      newAuthorizedPubkey: new PublicKey(newAuthorized),
-      stakeAuthorizationType: {
-        index: stakeAuthorizationType
-      }
-    };
-
-    if (instruction.keys.length > 3) {
-      o.custodianPubkey = instruction.keys[3].pubkey;
-    }
-
-    return o;
-  }
-  /**
-   * Decode an authorize-with-seed stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAuthorizeWithSeed(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 2);
-    const {
-      newAuthorized,
-      stakeAuthorizationType,
-      authoritySeed,
-      authorityOwner
-    } = decodeData$1(STAKE_INSTRUCTION_LAYOUTS.AuthorizeWithSeed, instruction.data);
-    const o = {
-      stakePubkey: instruction.keys[0].pubkey,
-      authorityBase: instruction.keys[1].pubkey,
-      authoritySeed: authoritySeed,
-      authorityOwner: new PublicKey(authorityOwner),
-      newAuthorizedPubkey: new PublicKey(newAuthorized),
-      stakeAuthorizationType: {
-        index: stakeAuthorizationType
-      }
-    };
-
-    if (instruction.keys.length > 3) {
-      o.custodianPubkey = instruction.keys[3].pubkey;
-    }
-
-    return o;
-  }
-  /**
-   * Decode a split stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeSplit(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      lamports
-    } = decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Split, instruction.data);
-    return {
-      stakePubkey: instruction.keys[0].pubkey,
-      splitStakePubkey: instruction.keys[1].pubkey,
-      authorizedPubkey: instruction.keys[2].pubkey,
-      lamports
-    };
-  }
-  /**
-   * Decode a merge stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeMerge(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Merge, instruction.data);
-    return {
-      stakePubkey: instruction.keys[0].pubkey,
-      sourceStakePubKey: instruction.keys[1].pubkey,
-      authorizedPubkey: instruction.keys[4].pubkey
-    };
-  }
-  /**
-   * Decode a withdraw stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeWithdraw(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 5);
-    const {
-      lamports
-    } = decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Withdraw, instruction.data);
-    const o = {
-      stakePubkey: instruction.keys[0].pubkey,
-      toPubkey: instruction.keys[1].pubkey,
-      authorizedPubkey: instruction.keys[4].pubkey,
-      lamports
-    };
-
-    if (instruction.keys.length > 5) {
-      o.custodianPubkey = instruction.keys[5].pubkey;
-    }
-
-    return o;
-  }
-  /**
-   * Decode a deactivate stake instruction and retrieve the instruction params.
-   */
-
-
-  static decodeDeactivate(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    decodeData$1(STAKE_INSTRUCTION_LAYOUTS.Deactivate, instruction.data);
-    return {
-      stakePubkey: instruction.keys[0].pubkey,
-      authorizedPubkey: instruction.keys[2].pubkey
-    };
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkProgramId(programId) {
-    if (!programId.equals(StakeProgram.programId)) {
-      throw new Error('invalid instruction; programId is not StakeProgram');
-    }
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkKeyLength(keys, expectedLength) {
-    if (keys.length < expectedLength) {
-      throw new Error(`invalid instruction; found ${keys.length} keys, expected at least ${expectedLength}`);
-    }
-  }
-
-}
-/**
- * An enumeration of valid StakeInstructionType's
- */
-
-/**
- * An enumeration of valid stake InstructionType's
- * @internal
- */
-const STAKE_INSTRUCTION_LAYOUTS = Object.freeze({
-  Initialize: {
-    index: 0,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), authorized(), lockup()])
-  },
-  Authorize: {
-    index: 1,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('newAuthorized'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('stakeAuthorizationType')])
-  },
-  Delegate: {
-    index: 2,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  },
-  Split: {
-    index: 3,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('lamports')])
-  },
-  Withdraw: {
-    index: 4,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('lamports')])
-  },
-  Deactivate: {
-    index: 5,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  },
-  Merge: {
-    index: 7,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction')])
-  },
-  AuthorizeWithSeed: {
-    index: 8,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('newAuthorized'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('stakeAuthorizationType'), rustString('authoritySeed'), publicKey('authorityOwner')])
-  }
-});
-/**
- * Stake authorization type
- */
-
-/**
- * An enumeration of valid StakeAuthorizationLayout's
- */
-const StakeAuthorizationLayout = Object.freeze({
-  Staker: {
-    index: 0
-  },
-  Withdrawer: {
-    index: 1
-  }
-});
-/**
- * Factory class for transactions to interact with the Stake program
- */
-
-class StakeProgram {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Public key that identifies the Stake program
-   */
-
-
-  /**
-   * Generate an Initialize instruction to add to a Stake Create transaction
-   */
-  static initialize(params) {
-    const {
-      stakePubkey,
-      authorized,
-      lockup: maybeLockup
-    } = params;
-    const lockup = maybeLockup || Lockup.default;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Initialize;
-    const data = encodeData(type, {
-      authorized: {
-        staker: toBuffer(authorized.staker.toBuffer()),
-        withdrawer: toBuffer(authorized.withdrawer.toBuffer())
-      },
-      lockup: {
-        unixTimestamp: lockup.unixTimestamp,
-        epoch: lockup.epoch,
-        custodian: toBuffer(lockup.custodian.toBuffer())
-      }
-    });
-    const instructionData = {
-      keys: [{
-        pubkey: stakePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_RENT_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    };
-    return new TransactionInstruction(instructionData);
-  }
-  /**
-   * Generate a Transaction that creates a new Stake account at
-   *   an address generated with `from`, a seed, and the Stake programId
-   */
-
-
-  static createAccountWithSeed(params) {
-    const transaction = new Transaction();
-    transaction.add(SystemProgram.createAccountWithSeed({
-      fromPubkey: params.fromPubkey,
-      newAccountPubkey: params.stakePubkey,
-      basePubkey: params.basePubkey,
-      seed: params.seed,
-      lamports: params.lamports,
-      space: this.space,
-      programId: this.programId
-    }));
-    const {
-      stakePubkey,
-      authorized,
-      lockup
-    } = params;
-    return transaction.add(this.initialize({
-      stakePubkey,
-      authorized,
-      lockup
-    }));
-  }
-  /**
-   * Generate a Transaction that creates a new Stake account
-   */
-
-
-  static createAccount(params) {
-    const transaction = new Transaction();
-    transaction.add(SystemProgram.createAccount({
-      fromPubkey: params.fromPubkey,
-      newAccountPubkey: params.stakePubkey,
-      lamports: params.lamports,
-      space: this.space,
-      programId: this.programId
-    }));
-    const {
-      stakePubkey,
-      authorized,
-      lockup
-    } = params;
-    return transaction.add(this.initialize({
-      stakePubkey,
-      authorized,
-      lockup
-    }));
-  }
-  /**
-   * Generate a Transaction that delegates Stake tokens to a validator
-   * Vote PublicKey. This transaction can also be used to redelegate Stake
-   * to a new validator Vote PublicKey.
-   */
-
-
-  static delegate(params) {
-    const {
-      stakePubkey,
-      authorizedPubkey,
-      votePubkey
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Delegate;
-    const data = encodeData(type);
-    return new Transaction().add({
-      keys: [{
-        pubkey: stakePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: votePubkey,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: SYSVAR_CLOCK_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: SYSVAR_STAKE_HISTORY_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: STAKE_CONFIG_ID,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a Transaction that authorizes a new PublicKey as Staker
-   * or Withdrawer on the Stake account.
-   */
-
-
-  static authorize(params) {
-    const {
-      stakePubkey,
-      authorizedPubkey,
-      newAuthorizedPubkey,
-      stakeAuthorizationType,
-      custodianPubkey
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Authorize;
-    const data = encodeData(type, {
-      newAuthorized: toBuffer(newAuthorizedPubkey.toBuffer()),
-      stakeAuthorizationType: stakeAuthorizationType.index
-    });
-    const keys = [{
-      pubkey: stakePubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: SYSVAR_CLOCK_PUBKEY,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: authorizedPubkey,
-      isSigner: true,
-      isWritable: false
-    }];
-
-    if (custodianPubkey) {
-      keys.push({
-        pubkey: custodianPubkey,
-        isSigner: false,
-        isWritable: false
-      });
-    }
-
-    return new Transaction().add({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a Transaction that authorizes a new PublicKey as Staker
-   * or Withdrawer on the Stake account.
-   */
-
-
-  static authorizeWithSeed(params) {
-    const {
-      stakePubkey,
-      authorityBase,
-      authoritySeed,
-      authorityOwner,
-      newAuthorizedPubkey,
-      stakeAuthorizationType,
-      custodianPubkey
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.AuthorizeWithSeed;
-    const data = encodeData(type, {
-      newAuthorized: toBuffer(newAuthorizedPubkey.toBuffer()),
-      stakeAuthorizationType: stakeAuthorizationType.index,
-      authoritySeed: authoritySeed,
-      authorityOwner: toBuffer(authorityOwner.toBuffer())
-    });
-    const keys = [{
-      pubkey: stakePubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: authorityBase,
-      isSigner: true,
-      isWritable: false
-    }, {
-      pubkey: SYSVAR_CLOCK_PUBKEY,
-      isSigner: false,
-      isWritable: false
-    }];
-
-    if (custodianPubkey) {
-      keys.push({
-        pubkey: custodianPubkey,
-        isSigner: false,
-        isWritable: false
-      });
-    }
-
-    return new Transaction().add({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * @internal
-   */
-
-
-  static splitInstruction(params) {
-    const {
-      stakePubkey,
-      authorizedPubkey,
-      splitStakePubkey,
-      lamports
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Split;
-    const data = encodeData(type, {
-      lamports
-    });
-    return new TransactionInstruction({
-      keys: [{
-        pubkey: stakePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: splitStakePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a Transaction that splits Stake tokens into another stake account
-   */
-
-
-  static split(params) {
-    const transaction = new Transaction();
-    transaction.add(SystemProgram.createAccount({
-      fromPubkey: params.authorizedPubkey,
-      newAccountPubkey: params.splitStakePubkey,
-      lamports: 0,
-      space: this.space,
-      programId: this.programId
-    }));
-    return transaction.add(this.splitInstruction(params));
-  }
-  /**
-   * Generate a Transaction that splits Stake tokens into another account
-   * derived from a base public key and seed
-   */
-
-
-  static splitWithSeed(params) {
-    const {
-      stakePubkey,
-      authorizedPubkey,
-      splitStakePubkey,
-      basePubkey,
-      seed,
-      lamports
-    } = params;
-    const transaction = new Transaction();
-    transaction.add(SystemProgram.allocate({
-      accountPubkey: splitStakePubkey,
-      basePubkey,
-      seed,
-      space: this.space,
-      programId: this.programId
-    }));
-    return transaction.add(this.splitInstruction({
-      stakePubkey,
-      authorizedPubkey,
-      splitStakePubkey,
-      lamports
-    }));
-  }
-  /**
-   * Generate a Transaction that merges Stake accounts.
-   */
-
-
-  static merge(params) {
-    const {
-      stakePubkey,
-      sourceStakePubKey,
-      authorizedPubkey
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Merge;
-    const data = encodeData(type);
-    return new Transaction().add({
-      keys: [{
-        pubkey: stakePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: sourceStakePubKey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_CLOCK_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: SYSVAR_STAKE_HISTORY_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a Transaction that withdraws deactivated Stake tokens.
-   */
-
-
-  static withdraw(params) {
-    const {
-      stakePubkey,
-      authorizedPubkey,
-      toPubkey,
-      lamports,
-      custodianPubkey
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Withdraw;
-    const data = encodeData(type, {
-      lamports
-    });
-    const keys = [{
-      pubkey: stakePubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: toPubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: SYSVAR_CLOCK_PUBKEY,
-      isSigner: false,
-      isWritable: false
-    }, {
-      pubkey: SYSVAR_STAKE_HISTORY_PUBKEY,
-      isSigner: false,
-      isWritable: false
-    }, {
-      pubkey: authorizedPubkey,
-      isSigner: true,
-      isWritable: false
-    }];
-
-    if (custodianPubkey) {
-      keys.push({
-        pubkey: custodianPubkey,
-        isSigner: false,
-        isWritable: false
-      });
-    }
-
-    return new Transaction().add({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a Transaction that deactivates Stake tokens.
-   */
-
-
-  static deactivate(params) {
-    const {
-      stakePubkey,
-      authorizedPubkey
-    } = params;
-    const type = STAKE_INSTRUCTION_LAYOUTS.Deactivate;
-    const data = encodeData(type);
-    return new Transaction().add({
-      keys: [{
-        pubkey: stakePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_CLOCK_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: authorizedPubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    });
-  }
-
-}
-StakeProgram.programId = new PublicKey('Stake11111111111111111111111111111111111111');
-StakeProgram.space = 200;
-
-/**
- * Vote account info
- */
-
-class VoteInit {
-  /** [0, 100] */
-  constructor(nodePubkey, authorizedVoter, authorizedWithdrawer, commission) {
-    this.nodePubkey = void 0;
-    this.authorizedVoter = void 0;
-    this.authorizedWithdrawer = void 0;
-    this.commission = void 0;
-    this.nodePubkey = nodePubkey;
-    this.authorizedVoter = authorizedVoter;
-    this.authorizedWithdrawer = authorizedWithdrawer;
-    this.commission = commission;
-  }
-
-}
-/**
- * Create vote account transaction params
- */
-
-/**
- * Vote Instruction class
- */
-class VoteInstruction {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Decode a vote instruction and retrieve the instruction type.
-   */
-
-
-  static decodeInstructionType(instruction) {
-    this.checkProgramId(instruction.programId);
-    const instructionTypeLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction');
-    const typeIndex = instructionTypeLayout.decode(instruction.data);
-    let type;
-
-    for (const [ixType, layout] of Object.entries(VOTE_INSTRUCTION_LAYOUTS)) {
-      if (layout.index == typeIndex) {
-        type = ixType;
-        break;
-      }
-    }
-
-    if (!type) {
-      throw new Error('Instruction type incorrect; not a VoteInstruction');
-    }
-
-    return type;
-  }
-  /**
-   * Decode an initialize vote instruction and retrieve the instruction params.
-   */
-
-
-  static decodeInitializeAccount(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 4);
-    const {
-      voteInit
-    } = decodeData$1(VOTE_INSTRUCTION_LAYOUTS.InitializeAccount, instruction.data);
-    return {
-      votePubkey: instruction.keys[0].pubkey,
-      nodePubkey: instruction.keys[3].pubkey,
-      voteInit: new VoteInit(new PublicKey(voteInit.nodePubkey), new PublicKey(voteInit.authorizedVoter), new PublicKey(voteInit.authorizedWithdrawer), voteInit.commission)
-    };
-  }
-  /**
-   * Decode an authorize instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAuthorize(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      newAuthorized,
-      voteAuthorizationType
-    } = decodeData$1(VOTE_INSTRUCTION_LAYOUTS.Authorize, instruction.data);
-    return {
-      votePubkey: instruction.keys[0].pubkey,
-      authorizedPubkey: instruction.keys[2].pubkey,
-      newAuthorizedPubkey: new PublicKey(newAuthorized),
-      voteAuthorizationType: {
-        index: voteAuthorizationType
-      }
-    };
-  }
-  /**
-   * Decode an authorize instruction and retrieve the instruction params.
-   */
-
-
-  static decodeAuthorizeWithSeed(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      voteAuthorizeWithSeedArgs: {
-        currentAuthorityDerivedKeyOwnerPubkey,
-        currentAuthorityDerivedKeySeed,
-        newAuthorized,
-        voteAuthorizationType
-      }
-    } = decodeData$1(VOTE_INSTRUCTION_LAYOUTS.AuthorizeWithSeed, instruction.data);
-    return {
-      currentAuthorityDerivedKeyBasePubkey: instruction.keys[2].pubkey,
-      currentAuthorityDerivedKeyOwnerPubkey: new PublicKey(currentAuthorityDerivedKeyOwnerPubkey),
-      currentAuthorityDerivedKeySeed: currentAuthorityDerivedKeySeed,
-      newAuthorizedPubkey: new PublicKey(newAuthorized),
-      voteAuthorizationType: {
-        index: voteAuthorizationType
-      },
-      votePubkey: instruction.keys[0].pubkey
-    };
-  }
-  /**
-   * Decode a withdraw instruction and retrieve the instruction params.
-   */
-
-
-  static decodeWithdraw(instruction) {
-    this.checkProgramId(instruction.programId);
-    this.checkKeyLength(instruction.keys, 3);
-    const {
-      lamports
-    } = decodeData$1(VOTE_INSTRUCTION_LAYOUTS.Withdraw, instruction.data);
-    return {
-      votePubkey: instruction.keys[0].pubkey,
-      authorizedWithdrawerPubkey: instruction.keys[2].pubkey,
-      lamports,
-      toPubkey: instruction.keys[1].pubkey
-    };
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkProgramId(programId) {
-    if (!programId.equals(VoteProgram.programId)) {
-      throw new Error('invalid instruction; programId is not VoteProgram');
-    }
-  }
-  /**
-   * @internal
-   */
-
-
-  static checkKeyLength(keys, expectedLength) {
-    if (keys.length < expectedLength) {
-      throw new Error(`invalid instruction; found ${keys.length} keys, expected at least ${expectedLength}`);
-    }
-  }
-
-}
-/**
- * An enumeration of valid VoteInstructionType's
- */
-
-const VOTE_INSTRUCTION_LAYOUTS = Object.freeze({
-  InitializeAccount: {
-    index: 0,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), voteInit()])
-  },
-  Authorize: {
-    index: 1,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), publicKey('newAuthorized'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('voteAuthorizationType')])
-  },
-  Withdraw: {
-    index: 3,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.ns64('lamports')])
-  },
-  AuthorizeWithSeed: {
-    index: 10,
-    layout: _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('instruction'), voteAuthorizeWithSeedArgs()])
-  }
-});
-/**
- * VoteAuthorize type
- */
-
-/**
- * An enumeration of valid VoteAuthorization layouts.
- */
-const VoteAuthorizationLayout = Object.freeze({
-  Voter: {
-    index: 0
-  },
-  Withdrawer: {
-    index: 1
-  }
-});
-/**
- * Factory class for transactions to interact with the Vote program
- */
-
-class VoteProgram {
-  /**
-   * @internal
-   */
-  constructor() {}
-  /**
-   * Public key that identifies the Vote program
-   */
-
-
-  /**
-   * Generate an Initialize instruction.
-   */
-  static initializeAccount(params) {
-    const {
-      votePubkey,
-      nodePubkey,
-      voteInit
-    } = params;
-    const type = VOTE_INSTRUCTION_LAYOUTS.InitializeAccount;
-    const data = encodeData(type, {
-      voteInit: {
-        nodePubkey: toBuffer(voteInit.nodePubkey.toBuffer()),
-        authorizedVoter: toBuffer(voteInit.authorizedVoter.toBuffer()),
-        authorizedWithdrawer: toBuffer(voteInit.authorizedWithdrawer.toBuffer()),
-        commission: voteInit.commission
-      }
-    });
-    const instructionData = {
-      keys: [{
-        pubkey: votePubkey,
-        isSigner: false,
-        isWritable: true
-      }, {
-        pubkey: SYSVAR_RENT_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: SYSVAR_CLOCK_PUBKEY,
-        isSigner: false,
-        isWritable: false
-      }, {
-        pubkey: nodePubkey,
-        isSigner: true,
-        isWritable: false
-      }],
-      programId: this.programId,
-      data
-    };
-    return new TransactionInstruction(instructionData);
-  }
-  /**
-   * Generate a transaction that creates a new Vote account.
-   */
-
-
-  static createAccount(params) {
-    const transaction = new Transaction();
-    transaction.add(SystemProgram.createAccount({
-      fromPubkey: params.fromPubkey,
-      newAccountPubkey: params.votePubkey,
-      lamports: params.lamports,
-      space: this.space,
-      programId: this.programId
-    }));
-    return transaction.add(this.initializeAccount({
-      votePubkey: params.votePubkey,
-      nodePubkey: params.voteInit.nodePubkey,
-      voteInit: params.voteInit
-    }));
-  }
-  /**
-   * Generate a transaction that authorizes a new Voter or Withdrawer on the Vote account.
-   */
-
-
-  static authorize(params) {
-    const {
-      votePubkey,
-      authorizedPubkey,
-      newAuthorizedPubkey,
-      voteAuthorizationType
-    } = params;
-    const type = VOTE_INSTRUCTION_LAYOUTS.Authorize;
-    const data = encodeData(type, {
-      newAuthorized: toBuffer(newAuthorizedPubkey.toBuffer()),
-      voteAuthorizationType: voteAuthorizationType.index
-    });
-    const keys = [{
-      pubkey: votePubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: SYSVAR_CLOCK_PUBKEY,
-      isSigner: false,
-      isWritable: false
-    }, {
-      pubkey: authorizedPubkey,
-      isSigner: true,
-      isWritable: false
-    }];
-    return new Transaction().add({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction that authorizes a new Voter or Withdrawer on the Vote account
-   * where the current Voter or Withdrawer authority is a derived key.
-   */
-
-
-  static authorizeWithSeed(params) {
-    const {
-      currentAuthorityDerivedKeyBasePubkey,
-      currentAuthorityDerivedKeyOwnerPubkey,
-      currentAuthorityDerivedKeySeed,
-      newAuthorizedPubkey,
-      voteAuthorizationType,
-      votePubkey
-    } = params;
-    const type = VOTE_INSTRUCTION_LAYOUTS.AuthorizeWithSeed;
-    const data = encodeData(type, {
-      voteAuthorizeWithSeedArgs: {
-        currentAuthorityDerivedKeyOwnerPubkey: toBuffer(currentAuthorityDerivedKeyOwnerPubkey.toBuffer()),
-        currentAuthorityDerivedKeySeed: currentAuthorityDerivedKeySeed,
-        newAuthorized: toBuffer(newAuthorizedPubkey.toBuffer()),
-        voteAuthorizationType: voteAuthorizationType.index
-      }
-    });
-    const keys = [{
-      pubkey: votePubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: SYSVAR_CLOCK_PUBKEY,
-      isSigner: false,
-      isWritable: false
-    }, {
-      pubkey: currentAuthorityDerivedKeyBasePubkey,
-      isSigner: true,
-      isWritable: false
-    }];
-    return new Transaction().add({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction to withdraw from a Vote account.
-   */
-
-
-  static withdraw(params) {
-    const {
-      votePubkey,
-      authorizedWithdrawerPubkey,
-      lamports,
-      toPubkey
-    } = params;
-    const type = VOTE_INSTRUCTION_LAYOUTS.Withdraw;
-    const data = encodeData(type, {
-      lamports
-    });
-    const keys = [{
-      pubkey: votePubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: toPubkey,
-      isSigner: false,
-      isWritable: true
-    }, {
-      pubkey: authorizedWithdrawerPubkey,
-      isSigner: true,
-      isWritable: false
-    }];
-    return new Transaction().add({
-      keys,
-      programId: this.programId,
-      data
-    });
-  }
-  /**
-   * Generate a transaction to withdraw safely from a Vote account.
-   *
-   * This function was created as a safeguard for vote accounts running validators, `safeWithdraw`
-   * checks that the withdraw amount will not exceed the specified balance while leaving enough left
-   * to cover rent. If you wish to close the vote account by withdrawing the full amount, call the
-   * `withdraw` method directly.
-   */
-
-
-  static safeWithdraw(params, currentVoteAccountBalance, rentExemptMinimum) {
-    if (params.lamports > currentVoteAccountBalance - rentExemptMinimum) {
-      throw new Error('Withdraw will leave vote account with insuffcient funds.');
-    }
-
-    return VoteProgram.withdraw(params);
-  }
-
-}
-VoteProgram.programId = new PublicKey('Vote111111111111111111111111111111111111111');
-VoteProgram.space = 3731;
-
-const VALIDATOR_INFO_KEY = new PublicKey('Va1idator1nfo111111111111111111111111111111');
-/**
- * @internal
- */
-
-const InfoString = (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.type)({
-  name: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)(),
-  website: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  details: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)()),
-  keybaseUsername: (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_14__.string)())
-});
-/**
- * ValidatorInfo class
- */
-
-class ValidatorInfo {
-  /**
-   * validator public key
-   */
-
-  /**
-   * validator information
-   */
-
-  /**
-   * Construct a valid ValidatorInfo
-   *
-   * @param key validator public key
-   * @param info validator information
-   */
-  constructor(key, info) {
-    this.key = void 0;
-    this.info = void 0;
-    this.key = key;
-    this.info = info;
-  }
-  /**
-   * Deserialize ValidatorInfo from the config account data. Exactly two config
-   * keys are required in the data.
-   *
-   * @param buffer config account data
-   * @return null if info was not found
-   */
-
-
-  static fromConfigData(buffer) {
-    let byteArray = [...buffer];
-    const configKeyCount = decodeLength(byteArray);
-    if (configKeyCount !== 2) return null;
-    const configKeys = [];
-
-    for (let i = 0; i < 2; i++) {
-      const publicKey = new PublicKey(byteArray.slice(0, PUBLIC_KEY_LENGTH));
-      byteArray = byteArray.slice(PUBLIC_KEY_LENGTH);
-      const isSigner = byteArray.slice(0, 1)[0] === 1;
-      byteArray = byteArray.slice(1);
-      configKeys.push({
-        publicKey,
-        isSigner
-      });
-    }
-
-    if (configKeys[0].publicKey.equals(VALIDATOR_INFO_KEY)) {
-      if (configKeys[1].isSigner) {
-        const rawInfo = rustString().decode(buffer__WEBPACK_IMPORTED_MODULE_0__.Buffer.from(byteArray));
-        const info = JSON.parse(rawInfo);
-        (0,superstruct__WEBPACK_IMPORTED_MODULE_14__.assert)(info, InfoString);
-        return new ValidatorInfo(configKeys[1].publicKey, info);
-      }
-    }
-
-    return null;
-  }
-
-}
-
-const VOTE_PROGRAM_ID = new PublicKey('Vote111111111111111111111111111111111111111');
-
-/**
- * See https://github.com/solana-labs/solana/blob/8a12ed029cfa38d4a45400916c2463fb82bbec8c/programs/vote_api/src/vote_state.rs#L68-L88
- *
- * @internal
- */
-const VoteAccountLayout = _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([publicKey('nodePubkey'), publicKey('authorizedWithdrawer'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('commission'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64(), // votes.length
-_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('slot'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32('confirmationCount')]), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32(), -8), 'votes'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('rootSlotValid'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('rootSlot'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64(), // authorizedVoters.length
-_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('epoch'), publicKey('authorizedVoter')]), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32(), -8), 'authorizedVoters'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([publicKey('authorizedPubkey'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('epochOfLastAuthorizedSwitch'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('targetEpoch')]), 32, 'buf'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('idx'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u8('isEmpty')], 'priorVoters'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64(), // epochCredits.length
-_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.seq(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('epoch'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('credits'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('prevCredits')]), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.offset(_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.u32(), -8), 'epochCredits'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.struct([_solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('slot'), _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_7__.nu64('timestamp')], 'lastTimestamp')]);
-
-/**
- * VoteAccount class
- */
-class VoteAccount {
-  /**
-   * @internal
-   */
-  constructor(args) {
-    this.nodePubkey = void 0;
-    this.authorizedWithdrawer = void 0;
-    this.commission = void 0;
-    this.rootSlot = void 0;
-    this.votes = void 0;
-    this.authorizedVoters = void 0;
-    this.priorVoters = void 0;
-    this.epochCredits = void 0;
-    this.lastTimestamp = void 0;
-    this.nodePubkey = args.nodePubkey;
-    this.authorizedWithdrawer = args.authorizedWithdrawer;
-    this.commission = args.commission;
-    this.rootSlot = args.rootSlot;
-    this.votes = args.votes;
-    this.authorizedVoters = args.authorizedVoters;
-    this.priorVoters = args.priorVoters;
-    this.epochCredits = args.epochCredits;
-    this.lastTimestamp = args.lastTimestamp;
-  }
-  /**
-   * Deserialize VoteAccount from the account data.
-   *
-   * @param buffer account data
-   * @return VoteAccount
-   */
-
-
-  static fromAccountData(buffer) {
-    const versionOffset = 4;
-    const va = VoteAccountLayout.decode(toBuffer(buffer), versionOffset);
-    let rootSlot = va.rootSlot;
-
-    if (!va.rootSlotValid) {
-      rootSlot = null;
-    }
-
-    return new VoteAccount({
-      nodePubkey: new PublicKey(va.nodePubkey),
-      authorizedWithdrawer: new PublicKey(va.authorizedWithdrawer),
-      commission: va.commission,
-      votes: va.votes,
-      rootSlot,
-      authorizedVoters: va.authorizedVoters.map(parseAuthorizedVoter),
-      priorVoters: getPriorVoters(va.priorVoters),
-      epochCredits: va.epochCredits,
-      lastTimestamp: va.lastTimestamp
-    });
-  }
-
-}
-
-function parseAuthorizedVoter({
-  authorizedVoter,
-  epoch
-}) {
-  return {
-    epoch,
-    authorizedVoter: new PublicKey(authorizedVoter)
-  };
-}
-
-function parsePriorVoters({
-  authorizedPubkey,
-  epochOfLastAuthorizedSwitch,
-  targetEpoch
-}) {
-  return {
-    authorizedPubkey: new PublicKey(authorizedPubkey),
-    epochOfLastAuthorizedSwitch,
-    targetEpoch
-  };
-}
-
-function getPriorVoters({
-  buf,
-  idx,
-  isEmpty
-}) {
-  if (isEmpty) {
-    return [];
-  }
-
-  return [...buf.slice(idx + 1).map(parsePriorVoters), ...buf.slice(0, idx).map(parsePriorVoters)];
-}
-
-const endpoint = {
-  http: {
-    devnet: 'http://api.devnet.solana.com',
-    testnet: 'http://api.testnet.solana.com',
-    'mainnet-beta': 'http://api.mainnet-beta.solana.com/'
-  },
-  https: {
-    devnet: 'https://api.devnet.solana.com',
-    testnet: 'https://api.testnet.solana.com',
-    'mainnet-beta': 'https://api.mainnet-beta.solana.com/'
-  }
-};
-
-/**
- * Retrieves the RPC API URL for the specified cluster
- */
-function clusterApiUrl(cluster, tls) {
-  const key = tls === false ? 'http' : 'https';
-
-  if (!cluster) {
-    return endpoint[key]['devnet'];
-  }
-
-  const url = endpoint[key][cluster];
-
-  if (!url) {
-    throw new Error(`Unknown ${key} cluster: ${cluster}`);
-  }
-
-  return url;
-}
-
-/**
- * Send and confirm a raw transaction
- *
- * If `commitment` option is not specified, defaults to 'max' commitment.
- *
- * @param {Connection} connection
- * @param {Buffer} rawTransaction
- * @param {BlockheightBasedTransactionConfirmationStrategy} confirmationStrategy
- * @param {ConfirmOptions} [options]
- * @returns {Promise<TransactionSignature>}
- */
-
-/**
- * @deprecated Calling `sendAndConfirmRawTransaction()` without a `confirmationStrategy`
- * is no longer supported and will be removed in a future version.
- */
-// eslint-disable-next-line no-redeclare
-// eslint-disable-next-line no-redeclare
-async function sendAndConfirmRawTransaction(connection, rawTransaction, confirmationStrategyOrConfirmOptions, maybeConfirmOptions) {
-  let confirmationStrategy;
-  let options;
-
-  if (confirmationStrategyOrConfirmOptions && Object.prototype.hasOwnProperty.call(confirmationStrategyOrConfirmOptions, 'lastValidBlockHeight')) {
-    confirmationStrategy = confirmationStrategyOrConfirmOptions;
-    options = maybeConfirmOptions;
-  } else {
-    options = confirmationStrategyOrConfirmOptions;
-  }
-
-  const sendOptions = options && {
-    skipPreflight: options.skipPreflight,
-    preflightCommitment: options.preflightCommitment || options.commitment,
-    minContextSlot: options.minContextSlot
-  };
-  const signature = await connection.sendRawTransaction(rawTransaction, sendOptions);
-  const commitment = options && options.commitment;
-  const confirmationPromise = confirmationStrategy ? connection.confirmTransaction(confirmationStrategy, commitment) : connection.confirmTransaction(signature, commitment);
-  const status = (await confirmationPromise).value;
-
-  if (status.err) {
-    throw new Error(`Raw transaction ${signature} failed (${JSON.stringify(status)})`);
-  }
-
-  return signature;
-}
-
-/**
- * There are 1-billion lamports in one SOL
- */
-
-const LAMPORTS_PER_SOL = 1000000000;
-
-
-//# sourceMappingURL=index.browser.esm.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/@solana/buffer-layout-utils/node_modules/buffer/index.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@solana/buffer-layout-utils/node_modules/buffer/index.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-/* eslint-disable no-proto */
-
-
-
-const base64 = __webpack_require__(/*! base64-js */ "./node_modules/base64-js/index.js")
-const ieee754 = __webpack_require__(/*! ieee754 */ "./node_modules/ieee754/index.js")
-const customInspectSymbol =
-  (typeof Symbol === 'function' && typeof Symbol['for'] === 'function') // eslint-disable-line dot-notation
-    ? Symbol['for']('nodejs.util.inspect.custom') // eslint-disable-line dot-notation
-    : null
-
-exports.Buffer = Buffer
-exports.SlowBuffer = SlowBuffer
-exports.INSPECT_MAX_BYTES = 50
-
-const K_MAX_LENGTH = 0x7fffffff
-exports.kMaxLength = K_MAX_LENGTH
-
-/**
- * If `Buffer.TYPED_ARRAY_SUPPORT`:
- *   === true    Use Uint8Array implementation (fastest)
- *   === false   Print warning and recommend using `buffer` v4.x which has an Object
- *               implementation (most compatible, even IE6)
- *
- * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
- * Opera 11.6+, iOS 4.2+.
- *
- * We report that the browser does not support typed arrays if the are not subclassable
- * using __proto__. Firefox 4-29 lacks support for adding new properties to `Uint8Array`
- * (See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438). IE 10 lacks support
- * for __proto__ and has a buggy typed array implementation.
- */
-Buffer.TYPED_ARRAY_SUPPORT = typedArraySupport()
-
-if (!Buffer.TYPED_ARRAY_SUPPORT && typeof console !== 'undefined' &&
-    typeof console.error === 'function') {
-  console.error(
-    'This browser lacks typed array (Uint8Array) support which is required by ' +
-    '`buffer` v5.x. Use `buffer` v4.x if you require old browser support.'
-  )
-}
-
-function typedArraySupport () {
-  // Can typed array instances can be augmented?
-  try {
-    const arr = new Uint8Array(1)
-    const proto = { foo: function () { return 42 } }
-    Object.setPrototypeOf(proto, Uint8Array.prototype)
-    Object.setPrototypeOf(arr, proto)
-    return arr.foo() === 42
-  } catch (e) {
-    return false
-  }
-}
-
-Object.defineProperty(Buffer.prototype, 'parent', {
-  enumerable: true,
-  get: function () {
-    if (!Buffer.isBuffer(this)) return undefined
-    return this.buffer
-  }
-})
-
-Object.defineProperty(Buffer.prototype, 'offset', {
-  enumerable: true,
-  get: function () {
-    if (!Buffer.isBuffer(this)) return undefined
-    return this.byteOffset
-  }
-})
-
-function createBuffer (length) {
-  if (length > K_MAX_LENGTH) {
-    throw new RangeError('The value "' + length + '" is invalid for option "size"')
-  }
-  // Return an augmented `Uint8Array` instance
-  const buf = new Uint8Array(length)
-  Object.setPrototypeOf(buf, Buffer.prototype)
-  return buf
-}
-
-/**
- * The Buffer constructor returns instances of `Uint8Array` that have their
- * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
- * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
- * and the `Uint8Array` methods. Square bracket notation works as expected -- it
- * returns a single octet.
- *
- * The `Uint8Array` prototype remains unmodified.
- */
-
-function Buffer (arg, encodingOrOffset, length) {
-  // Common case.
-  if (typeof arg === 'number') {
-    if (typeof encodingOrOffset === 'string') {
-      throw new TypeError(
-        'The "string" argument must be of type string. Received type number'
-      )
-    }
-    return allocUnsafe(arg)
-  }
-  return from(arg, encodingOrOffset, length)
-}
-
-Buffer.poolSize = 8192 // not used by this implementation
-
-function from (value, encodingOrOffset, length) {
-  if (typeof value === 'string') {
-    return fromString(value, encodingOrOffset)
-  }
-
-  if (ArrayBuffer.isView(value)) {
-    return fromArrayView(value)
-  }
-
-  if (value == null) {
-    throw new TypeError(
-      'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
-      'or Array-like Object. Received type ' + (typeof value)
-    )
-  }
-
-  if (isInstance(value, ArrayBuffer) ||
-      (value && isInstance(value.buffer, ArrayBuffer))) {
-    return fromArrayBuffer(value, encodingOrOffset, length)
-  }
-
-  if (typeof SharedArrayBuffer !== 'undefined' &&
-      (isInstance(value, SharedArrayBuffer) ||
-      (value && isInstance(value.buffer, SharedArrayBuffer)))) {
-    return fromArrayBuffer(value, encodingOrOffset, length)
-  }
-
-  if (typeof value === 'number') {
-    throw new TypeError(
-      'The "value" argument must not be of type number. Received type number'
-    )
-  }
-
-  const valueOf = value.valueOf && value.valueOf()
-  if (valueOf != null && valueOf !== value) {
-    return Buffer.from(valueOf, encodingOrOffset, length)
-  }
-
-  const b = fromObject(value)
-  if (b) return b
-
-  if (typeof Symbol !== 'undefined' && Symbol.toPrimitive != null &&
-      typeof value[Symbol.toPrimitive] === 'function') {
-    return Buffer.from(value[Symbol.toPrimitive]('string'), encodingOrOffset, length)
-  }
-
-  throw new TypeError(
-    'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
-    'or Array-like Object. Received type ' + (typeof value)
-  )
-}
-
-/**
- * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
- * if value is a number.
- * Buffer.from(str[, encoding])
- * Buffer.from(array)
- * Buffer.from(buffer)
- * Buffer.from(arrayBuffer[, byteOffset[, length]])
- **/
-Buffer.from = function (value, encodingOrOffset, length) {
-  return from(value, encodingOrOffset, length)
-}
-
-// Note: Change prototype *after* Buffer.from is defined to workaround Chrome bug:
-// https://github.com/feross/buffer/pull/148
-Object.setPrototypeOf(Buffer.prototype, Uint8Array.prototype)
-Object.setPrototypeOf(Buffer, Uint8Array)
-
-function assertSize (size) {
-  if (typeof size !== 'number') {
-    throw new TypeError('"size" argument must be of type number')
-  } else if (size < 0) {
-    throw new RangeError('The value "' + size + '" is invalid for option "size"')
-  }
-}
-
-function alloc (size, fill, encoding) {
-  assertSize(size)
-  if (size <= 0) {
-    return createBuffer(size)
-  }
-  if (fill !== undefined) {
-    // Only pay attention to encoding if it's a string. This
-    // prevents accidentally sending in a number that would
-    // be interpreted as a start offset.
-    return typeof encoding === 'string'
-      ? createBuffer(size).fill(fill, encoding)
-      : createBuffer(size).fill(fill)
-  }
-  return createBuffer(size)
-}
-
-/**
- * Creates a new filled Buffer instance.
- * alloc(size[, fill[, encoding]])
- **/
-Buffer.alloc = function (size, fill, encoding) {
-  return alloc(size, fill, encoding)
-}
-
-function allocUnsafe (size) {
-  assertSize(size)
-  return createBuffer(size < 0 ? 0 : checked(size) | 0)
-}
-
-/**
- * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
- * */
-Buffer.allocUnsafe = function (size) {
-  return allocUnsafe(size)
-}
-/**
- * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
- */
-Buffer.allocUnsafeSlow = function (size) {
-  return allocUnsafe(size)
-}
-
-function fromString (string, encoding) {
-  if (typeof encoding !== 'string' || encoding === '') {
-    encoding = 'utf8'
-  }
-
-  if (!Buffer.isEncoding(encoding)) {
-    throw new TypeError('Unknown encoding: ' + encoding)
-  }
-
-  const length = byteLength(string, encoding) | 0
-  let buf = createBuffer(length)
-
-  const actual = buf.write(string, encoding)
-
-  if (actual !== length) {
-    // Writing a hex string, for example, that contains invalid characters will
-    // cause everything after the first invalid character to be ignored. (e.g.
-    // 'abxxcd' will be treated as 'ab')
-    buf = buf.slice(0, actual)
-  }
-
-  return buf
-}
-
-function fromArrayLike (array) {
-  const length = array.length < 0 ? 0 : checked(array.length) | 0
-  const buf = createBuffer(length)
-  for (let i = 0; i < length; i += 1) {
-    buf[i] = array[i] & 255
-  }
-  return buf
-}
-
-function fromArrayView (arrayView) {
-  if (isInstance(arrayView, Uint8Array)) {
-    const copy = new Uint8Array(arrayView)
-    return fromArrayBuffer(copy.buffer, copy.byteOffset, copy.byteLength)
-  }
-  return fromArrayLike(arrayView)
-}
-
-function fromArrayBuffer (array, byteOffset, length) {
-  if (byteOffset < 0 || array.byteLength < byteOffset) {
-    throw new RangeError('"offset" is outside of buffer bounds')
-  }
-
-  if (array.byteLength < byteOffset + (length || 0)) {
-    throw new RangeError('"length" is outside of buffer bounds')
-  }
-
-  let buf
-  if (byteOffset === undefined && length === undefined) {
-    buf = new Uint8Array(array)
-  } else if (length === undefined) {
-    buf = new Uint8Array(array, byteOffset)
-  } else {
-    buf = new Uint8Array(array, byteOffset, length)
-  }
-
-  // Return an augmented `Uint8Array` instance
-  Object.setPrototypeOf(buf, Buffer.prototype)
-
-  return buf
-}
-
-function fromObject (obj) {
-  if (Buffer.isBuffer(obj)) {
-    const len = checked(obj.length) | 0
-    const buf = createBuffer(len)
-
-    if (buf.length === 0) {
-      return buf
-    }
-
-    obj.copy(buf, 0, 0, len)
-    return buf
-  }
-
-  if (obj.length !== undefined) {
-    if (typeof obj.length !== 'number' || numberIsNaN(obj.length)) {
-      return createBuffer(0)
-    }
-    return fromArrayLike(obj)
-  }
-
-  if (obj.type === 'Buffer' && Array.isArray(obj.data)) {
-    return fromArrayLike(obj.data)
-  }
-}
-
-function checked (length) {
-  // Note: cannot use `length < K_MAX_LENGTH` here because that fails when
-  // length is NaN (which is otherwise coerced to zero.)
-  if (length >= K_MAX_LENGTH) {
-    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + K_MAX_LENGTH.toString(16) + ' bytes')
-  }
-  return length | 0
-}
-
-function SlowBuffer (length) {
-  if (+length != length) { // eslint-disable-line eqeqeq
-    length = 0
-  }
-  return Buffer.alloc(+length)
-}
-
-Buffer.isBuffer = function isBuffer (b) {
-  return b != null && b._isBuffer === true &&
-    b !== Buffer.prototype // so Buffer.isBuffer(Buffer.prototype) will be false
-}
-
-Buffer.compare = function compare (a, b) {
-  if (isInstance(a, Uint8Array)) a = Buffer.from(a, a.offset, a.byteLength)
-  if (isInstance(b, Uint8Array)) b = Buffer.from(b, b.offset, b.byteLength)
-  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
-    throw new TypeError(
-      'The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array'
-    )
-  }
-
-  if (a === b) return 0
-
-  let x = a.length
-  let y = b.length
-
-  for (let i = 0, len = Math.min(x, y); i < len; ++i) {
-    if (a[i] !== b[i]) {
-      x = a[i]
-      y = b[i]
-      break
-    }
-  }
-
-  if (x < y) return -1
-  if (y < x) return 1
-  return 0
-}
-
-Buffer.isEncoding = function isEncoding (encoding) {
-  switch (String(encoding).toLowerCase()) {
-    case 'hex':
-    case 'utf8':
-    case 'utf-8':
-    case 'ascii':
-    case 'latin1':
-    case 'binary':
-    case 'base64':
-    case 'ucs2':
-    case 'ucs-2':
-    case 'utf16le':
-    case 'utf-16le':
-      return true
-    default:
-      return false
-  }
-}
-
-Buffer.concat = function concat (list, length) {
-  if (!Array.isArray(list)) {
-    throw new TypeError('"list" argument must be an Array of Buffers')
-  }
-
-  if (list.length === 0) {
-    return Buffer.alloc(0)
-  }
-
-  let i
-  if (length === undefined) {
-    length = 0
-    for (i = 0; i < list.length; ++i) {
-      length += list[i].length
-    }
-  }
-
-  const buffer = Buffer.allocUnsafe(length)
-  let pos = 0
-  for (i = 0; i < list.length; ++i) {
-    let buf = list[i]
-    if (isInstance(buf, Uint8Array)) {
-      if (pos + buf.length > buffer.length) {
-        if (!Buffer.isBuffer(buf)) buf = Buffer.from(buf)
-        buf.copy(buffer, pos)
-      } else {
-        Uint8Array.prototype.set.call(
-          buffer,
-          buf,
-          pos
-        )
-      }
-    } else if (!Buffer.isBuffer(buf)) {
-      throw new TypeError('"list" argument must be an Array of Buffers')
-    } else {
-      buf.copy(buffer, pos)
-    }
-    pos += buf.length
-  }
-  return buffer
-}
-
-function byteLength (string, encoding) {
-  if (Buffer.isBuffer(string)) {
-    return string.length
-  }
-  if (ArrayBuffer.isView(string) || isInstance(string, ArrayBuffer)) {
-    return string.byteLength
-  }
-  if (typeof string !== 'string') {
-    throw new TypeError(
-      'The "string" argument must be one of type string, Buffer, or ArrayBuffer. ' +
-      'Received type ' + typeof string
-    )
-  }
-
-  const len = string.length
-  const mustMatch = (arguments.length > 2 && arguments[2] === true)
-  if (!mustMatch && len === 0) return 0
-
-  // Use a for loop to avoid recursion
-  let loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'ascii':
-      case 'latin1':
-      case 'binary':
-        return len
-      case 'utf8':
-      case 'utf-8':
-        return utf8ToBytes(string).length
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return len * 2
-      case 'hex':
-        return len >>> 1
-      case 'base64':
-        return base64ToBytes(string).length
-      default:
-        if (loweredCase) {
-          return mustMatch ? -1 : utf8ToBytes(string).length // assume utf8
-        }
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-Buffer.byteLength = byteLength
-
-function slowToString (encoding, start, end) {
-  let loweredCase = false
-
-  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
-  // property of a typed array.
-
-  // This behaves neither like String nor Uint8Array in that we set start/end
-  // to their upper/lower bounds if the value passed is out of range.
-  // undefined is handled specially as per ECMA-262 6th Edition,
-  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
-  if (start === undefined || start < 0) {
-    start = 0
-  }
-  // Return early if start > this.length. Done here to prevent potential uint32
-  // coercion fail below.
-  if (start > this.length) {
-    return ''
-  }
-
-  if (end === undefined || end > this.length) {
-    end = this.length
-  }
-
-  if (end <= 0) {
-    return ''
-  }
-
-  // Force coercion to uint32. This will also coerce falsey/NaN values to 0.
-  end >>>= 0
-  start >>>= 0
-
-  if (end <= start) {
-    return ''
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  while (true) {
-    switch (encoding) {
-      case 'hex':
-        return hexSlice(this, start, end)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Slice(this, start, end)
-
-      case 'ascii':
-        return asciiSlice(this, start, end)
-
-      case 'latin1':
-      case 'binary':
-        return latin1Slice(this, start, end)
-
-      case 'base64':
-        return base64Slice(this, start, end)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return utf16leSlice(this, start, end)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = (encoding + '').toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-
-// This property is used by `Buffer.isBuffer` (and the `is-buffer` npm package)
-// to detect a Buffer instance. It's not possible to use `instanceof Buffer`
-// reliably in a browserify context because there could be multiple different
-// copies of the 'buffer' package in use. This method works even for Buffer
-// instances that were created from another copy of the `buffer` package.
-// See: https://github.com/feross/buffer/issues/154
-Buffer.prototype._isBuffer = true
-
-function swap (b, n, m) {
-  const i = b[n]
-  b[n] = b[m]
-  b[m] = i
-}
-
-Buffer.prototype.swap16 = function swap16 () {
-  const len = this.length
-  if (len % 2 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 16-bits')
-  }
-  for (let i = 0; i < len; i += 2) {
-    swap(this, i, i + 1)
-  }
-  return this
-}
-
-Buffer.prototype.swap32 = function swap32 () {
-  const len = this.length
-  if (len % 4 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 32-bits')
-  }
-  for (let i = 0; i < len; i += 4) {
-    swap(this, i, i + 3)
-    swap(this, i + 1, i + 2)
-  }
-  return this
-}
-
-Buffer.prototype.swap64 = function swap64 () {
-  const len = this.length
-  if (len % 8 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 64-bits')
-  }
-  for (let i = 0; i < len; i += 8) {
-    swap(this, i, i + 7)
-    swap(this, i + 1, i + 6)
-    swap(this, i + 2, i + 5)
-    swap(this, i + 3, i + 4)
-  }
-  return this
-}
-
-Buffer.prototype.toString = function toString () {
-  const length = this.length
-  if (length === 0) return ''
-  if (arguments.length === 0) return utf8Slice(this, 0, length)
-  return slowToString.apply(this, arguments)
-}
-
-Buffer.prototype.toLocaleString = Buffer.prototype.toString
-
-Buffer.prototype.equals = function equals (b) {
-  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-  if (this === b) return true
-  return Buffer.compare(this, b) === 0
-}
-
-Buffer.prototype.inspect = function inspect () {
-  let str = ''
-  const max = exports.INSPECT_MAX_BYTES
-  str = this.toString('hex', 0, max).replace(/(.{2})/g, '$1 ').trim()
-  if (this.length > max) str += ' ... '
-  return '<Buffer ' + str + '>'
-}
-if (customInspectSymbol) {
-  Buffer.prototype[customInspectSymbol] = Buffer.prototype.inspect
-}
-
-Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
-  if (isInstance(target, Uint8Array)) {
-    target = Buffer.from(target, target.offset, target.byteLength)
-  }
-  if (!Buffer.isBuffer(target)) {
-    throw new TypeError(
-      'The "target" argument must be one of type Buffer or Uint8Array. ' +
-      'Received type ' + (typeof target)
-    )
-  }
-
-  if (start === undefined) {
-    start = 0
-  }
-  if (end === undefined) {
-    end = target ? target.length : 0
-  }
-  if (thisStart === undefined) {
-    thisStart = 0
-  }
-  if (thisEnd === undefined) {
-    thisEnd = this.length
-  }
-
-  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
-    throw new RangeError('out of range index')
-  }
-
-  if (thisStart >= thisEnd && start >= end) {
-    return 0
-  }
-  if (thisStart >= thisEnd) {
-    return -1
-  }
-  if (start >= end) {
-    return 1
-  }
-
-  start >>>= 0
-  end >>>= 0
-  thisStart >>>= 0
-  thisEnd >>>= 0
-
-  if (this === target) return 0
-
-  let x = thisEnd - thisStart
-  let y = end - start
-  const len = Math.min(x, y)
-
-  const thisCopy = this.slice(thisStart, thisEnd)
-  const targetCopy = target.slice(start, end)
-
-  for (let i = 0; i < len; ++i) {
-    if (thisCopy[i] !== targetCopy[i]) {
-      x = thisCopy[i]
-      y = targetCopy[i]
-      break
-    }
-  }
-
-  if (x < y) return -1
-  if (y < x) return 1
-  return 0
-}
-
-// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
-// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
-//
-// Arguments:
-// - buffer - a Buffer to search
-// - val - a string, Buffer, or number
-// - byteOffset - an index into `buffer`; will be clamped to an int32
-// - encoding - an optional encoding, relevant is val is a string
-// - dir - true for indexOf, false for lastIndexOf
-function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
-  // Empty buffer means no match
-  if (buffer.length === 0) return -1
-
-  // Normalize byteOffset
-  if (typeof byteOffset === 'string') {
-    encoding = byteOffset
-    byteOffset = 0
-  } else if (byteOffset > 0x7fffffff) {
-    byteOffset = 0x7fffffff
-  } else if (byteOffset < -0x80000000) {
-    byteOffset = -0x80000000
-  }
-  byteOffset = +byteOffset // Coerce to Number.
-  if (numberIsNaN(byteOffset)) {
-    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
-    byteOffset = dir ? 0 : (buffer.length - 1)
-  }
-
-  // Normalize byteOffset: negative offsets start from the end of the buffer
-  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
-  if (byteOffset >= buffer.length) {
-    if (dir) return -1
-    else byteOffset = buffer.length - 1
-  } else if (byteOffset < 0) {
-    if (dir) byteOffset = 0
-    else return -1
-  }
-
-  // Normalize val
-  if (typeof val === 'string') {
-    val = Buffer.from(val, encoding)
-  }
-
-  // Finally, search either indexOf (if dir is true) or lastIndexOf
-  if (Buffer.isBuffer(val)) {
-    // Special case: looking for empty string/buffer always fails
-    if (val.length === 0) {
-      return -1
-    }
-    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
-  } else if (typeof val === 'number') {
-    val = val & 0xFF // Search for a byte value [0-255]
-    if (typeof Uint8Array.prototype.indexOf === 'function') {
-      if (dir) {
-        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
-      } else {
-        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
-      }
-    }
-    return arrayIndexOf(buffer, [val], byteOffset, encoding, dir)
-  }
-
-  throw new TypeError('val must be string, number or Buffer')
-}
-
-function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
-  let indexSize = 1
-  let arrLength = arr.length
-  let valLength = val.length
-
-  if (encoding !== undefined) {
-    encoding = String(encoding).toLowerCase()
-    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
-        encoding === 'utf16le' || encoding === 'utf-16le') {
-      if (arr.length < 2 || val.length < 2) {
-        return -1
-      }
-      indexSize = 2
-      arrLength /= 2
-      valLength /= 2
-      byteOffset /= 2
-    }
-  }
-
-  function read (buf, i) {
-    if (indexSize === 1) {
-      return buf[i]
-    } else {
-      return buf.readUInt16BE(i * indexSize)
-    }
-  }
-
-  let i
-  if (dir) {
-    let foundIndex = -1
-    for (i = byteOffset; i < arrLength; i++) {
-      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
-        if (foundIndex === -1) foundIndex = i
-        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
-      } else {
-        if (foundIndex !== -1) i -= i - foundIndex
-        foundIndex = -1
-      }
-    }
-  } else {
-    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
-    for (i = byteOffset; i >= 0; i--) {
-      let found = true
-      for (let j = 0; j < valLength; j++) {
-        if (read(arr, i + j) !== read(val, j)) {
-          found = false
-          break
-        }
-      }
-      if (found) return i
-    }
-  }
-
-  return -1
-}
-
-Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
-  return this.indexOf(val, byteOffset, encoding) !== -1
-}
-
-Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
-  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
-}
-
-Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
-  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
-}
-
-function hexWrite (buf, string, offset, length) {
-  offset = Number(offset) || 0
-  const remaining = buf.length - offset
-  if (!length) {
-    length = remaining
-  } else {
-    length = Number(length)
-    if (length > remaining) {
-      length = remaining
-    }
-  }
-
-  const strLen = string.length
-
-  if (length > strLen / 2) {
-    length = strLen / 2
-  }
-  let i
-  for (i = 0; i < length; ++i) {
-    const parsed = parseInt(string.substr(i * 2, 2), 16)
-    if (numberIsNaN(parsed)) return i
-    buf[offset + i] = parsed
-  }
-  return i
-}
-
-function utf8Write (buf, string, offset, length) {
-  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
-}
-
-function asciiWrite (buf, string, offset, length) {
-  return blitBuffer(asciiToBytes(string), buf, offset, length)
-}
-
-function base64Write (buf, string, offset, length) {
-  return blitBuffer(base64ToBytes(string), buf, offset, length)
-}
-
-function ucs2Write (buf, string, offset, length) {
-  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
-}
-
-Buffer.prototype.write = function write (string, offset, length, encoding) {
-  // Buffer#write(string)
-  if (offset === undefined) {
-    encoding = 'utf8'
-    length = this.length
-    offset = 0
-  // Buffer#write(string, encoding)
-  } else if (length === undefined && typeof offset === 'string') {
-    encoding = offset
-    length = this.length
-    offset = 0
-  // Buffer#write(string, offset[, length][, encoding])
-  } else if (isFinite(offset)) {
-    offset = offset >>> 0
-    if (isFinite(length)) {
-      length = length >>> 0
-      if (encoding === undefined) encoding = 'utf8'
-    } else {
-      encoding = length
-      length = undefined
-    }
-  } else {
-    throw new Error(
-      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
-    )
-  }
-
-  const remaining = this.length - offset
-  if (length === undefined || length > remaining) length = remaining
-
-  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
-    throw new RangeError('Attempt to write outside buffer bounds')
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  let loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'hex':
-        return hexWrite(this, string, offset, length)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Write(this, string, offset, length)
-
-      case 'ascii':
-      case 'latin1':
-      case 'binary':
-        return asciiWrite(this, string, offset, length)
-
-      case 'base64':
-        // Warning: maxLength not taken into account in base64Write
-        return base64Write(this, string, offset, length)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return ucs2Write(this, string, offset, length)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-
-Buffer.prototype.toJSON = function toJSON () {
-  return {
-    type: 'Buffer',
-    data: Array.prototype.slice.call(this._arr || this, 0)
-  }
-}
-
-function base64Slice (buf, start, end) {
-  if (start === 0 && end === buf.length) {
-    return base64.fromByteArray(buf)
-  } else {
-    return base64.fromByteArray(buf.slice(start, end))
-  }
-}
-
-function utf8Slice (buf, start, end) {
-  end = Math.min(buf.length, end)
-  const res = []
-
-  let i = start
-  while (i < end) {
-    const firstByte = buf[i]
-    let codePoint = null
-    let bytesPerSequence = (firstByte > 0xEF)
-      ? 4
-      : (firstByte > 0xDF)
-          ? 3
-          : (firstByte > 0xBF)
-              ? 2
-              : 1
-
-    if (i + bytesPerSequence <= end) {
-      let secondByte, thirdByte, fourthByte, tempCodePoint
-
-      switch (bytesPerSequence) {
-        case 1:
-          if (firstByte < 0x80) {
-            codePoint = firstByte
-          }
-          break
-        case 2:
-          secondByte = buf[i + 1]
-          if ((secondByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
-            if (tempCodePoint > 0x7F) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 3:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
-            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 4:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          fourthByte = buf[i + 3]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
-            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
-              codePoint = tempCodePoint
-            }
-          }
-      }
-    }
-
-    if (codePoint === null) {
-      // we did not generate a valid codePoint so insert a
-      // replacement char (U+FFFD) and advance only 1 byte
-      codePoint = 0xFFFD
-      bytesPerSequence = 1
-    } else if (codePoint > 0xFFFF) {
-      // encode to utf16 (surrogate pair dance)
-      codePoint -= 0x10000
-      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
-      codePoint = 0xDC00 | codePoint & 0x3FF
-    }
-
-    res.push(codePoint)
-    i += bytesPerSequence
-  }
-
-  return decodeCodePointsArray(res)
-}
-
-// Based on http://stackoverflow.com/a/22747272/680742, the browser with
-// the lowest limit is Chrome, with 0x10000 args.
-// We go 1 magnitude less, for safety
-const MAX_ARGUMENTS_LENGTH = 0x1000
-
-function decodeCodePointsArray (codePoints) {
-  const len = codePoints.length
-  if (len <= MAX_ARGUMENTS_LENGTH) {
-    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
-  }
-
-  // Decode in chunks to avoid "call stack size exceeded".
-  let res = ''
-  let i = 0
-  while (i < len) {
-    res += String.fromCharCode.apply(
-      String,
-      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
-    )
-  }
-  return res
-}
-
-function asciiSlice (buf, start, end) {
-  let ret = ''
-  end = Math.min(buf.length, end)
-
-  for (let i = start; i < end; ++i) {
-    ret += String.fromCharCode(buf[i] & 0x7F)
-  }
-  return ret
-}
-
-function latin1Slice (buf, start, end) {
-  let ret = ''
-  end = Math.min(buf.length, end)
-
-  for (let i = start; i < end; ++i) {
-    ret += String.fromCharCode(buf[i])
-  }
-  return ret
-}
-
-function hexSlice (buf, start, end) {
-  const len = buf.length
-
-  if (!start || start < 0) start = 0
-  if (!end || end < 0 || end > len) end = len
-
-  let out = ''
-  for (let i = start; i < end; ++i) {
-    out += hexSliceLookupTable[buf[i]]
-  }
-  return out
-}
-
-function utf16leSlice (buf, start, end) {
-  const bytes = buf.slice(start, end)
-  let res = ''
-  // If bytes.length is odd, the last 8 bits must be ignored (same as node.js)
-  for (let i = 0; i < bytes.length - 1; i += 2) {
-    res += String.fromCharCode(bytes[i] + (bytes[i + 1] * 256))
-  }
-  return res
-}
-
-Buffer.prototype.slice = function slice (start, end) {
-  const len = this.length
-  start = ~~start
-  end = end === undefined ? len : ~~end
-
-  if (start < 0) {
-    start += len
-    if (start < 0) start = 0
-  } else if (start > len) {
-    start = len
-  }
-
-  if (end < 0) {
-    end += len
-    if (end < 0) end = 0
-  } else if (end > len) {
-    end = len
-  }
-
-  if (end < start) end = start
-
-  const newBuf = this.subarray(start, end)
-  // Return an augmented `Uint8Array` instance
-  Object.setPrototypeOf(newBuf, Buffer.prototype)
-
-  return newBuf
-}
-
-/*
- * Need to make sure that buffer isn't trying to write out of bounds.
- */
-function checkOffset (offset, ext, length) {
-  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
-  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
-}
-
-Buffer.prototype.readUintLE =
-Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  let val = this[offset]
-  let mul = 1
-  let i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUintBE =
-Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    checkOffset(offset, byteLength, this.length)
-  }
-
-  let val = this[offset + --byteLength]
-  let mul = 1
-  while (byteLength > 0 && (mul *= 0x100)) {
-    val += this[offset + --byteLength] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUint8 =
-Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  return this[offset]
-}
-
-Buffer.prototype.readUint16LE =
-Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  return this[offset] | (this[offset + 1] << 8)
-}
-
-Buffer.prototype.readUint16BE =
-Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  return (this[offset] << 8) | this[offset + 1]
-}
-
-Buffer.prototype.readUint32LE =
-Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return ((this[offset]) |
-      (this[offset + 1] << 8) |
-      (this[offset + 2] << 16)) +
-      (this[offset + 3] * 0x1000000)
-}
-
-Buffer.prototype.readUint32BE =
-Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset] * 0x1000000) +
-    ((this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    this[offset + 3])
-}
-
-Buffer.prototype.readBigUInt64LE = defineBigIntMethod(function readBigUInt64LE (offset) {
-  offset = offset >>> 0
-  validateNumber(offset, 'offset')
-  const first = this[offset]
-  const last = this[offset + 7]
-  if (first === undefined || last === undefined) {
-    boundsError(offset, this.length - 8)
-  }
-
-  const lo = first +
-    this[++offset] * 2 ** 8 +
-    this[++offset] * 2 ** 16 +
-    this[++offset] * 2 ** 24
-
-  const hi = this[++offset] +
-    this[++offset] * 2 ** 8 +
-    this[++offset] * 2 ** 16 +
-    last * 2 ** 24
-
-  return BigInt(lo) + (BigInt(hi) << BigInt(32))
-})
-
-Buffer.prototype.readBigUInt64BE = defineBigIntMethod(function readBigUInt64BE (offset) {
-  offset = offset >>> 0
-  validateNumber(offset, 'offset')
-  const first = this[offset]
-  const last = this[offset + 7]
-  if (first === undefined || last === undefined) {
-    boundsError(offset, this.length - 8)
-  }
-
-  const hi = first * 2 ** 24 +
-    this[++offset] * 2 ** 16 +
-    this[++offset] * 2 ** 8 +
-    this[++offset]
-
-  const lo = this[++offset] * 2 ** 24 +
-    this[++offset] * 2 ** 16 +
-    this[++offset] * 2 ** 8 +
-    last
-
-  return (BigInt(hi) << BigInt(32)) + BigInt(lo)
-})
-
-Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  let val = this[offset]
-  let mul = 1
-  let i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  let i = byteLength
-  let mul = 1
-  let val = this[offset + --i]
-  while (i > 0 && (mul *= 0x100)) {
-    val += this[offset + --i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  if (!(this[offset] & 0x80)) return (this[offset])
-  return ((0xff - this[offset] + 1) * -1)
-}
-
-Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  const val = this[offset] | (this[offset + 1] << 8)
-  return (val & 0x8000) ? val | 0xFFFF0000 : val
-}
-
-Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  const val = this[offset + 1] | (this[offset] << 8)
-  return (val & 0x8000) ? val | 0xFFFF0000 : val
-}
-
-Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset]) |
-    (this[offset + 1] << 8) |
-    (this[offset + 2] << 16) |
-    (this[offset + 3] << 24)
-}
-
-Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset] << 24) |
-    (this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    (this[offset + 3])
-}
-
-Buffer.prototype.readBigInt64LE = defineBigIntMethod(function readBigInt64LE (offset) {
-  offset = offset >>> 0
-  validateNumber(offset, 'offset')
-  const first = this[offset]
-  const last = this[offset + 7]
-  if (first === undefined || last === undefined) {
-    boundsError(offset, this.length - 8)
-  }
-
-  const val = this[offset + 4] +
-    this[offset + 5] * 2 ** 8 +
-    this[offset + 6] * 2 ** 16 +
-    (last << 24) // Overflow
-
-  return (BigInt(val) << BigInt(32)) +
-    BigInt(first +
-    this[++offset] * 2 ** 8 +
-    this[++offset] * 2 ** 16 +
-    this[++offset] * 2 ** 24)
-})
-
-Buffer.prototype.readBigInt64BE = defineBigIntMethod(function readBigInt64BE (offset) {
-  offset = offset >>> 0
-  validateNumber(offset, 'offset')
-  const first = this[offset]
-  const last = this[offset + 7]
-  if (first === undefined || last === undefined) {
-    boundsError(offset, this.length - 8)
-  }
-
-  const val = (first << 24) + // Overflow
-    this[++offset] * 2 ** 16 +
-    this[++offset] * 2 ** 8 +
-    this[++offset]
-
-  return (BigInt(val) << BigInt(32)) +
-    BigInt(this[++offset] * 2 ** 24 +
-    this[++offset] * 2 ** 16 +
-    this[++offset] * 2 ** 8 +
-    last)
-})
-
-Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-  return ieee754.read(this, offset, true, 23, 4)
-}
-
-Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-  return ieee754.read(this, offset, false, 23, 4)
-}
-
-Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 8, this.length)
-  return ieee754.read(this, offset, true, 52, 8)
-}
-
-Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 8, this.length)
-  return ieee754.read(this, offset, false, 52, 8)
-}
-
-function checkInt (buf, value, offset, ext, max, min) {
-  if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
-  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
-  if (offset + ext > buf.length) throw new RangeError('Index out of range')
-}
-
-Buffer.prototype.writeUintLE =
-Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    const maxBytes = Math.pow(2, 8 * byteLength) - 1
-    checkInt(this, value, offset, byteLength, maxBytes, 0)
-  }
-
-  let mul = 1
-  let i = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUintBE =
-Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    const maxBytes = Math.pow(2, 8 * byteLength) - 1
-    checkInt(this, value, offset, byteLength, maxBytes, 0)
-  }
-
-  let i = byteLength - 1
-  let mul = 1
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUint8 =
-Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
-  this[offset] = (value & 0xff)
-  return offset + 1
-}
-
-Buffer.prototype.writeUint16LE =
-Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  return offset + 2
-}
-
-Buffer.prototype.writeUint16BE =
-Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  this[offset] = (value >>> 8)
-  this[offset + 1] = (value & 0xff)
-  return offset + 2
-}
-
-Buffer.prototype.writeUint32LE =
-Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  this[offset + 3] = (value >>> 24)
-  this[offset + 2] = (value >>> 16)
-  this[offset + 1] = (value >>> 8)
-  this[offset] = (value & 0xff)
-  return offset + 4
-}
-
-Buffer.prototype.writeUint32BE =
-Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  this[offset] = (value >>> 24)
-  this[offset + 1] = (value >>> 16)
-  this[offset + 2] = (value >>> 8)
-  this[offset + 3] = (value & 0xff)
-  return offset + 4
-}
-
-function wrtBigUInt64LE (buf, value, offset, min, max) {
-  checkIntBI(value, min, max, buf, offset, 7)
-
-  let lo = Number(value & BigInt(0xffffffff))
-  buf[offset++] = lo
-  lo = lo >> 8
-  buf[offset++] = lo
-  lo = lo >> 8
-  buf[offset++] = lo
-  lo = lo >> 8
-  buf[offset++] = lo
-  let hi = Number(value >> BigInt(32) & BigInt(0xffffffff))
-  buf[offset++] = hi
-  hi = hi >> 8
-  buf[offset++] = hi
-  hi = hi >> 8
-  buf[offset++] = hi
-  hi = hi >> 8
-  buf[offset++] = hi
-  return offset
-}
-
-function wrtBigUInt64BE (buf, value, offset, min, max) {
-  checkIntBI(value, min, max, buf, offset, 7)
-
-  let lo = Number(value & BigInt(0xffffffff))
-  buf[offset + 7] = lo
-  lo = lo >> 8
-  buf[offset + 6] = lo
-  lo = lo >> 8
-  buf[offset + 5] = lo
-  lo = lo >> 8
-  buf[offset + 4] = lo
-  let hi = Number(value >> BigInt(32) & BigInt(0xffffffff))
-  buf[offset + 3] = hi
-  hi = hi >> 8
-  buf[offset + 2] = hi
-  hi = hi >> 8
-  buf[offset + 1] = hi
-  hi = hi >> 8
-  buf[offset] = hi
-  return offset + 8
-}
-
-Buffer.prototype.writeBigUInt64LE = defineBigIntMethod(function writeBigUInt64LE (value, offset = 0) {
-  return wrtBigUInt64LE(this, value, offset, BigInt(0), BigInt('0xffffffffffffffff'))
-})
-
-Buffer.prototype.writeBigUInt64BE = defineBigIntMethod(function writeBigUInt64BE (value, offset = 0) {
-  return wrtBigUInt64BE(this, value, offset, BigInt(0), BigInt('0xffffffffffffffff'))
-})
-
-Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    const limit = Math.pow(2, (8 * byteLength) - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  let i = 0
-  let mul = 1
-  let sub = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
-      sub = 1
-    }
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    const limit = Math.pow(2, (8 * byteLength) - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  let i = byteLength - 1
-  let mul = 1
-  let sub = 0
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
-      sub = 1
-    }
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
-  if (value < 0) value = 0xff + value + 1
-  this[offset] = (value & 0xff)
-  return offset + 1
-}
-
-Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  return offset + 2
-}
-
-Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  this[offset] = (value >>> 8)
-  this[offset + 1] = (value & 0xff)
-  return offset + 2
-}
-
-Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  this[offset + 2] = (value >>> 16)
-  this[offset + 3] = (value >>> 24)
-  return offset + 4
-}
-
-Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  if (value < 0) value = 0xffffffff + value + 1
-  this[offset] = (value >>> 24)
-  this[offset + 1] = (value >>> 16)
-  this[offset + 2] = (value >>> 8)
-  this[offset + 3] = (value & 0xff)
-  return offset + 4
-}
-
-Buffer.prototype.writeBigInt64LE = defineBigIntMethod(function writeBigInt64LE (value, offset = 0) {
-  return wrtBigUInt64LE(this, value, offset, -BigInt('0x8000000000000000'), BigInt('0x7fffffffffffffff'))
-})
-
-Buffer.prototype.writeBigInt64BE = defineBigIntMethod(function writeBigInt64BE (value, offset = 0) {
-  return wrtBigUInt64BE(this, value, offset, -BigInt('0x8000000000000000'), BigInt('0x7fffffffffffffff'))
-})
-
-function checkIEEE754 (buf, value, offset, ext, max, min) {
-  if (offset + ext > buf.length) throw new RangeError('Index out of range')
-  if (offset < 0) throw new RangeError('Index out of range')
-}
-
-function writeFloat (buf, value, offset, littleEndian, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
-  }
-  ieee754.write(buf, value, offset, littleEndian, 23, 4)
-  return offset + 4
-}
-
-Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
-  return writeFloat(this, value, offset, true, noAssert)
-}
-
-Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
-  return writeFloat(this, value, offset, false, noAssert)
-}
-
-function writeDouble (buf, value, offset, littleEndian, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
-  }
-  ieee754.write(buf, value, offset, littleEndian, 52, 8)
-  return offset + 8
-}
-
-Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
-  return writeDouble(this, value, offset, true, noAssert)
-}
-
-Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
-  return writeDouble(this, value, offset, false, noAssert)
-}
-
-// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-Buffer.prototype.copy = function copy (target, targetStart, start, end) {
-  if (!Buffer.isBuffer(target)) throw new TypeError('argument should be a Buffer')
-  if (!start) start = 0
-  if (!end && end !== 0) end = this.length
-  if (targetStart >= target.length) targetStart = target.length
-  if (!targetStart) targetStart = 0
-  if (end > 0 && end < start) end = start
-
-  // Copy 0 bytes; we're done
-  if (end === start) return 0
-  if (target.length === 0 || this.length === 0) return 0
-
-  // Fatal error conditions
-  if (targetStart < 0) {
-    throw new RangeError('targetStart out of bounds')
-  }
-  if (start < 0 || start >= this.length) throw new RangeError('Index out of range')
-  if (end < 0) throw new RangeError('sourceEnd out of bounds')
-
-  // Are we oob?
-  if (end > this.length) end = this.length
-  if (target.length - targetStart < end - start) {
-    end = target.length - targetStart + start
-  }
-
-  const len = end - start
-
-  if (this === target && typeof Uint8Array.prototype.copyWithin === 'function') {
-    // Use built-in when available, missing from IE11
-    this.copyWithin(targetStart, start, end)
-  } else {
-    Uint8Array.prototype.set.call(
-      target,
-      this.subarray(start, end),
-      targetStart
-    )
-  }
-
-  return len
-}
-
-// Usage:
-//    buffer.fill(number[, offset[, end]])
-//    buffer.fill(buffer[, offset[, end]])
-//    buffer.fill(string[, offset[, end]][, encoding])
-Buffer.prototype.fill = function fill (val, start, end, encoding) {
-  // Handle string cases:
-  if (typeof val === 'string') {
-    if (typeof start === 'string') {
-      encoding = start
-      start = 0
-      end = this.length
-    } else if (typeof end === 'string') {
-      encoding = end
-      end = this.length
-    }
-    if (encoding !== undefined && typeof encoding !== 'string') {
-      throw new TypeError('encoding must be a string')
-    }
-    if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
-      throw new TypeError('Unknown encoding: ' + encoding)
-    }
-    if (val.length === 1) {
-      const code = val.charCodeAt(0)
-      if ((encoding === 'utf8' && code < 128) ||
-          encoding === 'latin1') {
-        // Fast path: If `val` fits into a single byte, use that numeric value.
-        val = code
-      }
-    }
-  } else if (typeof val === 'number') {
-    val = val & 255
-  } else if (typeof val === 'boolean') {
-    val = Number(val)
-  }
-
-  // Invalid ranges are not set to a default, so can range check early.
-  if (start < 0 || this.length < start || this.length < end) {
-    throw new RangeError('Out of range index')
-  }
-
-  if (end <= start) {
-    return this
-  }
-
-  start = start >>> 0
-  end = end === undefined ? this.length : end >>> 0
-
-  if (!val) val = 0
-
-  let i
-  if (typeof val === 'number') {
-    for (i = start; i < end; ++i) {
-      this[i] = val
-    }
-  } else {
-    const bytes = Buffer.isBuffer(val)
-      ? val
-      : Buffer.from(val, encoding)
-    const len = bytes.length
-    if (len === 0) {
-      throw new TypeError('The value "' + val +
-        '" is invalid for argument "value"')
-    }
-    for (i = 0; i < end - start; ++i) {
-      this[i + start] = bytes[i % len]
-    }
-  }
-
-  return this
-}
-
-// CUSTOM ERRORS
-// =============
-
-// Simplified versions from Node, changed for Buffer-only usage
-const errors = {}
-function E (sym, getMessage, Base) {
-  errors[sym] = class NodeError extends Base {
-    constructor () {
-      super()
-
-      Object.defineProperty(this, 'message', {
-        value: getMessage.apply(this, arguments),
-        writable: true,
-        configurable: true
-      })
-
-      // Add the error code to the name to include it in the stack trace.
-      this.name = `${this.name} [${sym}]`
-      // Access the stack to generate the error message including the error code
-      // from the name.
-      this.stack // eslint-disable-line no-unused-expressions
-      // Reset the name to the actual name.
-      delete this.name
-    }
-
-    get code () {
-      return sym
-    }
-
-    set code (value) {
-      Object.defineProperty(this, 'code', {
-        configurable: true,
-        enumerable: true,
-        value,
-        writable: true
-      })
-    }
-
-    toString () {
-      return `${this.name} [${sym}]: ${this.message}`
-    }
-  }
-}
-
-E('ERR_BUFFER_OUT_OF_BOUNDS',
-  function (name) {
-    if (name) {
-      return `${name} is outside of buffer bounds`
-    }
-
-    return 'Attempt to access memory outside buffer bounds'
-  }, RangeError)
-E('ERR_INVALID_ARG_TYPE',
-  function (name, actual) {
-    return `The "${name}" argument must be of type number. Received type ${typeof actual}`
-  }, TypeError)
-E('ERR_OUT_OF_RANGE',
-  function (str, range, input) {
-    let msg = `The value of "${str}" is out of range.`
-    let received = input
-    if (Number.isInteger(input) && Math.abs(input) > 2 ** 32) {
-      received = addNumericalSeparator(String(input))
-    } else if (typeof input === 'bigint') {
-      received = String(input)
-      if (input > BigInt(2) ** BigInt(32) || input < -(BigInt(2) ** BigInt(32))) {
-        received = addNumericalSeparator(received)
-      }
-      received += 'n'
-    }
-    msg += ` It must be ${range}. Received ${received}`
-    return msg
-  }, RangeError)
-
-function addNumericalSeparator (val) {
-  let res = ''
-  let i = val.length
-  const start = val[0] === '-' ? 1 : 0
-  for (; i >= start + 4; i -= 3) {
-    res = `_${val.slice(i - 3, i)}${res}`
-  }
-  return `${val.slice(0, i)}${res}`
-}
-
-// CHECK FUNCTIONS
-// ===============
-
-function checkBounds (buf, offset, byteLength) {
-  validateNumber(offset, 'offset')
-  if (buf[offset] === undefined || buf[offset + byteLength] === undefined) {
-    boundsError(offset, buf.length - (byteLength + 1))
-  }
-}
-
-function checkIntBI (value, min, max, buf, offset, byteLength) {
-  if (value > max || value < min) {
-    const n = typeof min === 'bigint' ? 'n' : ''
-    let range
-    if (byteLength > 3) {
-      if (min === 0 || min === BigInt(0)) {
-        range = `>= 0${n} and < 2${n} ** ${(byteLength + 1) * 8}${n}`
-      } else {
-        range = `>= -(2${n} ** ${(byteLength + 1) * 8 - 1}${n}) and < 2 ** ` +
-                `${(byteLength + 1) * 8 - 1}${n}`
-      }
-    } else {
-      range = `>= ${min}${n} and <= ${max}${n}`
-    }
-    throw new errors.ERR_OUT_OF_RANGE('value', range, value)
-  }
-  checkBounds(buf, offset, byteLength)
-}
-
-function validateNumber (value, name) {
-  if (typeof value !== 'number') {
-    throw new errors.ERR_INVALID_ARG_TYPE(name, 'number', value)
-  }
-}
-
-function boundsError (value, length, type) {
-  if (Math.floor(value) !== value) {
-    validateNumber(value, type)
-    throw new errors.ERR_OUT_OF_RANGE(type || 'offset', 'an integer', value)
-  }
-
-  if (length < 0) {
-    throw new errors.ERR_BUFFER_OUT_OF_BOUNDS()
-  }
-
-  throw new errors.ERR_OUT_OF_RANGE(type || 'offset',
-                                    `>= ${type ? 1 : 0} and <= ${length}`,
-                                    value)
-}
-
-// HELPER FUNCTIONS
-// ================
-
-const INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g
-
-function base64clean (str) {
-  // Node takes equal signs as end of the Base64 encoding
-  str = str.split('=')[0]
-  // Node strips out invalid characters like \n and \t from the string, base64-js does not
-  str = str.trim().replace(INVALID_BASE64_RE, '')
-  // Node converts strings with length < 2 to ''
-  if (str.length < 2) return ''
-  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
-  while (str.length % 4 !== 0) {
-    str = str + '='
-  }
-  return str
-}
-
-function utf8ToBytes (string, units) {
-  units = units || Infinity
-  let codePoint
-  const length = string.length
-  let leadSurrogate = null
-  const bytes = []
-
-  for (let i = 0; i < length; ++i) {
-    codePoint = string.charCodeAt(i)
-
-    // is surrogate component
-    if (codePoint > 0xD7FF && codePoint < 0xE000) {
-      // last char was a lead
-      if (!leadSurrogate) {
-        // no lead yet
-        if (codePoint > 0xDBFF) {
-          // unexpected trail
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        } else if (i + 1 === length) {
-          // unpaired lead
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        }
-
-        // valid lead
-        leadSurrogate = codePoint
-
-        continue
-      }
-
-      // 2 leads in a row
-      if (codePoint < 0xDC00) {
-        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-        leadSurrogate = codePoint
-        continue
-      }
-
-      // valid surrogate pair
-      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
-    } else if (leadSurrogate) {
-      // valid bmp char, but last char was a lead
-      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-    }
-
-    leadSurrogate = null
-
-    // encode utf8
-    if (codePoint < 0x80) {
-      if ((units -= 1) < 0) break
-      bytes.push(codePoint)
-    } else if (codePoint < 0x800) {
-      if ((units -= 2) < 0) break
-      bytes.push(
-        codePoint >> 0x6 | 0xC0,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x10000) {
-      if ((units -= 3) < 0) break
-      bytes.push(
-        codePoint >> 0xC | 0xE0,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x110000) {
-      if ((units -= 4) < 0) break
-      bytes.push(
-        codePoint >> 0x12 | 0xF0,
-        codePoint >> 0xC & 0x3F | 0x80,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else {
-      throw new Error('Invalid code point')
-    }
-  }
-
-  return bytes
-}
-
-function asciiToBytes (str) {
-  const byteArray = []
-  for (let i = 0; i < str.length; ++i) {
-    // Node's code seems to be doing this and not & 0x7F..
-    byteArray.push(str.charCodeAt(i) & 0xFF)
-  }
-  return byteArray
-}
-
-function utf16leToBytes (str, units) {
-  let c, hi, lo
-  const byteArray = []
-  for (let i = 0; i < str.length; ++i) {
-    if ((units -= 2) < 0) break
-
-    c = str.charCodeAt(i)
-    hi = c >> 8
-    lo = c % 256
-    byteArray.push(lo)
-    byteArray.push(hi)
-  }
-
-  return byteArray
-}
-
-function base64ToBytes (str) {
-  return base64.toByteArray(base64clean(str))
-}
-
-function blitBuffer (src, dst, offset, length) {
-  let i
-  for (i = 0; i < length; ++i) {
-    if ((i + offset >= dst.length) || (i >= src.length)) break
-    dst[i + offset] = src[i]
-  }
-  return i
-}
-
-// ArrayBuffer or Uint8Array objects from other contexts (i.e. iframes) do not pass
-// the `instanceof` check but they should be treated as of that type.
-// See: https://github.com/feross/buffer/issues/166
-function isInstance (obj, type) {
-  return obj instanceof type ||
-    (obj != null && obj.constructor != null && obj.constructor.name != null &&
-      obj.constructor.name === type.name)
-}
-function numberIsNaN (obj) {
-  // For IE11 support
-  return obj !== obj // eslint-disable-line no-self-compare
-}
-
-// Create lookup table for `toString('hex')`
-// See: https://github.com/feross/buffer/issues/219
-const hexSliceLookupTable = (function () {
-  const alphabet = '0123456789abcdef'
-  const table = new Array(256)
-  for (let i = 0; i < 16; ++i) {
-    const i16 = i * 16
-    for (let j = 0; j < 16; ++j) {
-      table[i16 + j] = alphabet[i] + alphabet[j]
-    }
-  }
-  return table
-})()
-
-// Return not function with Error if BigInt not supported
-function defineBigIntMethod (fn) {
-  return typeof BigInt === 'undefined' ? BufferBigIntNotDefined : fn
-}
-
-function BufferBigIntNotDefined () {
-  throw new Error('BigInt not supported')
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/@solana/buffer-layout/lib/Layout.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@solana/buffer-layout/lib/Layout.js ***!
@@ -28834,6 +16900,17 @@ exports.utf8 = ((maxSpan, property) => new UTF8(maxSpan, property));
 /** Factory for {@link Constant} values. */
 exports.constant = ((value, property) => new Constant(value, property));
 //# sourceMappingURL=Layout.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@solana/qr-code-styling/lib/qr-code-styling.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@solana/qr-code-styling/lib/qr-code-styling.js ***!
+  \*********************************************************************/
+/***/ (function(module) {
+
+!function(t,e){ true?module.exports=e():0}(this,(function(){return(()=>{var t={192:(t,e)=>{var r,n,o=function(){var t=function(t,e){var r=t,n=a[e],o=null,i=0,c=null,v=[],w={},m=function(t,e){o=function(t){for(var e=new Array(t),r=0;r<t;r+=1){e[r]=new Array(t);for(var n=0;n<t;n+=1)e[r][n]=null}return e}(i=4*r+17),_(0,0),_(i-7,0),_(0,i-7),x(),b(),C(t,e),r>=7&&S(t),null==c&&(c=M(r,n,v)),A(c,e)},_=function(t,e){for(var r=-1;r<=7;r+=1)if(!(t+r<=-1||i<=t+r))for(var n=-1;n<=7;n+=1)e+n<=-1||i<=e+n||(o[t+r][e+n]=0<=r&&r<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==r||6==r)||2<=r&&r<=4&&2<=n&&n<=4)},b=function(){for(var t=8;t<i-8;t+=1)null==o[t][6]&&(o[t][6]=t%2==0);for(var e=8;e<i-8;e+=1)null==o[6][e]&&(o[6][e]=e%2==0)},x=function(){for(var t=s.getPatternPosition(r),e=0;e<t.length;e+=1)for(var n=0;n<t.length;n+=1){var i=t[e],a=t[n];if(null==o[i][a])for(var c=-2;c<=2;c+=1)for(var u=-2;u<=2;u+=1)o[i+c][a+u]=-2==c||2==c||-2==u||2==u||0==c&&0==u}},S=function(t){for(var e=s.getBCHTypeNumber(r),n=0;n<18;n+=1){var a=!t&&1==(e>>n&1);o[Math.floor(n/3)][n%3+i-8-3]=a}for(n=0;n<18;n+=1)a=!t&&1==(e>>n&1),o[n%3+i-8-3][Math.floor(n/3)]=a},C=function(t,e){for(var r=n<<3|e,a=s.getBCHTypeInfo(r),c=0;c<15;c+=1){var u=!t&&1==(a>>c&1);c<6?o[c][8]=u:c<8?o[c+1][8]=u:o[i-15+c][8]=u}for(c=0;c<15;c+=1)u=!t&&1==(a>>c&1),c<8?o[8][i-c-1]=u:c<9?o[8][15-c-1+1]=u:o[8][15-c-1]=u;o[i-8][8]=!t},A=function(t,e){for(var r=-1,n=i-1,a=7,c=0,u=s.getMaskFunction(e),h=i-1;h>0;h-=2)for(6==h&&(h-=1);;){for(var l=0;l<2;l+=1)if(null==o[n][h-l]){var d=!1;c<t.length&&(d=1==(t[c]>>>a&1)),u(n,h-l)&&(d=!d),o[n][h-l]=d,-1==(a-=1)&&(c+=1,a=7)}if((n+=r)<0||i<=n){n-=r,r=-r;break}}},M=function(t,e,r){for(var n=h.getRSBlocks(t,e),o=l(),i=0;i<r.length;i+=1){var a=r[i];o.put(a.getMode(),4),o.put(a.getLength(),s.getLengthInBits(a.getMode(),t)),a.write(o)}var c=0;for(i=0;i<n.length;i+=1)c+=n[i].dataCount;if(o.getLengthInBits()>8*c)throw"code length overflow. ("+o.getLengthInBits()+">"+8*c+")";for(o.getLengthInBits()+4<=8*c&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=8*c||(o.put(236,8),o.getLengthInBits()>=8*c));)o.put(17,8);return function(t,e){for(var r=0,n=0,o=0,i=new Array(e.length),a=new Array(e.length),c=0;c<e.length;c+=1){var h=e[c].dataCount,l=e[c].totalCount-h;n=Math.max(n,h),o=Math.max(o,l),i[c]=new Array(h);for(var d=0;d<i[c].length;d+=1)i[c][d]=255&t.getBuffer()[d+r];r+=h;var f=s.getErrorCorrectPolynomial(l),g=u(i[c],f.getLength()-1).mod(f);for(a[c]=new Array(f.getLength()-1),d=0;d<a[c].length;d+=1){var p=d+g.getLength()-a[c].length;a[c][d]=p>=0?g.getAt(p):0}}var v=0;for(d=0;d<e.length;d+=1)v+=e[d].totalCount;var w=new Array(v),y=0;for(d=0;d<n;d+=1)for(c=0;c<e.length;c+=1)d<i[c].length&&(w[y]=i[c][d],y+=1);for(d=0;d<o;d+=1)for(c=0;c<e.length;c+=1)d<a[c].length&&(w[y]=a[c][d],y+=1);return w}(o,n)};w.addData=function(t,e){var r=null;switch(e=e||"Byte"){case"Numeric":r=d(t);break;case"Alphanumeric":r=f(t);break;case"Byte":r=g(t);break;case"Kanji":r=p(t);break;default:throw"mode:"+e}v.push(r),c=null},w.isDark=function(t,e){if(t<0||i<=t||e<0||i<=e)throw t+","+e;return o[t][e]},w.getModuleCount=function(){return i},w.make=function(){if(r<1){for(var t=1;t<40;t++){for(var e=h.getRSBlocks(t,n),o=l(),i=0;i<v.length;i++){var a=v[i];o.put(a.getMode(),4),o.put(a.getLength(),s.getLengthInBits(a.getMode(),t)),a.write(o)}var c=0;for(i=0;i<e.length;i++)c+=e[i].dataCount;if(o.getLengthInBits()<=8*c)break}r=t}m(!1,function(){for(var t=0,e=0,r=0;r<8;r+=1){m(!0,r);var n=s.getLostPoint(w);(0==r||t>n)&&(t=n,e=r)}return e}())},w.createTableTag=function(t,e){t=t||2;var r="";r+='<table style="',r+=" border-width: 0px; border-style: none;",r+=" border-collapse: collapse;",r+=" padding: 0px; margin: "+(e=void 0===e?4*t:e)+"px;",r+='">',r+="<tbody>";for(var n=0;n<w.getModuleCount();n+=1){r+="<tr>";for(var o=0;o<w.getModuleCount();o+=1)r+='<td style="',r+=" border-width: 0px; border-style: none;",r+=" border-collapse: collapse;",r+=" padding: 0px; margin: 0px;",r+=" width: "+t+"px;",r+=" height: "+t+"px;",r+=" background-color: ",r+=w.isDark(n,o)?"#000000":"#ffffff",r+=";",r+='"/>';r+="</tr>"}return(r+="</tbody>")+"</table>"},w.createSvgTag=function(t,e,r,n){var o={};"object"==typeof arguments[0]&&(t=(o=arguments[0]).cellSize,e=o.margin,r=o.alt,n=o.title),t=t||2,e=void 0===e?4*t:e,(r="string"==typeof r?{text:r}:r||{}).text=r.text||null,r.id=r.text?r.id||"qrcode-description":null,(n="string"==typeof n?{text:n}:n||{}).text=n.text||null,n.id=n.text?n.id||"qrcode-title":null;var i,a,s,c,u=w.getModuleCount()*t+2*e,h="";for(c="l"+t+",0 0,"+t+" -"+t+",0 0,-"+t+"z ",h+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',h+=o.scalable?"":' width="'+u+'px" height="'+u+'px"',h+=' viewBox="0 0 '+u+" "+u+'" ',h+=' preserveAspectRatio="xMinYMin meet"',h+=n.text||r.text?' role="img" aria-labelledby="'+k([n.id,r.id].join(" ").trim())+'"':"",h+=">",h+=n.text?'<title id="'+k(n.id)+'">'+k(n.text)+"</title>":"",h+=r.text?'<description id="'+k(r.id)+'">'+k(r.text)+"</description>":"",h+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',h+='<path d="',a=0;a<w.getModuleCount();a+=1)for(s=a*t+e,i=0;i<w.getModuleCount();i+=1)w.isDark(a,i)&&(h+="M"+(i*t+e)+","+s+c);return(h+='" stroke="transparent" fill="black"/>')+"</svg>"},w.createDataURL=function(t,e){t=t||2,e=void 0===e?4*t:e;var r=w.getModuleCount()*t+2*e,n=e,o=r-e;return y(r,r,(function(e,r){if(n<=e&&e<o&&n<=r&&r<o){var i=Math.floor((e-n)/t),a=Math.floor((r-n)/t);return w.isDark(a,i)?0:1}return 1}))},w.createImgTag=function(t,e,r){t=t||2,e=void 0===e?4*t:e;var n=w.getModuleCount()*t+2*e,o="";return o+="<img",o+=' src="',o+=w.createDataURL(t,e),o+='"',o+=' width="',o+=n,o+='"',o+=' height="',o+=n,o+='"',r&&(o+=' alt="',o+=k(r),o+='"'),o+"/>"};var k=function(t){for(var e="",r=0;r<t.length;r+=1){var n=t.charAt(r);switch(n){case"<":e+="&lt;";break;case">":e+="&gt;";break;case"&":e+="&amp;";break;case'"':e+="&quot;";break;default:e+=n}}return e};return w.createASCII=function(t,e){if((t=t||1)<2)return function(t){t=void 0===t?2:t;var e,r,n,o,i,a=1*w.getModuleCount()+2*t,s=t,c=a-t,u={"██":"█","█ ":"▀"," █":"▄","  ":" "},h={"██":"▀","█ ":"▀"," █":" ","  ":" "},l="";for(e=0;e<a;e+=2){for(n=Math.floor((e-s)/1),o=Math.floor((e+1-s)/1),r=0;r<a;r+=1)i="█",s<=r&&r<c&&s<=e&&e<c&&w.isDark(n,Math.floor((r-s)/1))&&(i=" "),s<=r&&r<c&&s<=e+1&&e+1<c&&w.isDark(o,Math.floor((r-s)/1))?i+=" ":i+="█",l+=t<1&&e+1>=c?h[i]:u[i];l+="\n"}return a%2&&t>0?l.substring(0,l.length-a-1)+Array(a+1).join("▀"):l.substring(0,l.length-1)}(e);t-=1,e=void 0===e?2*t:e;var r,n,o,i,a=w.getModuleCount()*t+2*e,s=e,c=a-e,u=Array(t+1).join("██"),h=Array(t+1).join("  "),l="",d="";for(r=0;r<a;r+=1){for(o=Math.floor((r-s)/t),d="",n=0;n<a;n+=1)i=1,s<=n&&n<c&&s<=r&&r<c&&w.isDark(o,Math.floor((n-s)/t))&&(i=0),d+=i?u:h;for(o=0;o<t;o+=1)l+=d+"\n"}return l.substring(0,l.length-1)},w.renderTo2dContext=function(t,e){e=e||2;for(var r=w.getModuleCount(),n=0;n<r;n++)for(var o=0;o<r;o++)t.fillStyle=w.isDark(n,o)?"black":"white",t.fillRect(n*e,o*e,e,e)},w};t.stringToBytes=(t.stringToBytesFuncs={default:function(t){for(var e=[],r=0;r<t.length;r+=1){var n=t.charCodeAt(r);e.push(255&n)}return e}}).default,t.createStringToBytes=function(t,e){var r=function(){for(var r=w(t),n=function(){var t=r.read();if(-1==t)throw"eof";return t},o=0,i={};;){var a=r.read();if(-1==a)break;var s=n(),c=n()<<8|n();i[String.fromCharCode(a<<8|s)]=c,o+=1}if(o!=e)throw o+" != "+e;return i}(),n="?".charCodeAt(0);return function(t){for(var e=[],o=0;o<t.length;o+=1){var i=t.charCodeAt(o);if(i<128)e.push(i);else{var a=r[t.charAt(o)];"number"==typeof a?(255&a)==a?e.push(a):(e.push(a>>>8),e.push(255&a)):e.push(n)}}return e}};var e,r,n,o,i,a={L:1,M:0,Q:3,H:2},s=(e=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],r=1335,n=7973,i=function(t){for(var e=0;0!=t;)e+=1,t>>>=1;return e},(o={}).getBCHTypeInfo=function(t){for(var e=t<<10;i(e)-i(r)>=0;)e^=r<<i(e)-i(r);return 21522^(t<<10|e)},o.getBCHTypeNumber=function(t){for(var e=t<<12;i(e)-i(n)>=0;)e^=n<<i(e)-i(n);return t<<12|e},o.getPatternPosition=function(t){return e[t-1]},o.getMaskFunction=function(t){switch(t){case 0:return function(t,e){return(t+e)%2==0};case 1:return function(t,e){return t%2==0};case 2:return function(t,e){return e%3==0};case 3:return function(t,e){return(t+e)%3==0};case 4:return function(t,e){return(Math.floor(t/2)+Math.floor(e/3))%2==0};case 5:return function(t,e){return t*e%2+t*e%3==0};case 6:return function(t,e){return(t*e%2+t*e%3)%2==0};case 7:return function(t,e){return(t*e%3+(t+e)%2)%2==0};default:throw"bad maskPattern:"+t}},o.getErrorCorrectPolynomial=function(t){for(var e=u([1],0),r=0;r<t;r+=1)e=e.multiply(u([1,c.gexp(r)],0));return e},o.getLengthInBits=function(t,e){if(1<=e&&e<10)switch(t){case 1:return 10;case 2:return 9;case 4:case 8:return 8;default:throw"mode:"+t}else if(e<27)switch(t){case 1:return 12;case 2:return 11;case 4:return 16;case 8:return 10;default:throw"mode:"+t}else{if(!(e<41))throw"type:"+e;switch(t){case 1:return 14;case 2:return 13;case 4:return 16;case 8:return 12;default:throw"mode:"+t}}},o.getLostPoint=function(t){for(var e=t.getModuleCount(),r=0,n=0;n<e;n+=1)for(var o=0;o<e;o+=1){for(var i=0,a=t.isDark(n,o),s=-1;s<=1;s+=1)if(!(n+s<0||e<=n+s))for(var c=-1;c<=1;c+=1)o+c<0||e<=o+c||0==s&&0==c||a==t.isDark(n+s,o+c)&&(i+=1);i>5&&(r+=3+i-5)}for(n=0;n<e-1;n+=1)for(o=0;o<e-1;o+=1){var u=0;t.isDark(n,o)&&(u+=1),t.isDark(n+1,o)&&(u+=1),t.isDark(n,o+1)&&(u+=1),t.isDark(n+1,o+1)&&(u+=1),0!=u&&4!=u||(r+=3)}for(n=0;n<e;n+=1)for(o=0;o<e-6;o+=1)t.isDark(n,o)&&!t.isDark(n,o+1)&&t.isDark(n,o+2)&&t.isDark(n,o+3)&&t.isDark(n,o+4)&&!t.isDark(n,o+5)&&t.isDark(n,o+6)&&(r+=40);for(o=0;o<e;o+=1)for(n=0;n<e-6;n+=1)t.isDark(n,o)&&!t.isDark(n+1,o)&&t.isDark(n+2,o)&&t.isDark(n+3,o)&&t.isDark(n+4,o)&&!t.isDark(n+5,o)&&t.isDark(n+6,o)&&(r+=40);var h=0;for(o=0;o<e;o+=1)for(n=0;n<e;n+=1)t.isDark(n,o)&&(h+=1);return r+Math.abs(100*h/e/e-50)/5*10},o),c=function(){for(var t=new Array(256),e=new Array(256),r=0;r<8;r+=1)t[r]=1<<r;for(r=8;r<256;r+=1)t[r]=t[r-4]^t[r-5]^t[r-6]^t[r-8];for(r=0;r<255;r+=1)e[t[r]]=r;return{glog:function(t){if(t<1)throw"glog("+t+")";return e[t]},gexp:function(e){for(;e<0;)e+=255;for(;e>=256;)e-=255;return t[e]}}}();function u(t,e){if(void 0===t.length)throw t.length+"/"+e;var r=function(){for(var r=0;r<t.length&&0==t[r];)r+=1;for(var n=new Array(t.length-r+e),o=0;o<t.length-r;o+=1)n[o]=t[o+r];return n}(),n={getAt:function(t){return r[t]},getLength:function(){return r.length},multiply:function(t){for(var e=new Array(n.getLength()+t.getLength()-1),r=0;r<n.getLength();r+=1)for(var o=0;o<t.getLength();o+=1)e[r+o]^=c.gexp(c.glog(n.getAt(r))+c.glog(t.getAt(o)));return u(e,0)},mod:function(t){if(n.getLength()-t.getLength()<0)return n;for(var e=c.glog(n.getAt(0))-c.glog(t.getAt(0)),r=new Array(n.getLength()),o=0;o<n.getLength();o+=1)r[o]=n.getAt(o);for(o=0;o<t.getLength();o+=1)r[o]^=c.gexp(c.glog(t.getAt(o))+e);return u(r,0).mod(t)}};return n}var h=function(){var t=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],e=function(t,e){var r={};return r.totalCount=t,r.dataCount=e,r},r={getRSBlocks:function(r,n){var o=function(e,r){switch(r){case a.L:return t[4*(e-1)+0];case a.M:return t[4*(e-1)+1];case a.Q:return t[4*(e-1)+2];case a.H:return t[4*(e-1)+3];default:return}}(r,n);if(void 0===o)throw"bad rs block @ typeNumber:"+r+"/errorCorrectionLevel:"+n;for(var i=o.length/3,s=[],c=0;c<i;c+=1)for(var u=o[3*c+0],h=o[3*c+1],l=o[3*c+2],d=0;d<u;d+=1)s.push(e(h,l));return s}};return r}(),l=function(){var t=[],e=0,r={getBuffer:function(){return t},getAt:function(e){var r=Math.floor(e/8);return 1==(t[r]>>>7-e%8&1)},put:function(t,e){for(var n=0;n<e;n+=1)r.putBit(1==(t>>>e-n-1&1))},getLengthInBits:function(){return e},putBit:function(r){var n=Math.floor(e/8);t.length<=n&&t.push(0),r&&(t[n]|=128>>>e%8),e+=1}};return r},d=function(t){var e=t,r={getMode:function(){return 1},getLength:function(t){return e.length},write:function(t){for(var r=e,o=0;o+2<r.length;)t.put(n(r.substring(o,o+3)),10),o+=3;o<r.length&&(r.length-o==1?t.put(n(r.substring(o,o+1)),4):r.length-o==2&&t.put(n(r.substring(o,o+2)),7))}},n=function(t){for(var e=0,r=0;r<t.length;r+=1)e=10*e+o(t.charAt(r));return e},o=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+t};return r},f=function(t){var e=t,r={getMode:function(){return 2},getLength:function(t){return e.length},write:function(t){for(var r=e,o=0;o+1<r.length;)t.put(45*n(r.charAt(o))+n(r.charAt(o+1)),11),o+=2;o<r.length&&t.put(n(r.charAt(o)),6)}},n=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);if("A"<=t&&t<="Z")return t.charCodeAt(0)-"A".charCodeAt(0)+10;switch(t){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+t}};return r},g=function(e){var r=t.stringToBytes(e);return{getMode:function(){return 4},getLength:function(t){return r.length},write:function(t){for(var e=0;e<r.length;e+=1)t.put(r[e],8)}}},p=function(e){var r=t.stringToBytesFuncs.SJIS;if(!r)throw"sjis not supported.";!function(t,e){var n=r("友");if(2!=n.length||38726!=(n[0]<<8|n[1]))throw"sjis not supported."}();var n=r(e),o={getMode:function(){return 8},getLength:function(t){return~~(n.length/2)},write:function(t){for(var e=n,r=0;r+1<e.length;){var o=(255&e[r])<<8|255&e[r+1];if(33088<=o&&o<=40956)o-=33088;else{if(!(57408<=o&&o<=60351))throw"illegal char at "+(r+1)+"/"+o;o-=49472}o=192*(o>>>8&255)+(255&o),t.put(o,13),r+=2}if(r<e.length)throw"illegal char at "+(r+1)}};return o},v=function(){var t=[],e={writeByte:function(e){t.push(255&e)},writeShort:function(t){e.writeByte(t),e.writeByte(t>>>8)},writeBytes:function(t,r,n){r=r||0,n=n||t.length;for(var o=0;o<n;o+=1)e.writeByte(t[o+r])},writeString:function(t){for(var r=0;r<t.length;r+=1)e.writeByte(t.charCodeAt(r))},toByteArray:function(){return t},toString:function(){var e="";e+="[";for(var r=0;r<t.length;r+=1)r>0&&(e+=","),e+=t[r];return e+"]"}};return e},w=function(t){var e=t,r=0,n=0,o=0,i={read:function(){for(;o<8;){if(r>=e.length){if(0==o)return-1;throw"unexpected end of file./"+o}var t=e.charAt(r);if(r+=1,"="==t)return o=0,-1;t.match(/^\s$/)||(n=n<<6|a(t.charCodeAt(0)),o+=6)}var i=n>>>o-8&255;return o-=8,i}},a=function(t){if(65<=t&&t<=90)return t-65;if(97<=t&&t<=122)return t-97+26;if(48<=t&&t<=57)return t-48+52;if(43==t)return 62;if(47==t)return 63;throw"c:"+t};return i},y=function(t,e,r){for(var n=function(t,e){var r=t,n=e,o=new Array(t*e),i={setPixel:function(t,e,n){o[e*r+t]=n},write:function(t){t.writeString("GIF87a"),t.writeShort(r),t.writeShort(n),t.writeByte(128),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(255),t.writeByte(255),t.writeByte(255),t.writeString(","),t.writeShort(0),t.writeShort(0),t.writeShort(r),t.writeShort(n),t.writeByte(0);var e=a(2);t.writeByte(2);for(var o=0;e.length-o>255;)t.writeByte(255),t.writeBytes(e,o,255),o+=255;t.writeByte(e.length-o),t.writeBytes(e,o,e.length-o),t.writeByte(0),t.writeString(";")}},a=function(t){for(var e=1<<t,r=1+(1<<t),n=t+1,i=s(),a=0;a<e;a+=1)i.add(String.fromCharCode(a));i.add(String.fromCharCode(e)),i.add(String.fromCharCode(r));var c,u,h,l=v(),d=(c=l,u=0,h=0,{write:function(t,e){if(t>>>e!=0)throw"length over";for(;u+e>=8;)c.writeByte(255&(t<<u|h)),e-=8-u,t>>>=8-u,h=0,u=0;h|=t<<u,u+=e},flush:function(){u>0&&c.writeByte(h)}});d.write(e,n);var f=0,g=String.fromCharCode(o[f]);for(f+=1;f<o.length;){var p=String.fromCharCode(o[f]);f+=1,i.contains(g+p)?g+=p:(d.write(i.indexOf(g),n),i.size()<4095&&(i.size()==1<<n&&(n+=1),i.add(g+p)),g=p)}return d.write(i.indexOf(g),n),d.write(r,n),d.flush(),l.toByteArray()},s=function(){var t={},e=0,r={add:function(n){if(r.contains(n))throw"dup key:"+n;t[n]=e,e+=1},size:function(){return e},indexOf:function(e){return t[e]},contains:function(e){return void 0!==t[e]}};return r};return i}(t,e),o=0;o<e;o+=1)for(var i=0;i<t;i+=1)n.setPixel(i,o,r(i,o));var a=v();n.write(a);for(var s=function(){var t=0,e=0,r=0,n="",o={},i=function(t){n+=String.fromCharCode(a(63&t))},a=function(t){if(t<0);else{if(t<26)return 65+t;if(t<52)return t-26+97;if(t<62)return t-52+48;if(62==t)return 43;if(63==t)return 47}throw"n:"+t};return o.writeByte=function(n){for(t=t<<8|255&n,e+=8,r+=1;e>=6;)i(t>>>e-6),e-=6},o.flush=function(){if(e>0&&(i(t<<6-e),t=0,e=0),r%3!=0)for(var o=3-r%3,a=0;a<o;a+=1)n+="="},o.toString=function(){return n},o}(),c=a.toByteArray(),u=0;u<c.length;u+=1)s.writeByte(c[u]);return s.flush(),"data:image/gif;base64,"+s};return t}();o.stringToBytesFuncs["UTF-8"]=function(t){return function(t){for(var e=[],r=0;r<t.length;r++){var n=t.charCodeAt(r);n<128?e.push(n):n<2048?e.push(192|n>>6,128|63&n):n<55296||n>=57344?e.push(224|n>>12,128|n>>6&63,128|63&n):(r++,n=65536+((1023&n)<<10|1023&t.charCodeAt(r)),e.push(240|n>>18,128|n>>12&63,128|n>>6&63,128|63&n))}return e}(t)},void 0===(n="function"==typeof(r=function(){return o})?r.apply(e,[]):r)||(t.exports=n)}},e={};function r(n){var o=e[n];if(void 0!==o)return o.exports;var i=e[n]={exports:{}};return t[n](i,i.exports,r),i.exports}r.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return r.d(e,{a:e}),e},r.d=(t,e)=>{for(var n in e)r.o(e,n)&&!r.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},r.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e);var n={};return(()=>{"use strict";r.d(n,{default:()=>E});var t=function(){return t=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var o in e=arguments[r])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},t.apply(this,arguments)},e=function(t,e,r){if(r||2===arguments.length)for(var n,o=0,i=e.length;o<i;o++)!n&&o in e||(n||(n=Array.prototype.slice.call(e,0,o)),n[o]=e[o]);return t.concat(n||Array.prototype.slice.call(e))},o=function(t){return!!t&&"object"==typeof t&&!Array.isArray(t)};function i(r){for(var n=[],a=1;a<arguments.length;a++)n[a-1]=arguments[a];if(!n.length)return r;var s=n.shift();return void 0!==s&&o(r)&&o(s)?(r=t({},r),Object.keys(s).forEach((function(t){var e=r[t],n=s[t];Array.isArray(e)&&Array.isArray(n)?r[t]=n:o(e)&&o(n)?r[t]=i(Object.assign({},e),n):r[t]=n})),i.apply(void 0,e([r],n,!1))):r}function a(t,e){var r=document.createElement("a");r.download=e,r.href=t,document.body.appendChild(r),r.click(),document.body.removeChild(r)}function s(t){return e=this,r=void 0,o=function(){return function(t,e){var r,n,o,i,a={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return i={next:s(0),throw:s(1),return:s(2)},"function"==typeof Symbol&&(i[Symbol.iterator]=function(){return this}),i;function s(i){return function(s){return function(i){if(r)throw new TypeError("Generator is already executing.");for(;a;)try{if(r=1,n&&(o=2&i[0]?n.return:i[0]?n.throw||((o=n.return)&&o.call(n),0):n.next)&&!(o=o.call(n,i[1])).done)return o;switch(n=0,o&&(i=[2&i[0],o.value]),i[0]){case 0:case 1:o=i;break;case 4:return a.label++,{value:i[1],done:!1};case 5:a.label++,n=i[1],i=[0];continue;case 7:i=a.ops.pop(),a.trys.pop();continue;default:if(!((o=(o=a.trys).length>0&&o[o.length-1])||6!==i[0]&&2!==i[0])){a=0;continue}if(3===i[0]&&(!o||i[1]>o[0]&&i[1]<o[3])){a.label=i[1];break}if(6===i[0]&&a.label<o[1]){a.label=o[1],o=i;break}if(o&&a.label<o[2]){a.label=o[2],a.ops.push(i);break}o[2]&&a.ops.pop(),a.trys.pop();continue}i=e.call(t,a)}catch(t){i=[6,t],n=0}finally{r=o=0}if(5&i[0])throw i[1];return{value:i[0]?i[1]:void 0,done:!0}}([i,s])}}}(this,(function(e){return[2,new Promise((function(e){var r=new XMLHttpRequest;r.onload=function(){var t=new FileReader;t.onloadend=function(){e(t.result)},t.readAsDataURL(r.response)},r.open("GET",t),r.responseType="blob",r.send()}))]}))},new((n=void 0)||(n=Promise))((function(t,i){function a(t){try{c(o.next(t))}catch(t){i(t)}}function s(t){try{c(o.throw(t))}catch(t){i(t)}}function c(e){var r;e.done?t(e.value):(r=e.value,r instanceof n?r:new n((function(t){t(r)}))).then(a,s)}c((o=o.apply(e,r||[])).next())}));var e,r,n,o}const c={L:.07,M:.15,Q:.25,H:.3};var u=function(){return u=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var o in e=arguments[r])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},u.apply(this,arguments)},h=function(){function t(t){var e=t.svg,r=t.type;this._svg=e,this._type=r}return t.prototype.draw=function(t,e,r,n){var o;switch(this._type){case"dots":o=this._drawDot;break;case"classy":o=this._drawClassy;break;case"classy-rounded":o=this._drawClassyRounded;break;case"rounded":o=this._drawRounded;break;case"extra-rounded":o=this._drawExtraRounded;break;default:o=this._drawSquare}o.call(this,{x:t,y:e,size:r,getNeighbor:n})},t.prototype._rotateFigure=function(t){var e,r=t.x,n=t.y,o=t.size,i=t.rotation,a=void 0===i?0:i,s=r+o/2,c=n+o/2;(0,t.draw)(),null===(e=this._element)||void 0===e||e.setAttribute("transform","rotate(".concat(180*a/Math.PI,",").concat(s,",").concat(c,")"))},t.prototype._basicDot=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(u(u({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","circle"),e._element.setAttribute("cx",String(n+r/2)),e._element.setAttribute("cy",String(o+r/2)),e._element.setAttribute("r",String(r/2))}}))},t.prototype._basicSquare=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(u(u({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","rect"),e._element.setAttribute("x",String(n)),e._element.setAttribute("y",String(o)),e._element.setAttribute("width",String(r)),e._element.setAttribute("height",String(r))}}))},t.prototype._basicSideRounded=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(u(u({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("d","M ".concat(n," ").concat(o)+"v ".concat(r)+"h ".concat(r/2)+"a ".concat(r/2," ").concat(r/2,", 0, 0, 0, 0 ").concat(-r))}}))},t.prototype._basicCornerRounded=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(u(u({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("d","M ".concat(n," ").concat(o)+"v ".concat(r)+"h ".concat(r)+"v ".concat(-r/2)+"a ".concat(r/2," ").concat(r/2,", 0, 0, 0, ").concat(-r/2," ").concat(-r/2))}}))},t.prototype._basicCornerExtraRounded=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(u(u({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("d","M ".concat(n," ").concat(o)+"v ".concat(r)+"h ".concat(r)+"a ".concat(r," ").concat(r,", 0, 0, 0, ").concat(-r," ").concat(-r))}}))},t.prototype._basicCornersRounded=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(u(u({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("d","M ".concat(n," ").concat(o)+"v ".concat(r/2)+"a ".concat(r/2," ").concat(r/2,", 0, 0, 0, ").concat(r/2," ").concat(r/2)+"h ".concat(r/2)+"v ".concat(-r/2)+"a ".concat(r/2," ").concat(r/2,", 0, 0, 0, ").concat(-r/2," ").concat(-r/2))}}))},t.prototype._drawDot=function(t){var e=t.x,r=t.y,n=t.size;this._basicDot({x:e,y:r,size:n,rotation:0})},t.prototype._drawSquare=function(t){var e=t.x,r=t.y,n=t.size;this._basicSquare({x:e,y:r,size:n,rotation:0})},t.prototype._drawRounded=function(t){var e=t.x,r=t.y,n=t.size,o=t.getNeighbor,i=o?+o(-1,0):0,a=o?+o(1,0):0,s=o?+o(0,-1):0,c=o?+o(0,1):0,u=i+a+s+c;if(0!==u)if(u>2||i&&a||s&&c)this._basicSquare({x:e,y:r,size:n,rotation:0});else{if(2===u){var h=0;return i&&s?h=Math.PI/2:s&&a?h=Math.PI:a&&c&&(h=-Math.PI/2),void this._basicCornerRounded({x:e,y:r,size:n,rotation:h})}if(1===u)return h=0,s?h=Math.PI/2:a?h=Math.PI:c&&(h=-Math.PI/2),void this._basicSideRounded({x:e,y:r,size:n,rotation:h})}else this._basicDot({x:e,y:r,size:n,rotation:0})},t.prototype._drawExtraRounded=function(t){var e=t.x,r=t.y,n=t.size,o=t.getNeighbor,i=o?+o(-1,0):0,a=o?+o(1,0):0,s=o?+o(0,-1):0,c=o?+o(0,1):0,u=i+a+s+c;if(0!==u)if(u>2||i&&a||s&&c)this._basicSquare({x:e,y:r,size:n,rotation:0});else{if(2===u){var h=0;return i&&s?h=Math.PI/2:s&&a?h=Math.PI:a&&c&&(h=-Math.PI/2),void this._basicCornerExtraRounded({x:e,y:r,size:n,rotation:h})}if(1===u)return h=0,s?h=Math.PI/2:a?h=Math.PI:c&&(h=-Math.PI/2),void this._basicSideRounded({x:e,y:r,size:n,rotation:h})}else this._basicDot({x:e,y:r,size:n,rotation:0})},t.prototype._drawClassy=function(t){var e=t.x,r=t.y,n=t.size,o=t.getNeighbor,i=o?+o(-1,0):0,a=o?+o(1,0):0,s=o?+o(0,-1):0,c=o?+o(0,1):0;0!==i+a+s+c?i||s?a||c?this._basicSquare({x:e,y:r,size:n,rotation:0}):this._basicCornerRounded({x:e,y:r,size:n,rotation:Math.PI/2}):this._basicCornerRounded({x:e,y:r,size:n,rotation:-Math.PI/2}):this._basicCornersRounded({x:e,y:r,size:n,rotation:Math.PI/2})},t.prototype._drawClassyRounded=function(t){var e=t.x,r=t.y,n=t.size,o=t.getNeighbor,i=o?+o(-1,0):0,a=o?+o(1,0):0,s=o?+o(0,-1):0,c=o?+o(0,1):0;0!==i+a+s+c?i||s?a||c?this._basicSquare({x:e,y:r,size:n,rotation:0}):this._basicCornerExtraRounded({x:e,y:r,size:n,rotation:Math.PI/2}):this._basicCornerExtraRounded({x:e,y:r,size:n,rotation:-Math.PI/2}):this._basicCornersRounded({x:e,y:r,size:n,rotation:Math.PI/2})},t}();const l=h;var d=function(){return d=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var o in e=arguments[r])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},d.apply(this,arguments)},f=function(){function t(t){var e=t.svg,r=t.type;this._svg=e,this._type=r}return t.prototype.draw=function(t,e,r,n){var o;switch(this._type){case"square":o=this._drawSquare;break;case"extra-rounded":o=this._drawExtraRounded;break;default:o=this._drawDot}o.call(this,{x:t,y:e,size:r,rotation:n})},t.prototype._rotateFigure=function(t){var e,r=t.x,n=t.y,o=t.size,i=t.rotation,a=void 0===i?0:i,s=r+o/2,c=n+o/2;(0,t.draw)(),null===(e=this._element)||void 0===e||e.setAttribute("transform","rotate(".concat(180*a/Math.PI,",").concat(s,",").concat(c,")"))},t.prototype._basicDot=function(t){var e=this,r=t.size,n=t.x,o=t.y,i=r/7;this._rotateFigure(d(d({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("clip-rule","evenodd"),e._element.setAttribute("d","M ".concat(n+r/2," ").concat(o)+"a ".concat(r/2," ").concat(r/2," 0 1 0 0.1 0")+"z"+"m 0 ".concat(i)+"a ".concat(r/2-i," ").concat(r/2-i," 0 1 1 -0.1 0")+"Z")}}))},t.prototype._basicSquare=function(t){var e=this,r=t.size,n=t.x,o=t.y,i=r/7;this._rotateFigure(d(d({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("clip-rule","evenodd"),e._element.setAttribute("d","M ".concat(n," ").concat(o)+"v ".concat(r)+"h ".concat(r)+"v ".concat(-r)+"z"+"M ".concat(n+i," ").concat(o+i)+"h ".concat(r-2*i)+"v ".concat(r-2*i)+"h ".concat(2*i-r)+"z")}}))},t.prototype._basicExtraRounded=function(t){var e=this,r=t.size,n=t.x,o=t.y,i=r/7;this._rotateFigure(d(d({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","path"),e._element.setAttribute("clip-rule","evenodd"),e._element.setAttribute("d","M ".concat(n," ").concat(o+2.5*i)+"v ".concat(2*i)+"a ".concat(2.5*i," ").concat(2.5*i,", 0, 0, 0, ").concat(2.5*i," ").concat(2.5*i)+"h ".concat(2*i)+"a ".concat(2.5*i," ").concat(2.5*i,", 0, 0, 0, ").concat(2.5*i," ").concat(2.5*-i)+"v ".concat(-2*i)+"a ".concat(2.5*i," ").concat(2.5*i,", 0, 0, 0, ").concat(2.5*-i," ").concat(2.5*-i)+"h ".concat(-2*i)+"a ".concat(2.5*i," ").concat(2.5*i,", 0, 0, 0, ").concat(2.5*-i," ").concat(2.5*i)+"M ".concat(n+2.5*i," ").concat(o+i)+"h ".concat(2*i)+"a ".concat(1.5*i," ").concat(1.5*i,", 0, 0, 1, ").concat(1.5*i," ").concat(1.5*i)+"v ".concat(2*i)+"a ".concat(1.5*i," ").concat(1.5*i,", 0, 0, 1, ").concat(1.5*-i," ").concat(1.5*i)+"h ".concat(-2*i)+"a ".concat(1.5*i," ").concat(1.5*i,", 0, 0, 1, ").concat(1.5*-i," ").concat(1.5*-i)+"v ".concat(-2*i)+"a ".concat(1.5*i," ").concat(1.5*i,", 0, 0, 1, ").concat(1.5*i," ").concat(1.5*-i))}}))},t.prototype._drawDot=function(t){var e=t.x,r=t.y,n=t.size,o=t.rotation;this._basicDot({x:e,y:r,size:n,rotation:o})},t.prototype._drawSquare=function(t){var e=t.x,r=t.y,n=t.size,o=t.rotation;this._basicSquare({x:e,y:r,size:n,rotation:o})},t.prototype._drawExtraRounded=function(t){var e=t.x,r=t.y,n=t.size,o=t.rotation;this._basicExtraRounded({x:e,y:r,size:n,rotation:o})},t}();const g=f;var p=function(){return p=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var o in e=arguments[r])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},p.apply(this,arguments)},v=function(){function t(t){var e=t.svg,r=t.type;this._svg=e,this._type=r}return t.prototype.draw=function(t,e,r,n){("square"===this._type?this._drawSquare:this._drawDot).call(this,{x:t,y:e,size:r,rotation:n})},t.prototype._rotateFigure=function(t){var e,r=t.x,n=t.y,o=t.size,i=t.rotation,a=void 0===i?0:i,s=r+o/2,c=n+o/2;(0,t.draw)(),null===(e=this._element)||void 0===e||e.setAttribute("transform","rotate(".concat(180*a/Math.PI,",").concat(s,",").concat(c,")"))},t.prototype._basicDot=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(p(p({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","circle"),e._element.setAttribute("cx",String(n+r/2)),e._element.setAttribute("cy",String(o+r/2)),e._element.setAttribute("r",String(r/2))}}))},t.prototype._basicSquare=function(t){var e=this,r=t.size,n=t.x,o=t.y;this._rotateFigure(p(p({},t),{draw:function(){e._element=document.createElementNS("http://www.w3.org/2000/svg","rect"),e._element.setAttribute("x",String(n)),e._element.setAttribute("y",String(o)),e._element.setAttribute("width",String(r)),e._element.setAttribute("height",String(r))}}))},t.prototype._drawDot=function(t){var e=t.x,r=t.y,n=t.size,o=t.rotation;this._basicDot({x:e,y:r,size:n,rotation:o})},t.prototype._drawSquare=function(t){var e=t.x,r=t.y,n=t.size,o=t.rotation;this._basicSquare({x:e,y:r,size:n,rotation:o})},t}();const w=v,y="circle";var m=function(t,e,r,n){return new(r||(r=Promise))((function(o,i){function a(t){try{c(n.next(t))}catch(t){i(t)}}function s(t){try{c(n.throw(t))}catch(t){i(t)}}function c(t){var e;t.done?o(t.value):(e=t.value,e instanceof r?e:new r((function(t){t(e)}))).then(a,s)}c((n=n.apply(t,e||[])).next())}))},_=function(t,e){var r,n,o,i,a={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return i={next:s(0),throw:s(1),return:s(2)},"function"==typeof Symbol&&(i[Symbol.iterator]=function(){return this}),i;function s(i){return function(s){return function(i){if(r)throw new TypeError("Generator is already executing.");for(;a;)try{if(r=1,n&&(o=2&i[0]?n.return:i[0]?n.throw||((o=n.return)&&o.call(n),0):n.next)&&!(o=o.call(n,i[1])).done)return o;switch(n=0,o&&(i=[2&i[0],o.value]),i[0]){case 0:case 1:o=i;break;case 4:return a.label++,{value:i[1],done:!1};case 5:a.label++,n=i[1],i=[0];continue;case 7:i=a.ops.pop(),a.trys.pop();continue;default:if(!((o=(o=a.trys).length>0&&o[o.length-1])||6!==i[0]&&2!==i[0])){a=0;continue}if(3===i[0]&&(!o||i[1]>o[0]&&i[1]<o[3])){a.label=i[1];break}if(6===i[0]&&a.label<o[1]){a.label=o[1],o=i;break}if(o&&a.label<o[2]){a.label=o[2],a.ops.push(i);break}o[2]&&a.ops.pop(),a.trys.pop();continue}i=e.call(t,a)}catch(t){i=[6,t],n=0}finally{r=o=0}if(5&i[0])throw i[1];return{value:i[0]?i[1]:void 0,done:!0}}([i,s])}}},b=[[1,1,1,1,1,1,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,0,0,0,0,0,1],[1,1,1,1,1,1,1]],x=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,1,1,1,0,0],[0,0,1,1,1,0,0],[0,0,1,1,1,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];const S=function(){function t(t){this._element=document.createElementNS("http://www.w3.org/2000/svg","svg"),this._element.setAttribute("width",String(t.width)),this._element.setAttribute("height",String(t.height)),this._defs=document.createElementNS("http://www.w3.org/2000/svg","defs"),this._element.appendChild(this._defs),this._options=t}return Object.defineProperty(t.prototype,"width",{get:function(){return this._options.width},enumerable:!1,configurable:!0}),Object.defineProperty(t.prototype,"height",{get:function(){return this._options.height},enumerable:!1,configurable:!0}),t.prototype.getElement=function(){return this._element},t.prototype.drawQR=function(t){return m(this,void 0,void 0,(function(){var e,r,n,o,i,a,s,u,h,l,d=this;return _(this,(function(f){switch(f.label){case 0:return e=t.getModuleCount(),r=Math.min(this._options.width,this._options.height)-2*this._options.margin,n=this._options.shape===y?r/Math.sqrt(2):r,o=n/e,i={hideXDots:0,hideYDots:0,width:0,height:0},this._qr=t,this._options.image?[4,this.loadImage()]:[3,2];case 1:if(f.sent(),!this._image)return[2];a=this._options,s=a.imageOptions,u=a.qrOptions,h=s.imageSize*c[u.errorCorrectionLevel],l=Math.floor(h*e*e),i=function(t){var e=t.originalHeight,r=t.originalWidth,n=t.maxHiddenDots,o=t.maxHiddenAxisDots,i=t.dotSize,a={x:0,y:0},s={x:0,y:0};if(e<=0||r<=0||n<=0||i<=0)return{height:0,width:0,hideYDots:0,hideXDots:0};var c=e/r;return a.x=Math.floor(Math.sqrt(n/c)),a.x<=0&&(a.x=1),o&&o<a.x&&(a.x=o),a.x%2==0&&a.x--,s.x=a.x*i,a.y=1+2*Math.ceil((a.x*c-1)/2),s.y=Math.round(s.x*c),(a.y*a.x>n||o&&o<a.y)&&(o&&o<a.y?(a.y=o,a.y%2==0&&a.x--):a.y-=2,s.y=a.y*i,a.x=1+2*Math.ceil((a.y/c-1)/2),s.x=Math.round(s.y/c)),{height:s.y,width:s.x,hideYDots:a.y,hideXDots:a.x}}({originalWidth:this._image.width,originalHeight:this._image.height,maxHiddenDots:l,maxHiddenAxisDots:e-14,dotSize:o}),f.label=2;case 2:return this.drawBackground(),this.drawDots((function(t,r){var n,o,a,s,c,u;return!(d._options.imageOptions.hideBackgroundDots&&t>=(e-i.hideXDots)/2&&t<(e+i.hideXDots)/2&&r>=(e-i.hideYDots)/2&&r<(e+i.hideYDots)/2||(null===(n=b[t])||void 0===n?void 0:n[r])||(null===(o=b[t-e+7])||void 0===o?void 0:o[r])||(null===(a=b[t])||void 0===a?void 0:a[r-e+7])||(null===(s=x[t])||void 0===s?void 0:s[r])||(null===(c=x[t-e+7])||void 0===c?void 0:c[r])||(null===(u=x[t])||void 0===u?void 0:u[r-e+7]))})),this.drawCorners(),this._options.image?[4,this.drawImage({width:i.width,height:i.height,count:e,dotSize:o})]:[3,4];case 3:f.sent(),f.label=4;case 4:return[2]}}))}))},t.prototype.drawBackground=function(){var t,e,r,n=this._element,o=this._options;if(n){var i=null===(t=o.backgroundOptions)||void 0===t?void 0:t.gradient,a=null===(e=o.backgroundOptions)||void 0===e?void 0:e.color;if((i||a)&&this._createColor({options:i,color:a,additionalRotation:0,x:0,y:0,height:o.height,width:o.width,name:"background-color"}),null===(r=o.backgroundOptions)||void 0===r?void 0:r.round){var s=Math.min(o.width,o.height),c=document.createElementNS("http://www.w3.org/2000/svg","rect");this._backgroundClipPath=document.createElementNS("http://www.w3.org/2000/svg","clipPath"),this._backgroundClipPath.setAttribute("id","clip-path-background-color"),this._defs.appendChild(this._backgroundClipPath),c.setAttribute("x",String((o.width-s)/2)),c.setAttribute("y",String((o.height-s)/2)),c.setAttribute("width",String(s)),c.setAttribute("height",String(s)),c.setAttribute("rx",String(s/2*o.backgroundOptions.round)),this._backgroundClipPath.appendChild(c)}}},t.prototype.drawDots=function(t){var e,r,n=this;if(!this._qr)throw"QR code is not defined";var o=this._options,i=this._qr.getModuleCount();if(i>o.width||i>o.height)throw"The canvas is too small.";var a=Math.min(o.width,o.height)-2*o.margin,s=(o.shape===y?a/Math.sqrt(2):a)/i,c=(o.width-i*s)/2,u=(o.height-i*s)/2,h=new l({svg:this._element,type:o.dotsOptions.type});this._dotsClipPath=document.createElementNS("http://www.w3.org/2000/svg","clipPath"),this._dotsClipPath.setAttribute("id","clip-path-dot-color"),this._defs.appendChild(this._dotsClipPath),this._createColor({options:null===(e=o.dotsOptions)||void 0===e?void 0:e.gradient,color:o.dotsOptions.color,additionalRotation:0,x:0,y:0,height:o.height,width:o.width,name:"dot-color"});for(var d=function(e){for(var o=function(o){return t&&!t(e,o)?"continue":(null===(r=f._qr)||void 0===r?void 0:r.isDark(e,o))?(h.draw(c+e*s,u+o*s,s,(function(r,a){return!(e+r<0||o+a<0||e+r>=i||o+a>=i)&&!(t&&!t(e+r,o+a))&&!!n._qr&&n._qr.isDark(e+r,o+a)})),void(h._element&&f._dotsClipPath&&f._dotsClipPath.appendChild(h._element))):"continue"},a=0;a<i;a++)o(a)},f=this,g=0;g<i;g++)d(g);if(o.shape===y){var p=Math.floor((a/s-i)/2),v=i+2*p,w=c-p*s,m=u-p*s,_=[],b=Math.floor(v/2);for(g=0;g<v;g++){_[g]=[];for(var x=0;x<v;x++)g>=p-1&&g<=v-p&&x>=p-1&&x<=v-p||Math.sqrt((g-b)*(g-b)+(x-b)*(x-b))>b?_[g][x]=0:_[g][x]=this._qr.isDark(x-2*p<0?x:x>=i?x-2*p:x-p,g-2*p<0?g:g>=i?g-2*p:g-p)?1:0}var S=function(t){for(var e=function(e){if(!_[t][e])return"continue";h.draw(w+t*s,m+e*s,s,(function(r,n){var o;return!!(null===(o=_[t+r])||void 0===o?void 0:o[e+n])})),h._element&&C._dotsClipPath&&C._dotsClipPath.appendChild(h._element)},r=0;r<v;r++)e(r)},C=this;for(g=0;g<v;g++)S(g)}},t.prototype.drawCorners=function(){var t=this;if(!this._qr)throw"QR code is not defined";var e=this._element,r=this._options;if(!e)throw"Element code is not defined";var n=this._qr.getModuleCount(),o=Math.min(r.width,r.height)-2*r.margin,i=(r.shape===y?o/Math.sqrt(2):o)/n,a=7*i,s=3*i,c=(r.width-n*i)/2,u=(r.height-n*i)/2;[[0,0,0],[1,0,Math.PI/2],[0,1,-Math.PI/2]].forEach((function(e){var o,h,d,f,p,v,y,m,_,S,C,A,M=e[0],k=e[1],O=e[2],D=c+M*i*(n-7),P=u+k*i*(n-7),z=t._dotsClipPath,B=t._dotsClipPath;if(((null===(o=r.cornersSquareOptions)||void 0===o?void 0:o.gradient)||(null===(h=r.cornersSquareOptions)||void 0===h?void 0:h.color))&&((z=document.createElementNS("http://www.w3.org/2000/svg","clipPath")).setAttribute("id","clip-path-corners-square-color-".concat(M,"-").concat(k)),t._defs.appendChild(z),t._cornersSquareClipPath=t._cornersDotClipPath=B=z,t._createColor({options:null===(d=r.cornersSquareOptions)||void 0===d?void 0:d.gradient,color:null===(f=r.cornersSquareOptions)||void 0===f?void 0:f.color,additionalRotation:O,x:D,y:P,height:a,width:a,name:"corners-square-color-".concat(M,"-").concat(k)})),null===(p=r.cornersSquareOptions)||void 0===p?void 0:p.type){var q=new g({svg:t._element,type:r.cornersSquareOptions.type});q.draw(D,P,a,O),q._element&&z&&z.appendChild(q._element)}else for(var I=new l({svg:t._element,type:r.dotsOptions.type}),E=function(t){for(var e=function(e){if(!(null===(v=b[t])||void 0===v?void 0:v[e]))return"continue";I.draw(D+t*i,P+e*i,i,(function(r,n){var o;return!!(null===(o=b[t+r])||void 0===o?void 0:o[e+n])})),I._element&&z&&z.appendChild(I._element)},r=0;r<b[t].length;r++)e(r)},L=0;L<b.length;L++)E(L);if(((null===(y=r.cornersDotOptions)||void 0===y?void 0:y.gradient)||(null===(m=r.cornersDotOptions)||void 0===m?void 0:m.color))&&((B=document.createElementNS("http://www.w3.org/2000/svg","clipPath")).setAttribute("id","clip-path-corners-dot-color-".concat(M,"-").concat(k)),t._defs.appendChild(B),t._cornersDotClipPath=B,t._createColor({options:null===(_=r.cornersDotOptions)||void 0===_?void 0:_.gradient,color:null===(S=r.cornersDotOptions)||void 0===S?void 0:S.color,additionalRotation:O,x:D+2*i,y:P+2*i,height:s,width:s,name:"corners-dot-color-".concat(M,"-").concat(k)})),null===(C=r.cornersDotOptions)||void 0===C?void 0:C.type){var R=new w({svg:t._element,type:r.cornersDotOptions.type});R.draw(D+2*i,P+2*i,s,O),R._element&&B&&B.appendChild(R._element)}else{I=new l({svg:t._element,type:r.dotsOptions.type});var N=function(t){for(var e=function(e){if(!(null===(A=x[t])||void 0===A?void 0:A[e]))return"continue";I.draw(D+t*i,P+e*i,i,(function(r,n){var o;return!!(null===(o=x[t+r])||void 0===o?void 0:o[e+n])})),I._element&&B&&B.appendChild(I._element)},r=0;r<x[t].length;r++)e(r)};for(L=0;L<x.length;L++)N(L)}}))},t.prototype.loadImage=function(){var t=this;return new Promise((function(e,r){var n=t._options,o=new Image;if(!n.image)return r("Image is not defined");"string"==typeof n.imageOptions.crossOrigin&&(o.crossOrigin=n.imageOptions.crossOrigin),t._image=o,o.onload=function(){e()},o.src=n.image}))},t.prototype.drawImage=function(t){var e=t.width,r=t.height,n=t.count,o=t.dotSize;return m(this,void 0,void 0,(function(){var t,i,a,c,u,h,l,d,f;return _(this,(function(g){switch(g.label){case 0:return t=this._options,i=(t.width-n*o)/2,a=(t.height-n*o)/2,c=i+t.imageOptions.margin+(n*o-e)/2,u=a+t.imageOptions.margin+(n*o-r)/2,h=e-2*t.imageOptions.margin,l=r-2*t.imageOptions.margin,(d=document.createElementNS("http://www.w3.org/2000/svg","image")).setAttribute("x",String(c)),d.setAttribute("y",String(u)),d.setAttribute("width","".concat(h,"px")),d.setAttribute("height","".concat(l,"px")),[4,s(t.image||"")];case 1:return f=g.sent(),d.setAttribute("href",f||""),this._element.appendChild(d),[2]}}))}))},t.prototype._createColor=function(t){var e=t.options,r=t.color,n=t.additionalRotation,o=t.x,i=t.y,a=t.height,s=t.width,c=t.name,u=s>a?s:a,h=document.createElementNS("http://www.w3.org/2000/svg","rect");if(h.setAttribute("x",String(o)),h.setAttribute("y",String(i)),h.setAttribute("height",String(a)),h.setAttribute("width",String(s)),h.setAttribute("clip-path","url('#clip-path-".concat(c,"')")),e){var l;if("radial"===e.type)(l=document.createElementNS("http://www.w3.org/2000/svg","radialGradient")).setAttribute("id",c),l.setAttribute("gradientUnits","userSpaceOnUse"),l.setAttribute("fx",String(o+s/2)),l.setAttribute("fy",String(i+a/2)),l.setAttribute("cx",String(o+s/2)),l.setAttribute("cy",String(i+a/2)),l.setAttribute("r",String(u/2));else{var d=((e.rotation||0)+n)%(2*Math.PI),f=(d+2*Math.PI)%(2*Math.PI),g=o+s/2,p=i+a/2,v=o+s/2,w=i+a/2;f>=0&&f<=.25*Math.PI||f>1.75*Math.PI&&f<=2*Math.PI?(g-=s/2,p-=a/2*Math.tan(d),v+=s/2,w+=a/2*Math.tan(d)):f>.25*Math.PI&&f<=.75*Math.PI?(p-=a/2,g-=s/2/Math.tan(d),w+=a/2,v+=s/2/Math.tan(d)):f>.75*Math.PI&&f<=1.25*Math.PI?(g+=s/2,p+=a/2*Math.tan(d),v-=s/2,w-=a/2*Math.tan(d)):f>1.25*Math.PI&&f<=1.75*Math.PI&&(p+=a/2,g+=s/2/Math.tan(d),w-=a/2,v-=s/2/Math.tan(d)),(l=document.createElementNS("http://www.w3.org/2000/svg","linearGradient")).setAttribute("id",c),l.setAttribute("gradientUnits","userSpaceOnUse"),l.setAttribute("x1",String(Math.round(g))),l.setAttribute("y1",String(Math.round(p))),l.setAttribute("x2",String(Math.round(v))),l.setAttribute("y2",String(Math.round(w)))}e.colorStops.forEach((function(t){var e=t.offset,r=t.color,n=document.createElementNS("http://www.w3.org/2000/svg","stop");n.setAttribute("offset","".concat(100*e,"%")),n.setAttribute("stop-color",r),l.appendChild(n)})),h.setAttribute("fill","url('#".concat(c,"')")),this._defs.appendChild(l)}else r&&h.setAttribute("fill",r);this._element.appendChild(h)},t}(),C="canvas";for(var A={},M=0;M<=40;M++)A[M]=M;const k={type:C,shape:"square",width:300,height:300,data:"",margin:0,qrOptions:{typeNumber:A[0],mode:void 0,errorCorrectionLevel:"Q"},imageOptions:{hideBackgroundDots:!0,imageSize:.4,crossOrigin:void 0,margin:0},dotsOptions:{type:"square",color:"#000"},backgroundOptions:{round:0,color:"#fff"}};var O=function(){return O=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var o in e=arguments[r])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},O.apply(this,arguments)};function D(t){var e=O({},t);if(!e.colorStops||!e.colorStops.length)throw"Field 'colorStops' is required in gradient";return e.rotation?e.rotation=Number(e.rotation):e.rotation=0,e.colorStops=e.colorStops.map((function(t){return O(O({},t),{offset:Number(t.offset)})})),e}function P(t){var e=O({},t);return e.width=Number(e.width),e.height=Number(e.height),e.margin=Number(e.margin),e.imageOptions=O(O({},e.imageOptions),{hideBackgroundDots:Boolean(e.imageOptions.hideBackgroundDots),imageSize:Number(e.imageOptions.imageSize),margin:Number(e.imageOptions.margin)}),e.margin>Math.min(e.width,e.height)&&(e.margin=Math.min(e.width,e.height)),e.dotsOptions=O({},e.dotsOptions),e.dotsOptions.gradient&&(e.dotsOptions.gradient=D(e.dotsOptions.gradient)),e.cornersSquareOptions&&(e.cornersSquareOptions=O({},e.cornersSquareOptions),e.cornersSquareOptions.gradient&&(e.cornersSquareOptions.gradient=D(e.cornersSquareOptions.gradient))),e.cornersDotOptions&&(e.cornersDotOptions=O({},e.cornersDotOptions),e.cornersDotOptions.gradient&&(e.cornersDotOptions.gradient=D(e.cornersDotOptions.gradient))),e.backgroundOptions&&(e.backgroundOptions=O({},e.backgroundOptions),e.backgroundOptions.gradient&&(e.backgroundOptions.gradient=D(e.backgroundOptions.gradient))),e}var z=r(192),B=r.n(z),q=function(t,e,r,n){return new(r||(r=Promise))((function(o,i){function a(t){try{c(n.next(t))}catch(t){i(t)}}function s(t){try{c(n.throw(t))}catch(t){i(t)}}function c(t){var e;t.done?o(t.value):(e=t.value,e instanceof r?e:new r((function(t){t(e)}))).then(a,s)}c((n=n.apply(t,e||[])).next())}))},I=function(t,e){var r,n,o,i,a={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return i={next:s(0),throw:s(1),return:s(2)},"function"==typeof Symbol&&(i[Symbol.iterator]=function(){return this}),i;function s(i){return function(s){return function(i){if(r)throw new TypeError("Generator is already executing.");for(;a;)try{if(r=1,n&&(o=2&i[0]?n.return:i[0]?n.throw||((o=n.return)&&o.call(n),0):n.next)&&!(o=o.call(n,i[1])).done)return o;switch(n=0,o&&(i=[2&i[0],o.value]),i[0]){case 0:case 1:o=i;break;case 4:return a.label++,{value:i[1],done:!1};case 5:a.label++,n=i[1],i=[0];continue;case 7:i=a.ops.pop(),a.trys.pop();continue;default:if(!((o=(o=a.trys).length>0&&o[o.length-1])||6!==i[0]&&2!==i[0])){a=0;continue}if(3===i[0]&&(!o||i[1]>o[0]&&i[1]<o[3])){a.label=i[1];break}if(6===i[0]&&a.label<o[1]){a.label=o[1],o=i;break}if(o&&a.label<o[2]){a.label=o[2],a.ops.push(i);break}o[2]&&a.ops.pop(),a.trys.pop();continue}i=e.call(t,a)}catch(t){i=[6,t],n=0}finally{r=o=0}if(5&i[0])throw i[1];return{value:i[0]?i[1]:void 0,done:!0}}([i,s])}}};const E=function(){function t(t){this._options=t?P(i(k,t)):k,this.update()}return t._clearContainer=function(t){t&&(t.innerHTML="")},t.prototype._setupSvg=function(){var t=this;if(this._qr){var e=new S(this._options);this._svg=e.getElement(),this._svgDrawingPromise=e.drawQR(this._qr).then((function(){var r;t._svg&&(null===(r=t._extension)||void 0===r||r.call(t,e.getElement(),t._options))}))}},t.prototype._setupCanvas=function(){var t,e=this;this._qr&&(this._canvas=document.createElement("canvas"),this._canvas.width=this._options.width,this._canvas.height=this._options.height,this._setupSvg(),this._canvasDrawingPromise=null===(t=this._svgDrawingPromise)||void 0===t?void 0:t.then((function(){if(e._svg){var t=e._svg,r=(new XMLSerializer).serializeToString(t),n="data:image/svg+xml;base64,"+btoa(r),o=new Image;return new Promise((function(t){o.onload=function(){var r,n;null===(n=null===(r=e._canvas)||void 0===r?void 0:r.getContext("2d"))||void 0===n||n.drawImage(o,0,0),t()},o.src=n}))}})))},t.prototype._getElement=function(t){return void 0===t&&(t="png"),q(this,void 0,void 0,(function(){return I(this,(function(e){switch(e.label){case 0:if(!this._qr)throw"QR code is empty";return"svg"!==t.toLowerCase()?[3,2]:(this._svg&&this._svgDrawingPromise||this._setupSvg(),[4,this._svgDrawingPromise]);case 1:return e.sent(),[2,this._svg];case 2:return this._canvas&&this._canvasDrawingPromise||this._setupCanvas(),[4,this._canvasDrawingPromise];case 3:return e.sent(),[2,this._canvas]}}))}))},t.prototype.update=function(e){t._clearContainer(this._container),this._options=e?P(i(this._options,e)):this._options,this._options.data&&(this._qr=B()(this._options.qrOptions.typeNumber,this._options.qrOptions.errorCorrectionLevel),this._qr.addData(this._options.data,this._options.qrOptions.mode||function(t){switch(!0){case/^[0-9]*$/.test(t):return"Numeric";case/^[0-9A-Z $%*+\-./:]*$/.test(t):return"Alphanumeric";default:return"Byte"}}(this._options.data)),this._qr.make(),this._options.type===C?this._setupCanvas():this._setupSvg(),this.append(this._container))},t.prototype.append=function(t){if(t){if("function"!=typeof t.appendChild)throw"Container should be a single DOM node";this._options.type===C?this._canvas&&t.appendChild(this._canvas):this._svg&&t.appendChild(this._svg),this._container=t}},t.prototype.applyExtension=function(t){if(!t)throw"Extension function should be defined.";this._extension=t,this.update()},t.prototype.deleteExtension=function(){this._extension=void 0,this.update()},t.prototype.getRawData=function(t){return void 0===t&&(t="png"),q(this,void 0,void 0,(function(){var e,r,n;return I(this,(function(o){switch(o.label){case 0:if(!this._qr)throw"QR code is empty";return[4,this._getElement(t)];case 1:return(e=o.sent())?"svg"===t.toLowerCase()?(r=new XMLSerializer,n=r.serializeToString(e),[2,new Blob(['<?xml version="1.0" standalone="no"?>\r\n'+n],{type:"image/svg+xml"})]):[2,new Promise((function(r){return e.toBlob(r,"image/".concat(t),1)}))]:[2,null]}}))}))},t.prototype.download=function(t){return q(this,void 0,void 0,(function(){var e,r,n,o,i;return I(this,(function(s){switch(s.label){case 0:if(!this._qr)throw"QR code is empty";return e="png",r="qr","string"==typeof t?(e=t,console.warn("Extension is deprecated as argument for 'download' method, please pass object { name: '...', extension: '...' } as argument")):"object"==typeof t&&null!==t&&(t.name&&(r=t.name),t.extension&&(e=t.extension)),[4,this._getElement(e)];case 1:return(n=s.sent())?("svg"===e.toLowerCase()?(o=new XMLSerializer,i='<?xml version="1.0" standalone="no"?>\r\n'+(i=o.serializeToString(n)),a("data:image/svg+xml;charset=utf-8,"+encodeURIComponent(i),"".concat(r,".svg"))):a(n.toDataURL("image/".concat(e)),"".concat(r,".").concat(e)),[2]):[2]}}))}))},t}()})(),n.default})()}));
+//# sourceMappingURL=qr-code-styling.js.map
 
 /***/ }),
 
@@ -41891,58 +29968,6 @@ function isFunction(a) {
 
 /***/ }),
 
-/***/ "./js/src/components/IFrameContainer.tsx":
-/*!***********************************************!*\
-  !*** ./js/src/components/IFrameContainer.tsx ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ IFrameContainer)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-var __assign = undefined && undefined.__assign || function () {
-  __assign = Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
-
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-      }
-    }
-
-    return t;
-  };
-
-  return __assign.apply(this, arguments);
-};
-
-
-function IFrameContainer(_a) {
-  var visible = _a.visible,
-      source = _a.source,
-      hide = _a.hide;
-  if (!visible) return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {});
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-    className: "socure-iframe-background",
-    onClick: hide
-  }, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
-      className: "socure-iframe-wrapper"
-    }, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("iframe", {
-        src: source,
-        className: "socure-iframe",
-        title: "Socure"
-      })
-    }))
-  }));
-}
-
-/***/ }),
-
 /***/ "./js/src/components/SolanaPay.tsx":
 /*!*****************************************!*\
   !*** ./js/src/components/SolanaPay.tsx ***!
@@ -41957,12 +29982,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @solana/web3.js */ "./node_modules/@solana/web3.js/lib/index.browser.esm.js");
-/* harmony import */ var _IFrameContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IFrameContainer */ "./js/src/components/IFrameContainer.tsx");
-/* harmony import */ var _config_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config/constants */ "./js/src/config/constants.ts");
-/* harmony import */ var _identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @identity.com/solana-gateway-ts */ "./node_modules/@identity.com/solana-gateway-ts/dist/index.js");
-/* harmony import */ var _identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/utils */ "./js/src/lib/utils.ts");
+/* harmony import */ var _solpay_components_SolanaPay_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./solpay/components/SolanaPay/types */ "./js/src/components/solpay/components/SolanaPay/types.ts");
+/* harmony import */ var _solpay_components_SolanaPay_SolanaPayModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./solpay/components/SolanaPay/SolanaPayModal */ "./js/src/components/solpay/components/SolanaPay/SolanaPayModal.tsx");
+/* harmony import */ var _solpay_components_SolanaPay_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./solpay/components/SolanaPay/constants */ "./js/src/components/solpay/components/SolanaPay/constants.ts");
+/* harmony import */ var _solpay_components_Socure_SocureModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./solpay/components/Socure/SocureModal */ "./js/src/components/solpay/components/Socure/SocureModal.tsx");
+/* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @solana/web3.js */ "./node_modules/@solana/web3.js/lib/index.browser.esm.js");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -41987,124 +30011,63 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 function SolanaPay(_a) {
-  var gatekeeper = _a.gatekeeper,
+  var gatekeeperNetwork = _a.gatekeeperNetwork,
       amount = _a.amount,
-      recipient = _a.recipient,
-      reference = _a.reference;
-
-  var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      solanaPayVisible = _b[0],
-      setSolanaPayVisible = _b[1];
-
-  var _c = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      socureVisible = _c[0],
-      setSocureVisible = _c[1];
-
-  var _d = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(undefined),
-      wallet = _d[0],
-      setWallet = _d[1];
-  /**
-   * If there's no token, initiate the socure process
-   */
-
-
-  var handleMissingTokenCallback = function handleMissingTokenCallback() {
-    setSolanaPayVisible(false);
-    setSocureVisible(true);
-  };
-  /**
-   * Handles errors from the solana pay callback
-   */
-
-
-  var handleSolanaPayError = function handleSolanaPayError(data) {
-    switch (data.errorType) {
-      case 'missing-token':
-        handleMissingTokenCallback();
-        break;
-    }
-  };
-  /**
-   * Handles errors from the solana pay callback
-   */
-
-
-  var handleSolanaPayConfirmed = function handleSolanaPayConfirmed(data) {
-    if (!data.wallet) return;
-    (0,_lib_utils__WEBPACK_IMPORTED_MODULE_6__.confirmAndRedirect)(new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.PublicKey(data.wallet));
-  };
-  /**
-   * Handles callbacks from the Solana pay process
-   */
-
-
-  var handleSolanaPayCallback = function handleSolanaPayCallback(data) {
-    if (data.wallet) {
-      setWallet(data.wallet);
-    }
-
-    switch (data.status) {
-      case 'error':
-        handleSolanaPayError(data);
-        break;
-
-      case 'tx_confirmed':
-        handleSolanaPayConfirmed(data);
-        break;
-    }
+      toWallet = _a.toWallet,
+      reference = _a.reference,
+      _b = _a.mint,
+      mint = _b === void 0 ? '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU' : _b;
+  var providedPaymentInfo = {
+    amount: amount,
+    type: _solpay_components_SolanaPay_types__WEBPACK_IMPORTED_MODULE_2__.PaymentType.SPL,
+    mint: mint,
+    toWallet: toWallet,
+    gatekeeperNetwork: gatekeeperNetwork
   };
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    console.log("WALLET CHANGED: " + wallet);
-  }, [wallet]);
+  var _c = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(),
+      paymentSession = _c[0],
+      setPaymentSession = _c[1];
 
-  var handleSocureCallback = function handleSocureCallback(socureWallet) {
-    var connection = new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.Connection((0,_solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.clusterApiUrl)('devnet'), 'confirmed');
-    (0,_identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_5__.onGatewayToken)(connection, new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.PublicKey(socureWallet), _config_constants__WEBPACK_IMPORTED_MODULE_4__.GATEKEEPER_NETWORK, function (token) {
-      // In case user decides to switch wallets
-      setWallet(undefined);
-      setSolanaPayVisible(true);
-      setSocureVisible(false);
+  var _d = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(),
+      verificationPublicKey = _d[0],
+      setVerificationPublicKey = _d[1];
+
+  var onClick = function onClick() {
+    if (!!paymentSession) {
+      return;
+    } // fetch data
+
+
+    fetch(_solpay_components_SolanaPay_constants__WEBPACK_IMPORTED_MODULE_4__.API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(providedPaymentInfo)
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      return setPaymentSession(data);
     });
   };
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    // handle callback events from the iframes (generalized to solana pay and socure)
-    window.addEventListener('message', function (e) {
-      switch (e.data.target) {
-        case 'solana-pay':
-          handleSolanaPayCallback(e.data);
-          break;
-
-        case 'socure':
-          handleSocureCallback(e.data.wallet);
-          break;
-
-        default:
-          console.log("Recieved UNKNWON event: " + JSON.stringify(e.data, null, 2));
-      }
-    });
-  }, []);
+  var connection = new _solana_web3_js__WEBPACK_IMPORTED_MODULE_6__.Connection((0,_solana_web3_js__WEBPACK_IMPORTED_MODULE_6__.clusterApiUrl)('devnet'), 'confirmed');
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", __assign({
       className: "wallet-adapter-button wallet-adapter-button-trigger",
-      onClick: function onClick() {
-        return setSolanaPayVisible(true);
-      }
+      onClick: onClick
     }, {
       children: "Pay with Solana Pay"
-    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_IFrameContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      visible: solanaPayVisible,
-      hide: function hide() {
-        return setSolanaPayVisible(false);
-      },
-      source: "".concat(_config_constants__WEBPACK_IMPORTED_MODULE_4__.SOLPAY_UI_BASE_URL, "?amount=").concat(amount, "&reference=").concat(reference, "&recipient=").concat(recipient, "&gatekeeper=").concat(gatekeeper, "&autostart=true")
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_IFrameContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      visible: socureVisible && !!wallet,
-      hide: function hide() {
-        return setSocureVisible(false);
-      },
-      source: "".concat(_config_constants__WEBPACK_IMPORTED_MODULE_4__.SOCURE_UI_BASE_URL).concat(wallet)
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_solpay_components_SolanaPay_SolanaPayModal__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      paymentSession: paymentSession,
+      setPaymentSession: setPaymentSession,
+      setVerificationPublicKey: setVerificationPublicKey
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_solpay_components_Socure_SocureModal__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      verificationPublicKey: verificationPublicKey,
+      setVerificationPublicKey: setVerificationPublicKey,
+      onComplete: onClick,
+      connection: connection
     })]
   });
 }
@@ -42120,7 +30083,7 @@ function SolanaPay(_a) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ SolanaWalet)
+/* harmony export */   "default": () => (/* binding */ SolanaWallet)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @solana/wallet-adapter-react */ "./node_modules/@solana/wallet-adapter-react/lib/esm/useWallet.js");
@@ -42138,11 +30101,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @identity.com/solana-gateway-ts */ "./node_modules/@identity.com/solana-gateway-ts/dist/index.js");
 /* harmony import */ var _identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _config_constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/constants */ "./js/src/config/constants.ts");
-/* harmony import */ var _IFrameContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./IFrameContainer */ "./js/src/components/IFrameContainer.tsx");
 /* harmony import */ var _solana_spl_token__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @solana/spl-token */ "./node_modules/@solana/spl-token/lib/esm/state/mint.js");
 /* harmony import */ var _solana_spl_token__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @solana/spl-token */ "./node_modules/@solana/spl-token/lib/esm/constants.js");
 /* harmony import */ var _solana_spl_token__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @solana/spl-token */ "./node_modules/@solana/spl-token/lib/esm/instructions/transfer.js");
-/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/utils */ "./js/src/lib/utils.ts");
+/* harmony import */ var _lib_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/utils */ "./js/src/lib/utils.ts");
+/* harmony import */ var _solpay_components_Socure_SocureModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./solpay/components/Socure/SocureModal */ "./js/src/components/solpay/components/Socure/SocureModal.tsx");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -42332,17 +30295,17 @@ function ConnectedApp() {
       token = _a[0],
       setToken = _a[1];
 
-  var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      showIframe = _b[0],
-      setShowIframe = _b[1];
+  var _b = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(undefined),
+      tokenCheck = _b[0],
+      setTokenCheck = _b[1];
 
-  var _c = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(undefined),
-      tokenCheck = _c[0],
-      setTokenCheck = _c[1];
+  var _c = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      paying = _c[0],
+      setPaying = _c[1];
 
-  var _d = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      paying = _d[0],
-      setPaying = _d[1];
+  var _d = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(),
+      verificationPublicKey = _d[0],
+      setVerificationPublicKey = _d[1];
 
   var _e = (0,_solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_8__.useWallet)(),
       publicKey = _e.publicKey,
@@ -42397,17 +30360,17 @@ function ConnectedApp() {
         });
       }, 2000);
     }
-  };
+  }; // window.addEventListener("message", function (e) {
+  //   if (e.data.target === 'tokenUpdate') {
+  //     setTokenCheck(false);
+  //     tokenCheck = false; // ?!?
+  //     setShowIframe(false);
+  //
+  //     checkForToken();
+  //   }
+  // });
 
-  window.addEventListener("message", function (e) {
-    if (e.data.target === 'tokenUpdate') {
-      setTokenCheck(false);
-      tokenCheck = false; // ?!?
 
-      setShowIframe(false);
-      checkForToken();
-    }
-  });
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     (function () {
       return __awaiter(_this, void 0, void 0, function () {
@@ -42469,7 +30432,7 @@ function ConnectedApp() {
             console.log("To token account: " + toTokenAccount);
             return [4
             /*yield*/
-            , (0,_lib_utils__WEBPACK_IMPORTED_MODULE_7__.createAssociatedTokenAccountInstructionIfNeeded)(connection, publicKey, toTokenAccount, new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.PublicKey(_config_constants__WEBPACK_IMPORTED_MODULE_5__.MINT_ADDRESS), new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.recipient))];
+            , (0,_lib_utils__WEBPACK_IMPORTED_MODULE_6__.createAssociatedTokenAccountInstructionIfNeeded)(connection, publicKey, toTokenAccount, new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.PublicKey(_config_constants__WEBPACK_IMPORTED_MODULE_5__.MINT_ADDRESS), new _solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.recipient))];
 
           case 4:
             optionalCreateAssociatedTokenAccountInstructions = _d.sent();
@@ -42579,12 +30542,13 @@ function ConnectedApp() {
     });
   };
 
-  return !publicKey && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}) || showIframe && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_IFrameContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    visible: showIframe,
-    hide: function hide() {
-      return setShowIframe(false);
-    },
-    source: "".concat(_config_constants__WEBPACK_IMPORTED_MODULE_5__.SOCURE_UI_BASE_URL).concat(publicKey === null || publicKey === void 0 ? void 0 : publicKey.toBase58())
+  return !publicKey && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}) || // showIframe && <IFrameContainer visible={showIframe} hide={() => setShowIframe(false)}
+  //                                source={`${SOCURE_UI_BASE_URL}${publicKey?.toBase58()}`}/> ||
+  !!verificationPublicKey && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_solpay_components_Socure_SocureModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    verificationPublicKey: verificationPublicKey,
+    setVerificationPublicKey: setVerificationPublicKey,
+    onComplete: setToken,
+    connection: connection
   }) || tokenCheck === false && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
     className: "status-text"
   }, {
@@ -42595,7 +30559,7 @@ function ConnectedApp() {
     children: "Checking For Pass"
   })) || token === null && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", __assign({
     onClick: function onClick() {
-      return setShowIframe(true);
+      return publicKey && setVerificationPublicKey(publicKey.toBase58());
     },
     className: "wallet-adapter-button wallet-adapter-button-trigger verify-button"
   }, {
@@ -42609,7 +30573,7 @@ function ConnectedApp() {
   }));
 }
 
-function SolanaWalet() {
+function SolanaWallet() {
   var network = _solana_wallet_adapter_base__WEBPACK_IMPORTED_MODULE_14__.WalletAdapterNetwork.Devnet;
   var endpoint = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
     return (0,_solana_web3_js__WEBPACK_IMPORTED_MODULE_2__.clusterApiUrl)(window.SOLANA_PAYMENT_CONFIG.cluster);
@@ -42636,6 +30600,790 @@ function SolanaWalet() {
 
 /***/ }),
 
+/***/ "./js/src/components/solpay/components/Socure/SocureModal.tsx":
+/*!********************************************************************!*\
+  !*** ./js/src/components/solpay/components/Socure/SocureModal.tsx ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SocureModal)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/transitions/transition.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/dialog/dialog.js");
+/* harmony import */ var _config_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../config/constants */ "./js/src/config/constants.ts");
+/* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @solana/web3.js */ "./node_modules/@solana/web3.js/lib/index.browser.esm.js");
+/* harmony import */ var _identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @identity.com/solana-gateway-ts */ "./node_modules/@identity.com/solana-gateway-ts/dist/index.js");
+/* harmony import */ var _identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4__);
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+
+
+
+
+
+
+function SocureModal(_a) {
+  var verificationPublicKey = _a.verificationPublicKey,
+      setVerificationPublicKey = _a.setVerificationPublicKey,
+      onComplete = _a.onComplete,
+      connection = _a.connection;
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (verificationPublicKey) {
+      (0,_identity_com_solana_gateway_ts__WEBPACK_IMPORTED_MODULE_4__.onGatewayToken)(connection, new _solana_web3_js__WEBPACK_IMPORTED_MODULE_3__.PublicKey(verificationPublicKey), _config_constants__WEBPACK_IMPORTED_MODULE_2__.GATEKEEPER_NETWORK, function (token) {
+        setVerificationPublicKey(undefined);
+        onComplete(token);
+      });
+    }
+  }, []);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Transition.Root, __assign({
+    show: !!verificationPublicKey,
+    as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment
+  }, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_6__.Dialog, __assign({
+      as: "div",
+      className: "relative z-10",
+      onClose: function onClose() {
+        return setVerificationPublicKey(undefined);
+      }
+    }, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Transition.Child, __assign({
+        as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment,
+        enter: "ease-out duration-300",
+        enterFrom: "opacity-0",
+        enterTo: "opacity-100",
+        leave: "ease-in duration-200",
+        leaveFrom: "opacity-100",
+        leaveTo: "opacity-0"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        })
+      })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+        className: "fixed inset-0 z-10 overflow-y-auto"
+      }, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+          className: "flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Transition.Child, __assign({
+            as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment,
+            enter: "ease-out duration-300",
+            enterFrom: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
+            enterTo: "opacity-100 translate-y-0 sm:scale-100",
+            leave: "ease-in duration-200",
+            leaveFrom: "opacity-100 translate-y-0 sm:scale-100",
+            leaveTo: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_6__.Dialog.Panel, __assign({
+              className: "relative transform rounded-lg bg-white px-4 pt-5 pb-4 text-center shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl sm:p-6"
+            }, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                className: "w-full h-full"
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("iframe", {
+                  className: "w-full h-[38rem]",
+                  src: "".concat(_config_constants__WEBPACK_IMPORTED_MODULE_2__.SOCURE_UI_BASE_URL).concat(verificationPublicKey),
+                  title: "Socure"
+                })
+              }))
+            }))
+          }))
+        }))
+      }))]
+    }))
+  }));
+}
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/SolanaPay/SolanaPayInfo.tsx":
+/*!*************************************************************************!*\
+  !*** ./js/src/components/solpay/components/SolanaPay/SolanaPayInfo.tsx ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SolanaPayInfo)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+
+function SolanaPayInfo(_a) {
+  var paymentInfo = _a.paymentInfo;
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+    className: "overflow-hidden bg-white shadow sm:rounded-lg"
+  }, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+      className: "px-4 py-5 sm:px-6"
+    }, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", __assign({
+        className: "text-lg font-medium leading-6 text-gray-900"
+      }, {
+        children: "Payment Information"
+      })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", __assign({
+        className: "mt-1 max-w-2xl text-sm text-gray-500"
+      }, {
+        children: "Solana Pay Details:"
+      }))]
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+      className: "border-t border-gray-200"
+    }, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("dl", {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+          className: "bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6"
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dt", __assign({
+            className: "text-sm font-medium text-gray-500"
+          }, {
+            children: "From"
+          })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dd", __assign({
+            className: "mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"
+          }, {
+            children: paymentInfo.fromWallet
+          }))]
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+          className: "bg-white px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6"
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dt", __assign({
+            className: "text-sm font-medium text-gray-500"
+          }, {
+            children: "To"
+          })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dd", __assign({
+            className: "mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"
+          }, {
+            children: paymentInfo.toWallet
+          }))]
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+          className: "bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6"
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dt", __assign({
+            className: "text-sm font-medium text-gray-500"
+          }, {
+            children: "Amount"
+          })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dd", __assign({
+            className: "mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"
+          }, {
+            children: Number(paymentInfo.amount) / 1000000
+          }))]
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+          className: "bg-white px-4 py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6"
+        }, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dt", __assign({
+            className: "text-sm font-medium text-gray-500"
+          }, {
+            children: "Gatekeeper"
+          })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("dd", __assign({
+            className: "mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"
+          }, {
+            children: paymentInfo.gatekeeperNetwork ? "Yes" : "No"
+          }))]
+        }))]
+      })
+    }))]
+  }));
+}
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/SolanaPay/SolanaPayModal.tsx":
+/*!**************************************************************************!*\
+  !*** ./js/src/components/solpay/components/SolanaPay/SolanaPayModal.tsx ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SolanaPayModal)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/transitions/transition.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/dialog/dialog.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types */ "./js/src/components/solpay/components/SolanaPay/types.ts");
+/* harmony import */ var _SolanaPayQR__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SolanaPayQR */ "./js/src/components/solpay/components/SolanaPay/SolanaPayQR.tsx");
+/* harmony import */ var _SolanaPaySteps__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SolanaPaySteps */ "./js/src/components/solpay/components/SolanaPay/SolanaPaySteps.tsx");
+/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/utils */ "./js/src/components/solpay/utils/utils.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./constants */ "./js/src/components/solpay/components/SolanaPay/constants.ts");
+/* harmony import */ var _Various_Spinner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Various/Spinner */ "./js/src/components/solpay/components/Various/Spinner.tsx");
+/* harmony import */ var _SolanaPayInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SolanaPayInfo */ "./js/src/components/solpay/components/SolanaPay/SolanaPayInfo.tsx");
+/* harmony import */ var _heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @heroicons/react/24/solid */ "./node_modules/@heroicons/react/24/solid/esm/CheckIcon.js");
+/* harmony import */ var _heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @heroicons/react/24/solid */ "./node_modules/@heroicons/react/24/solid/esm/XCircleIcon.js");
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+
+
+
+
+
+
+
+
+
+
+ // TODO: Split up this monster of a class
+
+function SolanaPayModal(_a) {
+  var _b;
+
+  var paymentSession = _a.paymentSession,
+      setPaymentSession = _a.setPaymentSession,
+      setVerificationPublicKey = _a.setVerificationPublicKey; // Poll Status
+
+  (0,_utils_utils__WEBPACK_IMPORTED_MODULE_5__.useInterval)(function () {
+    if (paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.id) {
+      fetch("".concat(_constants__WEBPACK_IMPORTED_MODULE_6__.API_URL, "/").concat(paymentSession.id)).then(function (response) {
+        return response.json();
+      }) // Map string to publicKey
+      .then(function (data) {
+        return setPaymentSession(data);
+      });
+    }
+  }, 1000 * 5);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    // close modal after 3s
+    if ((paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.status) === _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.TX_CONFIRMED) {
+      setTimeout(function () {
+        setPaymentSession(undefined);
+      }, 3000);
+    }
+  }, [paymentSession]);
+
+  var onVerificationClick = function onVerificationClick() {
+    setVerificationPublicKey(paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.paymentInfo.fromWallet); // setPaymentSession(undefined);
+  };
+
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_9__.Transition.Root, __assign({
+      show: !!paymentSession,
+      as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment
+    }, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_10__.Dialog, __assign({
+        as: "div",
+        className: "relative z-10",
+        onClose: function onClose() {
+          return setPaymentSession(undefined);
+        }
+      }, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_9__.Transition.Child, __assign({
+          as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment,
+          enter: "ease-out duration-300",
+          enterFrom: "opacity-0",
+          enterTo: "opacity-100",
+          leave: "ease-in duration-200",
+          leaveFrom: "opacity-100",
+          leaveTo: "opacity-0"
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+            className: "fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          })
+        })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+          className: "fixed inset-0 z-10 overflow-y-auto"
+        }, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+            className: "flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_9__.Transition.Child, __assign({
+              as: react__WEBPACK_IMPORTED_MODULE_1__.Fragment,
+              enter: "ease-out duration-300",
+              enterFrom: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
+              enterTo: "opacity-100 translate-y-0 sm:scale-100",
+              leave: "ease-in duration-200",
+              leaveFrom: "opacity-100 translate-y-0 sm:scale-100",
+              leaveTo: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            }, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_10__.Dialog.Panel, __assign({
+                className: "relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6"
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                  children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                    className: "mt-3 text-center sm:mt-5"
+                  }, {
+                    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_10__.Dialog.Title, __assign({
+                      as: "h4",
+                      className: "text-lg font-medium leading-6 text-gray-900"
+                    }, {
+                      children: "Solana Pay (with KYC)"
+                    }))
+                  })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                    className: "mx-auto flex items-center justify-center p-1"
+                  }, {
+                    children: (paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.status) === _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.QR && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_SolanaPayQR__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                      url: paymentSession.url
+                    })
+                  })), paymentSession && paymentSession.status !== _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.QR && paymentSession.status !== _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.ERROR && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                      className: "mx-auto flex items-center justify-center p-5"
+                    }, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_SolanaPayInfo__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                        paymentInfo: paymentSession.paymentInfo
+                      })
+                    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+                      className: "mx-auto flex items-center justify-center p-5"
+                    }, {
+                      children: [paymentSession.status !== _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.TX_CONFIRMED && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Various_Spinner__WEBPACK_IMPORTED_MODULE_7__["default"], {}), paymentSession.status === _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.TX_CONFIRMED && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                        className: "mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
+                      }, {
+                        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                          className: "h-6 w-6 text-green-600",
+                          "aria-hidden": "true"
+                        })
+                      }))]
+                    }))]
+                  }), (paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.status) === _types__WEBPACK_IMPORTED_MODULE_2__.PaymentStatus.ERROR && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                      className: "mx-auto flex items-center justify-center p-5"
+                    }, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
+                        children: "An error occured!"
+                      })
+                    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                      className: "mx-auto flex items-center justify-center p-5"
+                    }, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", __assign({
+                        className: "text-lg text-red-500"
+                      }, {
+                        children: paymentSession.errorMessage
+                      }))
+                    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                      className: "mx-auto flex items-center justify-center p-5"
+                    }, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                        className: "mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-100"
+                      }, {
+                        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_12__["default"], {
+                          className: "h-6 w-6 text-red-600",
+                          "aria-hidden": "true"
+                        })
+                      }))
+                    })), ((_b = paymentSession.errorMessage) === null || _b === void 0 ? void 0 : _b.includes("Gateway Token")) && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                      className: "mt-5 sm:mt-6"
+                    }, {
+                      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", __assign({
+                        type: "button",
+                        className: "inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm",
+                        onClick: onVerificationClick
+                      }, {
+                        children: "Verify me now!"
+                      }))
+                    }))]
+                  }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+                    className: "mx-auto flex items-center justify-center w-full p-1"
+                  }, {
+                    children: (paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.status) && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_SolanaPaySteps__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                      currentStatus: paymentSession === null || paymentSession === void 0 ? void 0 : paymentSession.status
+                    })
+                  }))]
+                })
+              }))
+            }))
+          }))
+        }))]
+      }))
+    }))
+  });
+}
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/SolanaPay/SolanaPayQR.tsx":
+/*!***********************************************************************!*\
+  !*** ./js/src/components/solpay/components/SolanaPay/SolanaPayQR.tsx ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SolanaPayQR)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _solana_pay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @solana/pay */ "./node_modules/@solana/pay/lib/esm/createQR.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function SolanaPayQR(_a) {
+  var url = _a.url; // ref to a div where we'll show the QR code
+
+  var qrRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    var qr = (0,_solana_pay__WEBPACK_IMPORTED_MODULE_2__.createQR)("solana:".concat(url), 512, 'transparent');
+
+    if (qrRef.current) {
+      qrRef.current.innerHTML = '';
+      qr.append(qrRef.current);
+    }
+  }, [url]);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      ref: qrRef
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/SolanaPay/SolanaPaySteps.tsx":
+/*!**************************************************************************!*\
+  !*** ./js/src/components/solpay/components/SolanaPay/SolanaPaySteps.tsx ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SolanaPaySteps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./js/src/components/solpay/components/SolanaPay/types.ts");
+/* harmony import */ var _heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/solid */ "./node_modules/@heroicons/react/24/solid/esm/CheckIcon.js");
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+
+
+
+var steps = [{
+  id: 1,
+  name: 'QR Code',
+  href: '#',
+  status: _types__WEBPACK_IMPORTED_MODULE_1__.PaymentStatus.QR
+}, {
+  id: 2,
+  name: 'Scanned',
+  href: '#',
+  status: _types__WEBPACK_IMPORTED_MODULE_1__.PaymentStatus.SCANNED
+}, {
+  id: 3,
+  name: 'TX send',
+  href: '#',
+  status: _types__WEBPACK_IMPORTED_MODULE_1__.PaymentStatus.TX_SEND
+}, {
+  id: 4,
+  name: 'TX confirmed',
+  href: '#',
+  status: _types__WEBPACK_IMPORTED_MODULE_1__.PaymentStatus.TX_CONFIRMED
+}];
+
+var getStatus = function getStatus(currentStatus, stepStatus) {
+  if (currentStatus === stepStatus) {
+    return 'current';
+  }
+
+  if (steps.findIndex(function (x) {
+    return x.status === currentStatus;
+  }) > steps.findIndex(function (x) {
+    return x.status === stepStatus;
+  })) {
+    return 'complete';
+  }
+
+  return 'upcoming';
+};
+
+function SolanaPaySteps(_a) {
+  var currentStatus = _a.currentStatus;
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", __assign({
+    "aria-label": "Progress"
+  }, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ol", __assign({
+      role: "list",
+      className: "divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0"
+    }, {
+      children: steps.map(function (step, stepIdx) {
+        return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", __assign({
+          className: "relative md:flex md:flex-1"
+        }, {
+          children: [getStatus(currentStatus, step.status) === 'complete' ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", __assign({
+            href: step.href,
+            className: "group flex w-full items-center"
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", __assign({
+              className: "flex items-center px-6 py-4 text-sm font-medium"
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+                className: "flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 group-hover:bg-indigo-800"
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                  className: "h-6 w-6 text-white",
+                  "aria-hidden": "true"
+                })
+              })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+                className: "ml-4 text-sm font-medium text-gray-900"
+              }, {
+                children: step.name
+              }))]
+            }))
+          })) : getStatus(currentStatus, step.status) === 'current' ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", __assign({
+            href: step.href,
+            className: "flex items-center px-6 py-4 text-sm font-medium",
+            "aria-current": "step"
+          }, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+              className: "flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-indigo-600"
+            }, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+                className: "text-indigo-600"
+              }, {
+                children: step.id
+              }))
+            })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+              className: "ml-4 text-sm font-medium text-indigo-600"
+            }, {
+              children: step.name
+            }))]
+          })) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", __assign({
+            href: step.href,
+            className: "group flex items-center"
+          }, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", __assign({
+              className: "flex items-center px-6 py-4 text-sm font-medium"
+            }, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+                className: "flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300 group-hover:border-gray-400"
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+                  className: "text-gray-500 group-hover:text-gray-900"
+                }, {
+                  children: step.id
+                }))
+              })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+                className: "ml-4 text-sm font-medium text-gray-500 group-hover:text-gray-900"
+              }, {
+                children: step.name
+              }))]
+            }))
+          })), stepIdx !== steps.length - 1 ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({
+              className: "absolute top-0 right-0 hidden h-full w-5 md:block",
+              "aria-hidden": "true"
+            }, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", __assign({
+                className: "h-full w-full text-gray-300",
+                viewBox: "0 0 22 80",
+                fill: "none",
+                preserveAspectRatio: "none"
+              }, {
+                children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
+                  d: "M0 -2L20 40L0 82",
+                  vectorEffect: "non-scaling-stroke",
+                  stroke: "currentcolor",
+                  strokeLinejoin: "round"
+                })
+              }))
+            }))
+          }) : null]
+        }), step.name);
+      })
+    }))
+  }));
+}
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/SolanaPay/constants.ts":
+/*!********************************************************************!*\
+  !*** ./js/src/components/solpay/components/SolanaPay/constants.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "API_URL": () => (/* binding */ API_URL)
+/* harmony export */ });
+var API_URL = 'https://pay-demo-api.identity.com/payments'; // export const API_URL = 'https://af7a80b6fedd.eu.ngrok.io/payments';
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/SolanaPay/types.ts":
+/*!****************************************************************!*\
+  !*** ./js/src/components/solpay/components/SolanaPay/types.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PaymentStatus": () => (/* binding */ PaymentStatus),
+/* harmony export */   "PaymentType": () => (/* binding */ PaymentType)
+/* harmony export */ });
+var PaymentStatus;
+
+(function (PaymentStatus) {
+  PaymentStatus["QR"] = "qr";
+  PaymentStatus["SCANNED"] = "scanned";
+  PaymentStatus["TX_SEND"] = "tx_send";
+  PaymentStatus["TX_CONFIRMED"] = "tx_confirmed";
+  PaymentStatus["ERROR"] = "error";
+})(PaymentStatus || (PaymentStatus = {}));
+
+var PaymentType;
+
+(function (PaymentType) {
+  PaymentType["SOL"] = "sol";
+  PaymentType["SPL"] = "spl";
+})(PaymentType || (PaymentType = {}));
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/components/Various/Spinner.tsx":
+/*!*****************************************************************!*\
+  !*** ./js/src/components/solpay/components/Various/Spinner.tsx ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Spinner)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var __assign = undefined && undefined.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+
+function Spinner() {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+    role: "status"
+  }, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", __assign({
+      className: "inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600",
+      viewBox: "0 0 100 101",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
+        d: "M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z",
+        fill: "currentColor"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
+        d: "M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z",
+        fill: "currentFill"
+      })]
+    })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", __assign({
+      className: "sr-only"
+    }, {
+      children: "Loading..."
+    }))]
+  }));
+}
+
+/***/ }),
+
+/***/ "./js/src/components/solpay/utils/utils.ts":
+/*!*************************************************!*\
+  !*** ./js/src/components/solpay/utils/utils.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useInterval": () => (/* binding */ useInterval)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var useInterval = function useInterval(callback, delay) {
+  var savedCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(function () {});
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    savedCallback.current = callback;
+  }, [callback]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    function tick() {
+      savedCallback.current();
+    }
+
+    if (delay !== null) {
+      var id_1 = setInterval(tick, delay);
+      return function () {
+        return clearInterval(id_1);
+      };
+    }
+  }, [delay]);
+};
+
+/***/ }),
+
 /***/ "./js/src/config/constants.ts":
 /*!************************************!*\
   !*** ./js/src/config/constants.ts ***!
@@ -42654,7 +31402,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var GATEKEEPER_NETWORK = new _solana_web3_js__WEBPACK_IMPORTED_MODULE_0__.PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
 var SOLPAY_UI_BASE_URL = 'http://localhost:3001/';
-var SOCURE_UI_BASE_URL = 'https://socure-demo.identity.com/#/verify/';
+var SOCURE_UI_BASE_URL = 'https://socure-demo.identity.com/#/verify/'; // export const SOCURE_UI_BASE_URL = 'http://localhost:3000/#/verify/';
+
 var MINT_ADDRESS = '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU';
 
 /***/ }),
@@ -42968,7 +31717,9 @@ var __assign = undefined && undefined.__assign || function () {
 
 
 function Main() {
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({
+    id: "socure-process"
+  }, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", __assign({
       className: "woocommerce-order-details__title"
     }, {
@@ -42980,12 +31731,12 @@ function Main() {
     }, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_SolanaWallet__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_SolanaPay__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      recipient: window.SOLANA_PAYMENT_CONFIG.transaction.recipient,
+      toWallet: window.SOLANA_PAYMENT_CONFIG.transaction.recipient,
       amount: window.SOLANA_PAYMENT_CONFIG.transaction.amount,
-      gatekeeper: _config_constants__WEBPACK_IMPORTED_MODULE_2__.GATEKEEPER_NETWORK.toBase58(),
+      gatekeeperNetwork: _config_constants__WEBPACK_IMPORTED_MODULE_2__.GATEKEEPER_NETWORK.toBase58(),
       reference: window.SOLANA_PAYMENT_CONFIG.transaction.reference
     })]
-  });
+  }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);
@@ -43360,6 +32111,2911 @@ function toBufferBE(num, width) {
     return converter.fromBigInt(num, Buffer.allocUnsafe(width), true);
 }
 exports.toBufferBE = toBufferBE;
+
+
+/***/ }),
+
+/***/ "./node_modules/bignumber.js/bignumber.js":
+/*!************************************************!*\
+  !*** ./node_modules/bignumber.js/bignumber.js ***!
+  \************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;;(function (globalObject) {
+  'use strict';
+
+/*
+ *      bignumber.js v9.0.2
+ *      A JavaScript library for arbitrary-precision arithmetic.
+ *      https://github.com/MikeMcl/bignumber.js
+ *      Copyright (c) 2021 Michael Mclaughlin <M8ch88l@gmail.com>
+ *      MIT Licensed.
+ *
+ *      BigNumber.prototype methods     |  BigNumber methods
+ *                                      |
+ *      absoluteValue            abs    |  clone
+ *      comparedTo                      |  config               set
+ *      decimalPlaces            dp     |      DECIMAL_PLACES
+ *      dividedBy                div    |      ROUNDING_MODE
+ *      dividedToIntegerBy       idiv   |      EXPONENTIAL_AT
+ *      exponentiatedBy          pow    |      RANGE
+ *      integerValue                    |      CRYPTO
+ *      isEqualTo                eq     |      MODULO_MODE
+ *      isFinite                        |      POW_PRECISION
+ *      isGreaterThan            gt     |      FORMAT
+ *      isGreaterThanOrEqualTo   gte    |      ALPHABET
+ *      isInteger                       |  isBigNumber
+ *      isLessThan               lt     |  maximum              max
+ *      isLessThanOrEqualTo      lte    |  minimum              min
+ *      isNaN                           |  random
+ *      isNegative                      |  sum
+ *      isPositive                      |
+ *      isZero                          |
+ *      minus                           |
+ *      modulo                   mod    |
+ *      multipliedBy             times  |
+ *      negated                         |
+ *      plus                            |
+ *      precision                sd     |
+ *      shiftedBy                       |
+ *      squareRoot               sqrt   |
+ *      toExponential                   |
+ *      toFixed                         |
+ *      toFormat                        |
+ *      toFraction                      |
+ *      toJSON                          |
+ *      toNumber                        |
+ *      toPrecision                     |
+ *      toString                        |
+ *      valueOf                         |
+ *
+ */
+
+
+  var BigNumber,
+    isNumeric = /^-?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i,
+    mathceil = Math.ceil,
+    mathfloor = Math.floor,
+
+    bignumberError = '[BigNumber Error] ',
+    tooManyDigits = bignumberError + 'Number primitive has more than 15 significant digits: ',
+
+    BASE = 1e14,
+    LOG_BASE = 14,
+    MAX_SAFE_INTEGER = 0x1fffffffffffff,         // 2^53 - 1
+    // MAX_INT32 = 0x7fffffff,                   // 2^31 - 1
+    POWS_TEN = [1, 10, 100, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10, 1e11, 1e12, 1e13],
+    SQRT_BASE = 1e7,
+
+    // EDITABLE
+    // The limit on the value of DECIMAL_PLACES, TO_EXP_NEG, TO_EXP_POS, MIN_EXP, MAX_EXP, and
+    // the arguments to toExponential, toFixed, toFormat, and toPrecision.
+    MAX = 1E9;                                   // 0 to MAX_INT32
+
+
+  /*
+   * Create and return a BigNumber constructor.
+   */
+  function clone(configObject) {
+    var div, convertBase, parseNumeric,
+      P = BigNumber.prototype = { constructor: BigNumber, toString: null, valueOf: null },
+      ONE = new BigNumber(1),
+
+
+      //----------------------------- EDITABLE CONFIG DEFAULTS -------------------------------
+
+
+      // The default values below must be integers within the inclusive ranges stated.
+      // The values can also be changed at run-time using BigNumber.set.
+
+      // The maximum number of decimal places for operations involving division.
+      DECIMAL_PLACES = 20,                     // 0 to MAX
+
+      // The rounding mode used when rounding to the above decimal places, and when using
+      // toExponential, toFixed, toFormat and toPrecision, and round (default value).
+      // UP         0 Away from zero.
+      // DOWN       1 Towards zero.
+      // CEIL       2 Towards +Infinity.
+      // FLOOR      3 Towards -Infinity.
+      // HALF_UP    4 Towards nearest neighbour. If equidistant, up.
+      // HALF_DOWN  5 Towards nearest neighbour. If equidistant, down.
+      // HALF_EVEN  6 Towards nearest neighbour. If equidistant, towards even neighbour.
+      // HALF_CEIL  7 Towards nearest neighbour. If equidistant, towards +Infinity.
+      // HALF_FLOOR 8 Towards nearest neighbour. If equidistant, towards -Infinity.
+      ROUNDING_MODE = 4,                       // 0 to 8
+
+      // EXPONENTIAL_AT : [TO_EXP_NEG , TO_EXP_POS]
+
+      // The exponent value at and beneath which toString returns exponential notation.
+      // Number type: -7
+      TO_EXP_NEG = -7,                         // 0 to -MAX
+
+      // The exponent value at and above which toString returns exponential notation.
+      // Number type: 21
+      TO_EXP_POS = 21,                         // 0 to MAX
+
+      // RANGE : [MIN_EXP, MAX_EXP]
+
+      // The minimum exponent value, beneath which underflow to zero occurs.
+      // Number type: -324  (5e-324)
+      MIN_EXP = -1e7,                          // -1 to -MAX
+
+      // The maximum exponent value, above which overflow to Infinity occurs.
+      // Number type:  308  (1.7976931348623157e+308)
+      // For MAX_EXP > 1e7, e.g. new BigNumber('1e100000000').plus(1) may be slow.
+      MAX_EXP = 1e7,                           // 1 to MAX
+
+      // Whether to use cryptographically-secure random number generation, if available.
+      CRYPTO = false,                          // true or false
+
+      // The modulo mode used when calculating the modulus: a mod n.
+      // The quotient (q = a / n) is calculated according to the corresponding rounding mode.
+      // The remainder (r) is calculated as: r = a - n * q.
+      //
+      // UP        0 The remainder is positive if the dividend is negative, else is negative.
+      // DOWN      1 The remainder has the same sign as the dividend.
+      //             This modulo mode is commonly known as 'truncated division' and is
+      //             equivalent to (a % n) in JavaScript.
+      // FLOOR     3 The remainder has the same sign as the divisor (Python %).
+      // HALF_EVEN 6 This modulo mode implements the IEEE 754 remainder function.
+      // EUCLID    9 Euclidian division. q = sign(n) * floor(a / abs(n)).
+      //             The remainder is always positive.
+      //
+      // The truncated division, floored division, Euclidian division and IEEE 754 remainder
+      // modes are commonly used for the modulus operation.
+      // Although the other rounding modes can also be used, they may not give useful results.
+      MODULO_MODE = 1,                         // 0 to 9
+
+      // The maximum number of significant digits of the result of the exponentiatedBy operation.
+      // If POW_PRECISION is 0, there will be unlimited significant digits.
+      POW_PRECISION = 0,                       // 0 to MAX
+
+      // The format specification used by the BigNumber.prototype.toFormat method.
+      FORMAT = {
+        prefix: '',
+        groupSize: 3,
+        secondaryGroupSize: 0,
+        groupSeparator: ',',
+        decimalSeparator: '.',
+        fractionGroupSize: 0,
+        fractionGroupSeparator: '\xA0',        // non-breaking space
+        suffix: ''
+      },
+
+      // The alphabet used for base conversion. It must be at least 2 characters long, with no '+',
+      // '-', '.', whitespace, or repeated character.
+      // '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$_'
+      ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyz',
+      alphabetHasNormalDecimalDigits = true;
+
+
+    //------------------------------------------------------------------------------------------
+
+
+    // CONSTRUCTOR
+
+
+    /*
+     * The BigNumber constructor and exported function.
+     * Create and return a new instance of a BigNumber object.
+     *
+     * v {number|string|BigNumber} A numeric value.
+     * [b] {number} The base of v. Integer, 2 to ALPHABET.length inclusive.
+     */
+    function BigNumber(v, b) {
+      var alphabet, c, caseChanged, e, i, isNum, len, str,
+        x = this;
+
+      // Enable constructor call without `new`.
+      if (!(x instanceof BigNumber)) return new BigNumber(v, b);
+
+      if (b == null) {
+
+        if (v && v._isBigNumber === true) {
+          x.s = v.s;
+
+          if (!v.c || v.e > MAX_EXP) {
+            x.c = x.e = null;
+          } else if (v.e < MIN_EXP) {
+            x.c = [x.e = 0];
+          } else {
+            x.e = v.e;
+            x.c = v.c.slice();
+          }
+
+          return;
+        }
+
+        if ((isNum = typeof v == 'number') && v * 0 == 0) {
+
+          // Use `1 / n` to handle minus zero also.
+          x.s = 1 / v < 0 ? (v = -v, -1) : 1;
+
+          // Fast path for integers, where n < 2147483648 (2**31).
+          if (v === ~~v) {
+            for (e = 0, i = v; i >= 10; i /= 10, e++);
+
+            if (e > MAX_EXP) {
+              x.c = x.e = null;
+            } else {
+              x.e = e;
+              x.c = [v];
+            }
+
+            return;
+          }
+
+          str = String(v);
+        } else {
+
+          if (!isNumeric.test(str = String(v))) return parseNumeric(x, str, isNum);
+
+          x.s = str.charCodeAt(0) == 45 ? (str = str.slice(1), -1) : 1;
+        }
+
+        // Decimal point?
+        if ((e = str.indexOf('.')) > -1) str = str.replace('.', '');
+
+        // Exponential form?
+        if ((i = str.search(/e/i)) > 0) {
+
+          // Determine exponent.
+          if (e < 0) e = i;
+          e += +str.slice(i + 1);
+          str = str.substring(0, i);
+        } else if (e < 0) {
+
+          // Integer.
+          e = str.length;
+        }
+
+      } else {
+
+        // '[BigNumber Error] Base {not a primitive number|not an integer|out of range}: {b}'
+        intCheck(b, 2, ALPHABET.length, 'Base');
+
+        // Allow exponential notation to be used with base 10 argument, while
+        // also rounding to DECIMAL_PLACES as with other bases.
+        if (b == 10 && alphabetHasNormalDecimalDigits) {
+          x = new BigNumber(v);
+          return round(x, DECIMAL_PLACES + x.e + 1, ROUNDING_MODE);
+        }
+
+        str = String(v);
+
+        if (isNum = typeof v == 'number') {
+
+          // Avoid potential interpretation of Infinity and NaN as base 44+ values.
+          if (v * 0 != 0) return parseNumeric(x, str, isNum, b);
+
+          x.s = 1 / v < 0 ? (str = str.slice(1), -1) : 1;
+
+          // '[BigNumber Error] Number primitive has more than 15 significant digits: {n}'
+          if (BigNumber.DEBUG && str.replace(/^0\.0*|\./, '').length > 15) {
+            throw Error
+             (tooManyDigits + v);
+          }
+        } else {
+          x.s = str.charCodeAt(0) === 45 ? (str = str.slice(1), -1) : 1;
+        }
+
+        alphabet = ALPHABET.slice(0, b);
+        e = i = 0;
+
+        // Check that str is a valid base b number.
+        // Don't use RegExp, so alphabet can contain special characters.
+        for (len = str.length; i < len; i++) {
+          if (alphabet.indexOf(c = str.charAt(i)) < 0) {
+            if (c == '.') {
+
+              // If '.' is not the first character and it has not be found before.
+              if (i > e) {
+                e = len;
+                continue;
+              }
+            } else if (!caseChanged) {
+
+              // Allow e.g. hexadecimal 'FF' as well as 'ff'.
+              if (str == str.toUpperCase() && (str = str.toLowerCase()) ||
+                  str == str.toLowerCase() && (str = str.toUpperCase())) {
+                caseChanged = true;
+                i = -1;
+                e = 0;
+                continue;
+              }
+            }
+
+            return parseNumeric(x, String(v), isNum, b);
+          }
+        }
+
+        // Prevent later check for length on converted number.
+        isNum = false;
+        str = convertBase(str, b, 10, x.s);
+
+        // Decimal point?
+        if ((e = str.indexOf('.')) > -1) str = str.replace('.', '');
+        else e = str.length;
+      }
+
+      // Determine leading zeros.
+      for (i = 0; str.charCodeAt(i) === 48; i++);
+
+      // Determine trailing zeros.
+      for (len = str.length; str.charCodeAt(--len) === 48;);
+
+      if (str = str.slice(i, ++len)) {
+        len -= i;
+
+        // '[BigNumber Error] Number primitive has more than 15 significant digits: {n}'
+        if (isNum && BigNumber.DEBUG &&
+          len > 15 && (v > MAX_SAFE_INTEGER || v !== mathfloor(v))) {
+            throw Error
+             (tooManyDigits + (x.s * v));
+        }
+
+         // Overflow?
+        if ((e = e - i - 1) > MAX_EXP) {
+
+          // Infinity.
+          x.c = x.e = null;
+
+        // Underflow?
+        } else if (e < MIN_EXP) {
+
+          // Zero.
+          x.c = [x.e = 0];
+        } else {
+          x.e = e;
+          x.c = [];
+
+          // Transform base
+
+          // e is the base 10 exponent.
+          // i is where to slice str to get the first element of the coefficient array.
+          i = (e + 1) % LOG_BASE;
+          if (e < 0) i += LOG_BASE;  // i < 1
+
+          if (i < len) {
+            if (i) x.c.push(+str.slice(0, i));
+
+            for (len -= LOG_BASE; i < len;) {
+              x.c.push(+str.slice(i, i += LOG_BASE));
+            }
+
+            i = LOG_BASE - (str = str.slice(i)).length;
+          } else {
+            i -= len;
+          }
+
+          for (; i--; str += '0');
+          x.c.push(+str);
+        }
+      } else {
+
+        // Zero.
+        x.c = [x.e = 0];
+      }
+    }
+
+
+    // CONSTRUCTOR PROPERTIES
+
+
+    BigNumber.clone = clone;
+
+    BigNumber.ROUND_UP = 0;
+    BigNumber.ROUND_DOWN = 1;
+    BigNumber.ROUND_CEIL = 2;
+    BigNumber.ROUND_FLOOR = 3;
+    BigNumber.ROUND_HALF_UP = 4;
+    BigNumber.ROUND_HALF_DOWN = 5;
+    BigNumber.ROUND_HALF_EVEN = 6;
+    BigNumber.ROUND_HALF_CEIL = 7;
+    BigNumber.ROUND_HALF_FLOOR = 8;
+    BigNumber.EUCLID = 9;
+
+
+    /*
+     * Configure infrequently-changing library-wide settings.
+     *
+     * Accept an object with the following optional properties (if the value of a property is
+     * a number, it must be an integer within the inclusive range stated):
+     *
+     *   DECIMAL_PLACES   {number}           0 to MAX
+     *   ROUNDING_MODE    {number}           0 to 8
+     *   EXPONENTIAL_AT   {number|number[]}  -MAX to MAX  or  [-MAX to 0, 0 to MAX]
+     *   RANGE            {number|number[]}  -MAX to MAX (not zero)  or  [-MAX to -1, 1 to MAX]
+     *   CRYPTO           {boolean}          true or false
+     *   MODULO_MODE      {number}           0 to 9
+     *   POW_PRECISION       {number}           0 to MAX
+     *   ALPHABET         {string}           A string of two or more unique characters which does
+     *                                       not contain '.'.
+     *   FORMAT           {object}           An object with some of the following properties:
+     *     prefix                 {string}
+     *     groupSize              {number}
+     *     secondaryGroupSize     {number}
+     *     groupSeparator         {string}
+     *     decimalSeparator       {string}
+     *     fractionGroupSize      {number}
+     *     fractionGroupSeparator {string}
+     *     suffix                 {string}
+     *
+     * (The values assigned to the above FORMAT object properties are not checked for validity.)
+     *
+     * E.g.
+     * BigNumber.config({ DECIMAL_PLACES : 20, ROUNDING_MODE : 4 })
+     *
+     * Ignore properties/parameters set to null or undefined, except for ALPHABET.
+     *
+     * Return an object with the properties current values.
+     */
+    BigNumber.config = BigNumber.set = function (obj) {
+      var p, v;
+
+      if (obj != null) {
+
+        if (typeof obj == 'object') {
+
+          // DECIMAL_PLACES {number} Integer, 0 to MAX inclusive.
+          // '[BigNumber Error] DECIMAL_PLACES {not a primitive number|not an integer|out of range}: {v}'
+          if (obj.hasOwnProperty(p = 'DECIMAL_PLACES')) {
+            v = obj[p];
+            intCheck(v, 0, MAX, p);
+            DECIMAL_PLACES = v;
+          }
+
+          // ROUNDING_MODE {number} Integer, 0 to 8 inclusive.
+          // '[BigNumber Error] ROUNDING_MODE {not a primitive number|not an integer|out of range}: {v}'
+          if (obj.hasOwnProperty(p = 'ROUNDING_MODE')) {
+            v = obj[p];
+            intCheck(v, 0, 8, p);
+            ROUNDING_MODE = v;
+          }
+
+          // EXPONENTIAL_AT {number|number[]}
+          // Integer, -MAX to MAX inclusive or
+          // [integer -MAX to 0 inclusive, 0 to MAX inclusive].
+          // '[BigNumber Error] EXPONENTIAL_AT {not a primitive number|not an integer|out of range}: {v}'
+          if (obj.hasOwnProperty(p = 'EXPONENTIAL_AT')) {
+            v = obj[p];
+            if (v && v.pop) {
+              intCheck(v[0], -MAX, 0, p);
+              intCheck(v[1], 0, MAX, p);
+              TO_EXP_NEG = v[0];
+              TO_EXP_POS = v[1];
+            } else {
+              intCheck(v, -MAX, MAX, p);
+              TO_EXP_NEG = -(TO_EXP_POS = v < 0 ? -v : v);
+            }
+          }
+
+          // RANGE {number|number[]} Non-zero integer, -MAX to MAX inclusive or
+          // [integer -MAX to -1 inclusive, integer 1 to MAX inclusive].
+          // '[BigNumber Error] RANGE {not a primitive number|not an integer|out of range|cannot be zero}: {v}'
+          if (obj.hasOwnProperty(p = 'RANGE')) {
+            v = obj[p];
+            if (v && v.pop) {
+              intCheck(v[0], -MAX, -1, p);
+              intCheck(v[1], 1, MAX, p);
+              MIN_EXP = v[0];
+              MAX_EXP = v[1];
+            } else {
+              intCheck(v, -MAX, MAX, p);
+              if (v) {
+                MIN_EXP = -(MAX_EXP = v < 0 ? -v : v);
+              } else {
+                throw Error
+                 (bignumberError + p + ' cannot be zero: ' + v);
+              }
+            }
+          }
+
+          // CRYPTO {boolean} true or false.
+          // '[BigNumber Error] CRYPTO not true or false: {v}'
+          // '[BigNumber Error] crypto unavailable'
+          if (obj.hasOwnProperty(p = 'CRYPTO')) {
+            v = obj[p];
+            if (v === !!v) {
+              if (v) {
+                if (typeof crypto != 'undefined' && crypto &&
+                 (crypto.getRandomValues || crypto.randomBytes)) {
+                  CRYPTO = v;
+                } else {
+                  CRYPTO = !v;
+                  throw Error
+                   (bignumberError + 'crypto unavailable');
+                }
+              } else {
+                CRYPTO = v;
+              }
+            } else {
+              throw Error
+               (bignumberError + p + ' not true or false: ' + v);
+            }
+          }
+
+          // MODULO_MODE {number} Integer, 0 to 9 inclusive.
+          // '[BigNumber Error] MODULO_MODE {not a primitive number|not an integer|out of range}: {v}'
+          if (obj.hasOwnProperty(p = 'MODULO_MODE')) {
+            v = obj[p];
+            intCheck(v, 0, 9, p);
+            MODULO_MODE = v;
+          }
+
+          // POW_PRECISION {number} Integer, 0 to MAX inclusive.
+          // '[BigNumber Error] POW_PRECISION {not a primitive number|not an integer|out of range}: {v}'
+          if (obj.hasOwnProperty(p = 'POW_PRECISION')) {
+            v = obj[p];
+            intCheck(v, 0, MAX, p);
+            POW_PRECISION = v;
+          }
+
+          // FORMAT {object}
+          // '[BigNumber Error] FORMAT not an object: {v}'
+          if (obj.hasOwnProperty(p = 'FORMAT')) {
+            v = obj[p];
+            if (typeof v == 'object') FORMAT = v;
+            else throw Error
+             (bignumberError + p + ' not an object: ' + v);
+          }
+
+          // ALPHABET {string}
+          // '[BigNumber Error] ALPHABET invalid: {v}'
+          if (obj.hasOwnProperty(p = 'ALPHABET')) {
+            v = obj[p];
+
+            // Disallow if less than two characters,
+            // or if it contains '+', '-', '.', whitespace, or a repeated character.
+            if (typeof v == 'string' && !/^.?$|[+\-.\s]|(.).*\1/.test(v)) {
+              alphabetHasNormalDecimalDigits = v.slice(0, 10) == '0123456789';
+              ALPHABET = v;
+            } else {
+              throw Error
+               (bignumberError + p + ' invalid: ' + v);
+            }
+          }
+
+        } else {
+
+          // '[BigNumber Error] Object expected: {v}'
+          throw Error
+           (bignumberError + 'Object expected: ' + obj);
+        }
+      }
+
+      return {
+        DECIMAL_PLACES: DECIMAL_PLACES,
+        ROUNDING_MODE: ROUNDING_MODE,
+        EXPONENTIAL_AT: [TO_EXP_NEG, TO_EXP_POS],
+        RANGE: [MIN_EXP, MAX_EXP],
+        CRYPTO: CRYPTO,
+        MODULO_MODE: MODULO_MODE,
+        POW_PRECISION: POW_PRECISION,
+        FORMAT: FORMAT,
+        ALPHABET: ALPHABET
+      };
+    };
+
+
+    /*
+     * Return true if v is a BigNumber instance, otherwise return false.
+     *
+     * If BigNumber.DEBUG is true, throw if a BigNumber instance is not well-formed.
+     *
+     * v {any}
+     *
+     * '[BigNumber Error] Invalid BigNumber: {v}'
+     */
+    BigNumber.isBigNumber = function (v) {
+      if (!v || v._isBigNumber !== true) return false;
+      if (!BigNumber.DEBUG) return true;
+
+      var i, n,
+        c = v.c,
+        e = v.e,
+        s = v.s;
+
+      out: if ({}.toString.call(c) == '[object Array]') {
+
+        if ((s === 1 || s === -1) && e >= -MAX && e <= MAX && e === mathfloor(e)) {
+
+          // If the first element is zero, the BigNumber value must be zero.
+          if (c[0] === 0) {
+            if (e === 0 && c.length === 1) return true;
+            break out;
+          }
+
+          // Calculate number of digits that c[0] should have, based on the exponent.
+          i = (e + 1) % LOG_BASE;
+          if (i < 1) i += LOG_BASE;
+
+          // Calculate number of digits of c[0].
+          //if (Math.ceil(Math.log(c[0] + 1) / Math.LN10) == i) {
+          if (String(c[0]).length == i) {
+
+            for (i = 0; i < c.length; i++) {
+              n = c[i];
+              if (n < 0 || n >= BASE || n !== mathfloor(n)) break out;
+            }
+
+            // Last element cannot be zero, unless it is the only element.
+            if (n !== 0) return true;
+          }
+        }
+
+      // Infinity/NaN
+      } else if (c === null && e === null && (s === null || s === 1 || s === -1)) {
+        return true;
+      }
+
+      throw Error
+        (bignumberError + 'Invalid BigNumber: ' + v);
+    };
+
+
+    /*
+     * Return a new BigNumber whose value is the maximum of the arguments.
+     *
+     * arguments {number|string|BigNumber}
+     */
+    BigNumber.maximum = BigNumber.max = function () {
+      return maxOrMin(arguments, P.lt);
+    };
+
+
+    /*
+     * Return a new BigNumber whose value is the minimum of the arguments.
+     *
+     * arguments {number|string|BigNumber}
+     */
+    BigNumber.minimum = BigNumber.min = function () {
+      return maxOrMin(arguments, P.gt);
+    };
+
+
+    /*
+     * Return a new BigNumber with a random value equal to or greater than 0 and less than 1,
+     * and with dp, or DECIMAL_PLACES if dp is omitted, decimal places (or less if trailing
+     * zeros are produced).
+     *
+     * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp}'
+     * '[BigNumber Error] crypto unavailable'
+     */
+    BigNumber.random = (function () {
+      var pow2_53 = 0x20000000000000;
+
+      // Return a 53 bit integer n, where 0 <= n < 9007199254740992.
+      // Check if Math.random() produces more than 32 bits of randomness.
+      // If it does, assume at least 53 bits are produced, otherwise assume at least 30 bits.
+      // 0x40000000 is 2^30, 0x800000 is 2^23, 0x1fffff is 2^21 - 1.
+      var random53bitInt = (Math.random() * pow2_53) & 0x1fffff
+       ? function () { return mathfloor(Math.random() * pow2_53); }
+       : function () { return ((Math.random() * 0x40000000 | 0) * 0x800000) +
+         (Math.random() * 0x800000 | 0); };
+
+      return function (dp) {
+        var a, b, e, k, v,
+          i = 0,
+          c = [],
+          rand = new BigNumber(ONE);
+
+        if (dp == null) dp = DECIMAL_PLACES;
+        else intCheck(dp, 0, MAX);
+
+        k = mathceil(dp / LOG_BASE);
+
+        if (CRYPTO) {
+
+          // Browsers supporting crypto.getRandomValues.
+          if (crypto.getRandomValues) {
+
+            a = crypto.getRandomValues(new Uint32Array(k *= 2));
+
+            for (; i < k;) {
+
+              // 53 bits:
+              // ((Math.pow(2, 32) - 1) * Math.pow(2, 21)).toString(2)
+              // 11111 11111111 11111111 11111111 11100000 00000000 00000000
+              // ((Math.pow(2, 32) - 1) >>> 11).toString(2)
+              //                                     11111 11111111 11111111
+              // 0x20000 is 2^21.
+              v = a[i] * 0x20000 + (a[i + 1] >>> 11);
+
+              // Rejection sampling:
+              // 0 <= v < 9007199254740992
+              // Probability that v >= 9e15, is
+              // 7199254740992 / 9007199254740992 ~= 0.0008, i.e. 1 in 1251
+              if (v >= 9e15) {
+                b = crypto.getRandomValues(new Uint32Array(2));
+                a[i] = b[0];
+                a[i + 1] = b[1];
+              } else {
+
+                // 0 <= v <= 8999999999999999
+                // 0 <= (v % 1e14) <= 99999999999999
+                c.push(v % 1e14);
+                i += 2;
+              }
+            }
+            i = k / 2;
+
+          // Node.js supporting crypto.randomBytes.
+          } else if (crypto.randomBytes) {
+
+            // buffer
+            a = crypto.randomBytes(k *= 7);
+
+            for (; i < k;) {
+
+              // 0x1000000000000 is 2^48, 0x10000000000 is 2^40
+              // 0x100000000 is 2^32, 0x1000000 is 2^24
+              // 11111 11111111 11111111 11111111 11111111 11111111 11111111
+              // 0 <= v < 9007199254740992
+              v = ((a[i] & 31) * 0x1000000000000) + (a[i + 1] * 0x10000000000) +
+                 (a[i + 2] * 0x100000000) + (a[i + 3] * 0x1000000) +
+                 (a[i + 4] << 16) + (a[i + 5] << 8) + a[i + 6];
+
+              if (v >= 9e15) {
+                crypto.randomBytes(7).copy(a, i);
+              } else {
+
+                // 0 <= (v % 1e14) <= 99999999999999
+                c.push(v % 1e14);
+                i += 7;
+              }
+            }
+            i = k / 7;
+          } else {
+            CRYPTO = false;
+            throw Error
+             (bignumberError + 'crypto unavailable');
+          }
+        }
+
+        // Use Math.random.
+        if (!CRYPTO) {
+
+          for (; i < k;) {
+            v = random53bitInt();
+            if (v < 9e15) c[i++] = v % 1e14;
+          }
+        }
+
+        k = c[--i];
+        dp %= LOG_BASE;
+
+        // Convert trailing digits to zeros according to dp.
+        if (k && dp) {
+          v = POWS_TEN[LOG_BASE - dp];
+          c[i] = mathfloor(k / v) * v;
+        }
+
+        // Remove trailing elements which are zero.
+        for (; c[i] === 0; c.pop(), i--);
+
+        // Zero?
+        if (i < 0) {
+          c = [e = 0];
+        } else {
+
+          // Remove leading elements which are zero and adjust exponent accordingly.
+          for (e = -1 ; c[0] === 0; c.splice(0, 1), e -= LOG_BASE);
+
+          // Count the digits of the first element of c to determine leading zeros, and...
+          for (i = 1, v = c[0]; v >= 10; v /= 10, i++);
+
+          // adjust the exponent accordingly.
+          if (i < LOG_BASE) e -= LOG_BASE - i;
+        }
+
+        rand.e = e;
+        rand.c = c;
+        return rand;
+      };
+    })();
+
+
+    /*
+     * Return a BigNumber whose value is the sum of the arguments.
+     *
+     * arguments {number|string|BigNumber}
+     */
+    BigNumber.sum = function () {
+      var i = 1,
+        args = arguments,
+        sum = new BigNumber(args[0]);
+      for (; i < args.length;) sum = sum.plus(args[i++]);
+      return sum;
+    };
+
+
+    // PRIVATE FUNCTIONS
+
+
+    // Called by BigNumber and BigNumber.prototype.toString.
+    convertBase = (function () {
+      var decimal = '0123456789';
+
+      /*
+       * Convert string of baseIn to an array of numbers of baseOut.
+       * Eg. toBaseOut('255', 10, 16) returns [15, 15].
+       * Eg. toBaseOut('ff', 16, 10) returns [2, 5, 5].
+       */
+      function toBaseOut(str, baseIn, baseOut, alphabet) {
+        var j,
+          arr = [0],
+          arrL,
+          i = 0,
+          len = str.length;
+
+        for (; i < len;) {
+          for (arrL = arr.length; arrL--; arr[arrL] *= baseIn);
+
+          arr[0] += alphabet.indexOf(str.charAt(i++));
+
+          for (j = 0; j < arr.length; j++) {
+
+            if (arr[j] > baseOut - 1) {
+              if (arr[j + 1] == null) arr[j + 1] = 0;
+              arr[j + 1] += arr[j] / baseOut | 0;
+              arr[j] %= baseOut;
+            }
+          }
+        }
+
+        return arr.reverse();
+      }
+
+      // Convert a numeric string of baseIn to a numeric string of baseOut.
+      // If the caller is toString, we are converting from base 10 to baseOut.
+      // If the caller is BigNumber, we are converting from baseIn to base 10.
+      return function (str, baseIn, baseOut, sign, callerIsToString) {
+        var alphabet, d, e, k, r, x, xc, y,
+          i = str.indexOf('.'),
+          dp = DECIMAL_PLACES,
+          rm = ROUNDING_MODE;
+
+        // Non-integer.
+        if (i >= 0) {
+          k = POW_PRECISION;
+
+          // Unlimited precision.
+          POW_PRECISION = 0;
+          str = str.replace('.', '');
+          y = new BigNumber(baseIn);
+          x = y.pow(str.length - i);
+          POW_PRECISION = k;
+
+          // Convert str as if an integer, then restore the fraction part by dividing the
+          // result by its base raised to a power.
+
+          y.c = toBaseOut(toFixedPoint(coeffToString(x.c), x.e, '0'),
+           10, baseOut, decimal);
+          y.e = y.c.length;
+        }
+
+        // Convert the number as integer.
+
+        xc = toBaseOut(str, baseIn, baseOut, callerIsToString
+         ? (alphabet = ALPHABET, decimal)
+         : (alphabet = decimal, ALPHABET));
+
+        // xc now represents str as an integer and converted to baseOut. e is the exponent.
+        e = k = xc.length;
+
+        // Remove trailing zeros.
+        for (; xc[--k] == 0; xc.pop());
+
+        // Zero?
+        if (!xc[0]) return alphabet.charAt(0);
+
+        // Does str represent an integer? If so, no need for the division.
+        if (i < 0) {
+          --e;
+        } else {
+          x.c = xc;
+          x.e = e;
+
+          // The sign is needed for correct rounding.
+          x.s = sign;
+          x = div(x, y, dp, rm, baseOut);
+          xc = x.c;
+          r = x.r;
+          e = x.e;
+        }
+
+        // xc now represents str converted to baseOut.
+
+        // THe index of the rounding digit.
+        d = e + dp + 1;
+
+        // The rounding digit: the digit to the right of the digit that may be rounded up.
+        i = xc[d];
+
+        // Look at the rounding digits and mode to determine whether to round up.
+
+        k = baseOut / 2;
+        r = r || d < 0 || xc[d + 1] != null;
+
+        r = rm < 4 ? (i != null || r) && (rm == 0 || rm == (x.s < 0 ? 3 : 2))
+              : i > k || i == k &&(rm == 4 || r || rm == 6 && xc[d - 1] & 1 ||
+               rm == (x.s < 0 ? 8 : 7));
+
+        // If the index of the rounding digit is not greater than zero, or xc represents
+        // zero, then the result of the base conversion is zero or, if rounding up, a value
+        // such as 0.00001.
+        if (d < 1 || !xc[0]) {
+
+          // 1^-dp or 0
+          str = r ? toFixedPoint(alphabet.charAt(1), -dp, alphabet.charAt(0)) : alphabet.charAt(0);
+        } else {
+
+          // Truncate xc to the required number of decimal places.
+          xc.length = d;
+
+          // Round up?
+          if (r) {
+
+            // Rounding up may mean the previous digit has to be rounded up and so on.
+            for (--baseOut; ++xc[--d] > baseOut;) {
+              xc[d] = 0;
+
+              if (!d) {
+                ++e;
+                xc = [1].concat(xc);
+              }
+            }
+          }
+
+          // Determine trailing zeros.
+          for (k = xc.length; !xc[--k];);
+
+          // E.g. [4, 11, 15] becomes 4bf.
+          for (i = 0, str = ''; i <= k; str += alphabet.charAt(xc[i++]));
+
+          // Add leading zeros, decimal point and trailing zeros as required.
+          str = toFixedPoint(str, e, alphabet.charAt(0));
+        }
+
+        // The caller will add the sign.
+        return str;
+      };
+    })();
+
+
+    // Perform division in the specified base. Called by div and convertBase.
+    div = (function () {
+
+      // Assume non-zero x and k.
+      function multiply(x, k, base) {
+        var m, temp, xlo, xhi,
+          carry = 0,
+          i = x.length,
+          klo = k % SQRT_BASE,
+          khi = k / SQRT_BASE | 0;
+
+        for (x = x.slice(); i--;) {
+          xlo = x[i] % SQRT_BASE;
+          xhi = x[i] / SQRT_BASE | 0;
+          m = khi * xlo + xhi * klo;
+          temp = klo * xlo + ((m % SQRT_BASE) * SQRT_BASE) + carry;
+          carry = (temp / base | 0) + (m / SQRT_BASE | 0) + khi * xhi;
+          x[i] = temp % base;
+        }
+
+        if (carry) x = [carry].concat(x);
+
+        return x;
+      }
+
+      function compare(a, b, aL, bL) {
+        var i, cmp;
+
+        if (aL != bL) {
+          cmp = aL > bL ? 1 : -1;
+        } else {
+
+          for (i = cmp = 0; i < aL; i++) {
+
+            if (a[i] != b[i]) {
+              cmp = a[i] > b[i] ? 1 : -1;
+              break;
+            }
+          }
+        }
+
+        return cmp;
+      }
+
+      function subtract(a, b, aL, base) {
+        var i = 0;
+
+        // Subtract b from a.
+        for (; aL--;) {
+          a[aL] -= i;
+          i = a[aL] < b[aL] ? 1 : 0;
+          a[aL] = i * base + a[aL] - b[aL];
+        }
+
+        // Remove leading zeros.
+        for (; !a[0] && a.length > 1; a.splice(0, 1));
+      }
+
+      // x: dividend, y: divisor.
+      return function (x, y, dp, rm, base) {
+        var cmp, e, i, more, n, prod, prodL, q, qc, rem, remL, rem0, xi, xL, yc0,
+          yL, yz,
+          s = x.s == y.s ? 1 : -1,
+          xc = x.c,
+          yc = y.c;
+
+        // Either NaN, Infinity or 0?
+        if (!xc || !xc[0] || !yc || !yc[0]) {
+
+          return new BigNumber(
+
+           // Return NaN if either NaN, or both Infinity or 0.
+           !x.s || !y.s || (xc ? yc && xc[0] == yc[0] : !yc) ? NaN :
+
+            // Return ±0 if x is ±0 or y is ±Infinity, or return ±Infinity as y is ±0.
+            xc && xc[0] == 0 || !yc ? s * 0 : s / 0
+         );
+        }
+
+        q = new BigNumber(s);
+        qc = q.c = [];
+        e = x.e - y.e;
+        s = dp + e + 1;
+
+        if (!base) {
+          base = BASE;
+          e = bitFloor(x.e / LOG_BASE) - bitFloor(y.e / LOG_BASE);
+          s = s / LOG_BASE | 0;
+        }
+
+        // Result exponent may be one less then the current value of e.
+        // The coefficients of the BigNumbers from convertBase may have trailing zeros.
+        for (i = 0; yc[i] == (xc[i] || 0); i++);
+
+        if (yc[i] > (xc[i] || 0)) e--;
+
+        if (s < 0) {
+          qc.push(1);
+          more = true;
+        } else {
+          xL = xc.length;
+          yL = yc.length;
+          i = 0;
+          s += 2;
+
+          // Normalise xc and yc so highest order digit of yc is >= base / 2.
+
+          n = mathfloor(base / (yc[0] + 1));
+
+          // Not necessary, but to handle odd bases where yc[0] == (base / 2) - 1.
+          // if (n > 1 || n++ == 1 && yc[0] < base / 2) {
+          if (n > 1) {
+            yc = multiply(yc, n, base);
+            xc = multiply(xc, n, base);
+            yL = yc.length;
+            xL = xc.length;
+          }
+
+          xi = yL;
+          rem = xc.slice(0, yL);
+          remL = rem.length;
+
+          // Add zeros to make remainder as long as divisor.
+          for (; remL < yL; rem[remL++] = 0);
+          yz = yc.slice();
+          yz = [0].concat(yz);
+          yc0 = yc[0];
+          if (yc[1] >= base / 2) yc0++;
+          // Not necessary, but to prevent trial digit n > base, when using base 3.
+          // else if (base == 3 && yc0 == 1) yc0 = 1 + 1e-15;
+
+          do {
+            n = 0;
+
+            // Compare divisor and remainder.
+            cmp = compare(yc, rem, yL, remL);
+
+            // If divisor < remainder.
+            if (cmp < 0) {
+
+              // Calculate trial digit, n.
+
+              rem0 = rem[0];
+              if (yL != remL) rem0 = rem0 * base + (rem[1] || 0);
+
+              // n is how many times the divisor goes into the current remainder.
+              n = mathfloor(rem0 / yc0);
+
+              //  Algorithm:
+              //  product = divisor multiplied by trial digit (n).
+              //  Compare product and remainder.
+              //  If product is greater than remainder:
+              //    Subtract divisor from product, decrement trial digit.
+              //  Subtract product from remainder.
+              //  If product was less than remainder at the last compare:
+              //    Compare new remainder and divisor.
+              //    If remainder is greater than divisor:
+              //      Subtract divisor from remainder, increment trial digit.
+
+              if (n > 1) {
+
+                // n may be > base only when base is 3.
+                if (n >= base) n = base - 1;
+
+                // product = divisor * trial digit.
+                prod = multiply(yc, n, base);
+                prodL = prod.length;
+                remL = rem.length;
+
+                // Compare product and remainder.
+                // If product > remainder then trial digit n too high.
+                // n is 1 too high about 5% of the time, and is not known to have
+                // ever been more than 1 too high.
+                while (compare(prod, rem, prodL, remL) == 1) {
+                  n--;
+
+                  // Subtract divisor from product.
+                  subtract(prod, yL < prodL ? yz : yc, prodL, base);
+                  prodL = prod.length;
+                  cmp = 1;
+                }
+              } else {
+
+                // n is 0 or 1, cmp is -1.
+                // If n is 0, there is no need to compare yc and rem again below,
+                // so change cmp to 1 to avoid it.
+                // If n is 1, leave cmp as -1, so yc and rem are compared again.
+                if (n == 0) {
+
+                  // divisor < remainder, so n must be at least 1.
+                  cmp = n = 1;
+                }
+
+                // product = divisor
+                prod = yc.slice();
+                prodL = prod.length;
+              }
+
+              if (prodL < remL) prod = [0].concat(prod);
+
+              // Subtract product from remainder.
+              subtract(rem, prod, remL, base);
+              remL = rem.length;
+
+               // If product was < remainder.
+              if (cmp == -1) {
+
+                // Compare divisor and new remainder.
+                // If divisor < new remainder, subtract divisor from remainder.
+                // Trial digit n too low.
+                // n is 1 too low about 5% of the time, and very rarely 2 too low.
+                while (compare(yc, rem, yL, remL) < 1) {
+                  n++;
+
+                  // Subtract divisor from remainder.
+                  subtract(rem, yL < remL ? yz : yc, remL, base);
+                  remL = rem.length;
+                }
+              }
+            } else if (cmp === 0) {
+              n++;
+              rem = [0];
+            } // else cmp === 1 and n will be 0
+
+            // Add the next digit, n, to the result array.
+            qc[i++] = n;
+
+            // Update the remainder.
+            if (rem[0]) {
+              rem[remL++] = xc[xi] || 0;
+            } else {
+              rem = [xc[xi]];
+              remL = 1;
+            }
+          } while ((xi++ < xL || rem[0] != null) && s--);
+
+          more = rem[0] != null;
+
+          // Leading zero?
+          if (!qc[0]) qc.splice(0, 1);
+        }
+
+        if (base == BASE) {
+
+          // To calculate q.e, first get the number of digits of qc[0].
+          for (i = 1, s = qc[0]; s >= 10; s /= 10, i++);
+
+          round(q, dp + (q.e = i + e * LOG_BASE - 1) + 1, rm, more);
+
+        // Caller is convertBase.
+        } else {
+          q.e = e;
+          q.r = +more;
+        }
+
+        return q;
+      };
+    })();
+
+
+    /*
+     * Return a string representing the value of BigNumber n in fixed-point or exponential
+     * notation rounded to the specified decimal places or significant digits.
+     *
+     * n: a BigNumber.
+     * i: the index of the last digit required (i.e. the digit that may be rounded up).
+     * rm: the rounding mode.
+     * id: 1 (toExponential) or 2 (toPrecision).
+     */
+    function format(n, i, rm, id) {
+      var c0, e, ne, len, str;
+
+      if (rm == null) rm = ROUNDING_MODE;
+      else intCheck(rm, 0, 8);
+
+      if (!n.c) return n.toString();
+
+      c0 = n.c[0];
+      ne = n.e;
+
+      if (i == null) {
+        str = coeffToString(n.c);
+        str = id == 1 || id == 2 && (ne <= TO_EXP_NEG || ne >= TO_EXP_POS)
+         ? toExponential(str, ne)
+         : toFixedPoint(str, ne, '0');
+      } else {
+        n = round(new BigNumber(n), i, rm);
+
+        // n.e may have changed if the value was rounded up.
+        e = n.e;
+
+        str = coeffToString(n.c);
+        len = str.length;
+
+        // toPrecision returns exponential notation if the number of significant digits
+        // specified is less than the number of digits necessary to represent the integer
+        // part of the value in fixed-point notation.
+
+        // Exponential notation.
+        if (id == 1 || id == 2 && (i <= e || e <= TO_EXP_NEG)) {
+
+          // Append zeros?
+          for (; len < i; str += '0', len++);
+          str = toExponential(str, e);
+
+        // Fixed-point notation.
+        } else {
+          i -= ne;
+          str = toFixedPoint(str, e, '0');
+
+          // Append zeros?
+          if (e + 1 > len) {
+            if (--i > 0) for (str += '.'; i--; str += '0');
+          } else {
+            i += e - len;
+            if (i > 0) {
+              if (e + 1 == len) str += '.';
+              for (; i--; str += '0');
+            }
+          }
+        }
+      }
+
+      return n.s < 0 && c0 ? '-' + str : str;
+    }
+
+
+    // Handle BigNumber.max and BigNumber.min.
+    function maxOrMin(args, method) {
+      var n,
+        i = 1,
+        m = new BigNumber(args[0]);
+
+      for (; i < args.length; i++) {
+        n = new BigNumber(args[i]);
+
+        // If any number is NaN, return NaN.
+        if (!n.s) {
+          m = n;
+          break;
+        } else if (method.call(m, n)) {
+          m = n;
+        }
+      }
+
+      return m;
+    }
+
+
+    /*
+     * Strip trailing zeros, calculate base 10 exponent and check against MIN_EXP and MAX_EXP.
+     * Called by minus, plus and times.
+     */
+    function normalise(n, c, e) {
+      var i = 1,
+        j = c.length;
+
+       // Remove trailing zeros.
+      for (; !c[--j]; c.pop());
+
+      // Calculate the base 10 exponent. First get the number of digits of c[0].
+      for (j = c[0]; j >= 10; j /= 10, i++);
+
+      // Overflow?
+      if ((e = i + e * LOG_BASE - 1) > MAX_EXP) {
+
+        // Infinity.
+        n.c = n.e = null;
+
+      // Underflow?
+      } else if (e < MIN_EXP) {
+
+        // Zero.
+        n.c = [n.e = 0];
+      } else {
+        n.e = e;
+        n.c = c;
+      }
+
+      return n;
+    }
+
+
+    // Handle values that fail the validity test in BigNumber.
+    parseNumeric = (function () {
+      var basePrefix = /^(-?)0([xbo])(?=\w[\w.]*$)/i,
+        dotAfter = /^([^.]+)\.$/,
+        dotBefore = /^\.([^.]+)$/,
+        isInfinityOrNaN = /^-?(Infinity|NaN)$/,
+        whitespaceOrPlus = /^\s*\+(?=[\w.])|^\s+|\s+$/g;
+
+      return function (x, str, isNum, b) {
+        var base,
+          s = isNum ? str : str.replace(whitespaceOrPlus, '');
+
+        // No exception on ±Infinity or NaN.
+        if (isInfinityOrNaN.test(s)) {
+          x.s = isNaN(s) ? null : s < 0 ? -1 : 1;
+        } else {
+          if (!isNum) {
+
+            // basePrefix = /^(-?)0([xbo])(?=\w[\w.]*$)/i
+            s = s.replace(basePrefix, function (m, p1, p2) {
+              base = (p2 = p2.toLowerCase()) == 'x' ? 16 : p2 == 'b' ? 2 : 8;
+              return !b || b == base ? p1 : m;
+            });
+
+            if (b) {
+              base = b;
+
+              // E.g. '1.' to '1', '.1' to '0.1'
+              s = s.replace(dotAfter, '$1').replace(dotBefore, '0.$1');
+            }
+
+            if (str != s) return new BigNumber(s, base);
+          }
+
+          // '[BigNumber Error] Not a number: {n}'
+          // '[BigNumber Error] Not a base {b} number: {n}'
+          if (BigNumber.DEBUG) {
+            throw Error
+              (bignumberError + 'Not a' + (b ? ' base ' + b : '') + ' number: ' + str);
+          }
+
+          // NaN
+          x.s = null;
+        }
+
+        x.c = x.e = null;
+      }
+    })();
+
+
+    /*
+     * Round x to sd significant digits using rounding mode rm. Check for over/under-flow.
+     * If r is truthy, it is known that there are more digits after the rounding digit.
+     */
+    function round(x, sd, rm, r) {
+      var d, i, j, k, n, ni, rd,
+        xc = x.c,
+        pows10 = POWS_TEN;
+
+      // if x is not Infinity or NaN...
+      if (xc) {
+
+        // rd is the rounding digit, i.e. the digit after the digit that may be rounded up.
+        // n is a base 1e14 number, the value of the element of array x.c containing rd.
+        // ni is the index of n within x.c.
+        // d is the number of digits of n.
+        // i is the index of rd within n including leading zeros.
+        // j is the actual index of rd within n (if < 0, rd is a leading zero).
+        out: {
+
+          // Get the number of digits of the first element of xc.
+          for (d = 1, k = xc[0]; k >= 10; k /= 10, d++);
+          i = sd - d;
+
+          // If the rounding digit is in the first element of xc...
+          if (i < 0) {
+            i += LOG_BASE;
+            j = sd;
+            n = xc[ni = 0];
+
+            // Get the rounding digit at index j of n.
+            rd = n / pows10[d - j - 1] % 10 | 0;
+          } else {
+            ni = mathceil((i + 1) / LOG_BASE);
+
+            if (ni >= xc.length) {
+
+              if (r) {
+
+                // Needed by sqrt.
+                for (; xc.length <= ni; xc.push(0));
+                n = rd = 0;
+                d = 1;
+                i %= LOG_BASE;
+                j = i - LOG_BASE + 1;
+              } else {
+                break out;
+              }
+            } else {
+              n = k = xc[ni];
+
+              // Get the number of digits of n.
+              for (d = 1; k >= 10; k /= 10, d++);
+
+              // Get the index of rd within n.
+              i %= LOG_BASE;
+
+              // Get the index of rd within n, adjusted for leading zeros.
+              // The number of leading zeros of n is given by LOG_BASE - d.
+              j = i - LOG_BASE + d;
+
+              // Get the rounding digit at index j of n.
+              rd = j < 0 ? 0 : n / pows10[d - j - 1] % 10 | 0;
+            }
+          }
+
+          r = r || sd < 0 ||
+
+          // Are there any non-zero digits after the rounding digit?
+          // The expression  n % pows10[d - j - 1]  returns all digits of n to the right
+          // of the digit at j, e.g. if n is 908714 and j is 2, the expression gives 714.
+           xc[ni + 1] != null || (j < 0 ? n : n % pows10[d - j - 1]);
+
+          r = rm < 4
+           ? (rd || r) && (rm == 0 || rm == (x.s < 0 ? 3 : 2))
+           : rd > 5 || rd == 5 && (rm == 4 || r || rm == 6 &&
+
+            // Check whether the digit to the left of the rounding digit is odd.
+            ((i > 0 ? j > 0 ? n / pows10[d - j] : 0 : xc[ni - 1]) % 10) & 1 ||
+             rm == (x.s < 0 ? 8 : 7));
+
+          if (sd < 1 || !xc[0]) {
+            xc.length = 0;
+
+            if (r) {
+
+              // Convert sd to decimal places.
+              sd -= x.e + 1;
+
+              // 1, 0.1, 0.01, 0.001, 0.0001 etc.
+              xc[0] = pows10[(LOG_BASE - sd % LOG_BASE) % LOG_BASE];
+              x.e = -sd || 0;
+            } else {
+
+              // Zero.
+              xc[0] = x.e = 0;
+            }
+
+            return x;
+          }
+
+          // Remove excess digits.
+          if (i == 0) {
+            xc.length = ni;
+            k = 1;
+            ni--;
+          } else {
+            xc.length = ni + 1;
+            k = pows10[LOG_BASE - i];
+
+            // E.g. 56700 becomes 56000 if 7 is the rounding digit.
+            // j > 0 means i > number of leading zeros of n.
+            xc[ni] = j > 0 ? mathfloor(n / pows10[d - j] % pows10[j]) * k : 0;
+          }
+
+          // Round up?
+          if (r) {
+
+            for (; ;) {
+
+              // If the digit to be rounded up is in the first element of xc...
+              if (ni == 0) {
+
+                // i will be the length of xc[0] before k is added.
+                for (i = 1, j = xc[0]; j >= 10; j /= 10, i++);
+                j = xc[0] += k;
+                for (k = 1; j >= 10; j /= 10, k++);
+
+                // if i != k the length has increased.
+                if (i != k) {
+                  x.e++;
+                  if (xc[0] == BASE) xc[0] = 1;
+                }
+
+                break;
+              } else {
+                xc[ni] += k;
+                if (xc[ni] != BASE) break;
+                xc[ni--] = 0;
+                k = 1;
+              }
+            }
+          }
+
+          // Remove trailing zeros.
+          for (i = xc.length; xc[--i] === 0; xc.pop());
+        }
+
+        // Overflow? Infinity.
+        if (x.e > MAX_EXP) {
+          x.c = x.e = null;
+
+        // Underflow? Zero.
+        } else if (x.e < MIN_EXP) {
+          x.c = [x.e = 0];
+        }
+      }
+
+      return x;
+    }
+
+
+    function valueOf(n) {
+      var str,
+        e = n.e;
+
+      if (e === null) return n.toString();
+
+      str = coeffToString(n.c);
+
+      str = e <= TO_EXP_NEG || e >= TO_EXP_POS
+        ? toExponential(str, e)
+        : toFixedPoint(str, e, '0');
+
+      return n.s < 0 ? '-' + str : str;
+    }
+
+
+    // PROTOTYPE/INSTANCE METHODS
+
+
+    /*
+     * Return a new BigNumber whose value is the absolute value of this BigNumber.
+     */
+    P.absoluteValue = P.abs = function () {
+      var x = new BigNumber(this);
+      if (x.s < 0) x.s = 1;
+      return x;
+    };
+
+
+    /*
+     * Return
+     *   1 if the value of this BigNumber is greater than the value of BigNumber(y, b),
+     *   -1 if the value of this BigNumber is less than the value of BigNumber(y, b),
+     *   0 if they have the same value,
+     *   or null if the value of either is NaN.
+     */
+    P.comparedTo = function (y, b) {
+      return compare(this, new BigNumber(y, b));
+    };
+
+
+    /*
+     * If dp is undefined or null or true or false, return the number of decimal places of the
+     * value of this BigNumber, or null if the value of this BigNumber is ±Infinity or NaN.
+     *
+     * Otherwise, if dp is a number, return a new BigNumber whose value is the value of this
+     * BigNumber rounded to a maximum of dp decimal places using rounding mode rm, or
+     * ROUNDING_MODE if rm is omitted.
+     *
+     * [dp] {number} Decimal places: integer, 0 to MAX inclusive.
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
+     */
+    P.decimalPlaces = P.dp = function (dp, rm) {
+      var c, n, v,
+        x = this;
+
+      if (dp != null) {
+        intCheck(dp, 0, MAX);
+        if (rm == null) rm = ROUNDING_MODE;
+        else intCheck(rm, 0, 8);
+
+        return round(new BigNumber(x), dp + x.e + 1, rm);
+      }
+
+      if (!(c = x.c)) return null;
+      n = ((v = c.length - 1) - bitFloor(this.e / LOG_BASE)) * LOG_BASE;
+
+      // Subtract the number of trailing zeros of the last number.
+      if (v = c[v]) for (; v % 10 == 0; v /= 10, n--);
+      if (n < 0) n = 0;
+
+      return n;
+    };
+
+
+    /*
+     *  n / 0 = I
+     *  n / N = N
+     *  n / I = 0
+     *  0 / n = 0
+     *  0 / 0 = N
+     *  0 / N = N
+     *  0 / I = 0
+     *  N / n = N
+     *  N / 0 = N
+     *  N / N = N
+     *  N / I = N
+     *  I / n = I
+     *  I / 0 = I
+     *  I / N = N
+     *  I / I = N
+     *
+     * Return a new BigNumber whose value is the value of this BigNumber divided by the value of
+     * BigNumber(y, b), rounded according to DECIMAL_PLACES and ROUNDING_MODE.
+     */
+    P.dividedBy = P.div = function (y, b) {
+      return div(this, new BigNumber(y, b), DECIMAL_PLACES, ROUNDING_MODE);
+    };
+
+
+    /*
+     * Return a new BigNumber whose value is the integer part of dividing the value of this
+     * BigNumber by the value of BigNumber(y, b).
+     */
+    P.dividedToIntegerBy = P.idiv = function (y, b) {
+      return div(this, new BigNumber(y, b), 0, 1);
+    };
+
+
+    /*
+     * Return a BigNumber whose value is the value of this BigNumber exponentiated by n.
+     *
+     * If m is present, return the result modulo m.
+     * If n is negative round according to DECIMAL_PLACES and ROUNDING_MODE.
+     * If POW_PRECISION is non-zero and m is not present, round to POW_PRECISION using ROUNDING_MODE.
+     *
+     * The modular power operation works efficiently when x, n, and m are integers, otherwise it
+     * is equivalent to calculating x.exponentiatedBy(n).modulo(m) with a POW_PRECISION of 0.
+     *
+     * n {number|string|BigNumber} The exponent. An integer.
+     * [m] {number|string|BigNumber} The modulus.
+     *
+     * '[BigNumber Error] Exponent not an integer: {n}'
+     */
+    P.exponentiatedBy = P.pow = function (n, m) {
+      var half, isModExp, i, k, more, nIsBig, nIsNeg, nIsOdd, y,
+        x = this;
+
+      n = new BigNumber(n);
+
+      // Allow NaN and ±Infinity, but not other non-integers.
+      if (n.c && !n.isInteger()) {
+        throw Error
+          (bignumberError + 'Exponent not an integer: ' + valueOf(n));
+      }
+
+      if (m != null) m = new BigNumber(m);
+
+      // Exponent of MAX_SAFE_INTEGER is 15.
+      nIsBig = n.e > 14;
+
+      // If x is NaN, ±Infinity, ±0 or ±1, or n is ±Infinity, NaN or ±0.
+      if (!x.c || !x.c[0] || x.c[0] == 1 && !x.e && x.c.length == 1 || !n.c || !n.c[0]) {
+
+        // The sign of the result of pow when x is negative depends on the evenness of n.
+        // If +n overflows to ±Infinity, the evenness of n would be not be known.
+        y = new BigNumber(Math.pow(+valueOf(x), nIsBig ? 2 - isOdd(n) : +valueOf(n)));
+        return m ? y.mod(m) : y;
+      }
+
+      nIsNeg = n.s < 0;
+
+      if (m) {
+
+        // x % m returns NaN if abs(m) is zero, or m is NaN.
+        if (m.c ? !m.c[0] : !m.s) return new BigNumber(NaN);
+
+        isModExp = !nIsNeg && x.isInteger() && m.isInteger();
+
+        if (isModExp) x = x.mod(m);
+
+      // Overflow to ±Infinity: >=2**1e10 or >=1.0000024**1e15.
+      // Underflow to ±0: <=0.79**1e10 or <=0.9999975**1e15.
+      } else if (n.e > 9 && (x.e > 0 || x.e < -1 || (x.e == 0
+        // [1, 240000000]
+        ? x.c[0] > 1 || nIsBig && x.c[1] >= 24e7
+        // [80000000000000]  [99999750000000]
+        : x.c[0] < 8e13 || nIsBig && x.c[0] <= 9999975e7))) {
+
+        // If x is negative and n is odd, k = -0, else k = 0.
+        k = x.s < 0 && isOdd(n) ? -0 : 0;
+
+        // If x >= 1, k = ±Infinity.
+        if (x.e > -1) k = 1 / k;
+
+        // If n is negative return ±0, else return ±Infinity.
+        return new BigNumber(nIsNeg ? 1 / k : k);
+
+      } else if (POW_PRECISION) {
+
+        // Truncating each coefficient array to a length of k after each multiplication
+        // equates to truncating significant digits to POW_PRECISION + [28, 41],
+        // i.e. there will be a minimum of 28 guard digits retained.
+        k = mathceil(POW_PRECISION / LOG_BASE + 2);
+      }
+
+      if (nIsBig) {
+        half = new BigNumber(0.5);
+        if (nIsNeg) n.s = 1;
+        nIsOdd = isOdd(n);
+      } else {
+        i = Math.abs(+valueOf(n));
+        nIsOdd = i % 2;
+      }
+
+      y = new BigNumber(ONE);
+
+      // Performs 54 loop iterations for n of 9007199254740991.
+      for (; ;) {
+
+        if (nIsOdd) {
+          y = y.times(x);
+          if (!y.c) break;
+
+          if (k) {
+            if (y.c.length > k) y.c.length = k;
+          } else if (isModExp) {
+            y = y.mod(m);    //y = y.minus(div(y, m, 0, MODULO_MODE).times(m));
+          }
+        }
+
+        if (i) {
+          i = mathfloor(i / 2);
+          if (i === 0) break;
+          nIsOdd = i % 2;
+        } else {
+          n = n.times(half);
+          round(n, n.e + 1, 1);
+
+          if (n.e > 14) {
+            nIsOdd = isOdd(n);
+          } else {
+            i = +valueOf(n);
+            if (i === 0) break;
+            nIsOdd = i % 2;
+          }
+        }
+
+        x = x.times(x);
+
+        if (k) {
+          if (x.c && x.c.length > k) x.c.length = k;
+        } else if (isModExp) {
+          x = x.mod(m);    //x = x.minus(div(x, m, 0, MODULO_MODE).times(m));
+        }
+      }
+
+      if (isModExp) return y;
+      if (nIsNeg) y = ONE.div(y);
+
+      return m ? y.mod(m) : k ? round(y, POW_PRECISION, ROUNDING_MODE, more) : y;
+    };
+
+
+    /*
+     * Return a new BigNumber whose value is the value of this BigNumber rounded to an integer
+     * using rounding mode rm, or ROUNDING_MODE if rm is omitted.
+     *
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {rm}'
+     */
+    P.integerValue = function (rm) {
+      var n = new BigNumber(this);
+      if (rm == null) rm = ROUNDING_MODE;
+      else intCheck(rm, 0, 8);
+      return round(n, n.e + 1, rm);
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is equal to the value of BigNumber(y, b),
+     * otherwise return false.
+     */
+    P.isEqualTo = P.eq = function (y, b) {
+      return compare(this, new BigNumber(y, b)) === 0;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is a finite number, otherwise return false.
+     */
+    P.isFinite = function () {
+      return !!this.c;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is greater than the value of BigNumber(y, b),
+     * otherwise return false.
+     */
+    P.isGreaterThan = P.gt = function (y, b) {
+      return compare(this, new BigNumber(y, b)) > 0;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is greater than or equal to the value of
+     * BigNumber(y, b), otherwise return false.
+     */
+    P.isGreaterThanOrEqualTo = P.gte = function (y, b) {
+      return (b = compare(this, new BigNumber(y, b))) === 1 || b === 0;
+
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is an integer, otherwise return false.
+     */
+    P.isInteger = function () {
+      return !!this.c && bitFloor(this.e / LOG_BASE) > this.c.length - 2;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is less than the value of BigNumber(y, b),
+     * otherwise return false.
+     */
+    P.isLessThan = P.lt = function (y, b) {
+      return compare(this, new BigNumber(y, b)) < 0;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is less than or equal to the value of
+     * BigNumber(y, b), otherwise return false.
+     */
+    P.isLessThanOrEqualTo = P.lte = function (y, b) {
+      return (b = compare(this, new BigNumber(y, b))) === -1 || b === 0;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is NaN, otherwise return false.
+     */
+    P.isNaN = function () {
+      return !this.s;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is negative, otherwise return false.
+     */
+    P.isNegative = function () {
+      return this.s < 0;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is positive, otherwise return false.
+     */
+    P.isPositive = function () {
+      return this.s > 0;
+    };
+
+
+    /*
+     * Return true if the value of this BigNumber is 0 or -0, otherwise return false.
+     */
+    P.isZero = function () {
+      return !!this.c && this.c[0] == 0;
+    };
+
+
+    /*
+     *  n - 0 = n
+     *  n - N = N
+     *  n - I = -I
+     *  0 - n = -n
+     *  0 - 0 = 0
+     *  0 - N = N
+     *  0 - I = -I
+     *  N - n = N
+     *  N - 0 = N
+     *  N - N = N
+     *  N - I = N
+     *  I - n = I
+     *  I - 0 = I
+     *  I - N = N
+     *  I - I = N
+     *
+     * Return a new BigNumber whose value is the value of this BigNumber minus the value of
+     * BigNumber(y, b).
+     */
+    P.minus = function (y, b) {
+      var i, j, t, xLTy,
+        x = this,
+        a = x.s;
+
+      y = new BigNumber(y, b);
+      b = y.s;
+
+      // Either NaN?
+      if (!a || !b) return new BigNumber(NaN);
+
+      // Signs differ?
+      if (a != b) {
+        y.s = -b;
+        return x.plus(y);
+      }
+
+      var xe = x.e / LOG_BASE,
+        ye = y.e / LOG_BASE,
+        xc = x.c,
+        yc = y.c;
+
+      if (!xe || !ye) {
+
+        // Either Infinity?
+        if (!xc || !yc) return xc ? (y.s = -b, y) : new BigNumber(yc ? x : NaN);
+
+        // Either zero?
+        if (!xc[0] || !yc[0]) {
+
+          // Return y if y is non-zero, x if x is non-zero, or zero if both are zero.
+          return yc[0] ? (y.s = -b, y) : new BigNumber(xc[0] ? x :
+
+           // IEEE 754 (2008) 6.3: n - n = -0 when rounding to -Infinity
+           ROUNDING_MODE == 3 ? -0 : 0);
+        }
+      }
+
+      xe = bitFloor(xe);
+      ye = bitFloor(ye);
+      xc = xc.slice();
+
+      // Determine which is the bigger number.
+      if (a = xe - ye) {
+
+        if (xLTy = a < 0) {
+          a = -a;
+          t = xc;
+        } else {
+          ye = xe;
+          t = yc;
+        }
+
+        t.reverse();
+
+        // Prepend zeros to equalise exponents.
+        for (b = a; b--; t.push(0));
+        t.reverse();
+      } else {
+
+        // Exponents equal. Check digit by digit.
+        j = (xLTy = (a = xc.length) < (b = yc.length)) ? a : b;
+
+        for (a = b = 0; b < j; b++) {
+
+          if (xc[b] != yc[b]) {
+            xLTy = xc[b] < yc[b];
+            break;
+          }
+        }
+      }
+
+      // x < y? Point xc to the array of the bigger number.
+      if (xLTy) t = xc, xc = yc, yc = t, y.s = -y.s;
+
+      b = (j = yc.length) - (i = xc.length);
+
+      // Append zeros to xc if shorter.
+      // No need to add zeros to yc if shorter as subtract only needs to start at yc.length.
+      if (b > 0) for (; b--; xc[i++] = 0);
+      b = BASE - 1;
+
+      // Subtract yc from xc.
+      for (; j > a;) {
+
+        if (xc[--j] < yc[j]) {
+          for (i = j; i && !xc[--i]; xc[i] = b);
+          --xc[i];
+          xc[j] += BASE;
+        }
+
+        xc[j] -= yc[j];
+      }
+
+      // Remove leading zeros and adjust exponent accordingly.
+      for (; xc[0] == 0; xc.splice(0, 1), --ye);
+
+      // Zero?
+      if (!xc[0]) {
+
+        // Following IEEE 754 (2008) 6.3,
+        // n - n = +0  but  n - n = -0  when rounding towards -Infinity.
+        y.s = ROUNDING_MODE == 3 ? -1 : 1;
+        y.c = [y.e = 0];
+        return y;
+      }
+
+      // No need to check for Infinity as +x - +y != Infinity && -x - -y != Infinity
+      // for finite x and y.
+      return normalise(y, xc, ye);
+    };
+
+
+    /*
+     *   n % 0 =  N
+     *   n % N =  N
+     *   n % I =  n
+     *   0 % n =  0
+     *  -0 % n = -0
+     *   0 % 0 =  N
+     *   0 % N =  N
+     *   0 % I =  0
+     *   N % n =  N
+     *   N % 0 =  N
+     *   N % N =  N
+     *   N % I =  N
+     *   I % n =  N
+     *   I % 0 =  N
+     *   I % N =  N
+     *   I % I =  N
+     *
+     * Return a new BigNumber whose value is the value of this BigNumber modulo the value of
+     * BigNumber(y, b). The result depends on the value of MODULO_MODE.
+     */
+    P.modulo = P.mod = function (y, b) {
+      var q, s,
+        x = this;
+
+      y = new BigNumber(y, b);
+
+      // Return NaN if x is Infinity or NaN, or y is NaN or zero.
+      if (!x.c || !y.s || y.c && !y.c[0]) {
+        return new BigNumber(NaN);
+
+      // Return x if y is Infinity or x is zero.
+      } else if (!y.c || x.c && !x.c[0]) {
+        return new BigNumber(x);
+      }
+
+      if (MODULO_MODE == 9) {
+
+        // Euclidian division: q = sign(y) * floor(x / abs(y))
+        // r = x - qy    where  0 <= r < abs(y)
+        s = y.s;
+        y.s = 1;
+        q = div(x, y, 0, 3);
+        y.s = s;
+        q.s *= s;
+      } else {
+        q = div(x, y, 0, MODULO_MODE);
+      }
+
+      y = x.minus(q.times(y));
+
+      // To match JavaScript %, ensure sign of zero is sign of dividend.
+      if (!y.c[0] && MODULO_MODE == 1) y.s = x.s;
+
+      return y;
+    };
+
+
+    /*
+     *  n * 0 = 0
+     *  n * N = N
+     *  n * I = I
+     *  0 * n = 0
+     *  0 * 0 = 0
+     *  0 * N = N
+     *  0 * I = N
+     *  N * n = N
+     *  N * 0 = N
+     *  N * N = N
+     *  N * I = N
+     *  I * n = I
+     *  I * 0 = N
+     *  I * N = N
+     *  I * I = I
+     *
+     * Return a new BigNumber whose value is the value of this BigNumber multiplied by the value
+     * of BigNumber(y, b).
+     */
+    P.multipliedBy = P.times = function (y, b) {
+      var c, e, i, j, k, m, xcL, xlo, xhi, ycL, ylo, yhi, zc,
+        base, sqrtBase,
+        x = this,
+        xc = x.c,
+        yc = (y = new BigNumber(y, b)).c;
+
+      // Either NaN, ±Infinity or ±0?
+      if (!xc || !yc || !xc[0] || !yc[0]) {
+
+        // Return NaN if either is NaN, or one is 0 and the other is Infinity.
+        if (!x.s || !y.s || xc && !xc[0] && !yc || yc && !yc[0] && !xc) {
+          y.c = y.e = y.s = null;
+        } else {
+          y.s *= x.s;
+
+          // Return ±Infinity if either is ±Infinity.
+          if (!xc || !yc) {
+            y.c = y.e = null;
+
+          // Return ±0 if either is ±0.
+          } else {
+            y.c = [0];
+            y.e = 0;
+          }
+        }
+
+        return y;
+      }
+
+      e = bitFloor(x.e / LOG_BASE) + bitFloor(y.e / LOG_BASE);
+      y.s *= x.s;
+      xcL = xc.length;
+      ycL = yc.length;
+
+      // Ensure xc points to longer array and xcL to its length.
+      if (xcL < ycL) zc = xc, xc = yc, yc = zc, i = xcL, xcL = ycL, ycL = i;
+
+      // Initialise the result array with zeros.
+      for (i = xcL + ycL, zc = []; i--; zc.push(0));
+
+      base = BASE;
+      sqrtBase = SQRT_BASE;
+
+      for (i = ycL; --i >= 0;) {
+        c = 0;
+        ylo = yc[i] % sqrtBase;
+        yhi = yc[i] / sqrtBase | 0;
+
+        for (k = xcL, j = i + k; j > i;) {
+          xlo = xc[--k] % sqrtBase;
+          xhi = xc[k] / sqrtBase | 0;
+          m = yhi * xlo + xhi * ylo;
+          xlo = ylo * xlo + ((m % sqrtBase) * sqrtBase) + zc[j] + c;
+          c = (xlo / base | 0) + (m / sqrtBase | 0) + yhi * xhi;
+          zc[j--] = xlo % base;
+        }
+
+        zc[j] = c;
+      }
+
+      if (c) {
+        ++e;
+      } else {
+        zc.splice(0, 1);
+      }
+
+      return normalise(y, zc, e);
+    };
+
+
+    /*
+     * Return a new BigNumber whose value is the value of this BigNumber negated,
+     * i.e. multiplied by -1.
+     */
+    P.negated = function () {
+      var x = new BigNumber(this);
+      x.s = -x.s || null;
+      return x;
+    };
+
+
+    /*
+     *  n + 0 = n
+     *  n + N = N
+     *  n + I = I
+     *  0 + n = n
+     *  0 + 0 = 0
+     *  0 + N = N
+     *  0 + I = I
+     *  N + n = N
+     *  N + 0 = N
+     *  N + N = N
+     *  N + I = N
+     *  I + n = I
+     *  I + 0 = I
+     *  I + N = N
+     *  I + I = I
+     *
+     * Return a new BigNumber whose value is the value of this BigNumber plus the value of
+     * BigNumber(y, b).
+     */
+    P.plus = function (y, b) {
+      var t,
+        x = this,
+        a = x.s;
+
+      y = new BigNumber(y, b);
+      b = y.s;
+
+      // Either NaN?
+      if (!a || !b) return new BigNumber(NaN);
+
+      // Signs differ?
+       if (a != b) {
+        y.s = -b;
+        return x.minus(y);
+      }
+
+      var xe = x.e / LOG_BASE,
+        ye = y.e / LOG_BASE,
+        xc = x.c,
+        yc = y.c;
+
+      if (!xe || !ye) {
+
+        // Return ±Infinity if either ±Infinity.
+        if (!xc || !yc) return new BigNumber(a / 0);
+
+        // Either zero?
+        // Return y if y is non-zero, x if x is non-zero, or zero if both are zero.
+        if (!xc[0] || !yc[0]) return yc[0] ? y : new BigNumber(xc[0] ? x : a * 0);
+      }
+
+      xe = bitFloor(xe);
+      ye = bitFloor(ye);
+      xc = xc.slice();
+
+      // Prepend zeros to equalise exponents. Faster to use reverse then do unshifts.
+      if (a = xe - ye) {
+        if (a > 0) {
+          ye = xe;
+          t = yc;
+        } else {
+          a = -a;
+          t = xc;
+        }
+
+        t.reverse();
+        for (; a--; t.push(0));
+        t.reverse();
+      }
+
+      a = xc.length;
+      b = yc.length;
+
+      // Point xc to the longer array, and b to the shorter length.
+      if (a - b < 0) t = yc, yc = xc, xc = t, b = a;
+
+      // Only start adding at yc.length - 1 as the further digits of xc can be ignored.
+      for (a = 0; b;) {
+        a = (xc[--b] = xc[b] + yc[b] + a) / BASE | 0;
+        xc[b] = BASE === xc[b] ? 0 : xc[b] % BASE;
+      }
+
+      if (a) {
+        xc = [a].concat(xc);
+        ++ye;
+      }
+
+      // No need to check for zero, as +x + +y != 0 && -x + -y != 0
+      // ye = MAX_EXP + 1 possible
+      return normalise(y, xc, ye);
+    };
+
+
+    /*
+     * If sd is undefined or null or true or false, return the number of significant digits of
+     * the value of this BigNumber, or null if the value of this BigNumber is ±Infinity or NaN.
+     * If sd is true include integer-part trailing zeros in the count.
+     *
+     * Otherwise, if sd is a number, return a new BigNumber whose value is the value of this
+     * BigNumber rounded to a maximum of sd significant digits using rounding mode rm, or
+     * ROUNDING_MODE if rm is omitted.
+     *
+     * sd {number|boolean} number: significant digits: integer, 1 to MAX inclusive.
+     *                     boolean: whether to count integer-part trailing zeros: true or false.
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {sd|rm}'
+     */
+    P.precision = P.sd = function (sd, rm) {
+      var c, n, v,
+        x = this;
+
+      if (sd != null && sd !== !!sd) {
+        intCheck(sd, 1, MAX);
+        if (rm == null) rm = ROUNDING_MODE;
+        else intCheck(rm, 0, 8);
+
+        return round(new BigNumber(x), sd, rm);
+      }
+
+      if (!(c = x.c)) return null;
+      v = c.length - 1;
+      n = v * LOG_BASE + 1;
+
+      if (v = c[v]) {
+
+        // Subtract the number of trailing zeros of the last element.
+        for (; v % 10 == 0; v /= 10, n--);
+
+        // Add the number of digits of the first element.
+        for (v = c[0]; v >= 10; v /= 10, n++);
+      }
+
+      if (sd && x.e + 1 > n) n = x.e + 1;
+
+      return n;
+    };
+
+
+    /*
+     * Return a new BigNumber whose value is the value of this BigNumber shifted by k places
+     * (powers of 10). Shift to the right if n > 0, and to the left if n < 0.
+     *
+     * k {number} Integer, -MAX_SAFE_INTEGER to MAX_SAFE_INTEGER inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {k}'
+     */
+    P.shiftedBy = function (k) {
+      intCheck(k, -MAX_SAFE_INTEGER, MAX_SAFE_INTEGER);
+      return this.times('1e' + k);
+    };
+
+
+    /*
+     *  sqrt(-n) =  N
+     *  sqrt(N) =  N
+     *  sqrt(-I) =  N
+     *  sqrt(I) =  I
+     *  sqrt(0) =  0
+     *  sqrt(-0) = -0
+     *
+     * Return a new BigNumber whose value is the square root of the value of this BigNumber,
+     * rounded according to DECIMAL_PLACES and ROUNDING_MODE.
+     */
+    P.squareRoot = P.sqrt = function () {
+      var m, n, r, rep, t,
+        x = this,
+        c = x.c,
+        s = x.s,
+        e = x.e,
+        dp = DECIMAL_PLACES + 4,
+        half = new BigNumber('0.5');
+
+      // Negative/NaN/Infinity/zero?
+      if (s !== 1 || !c || !c[0]) {
+        return new BigNumber(!s || s < 0 && (!c || c[0]) ? NaN : c ? x : 1 / 0);
+      }
+
+      // Initial estimate.
+      s = Math.sqrt(+valueOf(x));
+
+      // Math.sqrt underflow/overflow?
+      // Pass x to Math.sqrt as integer, then adjust the exponent of the result.
+      if (s == 0 || s == 1 / 0) {
+        n = coeffToString(c);
+        if ((n.length + e) % 2 == 0) n += '0';
+        s = Math.sqrt(+n);
+        e = bitFloor((e + 1) / 2) - (e < 0 || e % 2);
+
+        if (s == 1 / 0) {
+          n = '5e' + e;
+        } else {
+          n = s.toExponential();
+          n = n.slice(0, n.indexOf('e') + 1) + e;
+        }
+
+        r = new BigNumber(n);
+      } else {
+        r = new BigNumber(s + '');
+      }
+
+      // Check for zero.
+      // r could be zero if MIN_EXP is changed after the this value was created.
+      // This would cause a division by zero (x/t) and hence Infinity below, which would cause
+      // coeffToString to throw.
+      if (r.c[0]) {
+        e = r.e;
+        s = e + dp;
+        if (s < 3) s = 0;
+
+        // Newton-Raphson iteration.
+        for (; ;) {
+          t = r;
+          r = half.times(t.plus(div(x, t, dp, 1)));
+
+          if (coeffToString(t.c).slice(0, s) === (n = coeffToString(r.c)).slice(0, s)) {
+
+            // The exponent of r may here be one less than the final result exponent,
+            // e.g 0.0009999 (e-4) --> 0.001 (e-3), so adjust s so the rounding digits
+            // are indexed correctly.
+            if (r.e < e) --s;
+            n = n.slice(s - 3, s + 1);
+
+            // The 4th rounding digit may be in error by -1 so if the 4 rounding digits
+            // are 9999 or 4999 (i.e. approaching a rounding boundary) continue the
+            // iteration.
+            if (n == '9999' || !rep && n == '4999') {
+
+              // On the first iteration only, check to see if rounding up gives the
+              // exact result as the nines may infinitely repeat.
+              if (!rep) {
+                round(t, t.e + DECIMAL_PLACES + 2, 0);
+
+                if (t.times(t).eq(x)) {
+                  r = t;
+                  break;
+                }
+              }
+
+              dp += 4;
+              s += 4;
+              rep = 1;
+            } else {
+
+              // If rounding digits are null, 0{0,4} or 50{0,3}, check for exact
+              // result. If not, then there are further digits and m will be truthy.
+              if (!+n || !+n.slice(1) && n.charAt(0) == '5') {
+
+                // Truncate to the first rounding digit.
+                round(r, r.e + DECIMAL_PLACES + 2, 1);
+                m = !r.times(r).eq(x);
+              }
+
+              break;
+            }
+          }
+        }
+      }
+
+      return round(r, r.e + DECIMAL_PLACES + 1, ROUNDING_MODE, m);
+    };
+
+
+    /*
+     * Return a string representing the value of this BigNumber in exponential notation and
+     * rounded using ROUNDING_MODE to dp fixed decimal places.
+     *
+     * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
+     */
+    P.toExponential = function (dp, rm) {
+      if (dp != null) {
+        intCheck(dp, 0, MAX);
+        dp++;
+      }
+      return format(this, dp, rm, 1);
+    };
+
+
+    /*
+     * Return a string representing the value of this BigNumber in fixed-point notation rounding
+     * to dp fixed decimal places using rounding mode rm, or ROUNDING_MODE if rm is omitted.
+     *
+     * Note: as with JavaScript's number type, (-0).toFixed(0) is '0',
+     * but e.g. (-0.00001).toFixed(0) is '-0'.
+     *
+     * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
+     */
+    P.toFixed = function (dp, rm) {
+      if (dp != null) {
+        intCheck(dp, 0, MAX);
+        dp = dp + this.e + 1;
+      }
+      return format(this, dp, rm);
+    };
+
+
+    /*
+     * Return a string representing the value of this BigNumber in fixed-point notation rounded
+     * using rm or ROUNDING_MODE to dp decimal places, and formatted according to the properties
+     * of the format or FORMAT object (see BigNumber.set).
+     *
+     * The formatting object may contain some or all of the properties shown below.
+     *
+     * FORMAT = {
+     *   prefix: '',
+     *   groupSize: 3,
+     *   secondaryGroupSize: 0,
+     *   groupSeparator: ',',
+     *   decimalSeparator: '.',
+     *   fractionGroupSize: 0,
+     *   fractionGroupSeparator: '\xA0',      // non-breaking space
+     *   suffix: ''
+     * };
+     *
+     * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     * [format] {object} Formatting options. See FORMAT pbject above.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
+     * '[BigNumber Error] Argument not an object: {format}'
+     */
+    P.toFormat = function (dp, rm, format) {
+      var str,
+        x = this;
+
+      if (format == null) {
+        if (dp != null && rm && typeof rm == 'object') {
+          format = rm;
+          rm = null;
+        } else if (dp && typeof dp == 'object') {
+          format = dp;
+          dp = rm = null;
+        } else {
+          format = FORMAT;
+        }
+      } else if (typeof format != 'object') {
+        throw Error
+          (bignumberError + 'Argument not an object: ' + format);
+      }
+
+      str = x.toFixed(dp, rm);
+
+      if (x.c) {
+        var i,
+          arr = str.split('.'),
+          g1 = +format.groupSize,
+          g2 = +format.secondaryGroupSize,
+          groupSeparator = format.groupSeparator || '',
+          intPart = arr[0],
+          fractionPart = arr[1],
+          isNeg = x.s < 0,
+          intDigits = isNeg ? intPart.slice(1) : intPart,
+          len = intDigits.length;
+
+        if (g2) i = g1, g1 = g2, g2 = i, len -= i;
+
+        if (g1 > 0 && len > 0) {
+          i = len % g1 || g1;
+          intPart = intDigits.substr(0, i);
+          for (; i < len; i += g1) intPart += groupSeparator + intDigits.substr(i, g1);
+          if (g2 > 0) intPart += groupSeparator + intDigits.slice(i);
+          if (isNeg) intPart = '-' + intPart;
+        }
+
+        str = fractionPart
+         ? intPart + (format.decimalSeparator || '') + ((g2 = +format.fractionGroupSize)
+          ? fractionPart.replace(new RegExp('\\d{' + g2 + '}\\B', 'g'),
+           '$&' + (format.fractionGroupSeparator || ''))
+          : fractionPart)
+         : intPart;
+      }
+
+      return (format.prefix || '') + str + (format.suffix || '');
+    };
+
+
+    /*
+     * Return an array of two BigNumbers representing the value of this BigNumber as a simple
+     * fraction with an integer numerator and an integer denominator.
+     * The denominator will be a positive non-zero value less than or equal to the specified
+     * maximum denominator. If a maximum denominator is not specified, the denominator will be
+     * the lowest value necessary to represent the number exactly.
+     *
+     * [md] {number|string|BigNumber} Integer >= 1, or Infinity. The maximum denominator.
+     *
+     * '[BigNumber Error] Argument {not an integer|out of range} : {md}'
+     */
+    P.toFraction = function (md) {
+      var d, d0, d1, d2, e, exp, n, n0, n1, q, r, s,
+        x = this,
+        xc = x.c;
+
+      if (md != null) {
+        n = new BigNumber(md);
+
+        // Throw if md is less than one or is not an integer, unless it is Infinity.
+        if (!n.isInteger() && (n.c || n.s !== 1) || n.lt(ONE)) {
+          throw Error
+            (bignumberError + 'Argument ' +
+              (n.isInteger() ? 'out of range: ' : 'not an integer: ') + valueOf(n));
+        }
+      }
+
+      if (!xc) return new BigNumber(x);
+
+      d = new BigNumber(ONE);
+      n1 = d0 = new BigNumber(ONE);
+      d1 = n0 = new BigNumber(ONE);
+      s = coeffToString(xc);
+
+      // Determine initial denominator.
+      // d is a power of 10 and the minimum max denominator that specifies the value exactly.
+      e = d.e = s.length - x.e - 1;
+      d.c[0] = POWS_TEN[(exp = e % LOG_BASE) < 0 ? LOG_BASE + exp : exp];
+      md = !md || n.comparedTo(d) > 0 ? (e > 0 ? d : n1) : n;
+
+      exp = MAX_EXP;
+      MAX_EXP = 1 / 0;
+      n = new BigNumber(s);
+
+      // n0 = d1 = 0
+      n0.c[0] = 0;
+
+      for (; ;)  {
+        q = div(n, d, 0, 1);
+        d2 = d0.plus(q.times(d1));
+        if (d2.comparedTo(md) == 1) break;
+        d0 = d1;
+        d1 = d2;
+        n1 = n0.plus(q.times(d2 = n1));
+        n0 = d2;
+        d = n.minus(q.times(d2 = d));
+        n = d2;
+      }
+
+      d2 = div(md.minus(d0), d1, 0, 1);
+      n0 = n0.plus(d2.times(n1));
+      d0 = d0.plus(d2.times(d1));
+      n0.s = n1.s = x.s;
+      e = e * 2;
+
+      // Determine which fraction is closer to x, n0/d0 or n1/d1
+      r = div(n1, d1, e, ROUNDING_MODE).minus(x).abs().comparedTo(
+          div(n0, d0, e, ROUNDING_MODE).minus(x).abs()) < 1 ? [n1, d1] : [n0, d0];
+
+      MAX_EXP = exp;
+
+      return r;
+    };
+
+
+    /*
+     * Return the value of this BigNumber converted to a number primitive.
+     */
+    P.toNumber = function () {
+      return +valueOf(this);
+    };
+
+
+    /*
+     * Return a string representing the value of this BigNumber rounded to sd significant digits
+     * using rounding mode rm or ROUNDING_MODE. If sd is less than the number of digits
+     * necessary to represent the integer part of the value in fixed-point notation, then use
+     * exponential notation.
+     *
+     * [sd] {number} Significant digits. Integer, 1 to MAX inclusive.
+     * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
+     *
+     * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {sd|rm}'
+     */
+    P.toPrecision = function (sd, rm) {
+      if (sd != null) intCheck(sd, 1, MAX);
+      return format(this, sd, rm, 2);
+    };
+
+
+    /*
+     * Return a string representing the value of this BigNumber in base b, or base 10 if b is
+     * omitted. If a base is specified, including base 10, round according to DECIMAL_PLACES and
+     * ROUNDING_MODE. If a base is not specified, and this BigNumber has a positive exponent
+     * that is equal to or greater than TO_EXP_POS, or a negative exponent equal to or less than
+     * TO_EXP_NEG, return exponential notation.
+     *
+     * [b] {number} Integer, 2 to ALPHABET.length inclusive.
+     *
+     * '[BigNumber Error] Base {not a primitive number|not an integer|out of range}: {b}'
+     */
+    P.toString = function (b) {
+      var str,
+        n = this,
+        s = n.s,
+        e = n.e;
+
+      // Infinity or NaN?
+      if (e === null) {
+        if (s) {
+          str = 'Infinity';
+          if (s < 0) str = '-' + str;
+        } else {
+          str = 'NaN';
+        }
+      } else {
+        if (b == null) {
+          str = e <= TO_EXP_NEG || e >= TO_EXP_POS
+           ? toExponential(coeffToString(n.c), e)
+           : toFixedPoint(coeffToString(n.c), e, '0');
+        } else if (b === 10 && alphabetHasNormalDecimalDigits) {
+          n = round(new BigNumber(n), DECIMAL_PLACES + e + 1, ROUNDING_MODE);
+          str = toFixedPoint(coeffToString(n.c), n.e, '0');
+        } else {
+          intCheck(b, 2, ALPHABET.length, 'Base');
+          str = convertBase(toFixedPoint(coeffToString(n.c), e, '0'), 10, b, s, true);
+        }
+
+        if (s < 0 && n.c[0]) str = '-' + str;
+      }
+
+      return str;
+    };
+
+
+    /*
+     * Return as toString, but do not accept a base argument, and include the minus sign for
+     * negative zero.
+     */
+    P.valueOf = P.toJSON = function () {
+      return valueOf(this);
+    };
+
+
+    P._isBigNumber = true;
+
+    if (configObject != null) BigNumber.set(configObject);
+
+    return BigNumber;
+  }
+
+
+  // PRIVATE HELPER FUNCTIONS
+
+  // These functions don't need access to variables,
+  // e.g. DECIMAL_PLACES, in the scope of the `clone` function above.
+
+
+  function bitFloor(n) {
+    var i = n | 0;
+    return n > 0 || n === i ? i : i - 1;
+  }
+
+
+  // Return a coefficient array as a string of base 10 digits.
+  function coeffToString(a) {
+    var s, z,
+      i = 1,
+      j = a.length,
+      r = a[0] + '';
+
+    for (; i < j;) {
+      s = a[i++] + '';
+      z = LOG_BASE - s.length;
+      for (; z--; s = '0' + s);
+      r += s;
+    }
+
+    // Determine trailing zeros.
+    for (j = r.length; r.charCodeAt(--j) === 48;);
+
+    return r.slice(0, j + 1 || 1);
+  }
+
+
+  // Compare the value of BigNumbers x and y.
+  function compare(x, y) {
+    var a, b,
+      xc = x.c,
+      yc = y.c,
+      i = x.s,
+      j = y.s,
+      k = x.e,
+      l = y.e;
+
+    // Either NaN?
+    if (!i || !j) return null;
+
+    a = xc && !xc[0];
+    b = yc && !yc[0];
+
+    // Either zero?
+    if (a || b) return a ? b ? 0 : -j : i;
+
+    // Signs differ?
+    if (i != j) return i;
+
+    a = i < 0;
+    b = k == l;
+
+    // Either Infinity?
+    if (!xc || !yc) return b ? 0 : !xc ^ a ? 1 : -1;
+
+    // Compare exponents.
+    if (!b) return k > l ^ a ? 1 : -1;
+
+    j = (k = xc.length) < (l = yc.length) ? k : l;
+
+    // Compare digit by digit.
+    for (i = 0; i < j; i++) if (xc[i] != yc[i]) return xc[i] > yc[i] ^ a ? 1 : -1;
+
+    // Compare lengths.
+    return k == l ? 0 : k > l ^ a ? 1 : -1;
+  }
+
+
+  /*
+   * Check that n is a primitive number, an integer, and in range, otherwise throw.
+   */
+  function intCheck(n, min, max, name) {
+    if (n < min || n > max || n !== mathfloor(n)) {
+      throw Error
+       (bignumberError + (name || 'Argument') + (typeof n == 'number'
+         ? n < min || n > max ? ' out of range: ' : ' not an integer: '
+         : ' not a primitive number: ') + String(n));
+    }
+  }
+
+
+  // Assumes finite n.
+  function isOdd(n) {
+    var k = n.c.length - 1;
+    return bitFloor(n.e / LOG_BASE) == k && n.c[k] % 2 != 0;
+  }
+
+
+  function toExponential(str, e) {
+    return (str.length > 1 ? str.charAt(0) + '.' + str.slice(1) : str) +
+     (e < 0 ? 'e' : 'e+') + e;
+  }
+
+
+  function toFixedPoint(str, e, z) {
+    var len, zs;
+
+    // Negative exponent?
+    if (e < 0) {
+
+      // Prepend zeros.
+      for (zs = z + '.'; ++e; zs += z);
+      str = zs + str;
+
+    // Positive exponent
+    } else {
+      len = str.length;
+
+      // Append zeros.
+      if (++e > len) {
+        for (zs = z, e -= len; --e; zs += z);
+        str += zs;
+      } else if (e < len) {
+        str = str.slice(0, e) + '.' + str.slice(e);
+      }
+    }
+
+    return str;
+  }
+
+
+  // EXPORT
+
+
+  BigNumber = clone();
+  BigNumber['default'] = BigNumber.BigNumber = BigNumber;
+
+  // AMD.
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () { return BigNumber; }).call(exports, __webpack_require__, exports, module),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+  // Node.js and other environments that support module.exports.
+  } else {}
+})(this);
 
 
 /***/ }),
@@ -49505,9 +41161,9 @@ function BufferBigIntNotDefined () {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./js/src/styles.css":
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./js/src/output.css":
 /*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./js/src/styles.css ***!
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./js/src/output.css ***!
   \*************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -49522,7 +41178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".button-container {\n    display: flex;\n    flex-direction: row;\n    gap: 1em;\n}\n\n.status-text {\n    display: flex;\n    align-items: center;\n    margin-left: 1em;\n}\n\n.verify-button {\n    background-color: #fff;\n    border-width: 1px;\n    border-color: #2C3D6A;\n    color: #2C3D6A !important;\n    border-style: solid;\n}\n\n.verify-button:hover {\n    background-color: #2C3D6A !important;\n    color: #fff;\n}\n\n\n.socure-iframe-background {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 99999;\n    background-color: #0000007F;\n}\n\n.socure-iframe-wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n}\n\n.socure-iframe {\n    width: 90%;\n    height: 90%;\n    background-color: #fff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*\n! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com\n*/\n\n/*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n\n*,\n::before,\n::after {\n  box-sizing: border-box;\n  /* 1 */\n  border-width: 0;\n  /* 2 */\n  border-style: solid;\n  /* 2 */\n  border-color: #e5e7eb;\n  /* 2 */\n}\n\n::before,\n::after {\n  --tw-content: '';\n}\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n*/\n\nhtml {\n  line-height: 1.5;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */\n  -moz-tab-size: 4;\n  /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4;\n  /* 3 */\n  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  /* 4 */\n}\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\n\nbody {\n  margin: 0;\n  /* 1 */\n  line-height: inherit;\n  /* 2 */\n}\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\n\nhr {\n  height: 0;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  border-top-width: 1px;\n  /* 3 */\n}\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\n\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n/*\nRemove the default font size and weight for headings.\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/*\n1. Use the user's configured `mono` font family by default.\n2. Correct the odd `em` font sizing in all browsers.\n*/\n\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n\n/*\nAdd the correct font size in all browsers.\n*/\n\nsmall {\n  font-size: 80%;\n}\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\n\ntable {\n  text-indent: 0;\n  /* 1 */\n  border-color: inherit;\n  /* 2 */\n  border-collapse: collapse;\n  /* 3 */\n}\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  font-weight: inherit;\n  /* 1 */\n  line-height: inherit;\n  /* 1 */\n  color: inherit;\n  /* 1 */\n  margin: 0;\n  /* 2 */\n  padding: 0;\n  /* 3 */\n}\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\n\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button;\n  /* 1 */\n  background-color: transparent;\n  /* 2 */\n  background-image: none;\n  /* 2 */\n}\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n\n:-moz-focusring {\n  outline: auto;\n}\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\n\nprogress {\n  vertical-align: baseline;\n}\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n\n[type='search'] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */\n}\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n}\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\n\nsummary {\n  display: list-item;\n}\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nlegend {\n  padding: 0;\n}\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1;\n  /* 1 */\n  color: #9ca3af;\n  /* 2 */\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1;\n  /* 1 */\n  color: #9ca3af;\n  /* 2 */\n}\n\n/*\nSet the default cursor for buttons.\n*/\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n\n:disabled {\n  cursor: default;\n}\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block;\n  /* 1 */\n  vertical-align: middle;\n  /* 2 */\n}\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n*, ::before, ::after {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n\n::-webkit-backdrop {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n\n::backdrop {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n}\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.visible {\n  visibility: visible;\n}\n\n.\\!visible {\n  visibility: visible !important;\n}\n\n.fixed {\n  position: fixed;\n}\n\n.absolute {\n  position: absolute;\n}\n\n.relative {\n  position: relative;\n}\n\n.inset-0 {\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n\n.top-0 {\n  top: 0px;\n}\n\n.right-0 {\n  right: 0px;\n}\n\n.z-10 {\n  z-index: 10;\n}\n\n.mx-auto {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.mt-1 {\n  margin-top: 0.25rem;\n}\n\n.mt-3 {\n  margin-top: 0.75rem;\n}\n\n.mt-5 {\n  margin-top: 1.25rem;\n}\n\n.mt-2 {\n  margin-top: 0.5rem;\n}\n\n.ml-4 {\n  margin-left: 1rem;\n}\n\n.mr-2 {\n  margin-right: 0.5rem;\n}\n\n.block {\n  display: block;\n}\n\n.inline {\n  display: inline;\n}\n\n.flex {\n  display: flex;\n}\n\n.inline-flex {\n  display: inline-flex;\n}\n\n.hidden {\n  display: none;\n}\n\n.h-full {\n  height: 100%;\n}\n\n.h-\\[38rem\\] {\n  height: 38rem;\n}\n\n.h-4 {\n  height: 1rem;\n}\n\n.h-12 {\n  height: 3rem;\n}\n\n.h-6 {\n  height: 1.5rem;\n}\n\n.h-10 {\n  height: 2.5rem;\n}\n\n.h-8 {\n  height: 2rem;\n}\n\n.min-h-full {\n  min-height: 100%;\n}\n\n.w-full {\n  width: 100%;\n}\n\n.w-4 {\n  width: 1rem;\n}\n\n.w-12 {\n  width: 3rem;\n}\n\n.w-6 {\n  width: 1.5rem;\n}\n\n.w-10 {\n  width: 2.5rem;\n}\n\n.w-5 {\n  width: 1.25rem;\n}\n\n.w-8 {\n  width: 2rem;\n}\n\n.max-w-2xl {\n  max-width: 42rem;\n}\n\n.flex-shrink-0 {\n  flex-shrink: 0;\n}\n\n.translate-y-4 {\n  --tw-translate-y: 1rem;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n\n.translate-y-0 {\n  --tw-translate-y: 0px;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n\n.transform {\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n\n@-webkit-keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.animate-spin {\n  -webkit-animation: spin 1s linear infinite;\n          animation: spin 1s linear infinite;\n}\n\n.items-end {\n  align-items: flex-end;\n}\n\n.items-center {\n  align-items: center;\n}\n\n.justify-center {\n  justify-content: center;\n}\n\n.divide-y > :not([hidden]) ~ :not([hidden]) {\n  --tw-divide-y-reverse: 0;\n  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));\n  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));\n}\n\n.divide-gray-300 > :not([hidden]) ~ :not([hidden]) {\n  --tw-divide-opacity: 1;\n  border-color: rgb(209 213 219 / var(--tw-divide-opacity));\n}\n\n.overflow-hidden {\n  overflow: hidden;\n}\n\n.overflow-y-auto {\n  overflow-y: auto;\n}\n\n.rounded-lg {\n  border-radius: 0.5rem;\n}\n\n.rounded-md {\n  border-radius: 0.375rem;\n}\n\n.rounded {\n  border-radius: 0.25rem;\n}\n\n.rounded-full {\n  border-radius: 9999px;\n}\n\n.border {\n  border-width: 1px;\n}\n\n.border-2 {\n  border-width: 2px;\n}\n\n.border-t {\n  border-top-width: 1px;\n}\n\n.border-gray-200 {\n  --tw-border-opacity: 1;\n  border-color: rgb(229 231 235 / var(--tw-border-opacity));\n}\n\n.border-gray-300 {\n  --tw-border-opacity: 1;\n  border-color: rgb(209 213 219 / var(--tw-border-opacity));\n}\n\n.border-transparent {\n  border-color: transparent;\n}\n\n.border-indigo-600 {\n  --tw-border-opacity: 1;\n  border-color: rgb(79 70 229 / var(--tw-border-opacity));\n}\n\n.bg-gray-500 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(107 114 128 / var(--tw-bg-opacity));\n}\n\n.bg-white {\n  --tw-bg-opacity: 1;\n  background-color: rgb(255 255 255 / var(--tw-bg-opacity));\n}\n\n.bg-gray-50 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(249 250 251 / var(--tw-bg-opacity));\n}\n\n.bg-green-100 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(220 252 231 / var(--tw-bg-opacity));\n}\n\n.bg-red-100 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(254 226 226 / var(--tw-bg-opacity));\n}\n\n.bg-indigo-600 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(79 70 229 / var(--tw-bg-opacity));\n}\n\n.bg-opacity-75 {\n  --tw-bg-opacity: 0.75;\n}\n\n.fill-blue-600 {\n  fill: #2563eb;\n}\n\n.p-4 {\n  padding: 1rem;\n}\n\n.p-1 {\n  padding: 0.25rem;\n}\n\n.p-5 {\n  padding: 1.25rem;\n}\n\n.px-4 {\n  padding-left: 1rem;\n  padding-right: 1rem;\n}\n\n.py-5 {\n  padding-top: 1.25rem;\n  padding-bottom: 1.25rem;\n}\n\n.py-2 {\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n\n.px-6 {\n  padding-left: 1.5rem;\n  padding-right: 1.5rem;\n}\n\n.py-4 {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n}\n\n.pt-5 {\n  padding-top: 1.25rem;\n}\n\n.pb-4 {\n  padding-bottom: 1rem;\n}\n\n.pl-7 {\n  padding-left: 1.75rem;\n}\n\n.pr-12 {\n  padding-right: 3rem;\n}\n\n.text-left {\n  text-align: left;\n}\n\n.text-center {\n  text-align: center;\n}\n\n.text-lg {\n  font-size: 1.125rem;\n  line-height: 1.75rem;\n}\n\n.text-sm {\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n\n.text-base {\n  font-size: 1rem;\n  line-height: 1.5rem;\n}\n\n.font-medium {\n  font-weight: 500;\n}\n\n.leading-6 {\n  line-height: 1.5rem;\n}\n\n.text-gray-900 {\n  --tw-text-opacity: 1;\n  color: rgb(17 24 39 / var(--tw-text-opacity));\n}\n\n.text-gray-500 {\n  --tw-text-opacity: 1;\n  color: rgb(107 114 128 / var(--tw-text-opacity));\n}\n\n.text-indigo-600 {\n  --tw-text-opacity: 1;\n  color: rgb(79 70 229 / var(--tw-text-opacity));\n}\n\n.text-green-600 {\n  --tw-text-opacity: 1;\n  color: rgb(22 163 74 / var(--tw-text-opacity));\n}\n\n.text-red-500 {\n  --tw-text-opacity: 1;\n  color: rgb(239 68 68 / var(--tw-text-opacity));\n}\n\n.text-red-600 {\n  --tw-text-opacity: 1;\n  color: rgb(220 38 38 / var(--tw-text-opacity));\n}\n\n.text-white {\n  --tw-text-opacity: 1;\n  color: rgb(255 255 255 / var(--tw-text-opacity));\n}\n\n.text-gray-300 {\n  --tw-text-opacity: 1;\n  color: rgb(209 213 219 / var(--tw-text-opacity));\n}\n\n.text-gray-200 {\n  --tw-text-opacity: 1;\n  color: rgb(229 231 235 / var(--tw-text-opacity));\n}\n\n.opacity-0 {\n  opacity: 0;\n}\n\n.opacity-100 {\n  opacity: 1;\n}\n\n.shadow-xl {\n  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n\n.shadow {\n  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n\n.shadow-sm {\n  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);\n  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n\n.transition-opacity {\n  transition-property: opacity;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n\n.transition-all {\n  transition-property: all;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n\n.duration-300 {\n  transition-duration: 300ms;\n}\n\n.duration-200 {\n  transition-duration: 200ms;\n}\n\n.ease-out {\n  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);\n}\n\n.ease-in {\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n\n.button-container {\n  display: flex;\n  flex-direction: row;\n  gap: 1em;\n}\n\n.status-text {\n  display: flex;\n  align-items: center;\n  margin-left: 1em;\n}\n\n.verify-button {\n  background-color: #fff;\n  border-width: 1px;\n  border-color: #2C3D6A;\n  color: #2C3D6A !important;\n  border-style: solid;\n}\n\n.verify-button:hover {\n  background-color: #2C3D6A !important;\n  color: #fff;\n}\n\n.socure-iframe-background {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 99999;\n  background-color: #0000007F;\n}\n\n.socure-iframe-wrapper {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n}\n\n.socure-iframe {\n  width: 90%;\n  height: 90%;\n  background-color: #fff;\n}\n\n.hover\\:bg-indigo-700:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgb(67 56 202 / var(--tw-bg-opacity));\n}\n\n.focus\\:border-indigo-500:focus {\n  --tw-border-opacity: 1;\n  border-color: rgb(99 102 241 / var(--tw-border-opacity));\n}\n\n.focus\\:outline-none:focus {\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n\n.focus\\:ring-2:focus {\n  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);\n  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);\n  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);\n}\n\n.focus\\:ring-indigo-500:focus {\n  --tw-ring-opacity: 1;\n  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));\n}\n\n.focus\\:ring-offset-2:focus {\n  --tw-ring-offset-width: 2px;\n}\n\n.group:hover .group-hover\\:border-gray-400 {\n  --tw-border-opacity: 1;\n  border-color: rgb(156 163 175 / var(--tw-border-opacity));\n}\n\n.group:hover .group-hover\\:bg-indigo-800 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(55 48 163 / var(--tw-bg-opacity));\n}\n\n.group:hover .group-hover\\:text-gray-900 {\n  --tw-text-opacity: 1;\n  color: rgb(17 24 39 / var(--tw-text-opacity));\n}\n\n@media (prefers-color-scheme: dark) {\n  .dark\\:text-gray-600 {\n    --tw-text-opacity: 1;\n    color: rgb(75 85 99 / var(--tw-text-opacity));\n  }\n}\n\n@media (min-width: 640px) {\n  .sm\\:col-span-2 {\n    grid-column: span 2 / span 2;\n  }\n\n  .sm\\:col-span-4 {\n    grid-column: span 4 / span 4;\n  }\n\n  .sm\\:my-8 {\n    margin-top: 2rem;\n    margin-bottom: 2rem;\n  }\n\n  .sm\\:mt-0 {\n    margin-top: 0px;\n  }\n\n  .sm\\:mt-5 {\n    margin-top: 1.25rem;\n  }\n\n  .sm\\:mt-6 {\n    margin-top: 1.5rem;\n  }\n\n  .sm\\:grid {\n    display: grid;\n  }\n\n  .sm\\:w-full {\n    width: 100%;\n  }\n\n  .sm\\:max-w-4xl {\n    max-width: 56rem;\n  }\n\n  .sm\\:max-w-2xl {\n    max-width: 42rem;\n  }\n\n  .sm\\:translate-y-0 {\n    --tw-translate-y: 0px;\n    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  }\n\n  .sm\\:scale-95 {\n    --tw-scale-x: .95;\n    --tw-scale-y: .95;\n    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  }\n\n  .sm\\:scale-100 {\n    --tw-scale-x: 1;\n    --tw-scale-y: 1;\n    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n  }\n\n  .sm\\:grid-cols-5 {\n    grid-template-columns: repeat(5, minmax(0, 1fr));\n  }\n\n  .sm\\:items-center {\n    align-items: center;\n  }\n\n  .sm\\:gap-4 {\n    gap: 1rem;\n  }\n\n  .sm\\:rounded-lg {\n    border-radius: 0.5rem;\n  }\n\n  .sm\\:p-0 {\n    padding: 0px;\n  }\n\n  .sm\\:p-6 {\n    padding: 1.5rem;\n  }\n\n  .sm\\:px-6 {\n    padding-left: 1.5rem;\n    padding-right: 1.5rem;\n  }\n\n  .sm\\:text-sm {\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n  }\n}\n\n@media (min-width: 768px) {\n  .md\\:block {\n    display: block;\n  }\n\n  .md\\:flex {\n    display: flex;\n  }\n\n  .md\\:flex-1 {\n    flex: 1 1 0%;\n  }\n\n  .md\\:divide-y-0 > :not([hidden]) ~ :not([hidden]) {\n    --tw-divide-y-reverse: 0;\n    border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));\n    border-bottom-width: calc(0px * var(--tw-divide-y-reverse));\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -103734,9 +95390,9 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./js/src/styles.css":
+/***/ "./js/src/output.css":
 /*!***************************!*\
-  !*** ./js/src/styles.css ***!
+  !*** ./js/src/output.css ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -103747,7 +95403,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./js/src/styles.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_output_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./output.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./js/src/output.css");
 
             
 
@@ -103756,11 +95412,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_output_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_output_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -105580,6 +97236,840 @@ try {
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/description/description.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/description/description.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Description": () => (/* binding */ F),
+/* harmony export */   "useDescriptions": () => (/* binding */ k)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _hooks_use_id_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-id.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+let d=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);function u(){let r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(d);if(r===null){let t=new Error("You used a <Description /> component, but it is not inside a relevant parent.");throw Error.captureStackTrace&&Error.captureStackTrace(t,u),t}return r}function k(){let[r,t]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);return[r.length>0?r.join(" "):void 0,(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>function(e){let i=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_1__.useEvent)(n=>(t(o=>[...o,n]),()=>t(o=>{let c=o.slice(),p=c.indexOf(n);return p!==-1&&c.splice(p,1),c}))),s=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({register:i,slot:e.slot,name:e.name,props:e.props}),[i,e.slot,e.name,e.props]);return react__WEBPACK_IMPORTED_MODULE_0__.createElement(d.Provider,{value:s},e.children)},[t])]}let S="p",F=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.forwardRefWithAs)(function(t,a){let e=u(),i=`headlessui-description-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_3__.useId)()}`,s=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_4__.useSyncRefs)(a);(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_5__.useIsoMorphicEffect)(()=>e.register(i),[i,e.register]);let n=t,o={ref:s,...e.props,id:i};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_2__.render)({ourProps:o,theirProps:n,slot:e.slot||{},defaultTag:S,name:e.name||"Description"})});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/dialog/dialog.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/dialog/dialog.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Dialog": () => (/* binding */ gt)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _keyboard_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../keyboard.js */ "./node_modules/@headlessui/react/dist/components/keyboard.js");
+/* harmony import */ var _utils_bugs_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../utils/bugs.js */ "./node_modules/@headlessui/react/dist/utils/bugs.js");
+/* harmony import */ var _hooks_use_id_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../hooks/use-id.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.js");
+/* harmony import */ var _components_focus_trap_focus_trap_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/focus-trap/focus-trap.js */ "./node_modules/@headlessui/react/dist/components/focus-trap/focus-trap.js");
+/* harmony import */ var _hooks_use_inert_others_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../hooks/use-inert-others.js */ "./node_modules/@headlessui/react/dist/hooks/use-inert-others.js");
+/* harmony import */ var _components_portal_portal_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/portal/portal.js */ "./node_modules/@headlessui/react/dist/components/portal/portal.js");
+/* harmony import */ var _internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../internal/portal-force-root.js */ "./node_modules/@headlessui/react/dist/internal/portal-force-root.js");
+/* harmony import */ var _description_description_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../description/description.js */ "./node_modules/@headlessui/react/dist/components/description/description.js");
+/* harmony import */ var _internal_open_closed_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../internal/open-closed.js */ "./node_modules/@headlessui/react/dist/internal/open-closed.js");
+/* harmony import */ var _hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../hooks/use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+/* harmony import */ var _internal_stack_context_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../internal/stack-context.js */ "./node_modules/@headlessui/react/dist/internal/stack-context.js");
+/* harmony import */ var _hooks_use_outside_click_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../hooks/use-outside-click.js */ "./node_modules/@headlessui/react/dist/hooks/use-outside-click.js");
+/* harmony import */ var _hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../hooks/use-owner.js */ "./node_modules/@headlessui/react/dist/hooks/use-owner.js");
+/* harmony import */ var _hooks_use_event_listener_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../hooks/use-event-listener.js */ "./node_modules/@headlessui/react/dist/hooks/use-event-listener.js");
+/* harmony import */ var _internal_hidden_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../internal/hidden.js */ "./node_modules/@headlessui/react/dist/internal/hidden.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _utils_platform_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/platform.js */ "./node_modules/@headlessui/react/dist/utils/platform.js");
+var Re=(r=>(r[r.Open=0]="Open",r[r.Closed=1]="Closed",r))(Re||{}),be=(e=>(e[e.SetTitleId=0]="SetTitleId",e))(be||{});let Ae={[0](l,e){return l.titleId===e.id?l:{...l,titleId:e.id}}},M=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);M.displayName="DialogContext";function L(l){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(M);if(e===null){let r=new Error(`<${l} /> is missing a parent <Dialog /> component.`);throw Error.captureStackTrace&&Error.captureStackTrace(r,L),r}return e}function Ee(l,e){(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{var p;if(!e||!l)return;let r=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_1__.disposables)();function t(n,d,m){let i=n.style.getPropertyValue(d);return Object.assign(n.style,{[d]:m}),r.add(()=>{Object.assign(n.style,{[d]:i})})}let o=l.documentElement,s=((p=l.defaultView)!=null?p:window).innerWidth-o.clientWidth;if(t(o,"overflow","hidden"),s>0){let n=o.clientWidth-o.offsetWidth,d=s-n;t(o,"paddingRight",`${d}px`)}if((0,_utils_platform_js__WEBPACK_IMPORTED_MODULE_2__.isIOS)()){let n=window.pageYOffset;t(o,"position","fixed"),t(o,"marginTop",`-${n}px`),t(o,"width","100%"),r.add(()=>window.scrollTo(0,n))}return r.dispose},[l,e])}function ve(l,e){return (0,_utils_match_js__WEBPACK_IMPORTED_MODULE_3__.match)(e.type,Ae,l,e)}let Oe="div",Ce=_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.Features.RenderStrategy|_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.Features.Static,Se=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(e,r){let{open:t,onClose:o,initialFocus:a,__demoMode:s=!1,...p}=e,[n,d]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),m=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_5__.useOpenClosed)();t===void 0&&m!==null&&(t=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_3__.match)(m,{[_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_5__.State.Open]:!0,[_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_5__.State.Closed]:!1}));let i=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(new Set),T=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),K=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)(T,r),W=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),P=(0,_hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_7__.useOwnerDocument)(T),B=e.hasOwnProperty("open")||m!==null,G=e.hasOwnProperty("onClose");if(!B&&!G)throw new Error("You have to provide an `open` and an `onClose` prop to the `Dialog` component.");if(!B)throw new Error("You provided an `onClose` prop to the `Dialog`, but forgot an `open` prop.");if(!G)throw new Error("You provided an `open` prop to the `Dialog`, but forgot an `onClose` prop.");if(typeof t!="boolean")throw new Error(`You provided an \`open\` prop to the \`Dialog\`, but the value is not a boolean. Received: ${t}`);if(typeof o!="function")throw new Error(`You provided an \`onClose\` prop to the \`Dialog\`, but the value is not a function. Received: ${o}`);let u=t?0:1,[y,q]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(ve,{titleId:null,descriptionId:null,panelRef:(0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)()}),h=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_8__.useEvent)(()=>o(!1)),U=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_8__.useEvent)(f=>q({type:0,id:f})),_=(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_9__.useServerHandoffComplete)()?s?!1:u===0:!1,w=n>1,z=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(M)!==null,J=w?"parent":"leaf";(0,_hooks_use_inert_others_js__WEBPACK_IMPORTED_MODULE_10__.useInertOthers)(T,w?_:!1),(0,_hooks_use_outside_click_js__WEBPACK_IMPORTED_MODULE_11__.useOutsideClick)(()=>{var R,g;return[...Array.from((R=P==null?void 0:P.querySelectorAll("body > *, [data-headlessui-portal]"))!=null?R:[]).filter(D=>!(!(D instanceof HTMLElement)||D.contains(W.current)||y.panelRef.current&&D.contains(y.panelRef.current))),(g=y.panelRef.current)!=null?g:T.current]},h,_&&!w),(0,_hooks_use_event_listener_js__WEBPACK_IMPORTED_MODULE_12__.useEventListener)(P==null?void 0:P.defaultView,"keydown",f=>{f.defaultPrevented||f.key===_keyboard_js__WEBPACK_IMPORTED_MODULE_13__.Keys.Escape&&u===0&&(w||(f.preventDefault(),f.stopPropagation(),h()))}),Ee(P,u===0&&!z),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(u!==0||!T.current)return;let f=new IntersectionObserver(R=>{for(let g of R)g.boundingClientRect.x===0&&g.boundingClientRect.y===0&&g.boundingClientRect.width===0&&g.boundingClientRect.height===0&&h()});return f.observe(T.current),()=>f.disconnect()},[u,T,h]);let[Q,X]=(0,_description_description_js__WEBPACK_IMPORTED_MODULE_14__.useDescriptions)(),Z=`headlessui-dialog-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_15__.useId)()}`,ee=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>[{dialogState:u,close:h,setTitleId:U},y],[u,y,h,U]),$=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:u===0}),[u]),te={ref:K,id:Z,role:"dialog","aria-modal":u===0?!0:void 0,"aria-labelledby":y.titleId,"aria-describedby":Q};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_stack_context_js__WEBPACK_IMPORTED_MODULE_16__.StackProvider,{type:"Dialog",enabled:u===0,element:T,onUpdate:(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_8__.useEvent)((f,R,g)=>{R==="Dialog"&&(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_3__.match)(f,{[_internal_stack_context_js__WEBPACK_IMPORTED_MODULE_16__.StackMessage.Add](){i.current.add(g),d(D=>D+1)},[_internal_stack_context_js__WEBPACK_IMPORTED_MODULE_16__.StackMessage.Remove](){i.current.add(g),d(D=>D-1)}})})},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_17__.ForcePortalRoot,{force:!0},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_portal_portal_js__WEBPACK_IMPORTED_MODULE_18__.Portal,null,react__WEBPACK_IMPORTED_MODULE_0__.createElement(M.Provider,{value:ee},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_portal_portal_js__WEBPACK_IMPORTED_MODULE_18__.Portal.Group,{target:T},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_17__.ForcePortalRoot,{force:!1},react__WEBPACK_IMPORTED_MODULE_0__.createElement(X,{slot:$,name:"Dialog.Description"},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_focus_trap_focus_trap_js__WEBPACK_IMPORTED_MODULE_19__.FocusTrap,{initialFocus:a,containers:i,features:_?(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_3__.match)(J,{parent:_components_focus_trap_focus_trap_js__WEBPACK_IMPORTED_MODULE_19__.FocusTrap.features.RestoreFocus,leaf:_components_focus_trap_focus_trap_js__WEBPACK_IMPORTED_MODULE_19__.FocusTrap.features.All&~_components_focus_trap_focus_trap_js__WEBPACK_IMPORTED_MODULE_19__.FocusTrap.features.FocusLock}):_components_focus_trap_focus_trap_js__WEBPACK_IMPORTED_MODULE_19__.FocusTrap.features.None},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:te,theirProps:p,slot:$,defaultTag:Oe,features:Ce,visible:u===0,name:"Dialog"})))))))),react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_hidden_js__WEBPACK_IMPORTED_MODULE_20__.Hidden,{features:_internal_hidden_js__WEBPACK_IMPORTED_MODULE_20__.Features.Hidden,ref:W}))}),Le="div",we=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(e,r){let[{dialogState:t,close:o}]=L("Dialog.Overlay"),a=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)(r),s=`headlessui-dialog-overlay-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_15__.useId)()}`,p=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_8__.useEvent)(i=>{if(i.target===i.currentTarget){if((0,_utils_bugs_js__WEBPACK_IMPORTED_MODULE_21__.isDisabledReactIssue7711)(i.currentTarget))return i.preventDefault();i.preventDefault(),i.stopPropagation(),o()}}),n=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:t===0}),[t]);return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:{ref:a,id:s,"aria-hidden":!0,onClick:p},theirProps:e,slot:n,defaultTag:Le,name:"Dialog.Overlay"})}),Fe="div",ke=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(e,r){let[{dialogState:t},o]=L("Dialog.Backdrop"),a=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)(r),s=`headlessui-dialog-backdrop-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_15__.useId)()}`;(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(o.panelRef.current===null)throw new Error("A <Dialog.Backdrop /> component is being used, but a <Dialog.Panel /> component is missing.")},[o.panelRef]);let p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:t===0}),[t]);return react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_17__.ForcePortalRoot,{force:!0},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_portal_portal_js__WEBPACK_IMPORTED_MODULE_18__.Portal,null,(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:{ref:a,id:s,"aria-hidden":!0},theirProps:e,slot:p,defaultTag:Fe,name:"Dialog.Backdrop"})))}),Me="div",_e=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(e,r){let[{dialogState:t},o]=L("Dialog.Panel"),a=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)(r,o.panelRef),s=`headlessui-dialog-panel-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_15__.useId)()}`,p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:t===0}),[t]),n=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_8__.useEvent)(i=>{i.stopPropagation()});return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:{ref:a,id:s,onClick:n},theirProps:e,slot:p,defaultTag:Me,name:"Dialog.Panel"})}),xe="h2",Ie=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.forwardRefWithAs)(function(e,r){let[{dialogState:t,setTitleId:o}]=L("Dialog.Title"),a=`headlessui-dialog-title-${(0,_hooks_use_id_js__WEBPACK_IMPORTED_MODULE_15__.useId)()}`,s=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)(r);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>(o(a),()=>o(null)),[a,o]);let p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({open:t===0}),[t]);return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_4__.render)({ourProps:{ref:s,id:a},theirProps:e,slot:p,defaultTag:xe,name:"Dialog.Title"})}),gt=Object.assign(Se,{Backdrop:ke,Panel:_e,Overlay:we,Title:Ie,Description:_description_description_js__WEBPACK_IMPORTED_MODULE_14__.Description});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/focus-trap/focus-trap.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/focus-trap/focus-trap.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FocusTrap": () => (/* binding */ fe)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _internal_hidden_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../internal/hidden.js */ "./node_modules/@headlessui/react/dist/internal/hidden.js");
+/* harmony import */ var _utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/focus-management.js */ "./node_modules/@headlessui/react/dist/utils/focus-management.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+/* harmony import */ var _hooks_use_tab_direction_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-tab-direction.js */ "./node_modules/@headlessui/react/dist/hooks/use-tab-direction.js");
+/* harmony import */ var _hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../hooks/use-is-mounted.js */ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js");
+/* harmony import */ var _hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-owner.js */ "./node_modules/@headlessui/react/dist/hooks/use-owner.js");
+/* harmony import */ var _hooks_use_event_listener_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../hooks/use-event-listener.js */ "./node_modules/@headlessui/react/dist/hooks/use-event-listener.js");
+/* harmony import */ var _utils_micro_task_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utils/micro-task.js */ "./node_modules/@headlessui/react/dist/utils/micro-task.js");
+/* harmony import */ var _hooks_use_watch_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../hooks/use-watch.js */ "./node_modules/@headlessui/react/dist/hooks/use-watch.js");
+let N="div";var v=(r=>(r[r.None=1]="None",r[r.InitialFocus=2]="InitialFocus",r[r.TabLock=4]="TabLock",r[r.FocusLock=8]="FocusLock",r[r.RestoreFocus=16]="RestoreFocus",r[r.All=30]="All",r))(v||{});let fe=Object.assign((0,_utils_render_js__WEBPACK_IMPORTED_MODULE_1__.forwardRefWithAs)(function(u,e){let l=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),o=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_2__.useSyncRefs)(l,e),{initialFocus:a,containers:r,features:n=30,...c}=u;(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_3__.useServerHandoffComplete)()||(n=1);let s=(0,_hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_4__.useOwnerDocument)(l);V({ownerDocument:s},Boolean(n&16));let j=x({ownerDocument:s,container:l,initialFocus:a},Boolean(n&2));G({ownerDocument:s,container:l,containers:r,previousActiveElement:j},Boolean(n&8));let k=(0,_hooks_use_tab_direction_js__WEBPACK_IMPORTED_MODULE_5__.useTabDirection)(),p=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_6__.useEvent)(()=>{let T=l.current;!T||(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_7__.match)(k.current,{[_hooks_use_tab_direction_js__WEBPACK_IMPORTED_MODULE_5__.Direction.Forwards]:()=>(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusIn)(T,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.Focus.First),[_hooks_use_tab_direction_js__WEBPACK_IMPORTED_MODULE_5__.Direction.Backwards]:()=>(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusIn)(T,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.Focus.Last)})}),A={ref:o};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,Boolean(n&4)&&react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_hidden_js__WEBPACK_IMPORTED_MODULE_9__.Hidden,{as:"button",type:"button",onFocus:p,features:_internal_hidden_js__WEBPACK_IMPORTED_MODULE_9__.Features.Focusable}),(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_1__.render)({ourProps:A,theirProps:c,defaultTag:N,name:"FocusTrap"}),Boolean(n&4)&&react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_hidden_js__WEBPACK_IMPORTED_MODULE_9__.Hidden,{as:"button",type:"button",onFocus:p,features:_internal_hidden_js__WEBPACK_IMPORTED_MODULE_9__.Features.Focusable}))}),{features:v});function V({ownerDocument:t},u){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);(0,_hooks_use_event_listener_js__WEBPACK_IMPORTED_MODULE_10__.useEventListener)(t==null?void 0:t.defaultView,"focusout",o=>{!u||e.current||(e.current=o.target)},!0),(0,_hooks_use_watch_js__WEBPACK_IMPORTED_MODULE_11__.useWatch)(()=>{u||((t==null?void 0:t.activeElement)===(t==null?void 0:t.body)&&(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusElement)(e.current),e.current=null)},[u]);let l=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>(l.current=!1,()=>{l.current=!0,(0,_utils_micro_task_js__WEBPACK_IMPORTED_MODULE_12__.microTask)(()=>{!l.current||((0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusElement)(e.current),e.current=null)})}),[])}function x({ownerDocument:t,container:u,initialFocus:e},l){let o=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),a=(0,_hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_13__.useIsMounted)();return (0,_hooks_use_watch_js__WEBPACK_IMPORTED_MODULE_11__.useWatch)(()=>{if(!l)return;let r=u.current;!r||(0,_utils_micro_task_js__WEBPACK_IMPORTED_MODULE_12__.microTask)(()=>{if(!a.current)return;let n=t==null?void 0:t.activeElement;if(e!=null&&e.current){if((e==null?void 0:e.current)===n){o.current=n;return}}else if(r.contains(n)){o.current=n;return}e!=null&&e.current?(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusElement)(e.current):(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusIn)(r,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.Focus.First)===_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.FocusResult.Error&&console.warn("There are no focusable elements inside the <FocusTrap />"),o.current=t==null?void 0:t.activeElement})},[l]),o}function G({ownerDocument:t,container:u,containers:e,previousActiveElement:l},o){let a=(0,_hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_13__.useIsMounted)();(0,_hooks_use_event_listener_js__WEBPACK_IMPORTED_MODULE_10__.useEventListener)(t==null?void 0:t.defaultView,"focus",r=>{if(!o||!a.current)return;let n=new Set(e==null?void 0:e.current);n.add(u);let c=l.current;if(!c)return;let s=r.target;s&&s instanceof HTMLElement?W(n,s)?(l.current=s,(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusElement)(s)):(r.preventDefault(),r.stopPropagation(),(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusElement)(c)):(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_8__.focusElement)(l.current)},!0)}function W(t,u){var e;for(let l of t)if((e=l.current)!=null&&e.contains(u))return!0;return!1}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/keyboard.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/keyboard.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Keys": () => (/* binding */ o)
+/* harmony export */ });
+var o=(r=>(r.Space=" ",r.Enter="Enter",r.Escape="Escape",r.Backspace="Backspace",r.Delete="Delete",r.ArrowLeft="ArrowLeft",r.ArrowUp="ArrowUp",r.ArrowRight="ArrowRight",r.ArrowDown="ArrowDown",r.Home="Home",r.End="End",r.PageUp="PageUp",r.PageDown="PageDown",r.Tab="Tab",r))(o||{});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/portal/portal.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/portal/portal.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Portal": () => (/* binding */ $)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../internal/portal-force-root.js */ "./node_modules/@headlessui/react/dist/internal/portal-force-root.js");
+/* harmony import */ var _hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../hooks/use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-owner.js */ "./node_modules/@headlessui/react/dist/hooks/use-owner.js");
+/* harmony import */ var _utils_micro_task_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/micro-task.js */ "./node_modules/@headlessui/react/dist/utils/micro-task.js");
+/* harmony import */ var _utils_ssr_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/ssr.js */ "./node_modules/@headlessui/react/dist/utils/ssr.js");
+function x(i){let u=(0,_internal_portal_force_root_js__WEBPACK_IMPORTED_MODULE_2__.usePortalRoot)(),o=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(A),e=(0,_hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_3__.useOwnerDocument)(i),[r,f]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(()=>{if(!u&&o!==null||_utils_ssr_js__WEBPACK_IMPORTED_MODULE_4__.isServer)return null;let n=e==null?void 0:e.getElementById("headlessui-portal-root");if(n)return n;if(e===null)return null;let t=e.createElement("div");return t.setAttribute("id","headlessui-portal-root"),e.body.appendChild(t)});return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{r!==null&&(e!=null&&e.body.contains(r)||e==null||e.body.appendChild(r))},[r,e]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{u||o!==null&&f(o.current)},[o,f,u]),r}let _=react__WEBPACK_IMPORTED_MODULE_0__.Fragment,U=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.forwardRefWithAs)(function(u,o){let e=u,r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),f=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)((0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.optionalRef)(a=>{r.current=a}),o),n=(0,_hooks_use_owner_js__WEBPACK_IMPORTED_MODULE_3__.useOwnerDocument)(r),t=x(r),[l]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(()=>{var a;return _utils_ssr_js__WEBPACK_IMPORTED_MODULE_4__.isServer?null:(a=n==null?void 0:n.createElement("div"))!=null?a:null}),b=(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_7__.useServerHandoffComplete)(),p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1);return (0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_8__.useIsoMorphicEffect)(()=>{if(p.current=!1,!(!t||!l))return t.contains(l)||(l.setAttribute("data-headlessui-portal",""),t.appendChild(l)),()=>{p.current=!0,(0,_utils_micro_task_js__WEBPACK_IMPORTED_MODULE_9__.microTask)(()=>{var a;!p.current||!t||!l||(t.removeChild(l),t.childNodes.length<=0&&((a=t.parentElement)==null||a.removeChild(t)))})}},[t,l]),b?!t||!l?null:(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)((0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.render)({ourProps:{ref:f},theirProps:e,defaultTag:_,name:"Portal"}),l):null}),j=react__WEBPACK_IMPORTED_MODULE_0__.Fragment,A=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null),F=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.forwardRefWithAs)(function(u,o){let{target:e,...r}=u,n={ref:(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_6__.useSyncRefs)(o)};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(A.Provider,{value:e},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.render)({ourProps:n,theirProps:r,defaultTag:j,name:"Popover.Group"}))}),$=Object.assign(U,{Group:F});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/transitions/transition.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/transitions/transition.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Transition": () => (/* binding */ We)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+/* harmony import */ var _internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../internal/open-closed.js */ "./node_modules/@headlessui/react/dist/internal/open-closed.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/use-is-mounted.js */ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+/* harmony import */ var _hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+/* harmony import */ var _hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../hooks/use-sync-refs.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js");
+/* harmony import */ var _hooks_use_transition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../hooks/use-transition.js */ "./node_modules/@headlessui/react/dist/hooks/use-transition.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+/* harmony import */ var _hooks_use_disposables_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-disposables.js */ "./node_modules/@headlessui/react/dist/hooks/use-disposables.js");
+function x(r=""){return r.split(" ").filter(e=>e.trim().length>1)}let F=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);F.displayName="TransitionContext";var ve=(s=>(s.Visible="visible",s.Hidden="hidden",s))(ve||{});function Ce(){let r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(F);if(r===null)throw new Error("A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.");return r}function ge(){let r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(M);if(r===null)throw new Error("A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.");return r}let M=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);M.displayName="NestingContext";function I(r){return"children"in r?I(r.children):r.current.filter(({el:e})=>e.current!==null).filter(({state:e})=>e==="visible").length>0}function ee(r,e){let s=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(r),n=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]),m=(0,_hooks_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_2__.useIsMounted)(),D=(0,_hooks_use_disposables_js__WEBPACK_IMPORTED_MODULE_3__.useDisposables)(),b=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__.useEvent)((l,i=_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Hidden)=>{let t=n.current.findIndex(({el:o})=>o===l);t!==-1&&((0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(i,{[_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Unmount](){n.current.splice(t,1)},[_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Hidden](){n.current[t].state="hidden"}}),D.microTask(()=>{var o;!I(n)&&m.current&&((o=s.current)==null||o.call(s))}))}),E=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__.useEvent)(l=>{let i=n.current.find(({el:t})=>t===l);return i?i.state!=="visible"&&(i.state="visible"):n.current.push({el:l,state:"visible"}),()=>b(l,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Unmount)}),S=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]),u=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(Promise.resolve()),p=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({enter:[],leave:[],idle:[]}),d=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__.useEvent)((l,i,t)=>{S.current.splice(0),e&&(e.chains.current[i]=e.chains.current[i].filter(([o])=>o!==l)),e==null||e.chains.current[i].push([l,new Promise(o=>{S.current.push(o)})]),e==null||e.chains.current[i].push([l,new Promise(o=>{Promise.all(p.current[i].map(([f,a])=>a)).then(()=>o())})]),i==="enter"?u.current=u.current.then(()=>e==null?void 0:e.wait.current).then(()=>t(i)):t(i)}),h=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__.useEvent)((l,i,t)=>{Promise.all(p.current[i].splice(0).map(([o,f])=>f)).then(()=>{var o;(o=S.current.shift())==null||o()}).then(()=>t(i))});return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({children:n,register:E,unregister:b,onStart:d,onStop:h,wait:u,chains:p}),[E,b,n,d,h,p,u])}function be(){}let Ee=["beforeEnter","afterEnter","beforeLeave","afterLeave"];function te(r){var s;let e={};for(let n of Ee)e[n]=(s=r[n])!=null?s:be;return e}function Se(r){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(te(r));return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{e.current=te(r)},[r]),e}let xe="div",ne=_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.Features.RenderStrategy,re=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.forwardRefWithAs)(function(e,s){let{beforeEnter:n,afterEnter:m,beforeLeave:D,afterLeave:b,enter:E,enterFrom:S,enterTo:u,entered:p,leave:d,leaveFrom:h,leaveTo:l,...i}=e,t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),o=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_7__.useSyncRefs)(t,s),f=i.unmount?_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Unmount:_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Hidden,{show:a,appear:P,initial:ie}=Ce(),[v,_]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(a?"visible":"hidden"),z=ge(),{register:N,unregister:V}=z,j=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>N(t),[N,t]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(f===_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Hidden&&!!t.current){if(a&&v!=="visible"){_("visible");return}return (0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(v,{["hidden"]:()=>V(t),["visible"]:()=>N(t)})}},[v,t,N,V,a,f]);let oe=(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)({enter:x(E),enterFrom:x(S),enterTo:x(u),entered:x(p),leave:x(d),leaveFrom:x(h),leaveTo:x(l)}),L=Se({beforeEnter:n,afterEnter:m,beforeLeave:D,afterLeave:b}),U=(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_8__.useServerHandoffComplete)();(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(U&&v==="visible"&&t.current===null)throw new Error("Did you forget to passthrough the `ref` to the actual DOM node?")},[t,v,U]);let k=ie&&!P,se=(()=>!U||k||j.current===a?"idle":a?"enter":"leave")(),le=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__.useEvent)(C=>(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(C,{enter:()=>L.current.beforeEnter(),leave:()=>L.current.beforeLeave(),idle:()=>{}})),ae=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_4__.useEvent)(C=>(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(C,{enter:()=>L.current.afterEnter(),leave:()=>L.current.afterLeave(),idle:()=>{}})),w=ee(()=>{_("hidden"),V(t)},z);(0,_hooks_use_transition_js__WEBPACK_IMPORTED_MODULE_9__.useTransition)({container:t,classes:oe,direction:se,onStart:(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(C=>{w.onStart(t,C,le)}),onStop:(0,_hooks_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(C=>{w.onStop(t,C,ae),C==="leave"&&!I(w)&&(_("hidden"),V(t))})}),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{!k||(f===_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.RenderStrategy.Hidden?j.current=null:j.current=a)},[a,k,v]);let ue=i,de={ref:o};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(M.Provider,{value:w},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.OpenClosedProvider,{value:(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(v,{["visible"]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.State.Open,["hidden"]:_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.State.Closed})},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.render)({ourProps:de,theirProps:ue,defaultTag:xe,features:ne,visible:v==="visible",name:"Transition.Child"})))}),q=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.forwardRefWithAs)(function(e,s){let{show:n,appear:m=!1,unmount:D,...b}=e,E=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),S=(0,_hooks_use_sync_refs_js__WEBPACK_IMPORTED_MODULE_7__.useSyncRefs)(E,s);(0,_hooks_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_8__.useServerHandoffComplete)();let u=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.useOpenClosed)();if(n===void 0&&u!==null&&(n=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(u,{[_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.State.Open]:!0,[_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.State.Closed]:!1})),![!0,!1].includes(n))throw new Error("A <Transition /> is used but it is missing a `show={true | false}` prop.");let[p,d]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(n?"visible":"hidden"),h=ee(()=>{d("hidden")}),[l,i]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0),t=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([n]);(0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_11__.useIsoMorphicEffect)(()=>{l!==!1&&t.current[t.current.length-1]!==n&&(t.current.push(n),i(!1))},[t,n]);let o=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({show:n,appear:m,initial:l}),[n,m,l]);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{if(n)d("visible");else if(!I(h))d("hidden");else{let a=E.current;if(!a)return;let P=a.getBoundingClientRect();P.x===0&&P.y===0&&P.width===0&&P.height===0&&d("hidden")}},[n,h]);let f={unmount:D};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(M.Provider,{value:h},react__WEBPACK_IMPORTED_MODULE_0__.createElement(F.Provider,{value:o},(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.render)({ourProps:{...f,as:react__WEBPACK_IMPORTED_MODULE_0__.Fragment,children:react__WEBPACK_IMPORTED_MODULE_0__.createElement(re,{ref:S,...f,...b})},theirProps:{},defaultTag:react__WEBPACK_IMPORTED_MODULE_0__.Fragment,features:ne,visible:p==="visible",name:"Transition"})))}),Pe=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_5__.forwardRefWithAs)(function(e,s){let n=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(F)!==null,m=(0,_internal_open_closed_js__WEBPACK_IMPORTED_MODULE_10__.useOpenClosed)()!==null;return react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,!n&&m?react__WEBPACK_IMPORTED_MODULE_0__.createElement(q,{ref:s,...e}):react__WEBPACK_IMPORTED_MODULE_0__.createElement(re,{ref:s,...e}))}),We=Object.assign(q,{Child:Pe,Root:q});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/transitions/utils/transition.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/transitions/utils/transition.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Reason": () => (/* binding */ T),
+/* harmony export */   "transition": () => (/* binding */ C)
+/* harmony export */ });
+/* harmony import */ var _utils_once_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/once.js */ "./node_modules/@headlessui/react/dist/utils/once.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+function f(t,...e){t&&e.length>0&&t.classList.add(...e)}function v(t,...e){t&&e.length>0&&t.classList.remove(...e)}var T=(n=>(n.Ended="ended",n.Cancelled="cancelled",n))(T||{});function c(t,e){let n=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_0__.disposables)();if(!t)return n.dispose;let{transitionDuration:d,transitionDelay:o}=getComputedStyle(t),[s,u]=[d,o].map(i=>{let[a=0]=i.split(",").filter(Boolean).map(r=>r.includes("ms")?parseFloat(r):parseFloat(r)*1e3).sort((r,l)=>l-r);return a});if(s+u!==0){let i=[];i.push(n.addEventListener(t,"transitionrun",a=>{a.target===a.currentTarget&&(i.splice(0).forEach(r=>r()),i.push(n.addEventListener(t,"transitionend",r=>{r.target===r.currentTarget&&(e("ended"),i.splice(0).forEach(l=>l()))}),n.addEventListener(t,"transitioncancel",r=>{r.target===r.currentTarget&&(e("cancelled"),i.splice(0).forEach(l=>l()))})))}))}else e("ended");return n.add(()=>e("cancelled")),n.dispose}function C(t,e,n,d){let o=n?"enter":"leave",s=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_0__.disposables)(),u=d!==void 0?(0,_utils_once_js__WEBPACK_IMPORTED_MODULE_1__.once)(d):()=>{};o==="enter"&&(t.removeAttribute("hidden"),t.style.display="");let m=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(o,{enter:()=>e.enter,leave:()=>e.leave}),i=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(o,{enter:()=>e.enterTo,leave:()=>e.leaveTo}),a=(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_2__.match)(o,{enter:()=>e.enterFrom,leave:()=>e.leaveFrom});return v(t,...e.enter,...e.enterTo,...e.enterFrom,...e.leave,...e.leaveFrom,...e.leaveTo,...e.entered),f(t,...m,...a),s.nextFrame(()=>{v(t,...a),f(t,...i),c(t,r=>(r==="ended"&&(v(t,...m),f(t,...e.entered)),u(r)))}),s.dispose}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-disposables.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-disposables.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useDisposables": () => (/* binding */ p)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+function p(){let[e]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(_utils_disposables_js__WEBPACK_IMPORTED_MODULE_1__.disposables);return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>()=>e.dispose(),[e]),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-document-event.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-document-event.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useDocumentEvent": () => (/* binding */ d)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+function d(e,r,n){let o=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(r);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{function t(u){o.current(u)}return document.addEventListener(e,t,n),()=>document.removeEventListener(e,t,n)},[e,n])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-event-listener.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-event-listener.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useEventListener": () => (/* binding */ E)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+function E(n,e,a,t){let i=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(a);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{n=n!=null?n:window;function r(o){i.current(o)}return n.addEventListener(e,r,t),()=>n.removeEventListener(e,r,t)},[n,e,t])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-event.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-event.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useEvent": () => (/* binding */ o)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+let o=function(t){let e=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(t);return react__WEBPACK_IMPORTED_MODULE_0__.useCallback((...r)=>e.current(...r),[e])};
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-id.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-id.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useId": () => (/* binding */ I)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-server-handoff-complete.js */ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js");
+var u;let l=0;function r(){return++l}let I=(u=react__WEBPACK_IMPORTED_MODULE_0__.useId)!=null?u:function(){let n=(0,_use_server_handoff_complete_js__WEBPACK_IMPORTED_MODULE_1__.useServerHandoffComplete)(),[e,o]=react__WEBPACK_IMPORTED_MODULE_0__.useState(n?r:null);return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_2__.useIsoMorphicEffect)(()=>{e===null&&o(r())},[e]),e!=null?""+e:void 0};
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-inert-others.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-inert-others.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useInertOthers": () => (/* binding */ M)
+/* harmony export */ });
+/* harmony import */ var _utils_owner_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+let i=new Set,r=new Map;function u(t){t.setAttribute("aria-hidden","true"),t.inert=!0}function l(t){let n=r.get(t);!n||(n["aria-hidden"]===null?t.removeAttribute("aria-hidden"):t.setAttribute("aria-hidden",n["aria-hidden"]),t.inert=n.inert)}function M(t,n=!0){(0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_0__.useIsoMorphicEffect)(()=>{if(!n||!t.current)return;let o=t.current,a=(0,_utils_owner_js__WEBPACK_IMPORTED_MODULE_1__.getOwnerDocument)(o);if(!!a){i.add(o);for(let e of r.keys())e.contains(o)&&(l(e),r.delete(e));return a.querySelectorAll("body > *").forEach(e=>{if(e instanceof HTMLElement){for(let f of i)if(e.contains(f))return;i.size===1&&(r.set(e,{"aria-hidden":e.getAttribute("aria-hidden"),inert:e.inert}),u(e))}}),()=>{if(i.delete(o),i.size>0)a.querySelectorAll("body > *").forEach(e=>{if(e instanceof HTMLElement&&!r.has(e)){for(let f of i)if(e.contains(f))return;r.set(e,{"aria-hidden":e.getAttribute("aria-hidden"),inert:e.inert}),u(e)}});else for(let e of r.keys())l(e),r.delete(e)}}},[n])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useIsMounted": () => (/* binding */ f)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+function f(){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1);return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>(e.current=!0,()=>{e.current=!1}),[]),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useIsoMorphicEffect": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_ssr_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ssr.js */ "./node_modules/@headlessui/react/dist/utils/ssr.js");
+let s=_utils_ssr_js__WEBPACK_IMPORTED_MODULE_1__.isServer?react__WEBPACK_IMPORTED_MODULE_0__.useEffect:react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect;
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-latest-value.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useLatestValue": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+function s(e){let r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(e);return (0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(()=>{r.current=e},[e]),r}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-outside-click.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-outside-click.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useOutsideClick": () => (/* binding */ L)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/focus-management.js */ "./node_modules/@headlessui/react/dist/utils/focus-management.js");
+/* harmony import */ var _use_document_event_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-document-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-document-event.js");
+function L(s,E,a=!0){let i=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{requestAnimationFrame(()=>{i.current=a})},[a]);function f(e,l){if(!i.current||e.defaultPrevented)return;let o=function r(t){return typeof t=="function"?r(t()):Array.isArray(t)||t instanceof Set?t:[t]}(s),n=l(e);if(n!==null&&!!n.ownerDocument.documentElement.contains(n)){for(let r of o){if(r===null)continue;let t=r instanceof HTMLElement?r:r.current;if(t!=null&&t.contains(n))return}return!(0,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.isFocusableElement)(n,_utils_focus_management_js__WEBPACK_IMPORTED_MODULE_1__.FocusableMode.Loose)&&n.tabIndex!==-1&&e.preventDefault(),E(e,n)}}let u=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);(0,_use_document_event_js__WEBPACK_IMPORTED_MODULE_2__.useDocumentEvent)("mousedown",e=>{var l,o;i.current&&(u.current=((o=(l=e.composedPath)==null?void 0:l.call(e))==null?void 0:o[0])||e.target)},!0),(0,_use_document_event_js__WEBPACK_IMPORTED_MODULE_2__.useDocumentEvent)("click",e=>{!u.current||(f(e,()=>u.current),u.current=null)},!0),(0,_use_document_event_js__WEBPACK_IMPORTED_MODULE_2__.useDocumentEvent)("blur",e=>f(e,()=>window.document.activeElement instanceof HTMLIFrameElement?window.document.activeElement:null),!0)}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-owner.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-owner.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useOwnerDocument": () => (/* binding */ n)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_owner_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+function n(...e){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>(0,_utils_owner_js__WEBPACK_IMPORTED_MODULE_1__.getOwnerDocument)(...e),[...e])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useServerHandoffComplete": () => (/* binding */ a)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+let r={serverHandoffComplete:!1};function a(){let[e,f]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(r.serverHandoffComplete);return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{e!==!0&&f(!0)},[e]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{r.serverHandoffComplete===!1&&(r.serverHandoffComplete=!0)},[]),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-sync-refs.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "optionalRef": () => (/* binding */ T),
+/* harmony export */   "useSyncRefs": () => (/* binding */ y)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+let u=Symbol();function T(t,n=!0){return Object.assign(t,{[u]:n})}function y(...t){let n=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(t);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{n.current=t},[t]);let c=(0,_use_event_js__WEBPACK_IMPORTED_MODULE_1__.useEvent)(e=>{for(let o of n.current)o!=null&&(typeof o=="function"?o(e):o.current=e)});return t.every(e=>e==null||(e==null?void 0:e[u]))?void 0:c}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-tab-direction.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-tab-direction.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Direction": () => (/* binding */ s),
+/* harmony export */   "useTabDirection": () => (/* binding */ n)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_window_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-window-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-window-event.js");
+var s=(r=>(r[r.Forwards=0]="Forwards",r[r.Backwards=1]="Backwards",r))(s||{});function n(){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);return (0,_use_window_event_js__WEBPACK_IMPORTED_MODULE_1__.useWindowEvent)("keydown",o=>{o.key==="Tab"&&(e.current=o.shiftKey?1:0)},!0),e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-transition.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-transition.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useTransition": () => (/* binding */ I)
+/* harmony export */ });
+/* harmony import */ var _components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/transitions/utils/transition.js */ "./node_modules/@headlessui/react/dist/components/transitions/utils/transition.js");
+/* harmony import */ var _utils_disposables_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _utils_match_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _use_disposables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-disposables.js */ "./node_modules/@headlessui/react/dist/hooks/use-disposables.js");
+/* harmony import */ var _use_is_mounted_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./use-is-mounted.js */ "./node_modules/@headlessui/react/dist/hooks/use-is-mounted.js");
+/* harmony import */ var _use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+function I({container:o,direction:t,classes:s,onStart:a,onStop:u}){let c=(0,_use_is_mounted_js__WEBPACK_IMPORTED_MODULE_0__.useIsMounted)(),d=(0,_use_disposables_js__WEBPACK_IMPORTED_MODULE_1__.useDisposables)(),r=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_2__.useLatestValue)(t);(0,_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_3__.useIsoMorphicEffect)(()=>{let e=(0,_utils_disposables_js__WEBPACK_IMPORTED_MODULE_4__.disposables)();d.add(e.dispose);let n=o.current;if(!!n&&r.current!=="idle"&&!!c.current)return e.dispose(),a.current(r.current),e.add((0,_components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_5__.transition)(n,s.current,r.current==="enter",l=>{e.dispose(),(0,_utils_match_js__WEBPACK_IMPORTED_MODULE_6__.match)(l,{[_components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_5__.Reason.Ended](){u.current(r.current)},[_components_transitions_utils_transition_js__WEBPACK_IMPORTED_MODULE_5__.Reason.Cancelled]:()=>{}})})),e.dispose},[t])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-watch.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-watch.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useWatch": () => (/* binding */ m)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+function m(u,t){let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]),r=(0,_use_event_js__WEBPACK_IMPORTED_MODULE_1__.useEvent)(u);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{let o=[...e.current];for(let[n,a]of t.entries())if(e.current[n]!==a){let l=r(t,o);return e.current=t,l}},[r,...t])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-window-event.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-window-event.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useWindowEvent": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-latest-value.js */ "./node_modules/@headlessui/react/dist/hooks/use-latest-value.js");
+function s(e,r,n){let o=(0,_use_latest_value_js__WEBPACK_IMPORTED_MODULE_1__.useLatestValue)(r);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{function t(i){o.current(i)}return window.addEventListener(e,t,n),()=>window.removeEventListener(e,t,n)},[e,n])}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/internal/hidden.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/internal/hidden.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Features": () => (/* binding */ s),
+/* harmony export */   "Hidden": () => (/* binding */ h)
+/* harmony export */ });
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/render.js */ "./node_modules/@headlessui/react/dist/utils/render.js");
+let a="div";var s=(e=>(e[e.None=1]="None",e[e.Focusable=2]="Focusable",e[e.Hidden=4]="Hidden",e))(s||{});let h=(0,_utils_render_js__WEBPACK_IMPORTED_MODULE_0__.forwardRefWithAs)(function(t,o){let{features:e=1,...r}=t,d={ref:o,"aria-hidden":(e&2)===2?!0:void 0,style:{position:"fixed",top:1,left:1,width:1,height:0,padding:0,margin:-1,overflow:"hidden",clip:"rect(0, 0, 0, 0)",whiteSpace:"nowrap",borderWidth:"0",...(e&4)===4&&(e&2)!==2&&{display:"none"}}};return (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_0__.render)({ourProps:d,theirProps:r,slot:{},defaultTag:a,name:"Hidden"})});
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/internal/open-closed.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/internal/open-closed.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "OpenClosedProvider": () => (/* binding */ C),
+/* harmony export */   "State": () => (/* binding */ p),
+/* harmony export */   "useOpenClosed": () => (/* binding */ s)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+let o=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);o.displayName="OpenClosedContext";var p=(e=>(e[e.Open=0]="Open",e[e.Closed=1]="Closed",e))(p||{});function s(){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(o)}function C({value:t,children:n}){return react__WEBPACK_IMPORTED_MODULE_0__.createElement(o.Provider,{value:t},n)}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/internal/portal-force-root.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/internal/portal-force-root.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ForcePortalRoot": () => (/* binding */ P),
+/* harmony export */   "usePortalRoot": () => (/* binding */ l)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+let e=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(!1);function l(){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(e)}function P(o){return react__WEBPACK_IMPORTED_MODULE_0__.createElement(e.Provider,{value:o.force},o.children)}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/internal/stack-context.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/internal/stack-context.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "StackMessage": () => (/* binding */ s),
+/* harmony export */   "StackProvider": () => (/* binding */ M),
+/* harmony export */   "useStackContext": () => (/* binding */ x)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/use-iso-morphic-effect.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js");
+/* harmony import */ var _hooks_use_event_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/use-event.js */ "./node_modules/@headlessui/react/dist/hooks/use-event.js");
+let a=(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(()=>{});a.displayName="StackContext";var s=(e=>(e[e.Add=0]="Add",e[e.Remove=1]="Remove",e))(s||{});function x(){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(a)}function M({children:i,onUpdate:r,type:e,element:n,enabled:u}){let l=x(),o=(0,_hooks_use_event_js__WEBPACK_IMPORTED_MODULE_1__.useEvent)((...t)=>{r==null||r(...t),l(...t)});return (0,_hooks_use_iso_morphic_effect_js__WEBPACK_IMPORTED_MODULE_2__.useIsoMorphicEffect)(()=>{let t=u===void 0||u===!0;return t&&o(0,e,n),()=>{t&&o(1,e,n)}},[o,e,n,u]),react__WEBPACK_IMPORTED_MODULE_0__.createElement(a.Provider,{value:o},i)}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/bugs.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/bugs.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isDisabledReactIssue7711": () => (/* binding */ r)
+/* harmony export */ });
+function r(n){let e=n.parentElement,l=null;for(;e&&!(e instanceof HTMLFieldSetElement);)e instanceof HTMLLegendElement&&(l=e),e=e.parentElement;let t=(e==null?void 0:e.getAttribute("disabled"))==="";return t&&i(l)?!1:t}function i(n){if(!n)return!1;let e=n.previousElementSibling;for(;e!==null;){if(e instanceof HTMLLegendElement)return!1;e=e.previousElementSibling}return!0}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/disposables.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/disposables.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "disposables": () => (/* binding */ m)
+/* harmony export */ });
+/* harmony import */ var _micro_task_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./micro-task.js */ "./node_modules/@headlessui/react/dist/utils/micro-task.js");
+function m(){let n=[],i=[],r={enqueue(e){i.push(e)},addEventListener(e,t,a,o){return e.addEventListener(t,a,o),r.add(()=>e.removeEventListener(t,a,o))},requestAnimationFrame(...e){let t=requestAnimationFrame(...e);return r.add(()=>cancelAnimationFrame(t))},nextFrame(...e){return r.requestAnimationFrame(()=>r.requestAnimationFrame(...e))},setTimeout(...e){let t=setTimeout(...e);return r.add(()=>clearTimeout(t))},microTask(...e){let t={current:!0};return (0,_micro_task_js__WEBPACK_IMPORTED_MODULE_0__.microTask)(()=>{t.current&&e[0]()}),r.add(()=>{t.current=!1})},add(e){return n.push(e),()=>{let t=n.indexOf(e);if(t>=0){let[a]=n.splice(t,1);a()}}},dispose(){for(let e of n.splice(0))e()},async workQueue(){for(let e of i.splice(0))await e()}};return r}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/focus-management.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/focus-management.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Focus": () => (/* binding */ T),
+/* harmony export */   "FocusResult": () => (/* binding */ M),
+/* harmony export */   "FocusableMode": () => (/* binding */ N),
+/* harmony export */   "focusElement": () => (/* binding */ h),
+/* harmony export */   "focusFrom": () => (/* binding */ D),
+/* harmony export */   "focusIn": () => (/* binding */ O),
+/* harmony export */   "getFocusableElements": () => (/* binding */ d),
+/* harmony export */   "isFocusableElement": () => (/* binding */ F),
+/* harmony export */   "restoreFocusIfNecessary": () => (/* binding */ I),
+/* harmony export */   "sortByDomNode": () => (/* binding */ S)
+/* harmony export */ });
+/* harmony import */ var _disposables_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./disposables.js */ "./node_modules/@headlessui/react/dist/utils/disposables.js");
+/* harmony import */ var _match_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+/* harmony import */ var _owner_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./owner.js */ "./node_modules/@headlessui/react/dist/utils/owner.js");
+let m=["[contentEditable=true]","[tabindex]","a[href]","area[href]","button:not([disabled])","iframe","input:not([disabled])","select:not([disabled])","textarea:not([disabled])"].map(e=>`${e}:not([tabindex='-1'])`).join(",");var T=(n=>(n[n.First=1]="First",n[n.Previous=2]="Previous",n[n.Next=4]="Next",n[n.Last=8]="Last",n[n.WrapAround=16]="WrapAround",n[n.NoScroll=32]="NoScroll",n))(T||{}),M=(o=>(o[o.Error=0]="Error",o[o.Overflow=1]="Overflow",o[o.Success=2]="Success",o[o.Underflow=3]="Underflow",o))(M||{}),b=(r=>(r[r.Previous=-1]="Previous",r[r.Next=1]="Next",r))(b||{});function d(e=document.body){return e==null?[]:Array.from(e.querySelectorAll(m))}var N=(r=>(r[r.Strict=0]="Strict",r[r.Loose=1]="Loose",r))(N||{});function F(e,t=0){var r;return e===((r=(0,_owner_js__WEBPACK_IMPORTED_MODULE_0__.getOwnerDocument)(e))==null?void 0:r.body)?!1:(0,_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(t,{[0](){return e.matches(m)},[1](){let l=e;for(;l!==null;){if(l.matches(m))return!0;l=l.parentElement}return!1}})}function I(e){let t=(0,_owner_js__WEBPACK_IMPORTED_MODULE_0__.getOwnerDocument)(e);(0,_disposables_js__WEBPACK_IMPORTED_MODULE_2__.disposables)().nextFrame(()=>{t&&!F(t.activeElement,0)&&h(e)})}function h(e){e==null||e.focus({preventScroll:!0})}let w=["textarea","input"].join(",");function H(e){var t,r;return(r=(t=e==null?void 0:e.matches)==null?void 0:t.call(e,w))!=null?r:!1}function S(e,t=r=>r){return e.slice().sort((r,l)=>{let o=t(r),s=t(l);if(o===null||s===null)return 0;let n=o.compareDocumentPosition(s);return n&Node.DOCUMENT_POSITION_FOLLOWING?-1:n&Node.DOCUMENT_POSITION_PRECEDING?1:0})}function D(e,t){return O(d(),t,!0,e)}function O(e,t,r=!0,l=null){let o=Array.isArray(e)?e.length>0?e[0].ownerDocument:document:e.ownerDocument,s=Array.isArray(e)?r?S(e):e:d(e);l=l!=null?l:o.activeElement;let n=(()=>{if(t&5)return 1;if(t&10)return-1;throw new Error("Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last")})(),E=(()=>{if(t&1)return 0;if(t&2)return Math.max(0,s.indexOf(l))-1;if(t&4)return Math.max(0,s.indexOf(l))+1;if(t&8)return s.length-1;throw new Error("Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last")})(),x=t&32?{preventScroll:!0}:{},f=0,i=s.length,u;do{if(f>=i||f+i<=0)return 0;let a=E+f;if(t&16)a=(a+i)%i;else{if(a<0)return 3;if(a>=i)return 1}u=s[a],u==null||u.focus(x),f+=n}while(u!==o.activeElement);return t&6&&H(u)&&u.select(),u.hasAttribute("tabindex")||u.setAttribute("tabindex","0"),2}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/match.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/match.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "match": () => (/* binding */ u)
+/* harmony export */ });
+function u(r,n,...a){if(r in n){let e=n[r];return typeof e=="function"?e(...a):e}let t=new Error(`Tried to handle "${r}" but there is no handler defined. Only defined handlers are: ${Object.keys(n).map(e=>`"${e}"`).join(", ")}.`);throw Error.captureStackTrace&&Error.captureStackTrace(t,u),t}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/micro-task.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/micro-task.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "microTask": () => (/* binding */ t)
+/* harmony export */ });
+function t(e){typeof queueMicrotask=="function"?queueMicrotask(e):Promise.resolve().then(e).catch(o=>setTimeout(()=>{throw o}))}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/once.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/once.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "once": () => (/* binding */ l)
+/* harmony export */ });
+function l(r){let e={called:!1};return(...t)=>{if(!e.called)return e.called=!0,r(...t)}}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/owner.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/owner.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getOwnerDocument": () => (/* binding */ e)
+/* harmony export */ });
+/* harmony import */ var _ssr_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ssr.js */ "./node_modules/@headlessui/react/dist/utils/ssr.js");
+function e(r){return _ssr_js__WEBPACK_IMPORTED_MODULE_0__.isServer?null:r instanceof Node?r.ownerDocument:r!=null&&r.hasOwnProperty("current")&&r.current instanceof Node?r.current.ownerDocument:document}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/platform.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/platform.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isIOS": () => (/* binding */ o)
+/* harmony export */ });
+function o(){return/iPhone/gi.test(window.navigator.platform)||/Mac/gi.test(window.navigator.platform)&&window.navigator.maxTouchPoints>0}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/render.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/render.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Features": () => (/* binding */ S),
+/* harmony export */   "RenderStrategy": () => (/* binding */ j),
+/* harmony export */   "compact": () => (/* binding */ F),
+/* harmony export */   "forwardRefWithAs": () => (/* binding */ C),
+/* harmony export */   "render": () => (/* binding */ $)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _match_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./match.js */ "./node_modules/@headlessui/react/dist/utils/match.js");
+var S=(a=>(a[a.None=0]="None",a[a.RenderStrategy=1]="RenderStrategy",a[a.Static=2]="Static",a))(S||{}),j=(e=>(e[e.Unmount=0]="Unmount",e[e.Hidden=1]="Hidden",e))(j||{});function $({ourProps:r,theirProps:t,slot:e,defaultTag:a,features:o,visible:n=!0,name:l}){let s=T(t,r);if(n)return p(s,e,a,l);let u=o!=null?o:0;if(u&2){let{static:i=!1,...d}=s;if(i)return p(d,e,a,l)}if(u&1){let{unmount:i=!0,...d}=s;return (0,_match_js__WEBPACK_IMPORTED_MODULE_1__.match)(i?0:1,{[0](){return null},[1](){return p({...d,hidden:!0,style:{display:"none"}},e,a,l)}})}return p(s,e,a,l)}function p(r,t={},e,a){let{as:o=e,children:n,refName:l="ref",...s}=m(r,["unmount","static"]),u=r.ref!==void 0?{[l]:r.ref}:{},i=typeof n=="function"?n(t):n;s.className&&typeof s.className=="function"&&(s.className=s.className(t));let d={};if(t){let f=!1,y=[];for(let[h,g]of Object.entries(t))typeof g=="boolean"&&(f=!0),g===!0&&y.push(h);f&&(d["data-headlessui-state"]=y.join(" "))}if(o===react__WEBPACK_IMPORTED_MODULE_0__.Fragment&&Object.keys(F(s)).length>0){if(!(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(i)||Array.isArray(i)&&i.length>1)throw new Error(['Passing props on "Fragment"!',"",`The current component <${a} /> is rendering a "Fragment".`,"However we need to passthrough the following props:",Object.keys(s).map(f=>`  - ${f}`).join(`
+`),"","You can apply a few solutions:",['Add an `as="..."` prop, to ensure that we render an actual element instead of a "Fragment".',"Render a single element as the child so that we can forward the props onto that element."].map(f=>`  - ${f}`).join(`
+`)].join(`
+`));return (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(i,Object.assign({},T(i.props,F(m(s,["ref"]))),d,u,w(i.ref,u.ref)))}return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(o,Object.assign({},m(s,["ref"]),o!==react__WEBPACK_IMPORTED_MODULE_0__.Fragment&&u,o!==react__WEBPACK_IMPORTED_MODULE_0__.Fragment&&d),i)}function w(...r){return{ref:r.every(t=>t==null)?void 0:t=>{for(let e of r)e!=null&&(typeof e=="function"?e(t):e.current=t)}}}function T(...r){var a;if(r.length===0)return{};if(r.length===1)return r[0];let t={},e={};for(let o of r)for(let n in o)n.startsWith("on")&&typeof o[n]=="function"?((a=e[n])!=null||(e[n]=[]),e[n].push(o[n])):t[n]=o[n];if(t.disabled||t["aria-disabled"])return Object.assign(t,Object.fromEntries(Object.keys(e).map(o=>[o,void 0])));for(let o in e)Object.assign(t,{[o](n,...l){let s=e[o];for(let u of s){if((n instanceof Event||(n==null?void 0:n.nativeEvent)instanceof Event)&&n.defaultPrevented)return;u(n,...l)}}});return t}function C(r){var t;return Object.assign((0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(r),{displayName:(t=r.displayName)!=null?t:r.name})}function F(r){let t=Object.assign({},r);for(let e in t)t[e]===void 0&&delete t[e];return t}function m(r,t=[]){let e=Object.assign({},r);for(let a of t)a in e&&delete e[a];return e}
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/ssr.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/ssr.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isServer": () => (/* binding */ e)
+/* harmony export */ });
+const e=typeof window=="undefined"||typeof document=="undefined";
+
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/solid/esm/CheckIcon.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/solid/esm/CheckIcon.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function CheckIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    fill: "currentColor",
+    "aria-hidden": "true",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    fillRule: "evenodd",
+    d: "M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z",
+    clipRule: "evenodd"
+  }));
+}
+
+const ForwardRef = react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(CheckIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/solid/esm/XCircleIcon.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/solid/esm/XCircleIcon.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function XCircleIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    fill: "currentColor",
+    "aria-hidden": "true",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    fillRule: "evenodd",
+    d: "M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z",
+    clipRule: "evenodd"
+  }));
+}
+
+const ForwardRef = react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(XCircleIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
 
 /***/ }),
 
@@ -108870,7 +101360,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @solana/buffer-layout */ "./node_modules/@solana/buffer-layout/lib/Layout.js");
 /* harmony import */ var bigint_buffer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bigint-buffer */ "./node_modules/bigint-buffer/dist/browser.js");
 /* harmony import */ var _base_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base.mjs */ "./node_modules/@solana/buffer-layout-utils/lib/esm/base.mjs");
-/* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ "./node_modules/@solana/buffer-layout-utils/node_modules/buffer/index.js")["Buffer"];
+/* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")["Buffer"];
 
 
 
@@ -108926,20 +101416,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "WAD": () => (/* binding */ WAD),
 /* harmony export */   "decimal": () => (/* binding */ decimal)
 /* harmony export */ });
-/* harmony import */ var bignumber_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bignumber.js */ "./node_modules/@solana/buffer-layout-utils/node_modules/bignumber.js/bignumber.mjs");
+/* harmony import */ var bignumber_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bignumber.js */ "./node_modules/bignumber.js/bignumber.js");
 /* harmony import */ var _base_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base.mjs */ "./node_modules/@solana/buffer-layout-utils/lib/esm/base.mjs");
 /* harmony import */ var _bigint_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bigint.mjs */ "./node_modules/@solana/buffer-layout-utils/lib/esm/bigint.mjs");
 
 
 
-const WAD = new bignumber_js__WEBPACK_IMPORTED_MODULE_0__["default"]('1e+18');
+const WAD = new bignumber_js__WEBPACK_IMPORTED_MODULE_0__('1e+18');
 const decimal = (property) => {
     const layout = (0,_bigint_mjs__WEBPACK_IMPORTED_MODULE_2__.u128)(property);
     const { encode, decode } = (0,_base_mjs__WEBPACK_IMPORTED_MODULE_1__.encodeDecode)(layout);
     const decimalLayout = layout;
     decimalLayout.decode = (buffer, offset) => {
         const src = decode(buffer, offset).toString();
-        return new bignumber_js__WEBPACK_IMPORTED_MODULE_0__["default"](src).div(WAD);
+        return new bignumber_js__WEBPACK_IMPORTED_MODULE_0__(src).div(WAD);
     };
     decimalLayout.encode = (decimal, buffer, offset) => {
         const src = BigInt(decimal.times(WAD).integerValue().toString());
@@ -109035,7 +101525,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "publicKey": () => (/* binding */ publicKey)
 /* harmony export */ });
 /* harmony import */ var _solana_buffer_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @solana/buffer-layout */ "./node_modules/@solana/buffer-layout/lib/Layout.js");
-/* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @solana/web3.js */ "./node_modules/@solana/buffer-layout-utils/node_modules/@solana/web3.js/lib/index.browser.esm.js");
+/* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @solana/web3.js */ "./node_modules/@solana/web3.js/lib/index.browser.esm.js");
 /* harmony import */ var _base_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base.mjs */ "./node_modules/@solana/buffer-layout-utils/lib/esm/base.mjs");
 
 
@@ -109058,2908 +101548,56 @@ const publicKey = (property) => {
 
 /***/ }),
 
-/***/ "./node_modules/@solana/buffer-layout-utils/node_modules/bignumber.js/bignumber.mjs":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/@solana/buffer-layout-utils/node_modules/bignumber.js/bignumber.mjs ***!
-  \******************************************************************************************/
+/***/ "./node_modules/@solana/pay/lib/esm/createQR.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@solana/pay/lib/esm/createQR.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BigNumber": () => (/* binding */ BigNumber),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "createQR": () => (/* binding */ createQR),
+/* harmony export */   "createQROptions": () => (/* binding */ createQROptions)
 /* harmony export */ });
-/*
- *      bignumber.js v9.1.0
- *      A JavaScript library for arbitrary-precision arithmetic.
- *      https://github.com/MikeMcl/bignumber.js
- *      Copyright (c) 2022 Michael Mclaughlin <M8ch88l@gmail.com>
- *      MIT Licensed.
+/* harmony import */ var _solana_qr_code_styling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @solana/qr-code-styling */ "./node_modules/@solana/qr-code-styling/lib/qr-code-styling.js");
+
+/**
+ * Create a QR code from a Solana Pay URL.
  *
- *      BigNumber.prototype methods     |  BigNumber methods
- *                                      |
- *      absoluteValue            abs    |  clone
- *      comparedTo                      |  config               set
- *      decimalPlaces            dp     |      DECIMAL_PLACES
- *      dividedBy                div    |      ROUNDING_MODE
- *      dividedToIntegerBy       idiv   |      EXPONENTIAL_AT
- *      exponentiatedBy          pow    |      RANGE
- *      integerValue                    |      CRYPTO
- *      isEqualTo                eq     |      MODULO_MODE
- *      isFinite                        |      POW_PRECISION
- *      isGreaterThan            gt     |      FORMAT
- *      isGreaterThanOrEqualTo   gte    |      ALPHABET
- *      isInteger                       |  isBigNumber
- *      isLessThan               lt     |  maximum              max
- *      isLessThanOrEqualTo      lte    |  minimum              min
- *      isNaN                           |  random
- *      isNegative                      |  sum
- *      isPositive                      |
- *      isZero                          |
- *      minus                           |
- *      modulo                   mod    |
- *      multipliedBy             times  |
- *      negated                         |
- *      plus                            |
- *      precision                sd     |
- *      shiftedBy                       |
- *      squareRoot               sqrt   |
- *      toExponential                   |
- *      toFixed                         |
- *      toFormat                        |
- *      toFraction                      |
- *      toJSON                          |
- *      toNumber                        |
- *      toPrecision                     |
- *      toString                        |
- *      valueOf                         |
- *
+ * @param url - The URL to encode.
+ * @param size - Width and height in pixels.
+ * @param background - Background color, which should be light for device compatibility.
+ * @param color - Foreground color, which should be dark for device compatibility.
  */
-
-
-var
-  isNumeric = /^-?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i,
-  mathceil = Math.ceil,
-  mathfloor = Math.floor,
-
-  bignumberError = '[BigNumber Error] ',
-  tooManyDigits = bignumberError + 'Number primitive has more than 15 significant digits: ',
-
-  BASE = 1e14,
-  LOG_BASE = 14,
-  MAX_SAFE_INTEGER = 0x1fffffffffffff,         // 2^53 - 1
-  // MAX_INT32 = 0x7fffffff,                   // 2^31 - 1
-  POWS_TEN = [1, 10, 100, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10, 1e11, 1e12, 1e13],
-  SQRT_BASE = 1e7,
-
-  // EDITABLE
-  // The limit on the value of DECIMAL_PLACES, TO_EXP_NEG, TO_EXP_POS, MIN_EXP, MAX_EXP, and
-  // the arguments to toExponential, toFixed, toFormat, and toPrecision.
-  MAX = 1E9;                                   // 0 to MAX_INT32
-
-
-/*
- * Create and return a BigNumber constructor.
- */
-function clone(configObject) {
-  var div, convertBase, parseNumeric,
-    P = BigNumber.prototype = { constructor: BigNumber, toString: null, valueOf: null },
-    ONE = new BigNumber(1),
-
-
-    //----------------------------- EDITABLE CONFIG DEFAULTS -------------------------------
-
-
-    // The default values below must be integers within the inclusive ranges stated.
-    // The values can also be changed at run-time using BigNumber.set.
-
-    // The maximum number of decimal places for operations involving division.
-    DECIMAL_PLACES = 20,                     // 0 to MAX
-
-    // The rounding mode used when rounding to the above decimal places, and when using
-    // toExponential, toFixed, toFormat and toPrecision, and round (default value).
-    // UP         0 Away from zero.
-    // DOWN       1 Towards zero.
-    // CEIL       2 Towards +Infinity.
-    // FLOOR      3 Towards -Infinity.
-    // HALF_UP    4 Towards nearest neighbour. If equidistant, up.
-    // HALF_DOWN  5 Towards nearest neighbour. If equidistant, down.
-    // HALF_EVEN  6 Towards nearest neighbour. If equidistant, towards even neighbour.
-    // HALF_CEIL  7 Towards nearest neighbour. If equidistant, towards +Infinity.
-    // HALF_FLOOR 8 Towards nearest neighbour. If equidistant, towards -Infinity.
-    ROUNDING_MODE = 4,                       // 0 to 8
-
-    // EXPONENTIAL_AT : [TO_EXP_NEG , TO_EXP_POS]
-
-    // The exponent value at and beneath which toString returns exponential notation.
-    // Number type: -7
-    TO_EXP_NEG = -7,                         // 0 to -MAX
-
-    // The exponent value at and above which toString returns exponential notation.
-    // Number type: 21
-    TO_EXP_POS = 21,                         // 0 to MAX
-
-    // RANGE : [MIN_EXP, MAX_EXP]
-
-    // The minimum exponent value, beneath which underflow to zero occurs.
-    // Number type: -324  (5e-324)
-    MIN_EXP = -1e7,                          // -1 to -MAX
-
-    // The maximum exponent value, above which overflow to Infinity occurs.
-    // Number type:  308  (1.7976931348623157e+308)
-    // For MAX_EXP > 1e7, e.g. new BigNumber('1e100000000').plus(1) may be slow.
-    MAX_EXP = 1e7,                           // 1 to MAX
-
-    // Whether to use cryptographically-secure random number generation, if available.
-    CRYPTO = false,                          // true or false
-
-    // The modulo mode used when calculating the modulus: a mod n.
-    // The quotient (q = a / n) is calculated according to the corresponding rounding mode.
-    // The remainder (r) is calculated as: r = a - n * q.
-    //
-    // UP        0 The remainder is positive if the dividend is negative, else is negative.
-    // DOWN      1 The remainder has the same sign as the dividend.
-    //             This modulo mode is commonly known as 'truncated division' and is
-    //             equivalent to (a % n) in JavaScript.
-    // FLOOR     3 The remainder has the same sign as the divisor (Python %).
-    // HALF_EVEN 6 This modulo mode implements the IEEE 754 remainder function.
-    // EUCLID    9 Euclidian division. q = sign(n) * floor(a / abs(n)).
-    //             The remainder is always positive.
-    //
-    // The truncated division, floored division, Euclidian division and IEEE 754 remainder
-    // modes are commonly used for the modulus operation.
-    // Although the other rounding modes can also be used, they may not give useful results.
-    MODULO_MODE = 1,                         // 0 to 9
-
-    // The maximum number of significant digits of the result of the exponentiatedBy operation.
-    // If POW_PRECISION is 0, there will be unlimited significant digits.
-    POW_PRECISION = 0,                       // 0 to MAX
-
-    // The format specification used by the BigNumber.prototype.toFormat method.
-    FORMAT = {
-      prefix: '',
-      groupSize: 3,
-      secondaryGroupSize: 0,
-      groupSeparator: ',',
-      decimalSeparator: '.',
-      fractionGroupSize: 0,
-      fractionGroupSeparator: '\xA0',        // non-breaking space
-      suffix: ''
-    },
-
-    // The alphabet used for base conversion. It must be at least 2 characters long, with no '+',
-    // '-', '.', whitespace, or repeated character.
-    // '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$_'
-    ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyz',
-    alphabetHasNormalDecimalDigits = true;
-
-
-  //------------------------------------------------------------------------------------------
-
-
-  // CONSTRUCTOR
-
-
-  /*
-   * The BigNumber constructor and exported function.
-   * Create and return a new instance of a BigNumber object.
-   *
-   * v {number|string|BigNumber} A numeric value.
-   * [b] {number} The base of v. Integer, 2 to ALPHABET.length inclusive.
-   */
-  function BigNumber(v, b) {
-    var alphabet, c, caseChanged, e, i, isNum, len, str,
-      x = this;
-
-    // Enable constructor call without `new`.
-    if (!(x instanceof BigNumber)) return new BigNumber(v, b);
-
-    if (b == null) {
-
-      if (v && v._isBigNumber === true) {
-        x.s = v.s;
-
-        if (!v.c || v.e > MAX_EXP) {
-          x.c = x.e = null;
-        } else if (v.e < MIN_EXP) {
-          x.c = [x.e = 0];
-        } else {
-          x.e = v.e;
-          x.c = v.c.slice();
-        }
-
-        return;
-      }
-
-      if ((isNum = typeof v == 'number') && v * 0 == 0) {
-
-        // Use `1 / n` to handle minus zero also.
-        x.s = 1 / v < 0 ? (v = -v, -1) : 1;
-
-        // Fast path for integers, where n < 2147483648 (2**31).
-        if (v === ~~v) {
-          for (e = 0, i = v; i >= 10; i /= 10, e++);
-
-          if (e > MAX_EXP) {
-            x.c = x.e = null;
-          } else {
-            x.e = e;
-            x.c = [v];
-          }
-
-          return;
-        }
-
-        str = String(v);
-      } else {
-
-        if (!isNumeric.test(str = String(v))) return parseNumeric(x, str, isNum);
-
-        x.s = str.charCodeAt(0) == 45 ? (str = str.slice(1), -1) : 1;
-      }
-
-      // Decimal point?
-      if ((e = str.indexOf('.')) > -1) str = str.replace('.', '');
-
-      // Exponential form?
-      if ((i = str.search(/e/i)) > 0) {
-
-        // Determine exponent.
-        if (e < 0) e = i;
-        e += +str.slice(i + 1);
-        str = str.substring(0, i);
-      } else if (e < 0) {
-
-        // Integer.
-        e = str.length;
-      }
-
-    } else {
-
-      // '[BigNumber Error] Base {not a primitive number|not an integer|out of range}: {b}'
-      intCheck(b, 2, ALPHABET.length, 'Base');
-
-      // Allow exponential notation to be used with base 10 argument, while
-      // also rounding to DECIMAL_PLACES as with other bases.
-      if (b == 10 && alphabetHasNormalDecimalDigits) {
-        x = new BigNumber(v);
-        return round(x, DECIMAL_PLACES + x.e + 1, ROUNDING_MODE);
-      }
-
-      str = String(v);
-
-      if (isNum = typeof v == 'number') {
-
-        // Avoid potential interpretation of Infinity and NaN as base 44+ values.
-        if (v * 0 != 0) return parseNumeric(x, str, isNum, b);
-
-        x.s = 1 / v < 0 ? (str = str.slice(1), -1) : 1;
-
-        // '[BigNumber Error] Number primitive has more than 15 significant digits: {n}'
-        if (BigNumber.DEBUG && str.replace(/^0\.0*|\./, '').length > 15) {
-          throw Error
-           (tooManyDigits + v);
-        }
-      } else {
-        x.s = str.charCodeAt(0) === 45 ? (str = str.slice(1), -1) : 1;
-      }
-
-      alphabet = ALPHABET.slice(0, b);
-      e = i = 0;
-
-      // Check that str is a valid base b number.
-      // Don't use RegExp, so alphabet can contain special characters.
-      for (len = str.length; i < len; i++) {
-        if (alphabet.indexOf(c = str.charAt(i)) < 0) {
-          if (c == '.') {
-
-            // If '.' is not the first character and it has not be found before.
-            if (i > e) {
-              e = len;
-              continue;
-            }
-          } else if (!caseChanged) {
-
-            // Allow e.g. hexadecimal 'FF' as well as 'ff'.
-            if (str == str.toUpperCase() && (str = str.toLowerCase()) ||
-                str == str.toLowerCase() && (str = str.toUpperCase())) {
-              caseChanged = true;
-              i = -1;
-              e = 0;
-              continue;
-            }
-          }
-
-          return parseNumeric(x, String(v), isNum, b);
-        }
-      }
-
-      // Prevent later check for length on converted number.
-      isNum = false;
-      str = convertBase(str, b, 10, x.s);
-
-      // Decimal point?
-      if ((e = str.indexOf('.')) > -1) str = str.replace('.', '');
-      else e = str.length;
-    }
-
-    // Determine leading zeros.
-    for (i = 0; str.charCodeAt(i) === 48; i++);
-
-    // Determine trailing zeros.
-    for (len = str.length; str.charCodeAt(--len) === 48;);
-
-    if (str = str.slice(i, ++len)) {
-      len -= i;
-
-      // '[BigNumber Error] Number primitive has more than 15 significant digits: {n}'
-      if (isNum && BigNumber.DEBUG &&
-        len > 15 && (v > MAX_SAFE_INTEGER || v !== mathfloor(v))) {
-          throw Error
-           (tooManyDigits + (x.s * v));
-      }
-
-       // Overflow?
-      if ((e = e - i - 1) > MAX_EXP) {
-
-        // Infinity.
-        x.c = x.e = null;
-
-      // Underflow?
-      } else if (e < MIN_EXP) {
-
-        // Zero.
-        x.c = [x.e = 0];
-      } else {
-        x.e = e;
-        x.c = [];
-
-        // Transform base
-
-        // e is the base 10 exponent.
-        // i is where to slice str to get the first element of the coefficient array.
-        i = (e + 1) % LOG_BASE;
-        if (e < 0) i += LOG_BASE;  // i < 1
-
-        if (i < len) {
-          if (i) x.c.push(+str.slice(0, i));
-
-          for (len -= LOG_BASE; i < len;) {
-            x.c.push(+str.slice(i, i += LOG_BASE));
-          }
-
-          i = LOG_BASE - (str = str.slice(i)).length;
-        } else {
-          i -= len;
-        }
-
-        for (; i--; str += '0');
-        x.c.push(+str);
-      }
-    } else {
-
-      // Zero.
-      x.c = [x.e = 0];
-    }
-  }
-
-
-  // CONSTRUCTOR PROPERTIES
-
-
-  BigNumber.clone = clone;
-
-  BigNumber.ROUND_UP = 0;
-  BigNumber.ROUND_DOWN = 1;
-  BigNumber.ROUND_CEIL = 2;
-  BigNumber.ROUND_FLOOR = 3;
-  BigNumber.ROUND_HALF_UP = 4;
-  BigNumber.ROUND_HALF_DOWN = 5;
-  BigNumber.ROUND_HALF_EVEN = 6;
-  BigNumber.ROUND_HALF_CEIL = 7;
-  BigNumber.ROUND_HALF_FLOOR = 8;
-  BigNumber.EUCLID = 9;
-
-
-  /*
-   * Configure infrequently-changing library-wide settings.
-   *
-   * Accept an object with the following optional properties (if the value of a property is
-   * a number, it must be an integer within the inclusive range stated):
-   *
-   *   DECIMAL_PLACES   {number}           0 to MAX
-   *   ROUNDING_MODE    {number}           0 to 8
-   *   EXPONENTIAL_AT   {number|number[]}  -MAX to MAX  or  [-MAX to 0, 0 to MAX]
-   *   RANGE            {number|number[]}  -MAX to MAX (not zero)  or  [-MAX to -1, 1 to MAX]
-   *   CRYPTO           {boolean}          true or false
-   *   MODULO_MODE      {number}           0 to 9
-   *   POW_PRECISION       {number}           0 to MAX
-   *   ALPHABET         {string}           A string of two or more unique characters which does
-   *                                       not contain '.'.
-   *   FORMAT           {object}           An object with some of the following properties:
-   *     prefix                 {string}
-   *     groupSize              {number}
-   *     secondaryGroupSize     {number}
-   *     groupSeparator         {string}
-   *     decimalSeparator       {string}
-   *     fractionGroupSize      {number}
-   *     fractionGroupSeparator {string}
-   *     suffix                 {string}
-   *
-   * (The values assigned to the above FORMAT object properties are not checked for validity.)
-   *
-   * E.g.
-   * BigNumber.config({ DECIMAL_PLACES : 20, ROUNDING_MODE : 4 })
-   *
-   * Ignore properties/parameters set to null or undefined, except for ALPHABET.
-   *
-   * Return an object with the properties current values.
-   */
-  BigNumber.config = BigNumber.set = function (obj) {
-    var p, v;
-
-    if (obj != null) {
-
-      if (typeof obj == 'object') {
-
-        // DECIMAL_PLACES {number} Integer, 0 to MAX inclusive.
-        // '[BigNumber Error] DECIMAL_PLACES {not a primitive number|not an integer|out of range}: {v}'
-        if (obj.hasOwnProperty(p = 'DECIMAL_PLACES')) {
-          v = obj[p];
-          intCheck(v, 0, MAX, p);
-          DECIMAL_PLACES = v;
-        }
-
-        // ROUNDING_MODE {number} Integer, 0 to 8 inclusive.
-        // '[BigNumber Error] ROUNDING_MODE {not a primitive number|not an integer|out of range}: {v}'
-        if (obj.hasOwnProperty(p = 'ROUNDING_MODE')) {
-          v = obj[p];
-          intCheck(v, 0, 8, p);
-          ROUNDING_MODE = v;
-        }
-
-        // EXPONENTIAL_AT {number|number[]}
-        // Integer, -MAX to MAX inclusive or
-        // [integer -MAX to 0 inclusive, 0 to MAX inclusive].
-        // '[BigNumber Error] EXPONENTIAL_AT {not a primitive number|not an integer|out of range}: {v}'
-        if (obj.hasOwnProperty(p = 'EXPONENTIAL_AT')) {
-          v = obj[p];
-          if (v && v.pop) {
-            intCheck(v[0], -MAX, 0, p);
-            intCheck(v[1], 0, MAX, p);
-            TO_EXP_NEG = v[0];
-            TO_EXP_POS = v[1];
-          } else {
-            intCheck(v, -MAX, MAX, p);
-            TO_EXP_NEG = -(TO_EXP_POS = v < 0 ? -v : v);
-          }
-        }
-
-        // RANGE {number|number[]} Non-zero integer, -MAX to MAX inclusive or
-        // [integer -MAX to -1 inclusive, integer 1 to MAX inclusive].
-        // '[BigNumber Error] RANGE {not a primitive number|not an integer|out of range|cannot be zero}: {v}'
-        if (obj.hasOwnProperty(p = 'RANGE')) {
-          v = obj[p];
-          if (v && v.pop) {
-            intCheck(v[0], -MAX, -1, p);
-            intCheck(v[1], 1, MAX, p);
-            MIN_EXP = v[0];
-            MAX_EXP = v[1];
-          } else {
-            intCheck(v, -MAX, MAX, p);
-            if (v) {
-              MIN_EXP = -(MAX_EXP = v < 0 ? -v : v);
-            } else {
-              throw Error
-               (bignumberError + p + ' cannot be zero: ' + v);
-            }
-          }
-        }
-
-        // CRYPTO {boolean} true or false.
-        // '[BigNumber Error] CRYPTO not true or false: {v}'
-        // '[BigNumber Error] crypto unavailable'
-        if (obj.hasOwnProperty(p = 'CRYPTO')) {
-          v = obj[p];
-          if (v === !!v) {
-            if (v) {
-              if (typeof crypto != 'undefined' && crypto &&
-               (crypto.getRandomValues || crypto.randomBytes)) {
-                CRYPTO = v;
-              } else {
-                CRYPTO = !v;
-                throw Error
-                 (bignumberError + 'crypto unavailable');
-              }
-            } else {
-              CRYPTO = v;
-            }
-          } else {
-            throw Error
-             (bignumberError + p + ' not true or false: ' + v);
-          }
-        }
-
-        // MODULO_MODE {number} Integer, 0 to 9 inclusive.
-        // '[BigNumber Error] MODULO_MODE {not a primitive number|not an integer|out of range}: {v}'
-        if (obj.hasOwnProperty(p = 'MODULO_MODE')) {
-          v = obj[p];
-          intCheck(v, 0, 9, p);
-          MODULO_MODE = v;
-        }
-
-        // POW_PRECISION {number} Integer, 0 to MAX inclusive.
-        // '[BigNumber Error] POW_PRECISION {not a primitive number|not an integer|out of range}: {v}'
-        if (obj.hasOwnProperty(p = 'POW_PRECISION')) {
-          v = obj[p];
-          intCheck(v, 0, MAX, p);
-          POW_PRECISION = v;
-        }
-
-        // FORMAT {object}
-        // '[BigNumber Error] FORMAT not an object: {v}'
-        if (obj.hasOwnProperty(p = 'FORMAT')) {
-          v = obj[p];
-          if (typeof v == 'object') FORMAT = v;
-          else throw Error
-           (bignumberError + p + ' not an object: ' + v);
-        }
-
-        // ALPHABET {string}
-        // '[BigNumber Error] ALPHABET invalid: {v}'
-        if (obj.hasOwnProperty(p = 'ALPHABET')) {
-          v = obj[p];
-
-          // Disallow if less than two characters,
-          // or if it contains '+', '-', '.', whitespace, or a repeated character.
-          if (typeof v == 'string' && !/^.?$|[+\-.\s]|(.).*\1/.test(v)) {
-            alphabetHasNormalDecimalDigits = v.slice(0, 10) == '0123456789';
-            ALPHABET = v;
-          } else {
-            throw Error
-             (bignumberError + p + ' invalid: ' + v);
-          }
-        }
-
-      } else {
-
-        // '[BigNumber Error] Object expected: {v}'
-        throw Error
-         (bignumberError + 'Object expected: ' + obj);
-      }
-    }
-
+function createQR(url, size = 512, background = 'white', color = 'black') {
+    return new _solana_qr_code_styling__WEBPACK_IMPORTED_MODULE_0__(createQROptions(url, size, background, color));
+}
+/** @ignore */
+function createQROptions(url, size = 512, background = 'white', color = 'black') {
     return {
-      DECIMAL_PLACES: DECIMAL_PLACES,
-      ROUNDING_MODE: ROUNDING_MODE,
-      EXPONENTIAL_AT: [TO_EXP_NEG, TO_EXP_POS],
-      RANGE: [MIN_EXP, MAX_EXP],
-      CRYPTO: CRYPTO,
-      MODULO_MODE: MODULO_MODE,
-      POW_PRECISION: POW_PRECISION,
-      FORMAT: FORMAT,
-      ALPHABET: ALPHABET
+        type: 'svg',
+        width: size,
+        height: size,
+        data: String(url),
+        margin: 16,
+        qrOptions: {
+            typeNumber: 0,
+            mode: 'Byte',
+            errorCorrectionLevel: 'Q',
+        },
+        backgroundOptions: { color: background },
+        dotsOptions: { type: 'extra-rounded', color },
+        cornersSquareOptions: {
+            type: 'extra-rounded',
+            color,
+        },
+        cornersDotOptions: { type: 'square', color },
+        imageOptions: { hideBackgroundDots: true, imageSize: 0.15, margin: 8 },
+        image: `data:image/svg+xml;utf8,<svg fill="${encodeURIComponent(color)}" height="16" viewBox="0 0 16 14" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m15.9176 11.038-2.6413 2.7713c-.0574.0602-.1269.1082-.2041.141s-.1604.0497-.2446.0497h-12.520966c-.059744 0-.118187-.0171-.168147-.0491-.0499596-.0321-.0892609-.0777-.1130745-.1313-.02381372-.0536-.03110249-.1129-.02097081-.1705.01013171-.0576.03724251-.111.07800141-.1538l2.6432769-2.7713c.05726-.06.12651-.1079.20346-.1407s.15996-.0498.2439-.05h12.52032c.0597 0 .1182.0171.1681.0492.05.032.0893.0776.1131.1313.0238.0536.0311.1128.021.1704-.0102.0576-.0373.1111-.078.1538zm-2.6413-5.58067c-.0574-.0602-.1269-.1082-.2041-.141s-.1604-.04971-.2446-.04966h-12.520966c-.059744 0-.118187.01708-.168147.04913-.0499596.03205-.0892609.07768-.1130745.13129-.02381372.0536-.03110249.11285-.02097081.17045.01013171.05761.03724251.11106.07800141.15379l2.6432769 2.77134c.05726.06004.12651.10794.20346.14073.07695.0328.15996.04979.2439.04993h12.52032c.0597 0 .1182-.01707.1681-.04913.05-.03205.0893-.07768.1131-.13129.0238-.0536.0311-.11285.021-.17045-.0102-.05761-.0373-.11106-.078-.15379zm-12.969666-1.99066h12.520966c.0842.00004.1674-.01687.2446-.04967s.1467-.0808.2041-.141l2.6413-2.771333c.0407-.042736.0678-.096189.078-.153792.0101-.057603.0028-.116847-.021-.170453s-.0631-.0992385-.1131-.1312911c-.0499-.0320526-.1084-.04912893-.1681-.0491309h-12.52032c-.08394.00013975-.16695.0171339-.2439.0499304s-.1462.0806976-.20346.1407366l-2.6425955 2.771333c-.0407196.04269-.0678184.09609-.07797306.15363-.01015467.05754-.00292373.11673.02080606.17031.0237297.05358.0629266.09922.1127835.13132.049857.03211.108207.04928.167893.04941z"/></svg>`,
     };
-  };
-
-
-  /*
-   * Return true if v is a BigNumber instance, otherwise return false.
-   *
-   * If BigNumber.DEBUG is true, throw if a BigNumber instance is not well-formed.
-   *
-   * v {any}
-   *
-   * '[BigNumber Error] Invalid BigNumber: {v}'
-   */
-  BigNumber.isBigNumber = function (v) {
-    if (!v || v._isBigNumber !== true) return false;
-    if (!BigNumber.DEBUG) return true;
-
-    var i, n,
-      c = v.c,
-      e = v.e,
-      s = v.s;
-
-    out: if ({}.toString.call(c) == '[object Array]') {
-
-      if ((s === 1 || s === -1) && e >= -MAX && e <= MAX && e === mathfloor(e)) {
-
-        // If the first element is zero, the BigNumber value must be zero.
-        if (c[0] === 0) {
-          if (e === 0 && c.length === 1) return true;
-          break out;
-        }
-
-        // Calculate number of digits that c[0] should have, based on the exponent.
-        i = (e + 1) % LOG_BASE;
-        if (i < 1) i += LOG_BASE;
-
-        // Calculate number of digits of c[0].
-        //if (Math.ceil(Math.log(c[0] + 1) / Math.LN10) == i) {
-        if (String(c[0]).length == i) {
-
-          for (i = 0; i < c.length; i++) {
-            n = c[i];
-            if (n < 0 || n >= BASE || n !== mathfloor(n)) break out;
-          }
-
-          // Last element cannot be zero, unless it is the only element.
-          if (n !== 0) return true;
-        }
-      }
-
-    // Infinity/NaN
-    } else if (c === null && e === null && (s === null || s === 1 || s === -1)) {
-      return true;
-    }
-
-    throw Error
-      (bignumberError + 'Invalid BigNumber: ' + v);
-  };
-
-
-  /*
-   * Return a new BigNumber whose value is the maximum of the arguments.
-   *
-   * arguments {number|string|BigNumber}
-   */
-  BigNumber.maximum = BigNumber.max = function () {
-    return maxOrMin(arguments, P.lt);
-  };
-
-
-  /*
-   * Return a new BigNumber whose value is the minimum of the arguments.
-   *
-   * arguments {number|string|BigNumber}
-   */
-  BigNumber.minimum = BigNumber.min = function () {
-    return maxOrMin(arguments, P.gt);
-  };
-
-
-  /*
-   * Return a new BigNumber with a random value equal to or greater than 0 and less than 1,
-   * and with dp, or DECIMAL_PLACES if dp is omitted, decimal places (or less if trailing
-   * zeros are produced).
-   *
-   * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp}'
-   * '[BigNumber Error] crypto unavailable'
-   */
-  BigNumber.random = (function () {
-    var pow2_53 = 0x20000000000000;
-
-    // Return a 53 bit integer n, where 0 <= n < 9007199254740992.
-    // Check if Math.random() produces more than 32 bits of randomness.
-    // If it does, assume at least 53 bits are produced, otherwise assume at least 30 bits.
-    // 0x40000000 is 2^30, 0x800000 is 2^23, 0x1fffff is 2^21 - 1.
-    var random53bitInt = (Math.random() * pow2_53) & 0x1fffff
-     ? function () { return mathfloor(Math.random() * pow2_53); }
-     : function () { return ((Math.random() * 0x40000000 | 0) * 0x800000) +
-       (Math.random() * 0x800000 | 0); };
-
-    return function (dp) {
-      var a, b, e, k, v,
-        i = 0,
-        c = [],
-        rand = new BigNumber(ONE);
-
-      if (dp == null) dp = DECIMAL_PLACES;
-      else intCheck(dp, 0, MAX);
-
-      k = mathceil(dp / LOG_BASE);
-
-      if (CRYPTO) {
-
-        // Browsers supporting crypto.getRandomValues.
-        if (crypto.getRandomValues) {
-
-          a = crypto.getRandomValues(new Uint32Array(k *= 2));
-
-          for (; i < k;) {
-
-            // 53 bits:
-            // ((Math.pow(2, 32) - 1) * Math.pow(2, 21)).toString(2)
-            // 11111 11111111 11111111 11111111 11100000 00000000 00000000
-            // ((Math.pow(2, 32) - 1) >>> 11).toString(2)
-            //                                     11111 11111111 11111111
-            // 0x20000 is 2^21.
-            v = a[i] * 0x20000 + (a[i + 1] >>> 11);
-
-            // Rejection sampling:
-            // 0 <= v < 9007199254740992
-            // Probability that v >= 9e15, is
-            // 7199254740992 / 9007199254740992 ~= 0.0008, i.e. 1 in 1251
-            if (v >= 9e15) {
-              b = crypto.getRandomValues(new Uint32Array(2));
-              a[i] = b[0];
-              a[i + 1] = b[1];
-            } else {
-
-              // 0 <= v <= 8999999999999999
-              // 0 <= (v % 1e14) <= 99999999999999
-              c.push(v % 1e14);
-              i += 2;
-            }
-          }
-          i = k / 2;
-
-        // Node.js supporting crypto.randomBytes.
-        } else if (crypto.randomBytes) {
-
-          // buffer
-          a = crypto.randomBytes(k *= 7);
-
-          for (; i < k;) {
-
-            // 0x1000000000000 is 2^48, 0x10000000000 is 2^40
-            // 0x100000000 is 2^32, 0x1000000 is 2^24
-            // 11111 11111111 11111111 11111111 11111111 11111111 11111111
-            // 0 <= v < 9007199254740992
-            v = ((a[i] & 31) * 0x1000000000000) + (a[i + 1] * 0x10000000000) +
-               (a[i + 2] * 0x100000000) + (a[i + 3] * 0x1000000) +
-               (a[i + 4] << 16) + (a[i + 5] << 8) + a[i + 6];
-
-            if (v >= 9e15) {
-              crypto.randomBytes(7).copy(a, i);
-            } else {
-
-              // 0 <= (v % 1e14) <= 99999999999999
-              c.push(v % 1e14);
-              i += 7;
-            }
-          }
-          i = k / 7;
-        } else {
-          CRYPTO = false;
-          throw Error
-           (bignumberError + 'crypto unavailable');
-        }
-      }
-
-      // Use Math.random.
-      if (!CRYPTO) {
-
-        for (; i < k;) {
-          v = random53bitInt();
-          if (v < 9e15) c[i++] = v % 1e14;
-        }
-      }
-
-      k = c[--i];
-      dp %= LOG_BASE;
-
-      // Convert trailing digits to zeros according to dp.
-      if (k && dp) {
-        v = POWS_TEN[LOG_BASE - dp];
-        c[i] = mathfloor(k / v) * v;
-      }
-
-      // Remove trailing elements which are zero.
-      for (; c[i] === 0; c.pop(), i--);
-
-      // Zero?
-      if (i < 0) {
-        c = [e = 0];
-      } else {
-
-        // Remove leading elements which are zero and adjust exponent accordingly.
-        for (e = -1 ; c[0] === 0; c.splice(0, 1), e -= LOG_BASE);
-
-        // Count the digits of the first element of c to determine leading zeros, and...
-        for (i = 1, v = c[0]; v >= 10; v /= 10, i++);
-
-        // adjust the exponent accordingly.
-        if (i < LOG_BASE) e -= LOG_BASE - i;
-      }
-
-      rand.e = e;
-      rand.c = c;
-      return rand;
-    };
-  })();
-
-
-   /*
-   * Return a BigNumber whose value is the sum of the arguments.
-   *
-   * arguments {number|string|BigNumber}
-   */
-  BigNumber.sum = function () {
-    var i = 1,
-      args = arguments,
-      sum = new BigNumber(args[0]);
-    for (; i < args.length;) sum = sum.plus(args[i++]);
-    return sum;
-  };
-
-
-  // PRIVATE FUNCTIONS
-
-
-  // Called by BigNumber and BigNumber.prototype.toString.
-  convertBase = (function () {
-    var decimal = '0123456789';
-
-    /*
-     * Convert string of baseIn to an array of numbers of baseOut.
-     * Eg. toBaseOut('255', 10, 16) returns [15, 15].
-     * Eg. toBaseOut('ff', 16, 10) returns [2, 5, 5].
-     */
-    function toBaseOut(str, baseIn, baseOut, alphabet) {
-      var j,
-        arr = [0],
-        arrL,
-        i = 0,
-        len = str.length;
-
-      for (; i < len;) {
-        for (arrL = arr.length; arrL--; arr[arrL] *= baseIn);
-
-        arr[0] += alphabet.indexOf(str.charAt(i++));
-
-        for (j = 0; j < arr.length; j++) {
-
-          if (arr[j] > baseOut - 1) {
-            if (arr[j + 1] == null) arr[j + 1] = 0;
-            arr[j + 1] += arr[j] / baseOut | 0;
-            arr[j] %= baseOut;
-          }
-        }
-      }
-
-      return arr.reverse();
-    }
-
-    // Convert a numeric string of baseIn to a numeric string of baseOut.
-    // If the caller is toString, we are converting from base 10 to baseOut.
-    // If the caller is BigNumber, we are converting from baseIn to base 10.
-    return function (str, baseIn, baseOut, sign, callerIsToString) {
-      var alphabet, d, e, k, r, x, xc, y,
-        i = str.indexOf('.'),
-        dp = DECIMAL_PLACES,
-        rm = ROUNDING_MODE;
-
-      // Non-integer.
-      if (i >= 0) {
-        k = POW_PRECISION;
-
-        // Unlimited precision.
-        POW_PRECISION = 0;
-        str = str.replace('.', '');
-        y = new BigNumber(baseIn);
-        x = y.pow(str.length - i);
-        POW_PRECISION = k;
-
-        // Convert str as if an integer, then restore the fraction part by dividing the
-        // result by its base raised to a power.
-
-        y.c = toBaseOut(toFixedPoint(coeffToString(x.c), x.e, '0'),
-         10, baseOut, decimal);
-        y.e = y.c.length;
-      }
-
-      // Convert the number as integer.
-
-      xc = toBaseOut(str, baseIn, baseOut, callerIsToString
-       ? (alphabet = ALPHABET, decimal)
-       : (alphabet = decimal, ALPHABET));
-
-      // xc now represents str as an integer and converted to baseOut. e is the exponent.
-      e = k = xc.length;
-
-      // Remove trailing zeros.
-      for (; xc[--k] == 0; xc.pop());
-
-      // Zero?
-      if (!xc[0]) return alphabet.charAt(0);
-
-      // Does str represent an integer? If so, no need for the division.
-      if (i < 0) {
-        --e;
-      } else {
-        x.c = xc;
-        x.e = e;
-
-        // The sign is needed for correct rounding.
-        x.s = sign;
-        x = div(x, y, dp, rm, baseOut);
-        xc = x.c;
-        r = x.r;
-        e = x.e;
-      }
-
-      // xc now represents str converted to baseOut.
-
-      // THe index of the rounding digit.
-      d = e + dp + 1;
-
-      // The rounding digit: the digit to the right of the digit that may be rounded up.
-      i = xc[d];
-
-      // Look at the rounding digits and mode to determine whether to round up.
-
-      k = baseOut / 2;
-      r = r || d < 0 || xc[d + 1] != null;
-
-      r = rm < 4 ? (i != null || r) && (rm == 0 || rm == (x.s < 0 ? 3 : 2))
-            : i > k || i == k &&(rm == 4 || r || rm == 6 && xc[d - 1] & 1 ||
-             rm == (x.s < 0 ? 8 : 7));
-
-      // If the index of the rounding digit is not greater than zero, or xc represents
-      // zero, then the result of the base conversion is zero or, if rounding up, a value
-      // such as 0.00001.
-      if (d < 1 || !xc[0]) {
-
-        // 1^-dp or 0
-        str = r ? toFixedPoint(alphabet.charAt(1), -dp, alphabet.charAt(0)) : alphabet.charAt(0);
-      } else {
-
-        // Truncate xc to the required number of decimal places.
-        xc.length = d;
-
-        // Round up?
-        if (r) {
-
-          // Rounding up may mean the previous digit has to be rounded up and so on.
-          for (--baseOut; ++xc[--d] > baseOut;) {
-            xc[d] = 0;
-
-            if (!d) {
-              ++e;
-              xc = [1].concat(xc);
-            }
-          }
-        }
-
-        // Determine trailing zeros.
-        for (k = xc.length; !xc[--k];);
-
-        // E.g. [4, 11, 15] becomes 4bf.
-        for (i = 0, str = ''; i <= k; str += alphabet.charAt(xc[i++]));
-
-        // Add leading zeros, decimal point and trailing zeros as required.
-        str = toFixedPoint(str, e, alphabet.charAt(0));
-      }
-
-      // The caller will add the sign.
-      return str;
-    };
-  })();
-
-
-  // Perform division in the specified base. Called by div and convertBase.
-  div = (function () {
-
-    // Assume non-zero x and k.
-    function multiply(x, k, base) {
-      var m, temp, xlo, xhi,
-        carry = 0,
-        i = x.length,
-        klo = k % SQRT_BASE,
-        khi = k / SQRT_BASE | 0;
-
-      for (x = x.slice(); i--;) {
-        xlo = x[i] % SQRT_BASE;
-        xhi = x[i] / SQRT_BASE | 0;
-        m = khi * xlo + xhi * klo;
-        temp = klo * xlo + ((m % SQRT_BASE) * SQRT_BASE) + carry;
-        carry = (temp / base | 0) + (m / SQRT_BASE | 0) + khi * xhi;
-        x[i] = temp % base;
-      }
-
-      if (carry) x = [carry].concat(x);
-
-      return x;
-    }
-
-    function compare(a, b, aL, bL) {
-      var i, cmp;
-
-      if (aL != bL) {
-        cmp = aL > bL ? 1 : -1;
-      } else {
-
-        for (i = cmp = 0; i < aL; i++) {
-
-          if (a[i] != b[i]) {
-            cmp = a[i] > b[i] ? 1 : -1;
-            break;
-          }
-        }
-      }
-
-      return cmp;
-    }
-
-    function subtract(a, b, aL, base) {
-      var i = 0;
-
-      // Subtract b from a.
-      for (; aL--;) {
-        a[aL] -= i;
-        i = a[aL] < b[aL] ? 1 : 0;
-        a[aL] = i * base + a[aL] - b[aL];
-      }
-
-      // Remove leading zeros.
-      for (; !a[0] && a.length > 1; a.splice(0, 1));
-    }
-
-    // x: dividend, y: divisor.
-    return function (x, y, dp, rm, base) {
-      var cmp, e, i, more, n, prod, prodL, q, qc, rem, remL, rem0, xi, xL, yc0,
-        yL, yz,
-        s = x.s == y.s ? 1 : -1,
-        xc = x.c,
-        yc = y.c;
-
-      // Either NaN, Infinity or 0?
-      if (!xc || !xc[0] || !yc || !yc[0]) {
-
-        return new BigNumber(
-
-         // Return NaN if either NaN, or both Infinity or 0.
-         !x.s || !y.s || (xc ? yc && xc[0] == yc[0] : !yc) ? NaN :
-
-          // Return ±0 if x is ±0 or y is ±Infinity, or return ±Infinity as y is ±0.
-          xc && xc[0] == 0 || !yc ? s * 0 : s / 0
-       );
-      }
-
-      q = new BigNumber(s);
-      qc = q.c = [];
-      e = x.e - y.e;
-      s = dp + e + 1;
-
-      if (!base) {
-        base = BASE;
-        e = bitFloor(x.e / LOG_BASE) - bitFloor(y.e / LOG_BASE);
-        s = s / LOG_BASE | 0;
-      }
-
-      // Result exponent may be one less then the current value of e.
-      // The coefficients of the BigNumbers from convertBase may have trailing zeros.
-      for (i = 0; yc[i] == (xc[i] || 0); i++);
-
-      if (yc[i] > (xc[i] || 0)) e--;
-
-      if (s < 0) {
-        qc.push(1);
-        more = true;
-      } else {
-        xL = xc.length;
-        yL = yc.length;
-        i = 0;
-        s += 2;
-
-        // Normalise xc and yc so highest order digit of yc is >= base / 2.
-
-        n = mathfloor(base / (yc[0] + 1));
-
-        // Not necessary, but to handle odd bases where yc[0] == (base / 2) - 1.
-        // if (n > 1 || n++ == 1 && yc[0] < base / 2) {
-        if (n > 1) {
-          yc = multiply(yc, n, base);
-          xc = multiply(xc, n, base);
-          yL = yc.length;
-          xL = xc.length;
-        }
-
-        xi = yL;
-        rem = xc.slice(0, yL);
-        remL = rem.length;
-
-        // Add zeros to make remainder as long as divisor.
-        for (; remL < yL; rem[remL++] = 0);
-        yz = yc.slice();
-        yz = [0].concat(yz);
-        yc0 = yc[0];
-        if (yc[1] >= base / 2) yc0++;
-        // Not necessary, but to prevent trial digit n > base, when using base 3.
-        // else if (base == 3 && yc0 == 1) yc0 = 1 + 1e-15;
-
-        do {
-          n = 0;
-
-          // Compare divisor and remainder.
-          cmp = compare(yc, rem, yL, remL);
-
-          // If divisor < remainder.
-          if (cmp < 0) {
-
-            // Calculate trial digit, n.
-
-            rem0 = rem[0];
-            if (yL != remL) rem0 = rem0 * base + (rem[1] || 0);
-
-            // n is how many times the divisor goes into the current remainder.
-            n = mathfloor(rem0 / yc0);
-
-            //  Algorithm:
-            //  product = divisor multiplied by trial digit (n).
-            //  Compare product and remainder.
-            //  If product is greater than remainder:
-            //    Subtract divisor from product, decrement trial digit.
-            //  Subtract product from remainder.
-            //  If product was less than remainder at the last compare:
-            //    Compare new remainder and divisor.
-            //    If remainder is greater than divisor:
-            //      Subtract divisor from remainder, increment trial digit.
-
-            if (n > 1) {
-
-              // n may be > base only when base is 3.
-              if (n >= base) n = base - 1;
-
-              // product = divisor * trial digit.
-              prod = multiply(yc, n, base);
-              prodL = prod.length;
-              remL = rem.length;
-
-              // Compare product and remainder.
-              // If product > remainder then trial digit n too high.
-              // n is 1 too high about 5% of the time, and is not known to have
-              // ever been more than 1 too high.
-              while (compare(prod, rem, prodL, remL) == 1) {
-                n--;
-
-                // Subtract divisor from product.
-                subtract(prod, yL < prodL ? yz : yc, prodL, base);
-                prodL = prod.length;
-                cmp = 1;
-              }
-            } else {
-
-              // n is 0 or 1, cmp is -1.
-              // If n is 0, there is no need to compare yc and rem again below,
-              // so change cmp to 1 to avoid it.
-              // If n is 1, leave cmp as -1, so yc and rem are compared again.
-              if (n == 0) {
-
-                // divisor < remainder, so n must be at least 1.
-                cmp = n = 1;
-              }
-
-              // product = divisor
-              prod = yc.slice();
-              prodL = prod.length;
-            }
-
-            if (prodL < remL) prod = [0].concat(prod);
-
-            // Subtract product from remainder.
-            subtract(rem, prod, remL, base);
-            remL = rem.length;
-
-             // If product was < remainder.
-            if (cmp == -1) {
-
-              // Compare divisor and new remainder.
-              // If divisor < new remainder, subtract divisor from remainder.
-              // Trial digit n too low.
-              // n is 1 too low about 5% of the time, and very rarely 2 too low.
-              while (compare(yc, rem, yL, remL) < 1) {
-                n++;
-
-                // Subtract divisor from remainder.
-                subtract(rem, yL < remL ? yz : yc, remL, base);
-                remL = rem.length;
-              }
-            }
-          } else if (cmp === 0) {
-            n++;
-            rem = [0];
-          } // else cmp === 1 and n will be 0
-
-          // Add the next digit, n, to the result array.
-          qc[i++] = n;
-
-          // Update the remainder.
-          if (rem[0]) {
-            rem[remL++] = xc[xi] || 0;
-          } else {
-            rem = [xc[xi]];
-            remL = 1;
-          }
-        } while ((xi++ < xL || rem[0] != null) && s--);
-
-        more = rem[0] != null;
-
-        // Leading zero?
-        if (!qc[0]) qc.splice(0, 1);
-      }
-
-      if (base == BASE) {
-
-        // To calculate q.e, first get the number of digits of qc[0].
-        for (i = 1, s = qc[0]; s >= 10; s /= 10, i++);
-
-        round(q, dp + (q.e = i + e * LOG_BASE - 1) + 1, rm, more);
-
-      // Caller is convertBase.
-      } else {
-        q.e = e;
-        q.r = +more;
-      }
-
-      return q;
-    };
-  })();
-
-
-  /*
-   * Return a string representing the value of BigNumber n in fixed-point or exponential
-   * notation rounded to the specified decimal places or significant digits.
-   *
-   * n: a BigNumber.
-   * i: the index of the last digit required (i.e. the digit that may be rounded up).
-   * rm: the rounding mode.
-   * id: 1 (toExponential) or 2 (toPrecision).
-   */
-  function format(n, i, rm, id) {
-    var c0, e, ne, len, str;
-
-    if (rm == null) rm = ROUNDING_MODE;
-    else intCheck(rm, 0, 8);
-
-    if (!n.c) return n.toString();
-
-    c0 = n.c[0];
-    ne = n.e;
-
-    if (i == null) {
-      str = coeffToString(n.c);
-      str = id == 1 || id == 2 && (ne <= TO_EXP_NEG || ne >= TO_EXP_POS)
-       ? toExponential(str, ne)
-       : toFixedPoint(str, ne, '0');
-    } else {
-      n = round(new BigNumber(n), i, rm);
-
-      // n.e may have changed if the value was rounded up.
-      e = n.e;
-
-      str = coeffToString(n.c);
-      len = str.length;
-
-      // toPrecision returns exponential notation if the number of significant digits
-      // specified is less than the number of digits necessary to represent the integer
-      // part of the value in fixed-point notation.
-
-      // Exponential notation.
-      if (id == 1 || id == 2 && (i <= e || e <= TO_EXP_NEG)) {
-
-        // Append zeros?
-        for (; len < i; str += '0', len++);
-        str = toExponential(str, e);
-
-      // Fixed-point notation.
-      } else {
-        i -= ne;
-        str = toFixedPoint(str, e, '0');
-
-        // Append zeros?
-        if (e + 1 > len) {
-          if (--i > 0) for (str += '.'; i--; str += '0');
-        } else {
-          i += e - len;
-          if (i > 0) {
-            if (e + 1 == len) str += '.';
-            for (; i--; str += '0');
-          }
-        }
-      }
-    }
-
-    return n.s < 0 && c0 ? '-' + str : str;
-  }
-
-
-  // Handle BigNumber.max and BigNumber.min.
-  function maxOrMin(args, method) {
-    var n,
-      i = 1,
-      m = new BigNumber(args[0]);
-
-    for (; i < args.length; i++) {
-      n = new BigNumber(args[i]);
-
-      // If any number is NaN, return NaN.
-      if (!n.s) {
-        m = n;
-        break;
-      } else if (method.call(m, n)) {
-        m = n;
-      }
-    }
-
-    return m;
-  }
-
-
-  /*
-   * Strip trailing zeros, calculate base 10 exponent and check against MIN_EXP and MAX_EXP.
-   * Called by minus, plus and times.
-   */
-  function normalise(n, c, e) {
-    var i = 1,
-      j = c.length;
-
-     // Remove trailing zeros.
-    for (; !c[--j]; c.pop());
-
-    // Calculate the base 10 exponent. First get the number of digits of c[0].
-    for (j = c[0]; j >= 10; j /= 10, i++);
-
-    // Overflow?
-    if ((e = i + e * LOG_BASE - 1) > MAX_EXP) {
-
-      // Infinity.
-      n.c = n.e = null;
-
-    // Underflow?
-    } else if (e < MIN_EXP) {
-
-      // Zero.
-      n.c = [n.e = 0];
-    } else {
-      n.e = e;
-      n.c = c;
-    }
-
-    return n;
-  }
-
-
-  // Handle values that fail the validity test in BigNumber.
-  parseNumeric = (function () {
-    var basePrefix = /^(-?)0([xbo])(?=\w[\w.]*$)/i,
-      dotAfter = /^([^.]+)\.$/,
-      dotBefore = /^\.([^.]+)$/,
-      isInfinityOrNaN = /^-?(Infinity|NaN)$/,
-      whitespaceOrPlus = /^\s*\+(?=[\w.])|^\s+|\s+$/g;
-
-    return function (x, str, isNum, b) {
-      var base,
-        s = isNum ? str : str.replace(whitespaceOrPlus, '');
-
-      // No exception on ±Infinity or NaN.
-      if (isInfinityOrNaN.test(s)) {
-        x.s = isNaN(s) ? null : s < 0 ? -1 : 1;
-      } else {
-        if (!isNum) {
-
-          // basePrefix = /^(-?)0([xbo])(?=\w[\w.]*$)/i
-          s = s.replace(basePrefix, function (m, p1, p2) {
-            base = (p2 = p2.toLowerCase()) == 'x' ? 16 : p2 == 'b' ? 2 : 8;
-            return !b || b == base ? p1 : m;
-          });
-
-          if (b) {
-            base = b;
-
-            // E.g. '1.' to '1', '.1' to '0.1'
-            s = s.replace(dotAfter, '$1').replace(dotBefore, '0.$1');
-          }
-
-          if (str != s) return new BigNumber(s, base);
-        }
-
-        // '[BigNumber Error] Not a number: {n}'
-        // '[BigNumber Error] Not a base {b} number: {n}'
-        if (BigNumber.DEBUG) {
-          throw Error
-            (bignumberError + 'Not a' + (b ? ' base ' + b : '') + ' number: ' + str);
-        }
-
-        // NaN
-        x.s = null;
-      }
-
-      x.c = x.e = null;
-    }
-  })();
-
-
-  /*
-   * Round x to sd significant digits using rounding mode rm. Check for over/under-flow.
-   * If r is truthy, it is known that there are more digits after the rounding digit.
-   */
-  function round(x, sd, rm, r) {
-    var d, i, j, k, n, ni, rd,
-      xc = x.c,
-      pows10 = POWS_TEN;
-
-    // if x is not Infinity or NaN...
-    if (xc) {
-
-      // rd is the rounding digit, i.e. the digit after the digit that may be rounded up.
-      // n is a base 1e14 number, the value of the element of array x.c containing rd.
-      // ni is the index of n within x.c.
-      // d is the number of digits of n.
-      // i is the index of rd within n including leading zeros.
-      // j is the actual index of rd within n (if < 0, rd is a leading zero).
-      out: {
-
-        // Get the number of digits of the first element of xc.
-        for (d = 1, k = xc[0]; k >= 10; k /= 10, d++);
-        i = sd - d;
-
-        // If the rounding digit is in the first element of xc...
-        if (i < 0) {
-          i += LOG_BASE;
-          j = sd;
-          n = xc[ni = 0];
-
-          // Get the rounding digit at index j of n.
-          rd = n / pows10[d - j - 1] % 10 | 0;
-        } else {
-          ni = mathceil((i + 1) / LOG_BASE);
-
-          if (ni >= xc.length) {
-
-            if (r) {
-
-              // Needed by sqrt.
-              for (; xc.length <= ni; xc.push(0));
-              n = rd = 0;
-              d = 1;
-              i %= LOG_BASE;
-              j = i - LOG_BASE + 1;
-            } else {
-              break out;
-            }
-          } else {
-            n = k = xc[ni];
-
-            // Get the number of digits of n.
-            for (d = 1; k >= 10; k /= 10, d++);
-
-            // Get the index of rd within n.
-            i %= LOG_BASE;
-
-            // Get the index of rd within n, adjusted for leading zeros.
-            // The number of leading zeros of n is given by LOG_BASE - d.
-            j = i - LOG_BASE + d;
-
-            // Get the rounding digit at index j of n.
-            rd = j < 0 ? 0 : n / pows10[d - j - 1] % 10 | 0;
-          }
-        }
-
-        r = r || sd < 0 ||
-
-        // Are there any non-zero digits after the rounding digit?
-        // The expression  n % pows10[d - j - 1]  returns all digits of n to the right
-        // of the digit at j, e.g. if n is 908714 and j is 2, the expression gives 714.
-         xc[ni + 1] != null || (j < 0 ? n : n % pows10[d - j - 1]);
-
-        r = rm < 4
-         ? (rd || r) && (rm == 0 || rm == (x.s < 0 ? 3 : 2))
-         : rd > 5 || rd == 5 && (rm == 4 || r || rm == 6 &&
-
-          // Check whether the digit to the left of the rounding digit is odd.
-          ((i > 0 ? j > 0 ? n / pows10[d - j] : 0 : xc[ni - 1]) % 10) & 1 ||
-           rm == (x.s < 0 ? 8 : 7));
-
-        if (sd < 1 || !xc[0]) {
-          xc.length = 0;
-
-          if (r) {
-
-            // Convert sd to decimal places.
-            sd -= x.e + 1;
-
-            // 1, 0.1, 0.01, 0.001, 0.0001 etc.
-            xc[0] = pows10[(LOG_BASE - sd % LOG_BASE) % LOG_BASE];
-            x.e = -sd || 0;
-          } else {
-
-            // Zero.
-            xc[0] = x.e = 0;
-          }
-
-          return x;
-        }
-
-        // Remove excess digits.
-        if (i == 0) {
-          xc.length = ni;
-          k = 1;
-          ni--;
-        } else {
-          xc.length = ni + 1;
-          k = pows10[LOG_BASE - i];
-
-          // E.g. 56700 becomes 56000 if 7 is the rounding digit.
-          // j > 0 means i > number of leading zeros of n.
-          xc[ni] = j > 0 ? mathfloor(n / pows10[d - j] % pows10[j]) * k : 0;
-        }
-
-        // Round up?
-        if (r) {
-
-          for (; ;) {
-
-            // If the digit to be rounded up is in the first element of xc...
-            if (ni == 0) {
-
-              // i will be the length of xc[0] before k is added.
-              for (i = 1, j = xc[0]; j >= 10; j /= 10, i++);
-              j = xc[0] += k;
-              for (k = 1; j >= 10; j /= 10, k++);
-
-              // if i != k the length has increased.
-              if (i != k) {
-                x.e++;
-                if (xc[0] == BASE) xc[0] = 1;
-              }
-
-              break;
-            } else {
-              xc[ni] += k;
-              if (xc[ni] != BASE) break;
-              xc[ni--] = 0;
-              k = 1;
-            }
-          }
-        }
-
-        // Remove trailing zeros.
-        for (i = xc.length; xc[--i] === 0; xc.pop());
-      }
-
-      // Overflow? Infinity.
-      if (x.e > MAX_EXP) {
-        x.c = x.e = null;
-
-      // Underflow? Zero.
-      } else if (x.e < MIN_EXP) {
-        x.c = [x.e = 0];
-      }
-    }
-
-    return x;
-  }
-
-
-  function valueOf(n) {
-    var str,
-      e = n.e;
-
-    if (e === null) return n.toString();
-
-    str = coeffToString(n.c);
-
-    str = e <= TO_EXP_NEG || e >= TO_EXP_POS
-      ? toExponential(str, e)
-      : toFixedPoint(str, e, '0');
-
-    return n.s < 0 ? '-' + str : str;
-  }
-
-
-  // PROTOTYPE/INSTANCE METHODS
-
-
-  /*
-   * Return a new BigNumber whose value is the absolute value of this BigNumber.
-   */
-  P.absoluteValue = P.abs = function () {
-    var x = new BigNumber(this);
-    if (x.s < 0) x.s = 1;
-    return x;
-  };
-
-
-  /*
-   * Return
-   *   1 if the value of this BigNumber is greater than the value of BigNumber(y, b),
-   *   -1 if the value of this BigNumber is less than the value of BigNumber(y, b),
-   *   0 if they have the same value,
-   *   or null if the value of either is NaN.
-   */
-  P.comparedTo = function (y, b) {
-    return compare(this, new BigNumber(y, b));
-  };
-
-
-  /*
-   * If dp is undefined or null or true or false, return the number of decimal places of the
-   * value of this BigNumber, or null if the value of this BigNumber is ±Infinity or NaN.
-   *
-   * Otherwise, if dp is a number, return a new BigNumber whose value is the value of this
-   * BigNumber rounded to a maximum of dp decimal places using rounding mode rm, or
-   * ROUNDING_MODE if rm is omitted.
-   *
-   * [dp] {number} Decimal places: integer, 0 to MAX inclusive.
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
-   */
-  P.decimalPlaces = P.dp = function (dp, rm) {
-    var c, n, v,
-      x = this;
-
-    if (dp != null) {
-      intCheck(dp, 0, MAX);
-      if (rm == null) rm = ROUNDING_MODE;
-      else intCheck(rm, 0, 8);
-
-      return round(new BigNumber(x), dp + x.e + 1, rm);
-    }
-
-    if (!(c = x.c)) return null;
-    n = ((v = c.length - 1) - bitFloor(this.e / LOG_BASE)) * LOG_BASE;
-
-    // Subtract the number of trailing zeros of the last number.
-    if (v = c[v]) for (; v % 10 == 0; v /= 10, n--);
-    if (n < 0) n = 0;
-
-    return n;
-  };
-
-
-  /*
-   *  n / 0 = I
-   *  n / N = N
-   *  n / I = 0
-   *  0 / n = 0
-   *  0 / 0 = N
-   *  0 / N = N
-   *  0 / I = 0
-   *  N / n = N
-   *  N / 0 = N
-   *  N / N = N
-   *  N / I = N
-   *  I / n = I
-   *  I / 0 = I
-   *  I / N = N
-   *  I / I = N
-   *
-   * Return a new BigNumber whose value is the value of this BigNumber divided by the value of
-   * BigNumber(y, b), rounded according to DECIMAL_PLACES and ROUNDING_MODE.
-   */
-  P.dividedBy = P.div = function (y, b) {
-    return div(this, new BigNumber(y, b), DECIMAL_PLACES, ROUNDING_MODE);
-  };
-
-
-  /*
-   * Return a new BigNumber whose value is the integer part of dividing the value of this
-   * BigNumber by the value of BigNumber(y, b).
-   */
-  P.dividedToIntegerBy = P.idiv = function (y, b) {
-    return div(this, new BigNumber(y, b), 0, 1);
-  };
-
-
-  /*
-   * Return a BigNumber whose value is the value of this BigNumber exponentiated by n.
-   *
-   * If m is present, return the result modulo m.
-   * If n is negative round according to DECIMAL_PLACES and ROUNDING_MODE.
-   * If POW_PRECISION is non-zero and m is not present, round to POW_PRECISION using ROUNDING_MODE.
-   *
-   * The modular power operation works efficiently when x, n, and m are integers, otherwise it
-   * is equivalent to calculating x.exponentiatedBy(n).modulo(m) with a POW_PRECISION of 0.
-   *
-   * n {number|string|BigNumber} The exponent. An integer.
-   * [m] {number|string|BigNumber} The modulus.
-   *
-   * '[BigNumber Error] Exponent not an integer: {n}'
-   */
-  P.exponentiatedBy = P.pow = function (n, m) {
-    var half, isModExp, i, k, more, nIsBig, nIsNeg, nIsOdd, y,
-      x = this;
-
-    n = new BigNumber(n);
-
-    // Allow NaN and ±Infinity, but not other non-integers.
-    if (n.c && !n.isInteger()) {
-      throw Error
-        (bignumberError + 'Exponent not an integer: ' + valueOf(n));
-    }
-
-    if (m != null) m = new BigNumber(m);
-
-    // Exponent of MAX_SAFE_INTEGER is 15.
-    nIsBig = n.e > 14;
-
-    // If x is NaN, ±Infinity, ±0 or ±1, or n is ±Infinity, NaN or ±0.
-    if (!x.c || !x.c[0] || x.c[0] == 1 && !x.e && x.c.length == 1 || !n.c || !n.c[0]) {
-
-      // The sign of the result of pow when x is negative depends on the evenness of n.
-      // If +n overflows to ±Infinity, the evenness of n would be not be known.
-      y = new BigNumber(Math.pow(+valueOf(x), nIsBig ? 2 - isOdd(n) : +valueOf(n)));
-      return m ? y.mod(m) : y;
-    }
-
-    nIsNeg = n.s < 0;
-
-    if (m) {
-
-      // x % m returns NaN if abs(m) is zero, or m is NaN.
-      if (m.c ? !m.c[0] : !m.s) return new BigNumber(NaN);
-
-      isModExp = !nIsNeg && x.isInteger() && m.isInteger();
-
-      if (isModExp) x = x.mod(m);
-
-    // Overflow to ±Infinity: >=2**1e10 or >=1.0000024**1e15.
-    // Underflow to ±0: <=0.79**1e10 or <=0.9999975**1e15.
-    } else if (n.e > 9 && (x.e > 0 || x.e < -1 || (x.e == 0
-      // [1, 240000000]
-      ? x.c[0] > 1 || nIsBig && x.c[1] >= 24e7
-      // [80000000000000]  [99999750000000]
-      : x.c[0] < 8e13 || nIsBig && x.c[0] <= 9999975e7))) {
-
-      // If x is negative and n is odd, k = -0, else k = 0.
-      k = x.s < 0 && isOdd(n) ? -0 : 0;
-
-      // If x >= 1, k = ±Infinity.
-      if (x.e > -1) k = 1 / k;
-
-      // If n is negative return ±0, else return ±Infinity.
-      return new BigNumber(nIsNeg ? 1 / k : k);
-
-    } else if (POW_PRECISION) {
-
-      // Truncating each coefficient array to a length of k after each multiplication
-      // equates to truncating significant digits to POW_PRECISION + [28, 41],
-      // i.e. there will be a minimum of 28 guard digits retained.
-      k = mathceil(POW_PRECISION / LOG_BASE + 2);
-    }
-
-    if (nIsBig) {
-      half = new BigNumber(0.5);
-      if (nIsNeg) n.s = 1;
-      nIsOdd = isOdd(n);
-    } else {
-      i = Math.abs(+valueOf(n));
-      nIsOdd = i % 2;
-    }
-
-    y = new BigNumber(ONE);
-
-    // Performs 54 loop iterations for n of 9007199254740991.
-    for (; ;) {
-
-      if (nIsOdd) {
-        y = y.times(x);
-        if (!y.c) break;
-
-        if (k) {
-          if (y.c.length > k) y.c.length = k;
-        } else if (isModExp) {
-          y = y.mod(m);    //y = y.minus(div(y, m, 0, MODULO_MODE).times(m));
-        }
-      }
-
-      if (i) {
-        i = mathfloor(i / 2);
-        if (i === 0) break;
-        nIsOdd = i % 2;
-      } else {
-        n = n.times(half);
-        round(n, n.e + 1, 1);
-
-        if (n.e > 14) {
-          nIsOdd = isOdd(n);
-        } else {
-          i = +valueOf(n);
-          if (i === 0) break;
-          nIsOdd = i % 2;
-        }
-      }
-
-      x = x.times(x);
-
-      if (k) {
-        if (x.c && x.c.length > k) x.c.length = k;
-      } else if (isModExp) {
-        x = x.mod(m);    //x = x.minus(div(x, m, 0, MODULO_MODE).times(m));
-      }
-    }
-
-    if (isModExp) return y;
-    if (nIsNeg) y = ONE.div(y);
-
-    return m ? y.mod(m) : k ? round(y, POW_PRECISION, ROUNDING_MODE, more) : y;
-  };
-
-
-  /*
-   * Return a new BigNumber whose value is the value of this BigNumber rounded to an integer
-   * using rounding mode rm, or ROUNDING_MODE if rm is omitted.
-   *
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {rm}'
-   */
-  P.integerValue = function (rm) {
-    var n = new BigNumber(this);
-    if (rm == null) rm = ROUNDING_MODE;
-    else intCheck(rm, 0, 8);
-    return round(n, n.e + 1, rm);
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is equal to the value of BigNumber(y, b),
-   * otherwise return false.
-   */
-  P.isEqualTo = P.eq = function (y, b) {
-    return compare(this, new BigNumber(y, b)) === 0;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is a finite number, otherwise return false.
-   */
-  P.isFinite = function () {
-    return !!this.c;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is greater than the value of BigNumber(y, b),
-   * otherwise return false.
-   */
-  P.isGreaterThan = P.gt = function (y, b) {
-    return compare(this, new BigNumber(y, b)) > 0;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is greater than or equal to the value of
-   * BigNumber(y, b), otherwise return false.
-   */
-  P.isGreaterThanOrEqualTo = P.gte = function (y, b) {
-    return (b = compare(this, new BigNumber(y, b))) === 1 || b === 0;
-
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is an integer, otherwise return false.
-   */
-  P.isInteger = function () {
-    return !!this.c && bitFloor(this.e / LOG_BASE) > this.c.length - 2;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is less than the value of BigNumber(y, b),
-   * otherwise return false.
-   */
-  P.isLessThan = P.lt = function (y, b) {
-    return compare(this, new BigNumber(y, b)) < 0;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is less than or equal to the value of
-   * BigNumber(y, b), otherwise return false.
-   */
-  P.isLessThanOrEqualTo = P.lte = function (y, b) {
-    return (b = compare(this, new BigNumber(y, b))) === -1 || b === 0;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is NaN, otherwise return false.
-   */
-  P.isNaN = function () {
-    return !this.s;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is negative, otherwise return false.
-   */
-  P.isNegative = function () {
-    return this.s < 0;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is positive, otherwise return false.
-   */
-  P.isPositive = function () {
-    return this.s > 0;
-  };
-
-
-  /*
-   * Return true if the value of this BigNumber is 0 or -0, otherwise return false.
-   */
-  P.isZero = function () {
-    return !!this.c && this.c[0] == 0;
-  };
-
-
-  /*
-   *  n - 0 = n
-   *  n - N = N
-   *  n - I = -I
-   *  0 - n = -n
-   *  0 - 0 = 0
-   *  0 - N = N
-   *  0 - I = -I
-   *  N - n = N
-   *  N - 0 = N
-   *  N - N = N
-   *  N - I = N
-   *  I - n = I
-   *  I - 0 = I
-   *  I - N = N
-   *  I - I = N
-   *
-   * Return a new BigNumber whose value is the value of this BigNumber minus the value of
-   * BigNumber(y, b).
-   */
-  P.minus = function (y, b) {
-    var i, j, t, xLTy,
-      x = this,
-      a = x.s;
-
-    y = new BigNumber(y, b);
-    b = y.s;
-
-    // Either NaN?
-    if (!a || !b) return new BigNumber(NaN);
-
-    // Signs differ?
-    if (a != b) {
-      y.s = -b;
-      return x.plus(y);
-    }
-
-    var xe = x.e / LOG_BASE,
-      ye = y.e / LOG_BASE,
-      xc = x.c,
-      yc = y.c;
-
-    if (!xe || !ye) {
-
-      // Either Infinity?
-      if (!xc || !yc) return xc ? (y.s = -b, y) : new BigNumber(yc ? x : NaN);
-
-      // Either zero?
-      if (!xc[0] || !yc[0]) {
-
-        // Return y if y is non-zero, x if x is non-zero, or zero if both are zero.
-        return yc[0] ? (y.s = -b, y) : new BigNumber(xc[0] ? x :
-
-         // IEEE 754 (2008) 6.3: n - n = -0 when rounding to -Infinity
-         ROUNDING_MODE == 3 ? -0 : 0);
-      }
-    }
-
-    xe = bitFloor(xe);
-    ye = bitFloor(ye);
-    xc = xc.slice();
-
-    // Determine which is the bigger number.
-    if (a = xe - ye) {
-
-      if (xLTy = a < 0) {
-        a = -a;
-        t = xc;
-      } else {
-        ye = xe;
-        t = yc;
-      }
-
-      t.reverse();
-
-      // Prepend zeros to equalise exponents.
-      for (b = a; b--; t.push(0));
-      t.reverse();
-    } else {
-
-      // Exponents equal. Check digit by digit.
-      j = (xLTy = (a = xc.length) < (b = yc.length)) ? a : b;
-
-      for (a = b = 0; b < j; b++) {
-
-        if (xc[b] != yc[b]) {
-          xLTy = xc[b] < yc[b];
-          break;
-        }
-      }
-    }
-
-    // x < y? Point xc to the array of the bigger number.
-    if (xLTy) t = xc, xc = yc, yc = t, y.s = -y.s;
-
-    b = (j = yc.length) - (i = xc.length);
-
-    // Append zeros to xc if shorter.
-    // No need to add zeros to yc if shorter as subtract only needs to start at yc.length.
-    if (b > 0) for (; b--; xc[i++] = 0);
-    b = BASE - 1;
-
-    // Subtract yc from xc.
-    for (; j > a;) {
-
-      if (xc[--j] < yc[j]) {
-        for (i = j; i && !xc[--i]; xc[i] = b);
-        --xc[i];
-        xc[j] += BASE;
-      }
-
-      xc[j] -= yc[j];
-    }
-
-    // Remove leading zeros and adjust exponent accordingly.
-    for (; xc[0] == 0; xc.splice(0, 1), --ye);
-
-    // Zero?
-    if (!xc[0]) {
-
-      // Following IEEE 754 (2008) 6.3,
-      // n - n = +0  but  n - n = -0  when rounding towards -Infinity.
-      y.s = ROUNDING_MODE == 3 ? -1 : 1;
-      y.c = [y.e = 0];
-      return y;
-    }
-
-    // No need to check for Infinity as +x - +y != Infinity && -x - -y != Infinity
-    // for finite x and y.
-    return normalise(y, xc, ye);
-  };
-
-
-  /*
-   *   n % 0 =  N
-   *   n % N =  N
-   *   n % I =  n
-   *   0 % n =  0
-   *  -0 % n = -0
-   *   0 % 0 =  N
-   *   0 % N =  N
-   *   0 % I =  0
-   *   N % n =  N
-   *   N % 0 =  N
-   *   N % N =  N
-   *   N % I =  N
-   *   I % n =  N
-   *   I % 0 =  N
-   *   I % N =  N
-   *   I % I =  N
-   *
-   * Return a new BigNumber whose value is the value of this BigNumber modulo the value of
-   * BigNumber(y, b). The result depends on the value of MODULO_MODE.
-   */
-  P.modulo = P.mod = function (y, b) {
-    var q, s,
-      x = this;
-
-    y = new BigNumber(y, b);
-
-    // Return NaN if x is Infinity or NaN, or y is NaN or zero.
-    if (!x.c || !y.s || y.c && !y.c[0]) {
-      return new BigNumber(NaN);
-
-    // Return x if y is Infinity or x is zero.
-    } else if (!y.c || x.c && !x.c[0]) {
-      return new BigNumber(x);
-    }
-
-    if (MODULO_MODE == 9) {
-
-      // Euclidian division: q = sign(y) * floor(x / abs(y))
-      // r = x - qy    where  0 <= r < abs(y)
-      s = y.s;
-      y.s = 1;
-      q = div(x, y, 0, 3);
-      y.s = s;
-      q.s *= s;
-    } else {
-      q = div(x, y, 0, MODULO_MODE);
-    }
-
-    y = x.minus(q.times(y));
-
-    // To match JavaScript %, ensure sign of zero is sign of dividend.
-    if (!y.c[0] && MODULO_MODE == 1) y.s = x.s;
-
-    return y;
-  };
-
-
-  /*
-   *  n * 0 = 0
-   *  n * N = N
-   *  n * I = I
-   *  0 * n = 0
-   *  0 * 0 = 0
-   *  0 * N = N
-   *  0 * I = N
-   *  N * n = N
-   *  N * 0 = N
-   *  N * N = N
-   *  N * I = N
-   *  I * n = I
-   *  I * 0 = N
-   *  I * N = N
-   *  I * I = I
-   *
-   * Return a new BigNumber whose value is the value of this BigNumber multiplied by the value
-   * of BigNumber(y, b).
-   */
-  P.multipliedBy = P.times = function (y, b) {
-    var c, e, i, j, k, m, xcL, xlo, xhi, ycL, ylo, yhi, zc,
-      base, sqrtBase,
-      x = this,
-      xc = x.c,
-      yc = (y = new BigNumber(y, b)).c;
-
-    // Either NaN, ±Infinity or ±0?
-    if (!xc || !yc || !xc[0] || !yc[0]) {
-
-      // Return NaN if either is NaN, or one is 0 and the other is Infinity.
-      if (!x.s || !y.s || xc && !xc[0] && !yc || yc && !yc[0] && !xc) {
-        y.c = y.e = y.s = null;
-      } else {
-        y.s *= x.s;
-
-        // Return ±Infinity if either is ±Infinity.
-        if (!xc || !yc) {
-          y.c = y.e = null;
-
-        // Return ±0 if either is ±0.
-        } else {
-          y.c = [0];
-          y.e = 0;
-        }
-      }
-
-      return y;
-    }
-
-    e = bitFloor(x.e / LOG_BASE) + bitFloor(y.e / LOG_BASE);
-    y.s *= x.s;
-    xcL = xc.length;
-    ycL = yc.length;
-
-    // Ensure xc points to longer array and xcL to its length.
-    if (xcL < ycL) zc = xc, xc = yc, yc = zc, i = xcL, xcL = ycL, ycL = i;
-
-    // Initialise the result array with zeros.
-    for (i = xcL + ycL, zc = []; i--; zc.push(0));
-
-    base = BASE;
-    sqrtBase = SQRT_BASE;
-
-    for (i = ycL; --i >= 0;) {
-      c = 0;
-      ylo = yc[i] % sqrtBase;
-      yhi = yc[i] / sqrtBase | 0;
-
-      for (k = xcL, j = i + k; j > i;) {
-        xlo = xc[--k] % sqrtBase;
-        xhi = xc[k] / sqrtBase | 0;
-        m = yhi * xlo + xhi * ylo;
-        xlo = ylo * xlo + ((m % sqrtBase) * sqrtBase) + zc[j] + c;
-        c = (xlo / base | 0) + (m / sqrtBase | 0) + yhi * xhi;
-        zc[j--] = xlo % base;
-      }
-
-      zc[j] = c;
-    }
-
-    if (c) {
-      ++e;
-    } else {
-      zc.splice(0, 1);
-    }
-
-    return normalise(y, zc, e);
-  };
-
-
-  /*
-   * Return a new BigNumber whose value is the value of this BigNumber negated,
-   * i.e. multiplied by -1.
-   */
-  P.negated = function () {
-    var x = new BigNumber(this);
-    x.s = -x.s || null;
-    return x;
-  };
-
-
-  /*
-   *  n + 0 = n
-   *  n + N = N
-   *  n + I = I
-   *  0 + n = n
-   *  0 + 0 = 0
-   *  0 + N = N
-   *  0 + I = I
-   *  N + n = N
-   *  N + 0 = N
-   *  N + N = N
-   *  N + I = N
-   *  I + n = I
-   *  I + 0 = I
-   *  I + N = N
-   *  I + I = I
-   *
-   * Return a new BigNumber whose value is the value of this BigNumber plus the value of
-   * BigNumber(y, b).
-   */
-  P.plus = function (y, b) {
-    var t,
-      x = this,
-      a = x.s;
-
-    y = new BigNumber(y, b);
-    b = y.s;
-
-    // Either NaN?
-    if (!a || !b) return new BigNumber(NaN);
-
-    // Signs differ?
-     if (a != b) {
-      y.s = -b;
-      return x.minus(y);
-    }
-
-    var xe = x.e / LOG_BASE,
-      ye = y.e / LOG_BASE,
-      xc = x.c,
-      yc = y.c;
-
-    if (!xe || !ye) {
-
-      // Return ±Infinity if either ±Infinity.
-      if (!xc || !yc) return new BigNumber(a / 0);
-
-      // Either zero?
-      // Return y if y is non-zero, x if x is non-zero, or zero if both are zero.
-      if (!xc[0] || !yc[0]) return yc[0] ? y : new BigNumber(xc[0] ? x : a * 0);
-    }
-
-    xe = bitFloor(xe);
-    ye = bitFloor(ye);
-    xc = xc.slice();
-
-    // Prepend zeros to equalise exponents. Faster to use reverse then do unshifts.
-    if (a = xe - ye) {
-      if (a > 0) {
-        ye = xe;
-        t = yc;
-      } else {
-        a = -a;
-        t = xc;
-      }
-
-      t.reverse();
-      for (; a--; t.push(0));
-      t.reverse();
-    }
-
-    a = xc.length;
-    b = yc.length;
-
-    // Point xc to the longer array, and b to the shorter length.
-    if (a - b < 0) t = yc, yc = xc, xc = t, b = a;
-
-    // Only start adding at yc.length - 1 as the further digits of xc can be ignored.
-    for (a = 0; b;) {
-      a = (xc[--b] = xc[b] + yc[b] + a) / BASE | 0;
-      xc[b] = BASE === xc[b] ? 0 : xc[b] % BASE;
-    }
-
-    if (a) {
-      xc = [a].concat(xc);
-      ++ye;
-    }
-
-    // No need to check for zero, as +x + +y != 0 && -x + -y != 0
-    // ye = MAX_EXP + 1 possible
-    return normalise(y, xc, ye);
-  };
-
-
-  /*
-   * If sd is undefined or null or true or false, return the number of significant digits of
-   * the value of this BigNumber, or null if the value of this BigNumber is ±Infinity or NaN.
-   * If sd is true include integer-part trailing zeros in the count.
-   *
-   * Otherwise, if sd is a number, return a new BigNumber whose value is the value of this
-   * BigNumber rounded to a maximum of sd significant digits using rounding mode rm, or
-   * ROUNDING_MODE if rm is omitted.
-   *
-   * sd {number|boolean} number: significant digits: integer, 1 to MAX inclusive.
-   *                     boolean: whether to count integer-part trailing zeros: true or false.
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {sd|rm}'
-   */
-  P.precision = P.sd = function (sd, rm) {
-    var c, n, v,
-      x = this;
-
-    if (sd != null && sd !== !!sd) {
-      intCheck(sd, 1, MAX);
-      if (rm == null) rm = ROUNDING_MODE;
-      else intCheck(rm, 0, 8);
-
-      return round(new BigNumber(x), sd, rm);
-    }
-
-    if (!(c = x.c)) return null;
-    v = c.length - 1;
-    n = v * LOG_BASE + 1;
-
-    if (v = c[v]) {
-
-      // Subtract the number of trailing zeros of the last element.
-      for (; v % 10 == 0; v /= 10, n--);
-
-      // Add the number of digits of the first element.
-      for (v = c[0]; v >= 10; v /= 10, n++);
-    }
-
-    if (sd && x.e + 1 > n) n = x.e + 1;
-
-    return n;
-  };
-
-
-  /*
-   * Return a new BigNumber whose value is the value of this BigNumber shifted by k places
-   * (powers of 10). Shift to the right if n > 0, and to the left if n < 0.
-   *
-   * k {number} Integer, -MAX_SAFE_INTEGER to MAX_SAFE_INTEGER inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {k}'
-   */
-  P.shiftedBy = function (k) {
-    intCheck(k, -MAX_SAFE_INTEGER, MAX_SAFE_INTEGER);
-    return this.times('1e' + k);
-  };
-
-
-  /*
-   *  sqrt(-n) =  N
-   *  sqrt(N) =  N
-   *  sqrt(-I) =  N
-   *  sqrt(I) =  I
-   *  sqrt(0) =  0
-   *  sqrt(-0) = -0
-   *
-   * Return a new BigNumber whose value is the square root of the value of this BigNumber,
-   * rounded according to DECIMAL_PLACES and ROUNDING_MODE.
-   */
-  P.squareRoot = P.sqrt = function () {
-    var m, n, r, rep, t,
-      x = this,
-      c = x.c,
-      s = x.s,
-      e = x.e,
-      dp = DECIMAL_PLACES + 4,
-      half = new BigNumber('0.5');
-
-    // Negative/NaN/Infinity/zero?
-    if (s !== 1 || !c || !c[0]) {
-      return new BigNumber(!s || s < 0 && (!c || c[0]) ? NaN : c ? x : 1 / 0);
-    }
-
-    // Initial estimate.
-    s = Math.sqrt(+valueOf(x));
-
-    // Math.sqrt underflow/overflow?
-    // Pass x to Math.sqrt as integer, then adjust the exponent of the result.
-    if (s == 0 || s == 1 / 0) {
-      n = coeffToString(c);
-      if ((n.length + e) % 2 == 0) n += '0';
-      s = Math.sqrt(+n);
-      e = bitFloor((e + 1) / 2) - (e < 0 || e % 2);
-
-      if (s == 1 / 0) {
-        n = '5e' + e;
-      } else {
-        n = s.toExponential();
-        n = n.slice(0, n.indexOf('e') + 1) + e;
-      }
-
-      r = new BigNumber(n);
-    } else {
-      r = new BigNumber(s + '');
-    }
-
-    // Check for zero.
-    // r could be zero if MIN_EXP is changed after the this value was created.
-    // This would cause a division by zero (x/t) and hence Infinity below, which would cause
-    // coeffToString to throw.
-    if (r.c[0]) {
-      e = r.e;
-      s = e + dp;
-      if (s < 3) s = 0;
-
-      // Newton-Raphson iteration.
-      for (; ;) {
-        t = r;
-        r = half.times(t.plus(div(x, t, dp, 1)));
-
-        if (coeffToString(t.c).slice(0, s) === (n = coeffToString(r.c)).slice(0, s)) {
-
-          // The exponent of r may here be one less than the final result exponent,
-          // e.g 0.0009999 (e-4) --> 0.001 (e-3), so adjust s so the rounding digits
-          // are indexed correctly.
-          if (r.e < e) --s;
-          n = n.slice(s - 3, s + 1);
-
-          // The 4th rounding digit may be in error by -1 so if the 4 rounding digits
-          // are 9999 or 4999 (i.e. approaching a rounding boundary) continue the
-          // iteration.
-          if (n == '9999' || !rep && n == '4999') {
-
-            // On the first iteration only, check to see if rounding up gives the
-            // exact result as the nines may infinitely repeat.
-            if (!rep) {
-              round(t, t.e + DECIMAL_PLACES + 2, 0);
-
-              if (t.times(t).eq(x)) {
-                r = t;
-                break;
-              }
-            }
-
-            dp += 4;
-            s += 4;
-            rep = 1;
-          } else {
-
-            // If rounding digits are null, 0{0,4} or 50{0,3}, check for exact
-            // result. If not, then there are further digits and m will be truthy.
-            if (!+n || !+n.slice(1) && n.charAt(0) == '5') {
-
-              // Truncate to the first rounding digit.
-              round(r, r.e + DECIMAL_PLACES + 2, 1);
-              m = !r.times(r).eq(x);
-            }
-
-            break;
-          }
-        }
-      }
-    }
-
-    return round(r, r.e + DECIMAL_PLACES + 1, ROUNDING_MODE, m);
-  };
-
-
-  /*
-   * Return a string representing the value of this BigNumber in exponential notation and
-   * rounded using ROUNDING_MODE to dp fixed decimal places.
-   *
-   * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
-   */
-  P.toExponential = function (dp, rm) {
-    if (dp != null) {
-      intCheck(dp, 0, MAX);
-      dp++;
-    }
-    return format(this, dp, rm, 1);
-  };
-
-
-  /*
-   * Return a string representing the value of this BigNumber in fixed-point notation rounding
-   * to dp fixed decimal places using rounding mode rm, or ROUNDING_MODE if rm is omitted.
-   *
-   * Note: as with JavaScript's number type, (-0).toFixed(0) is '0',
-   * but e.g. (-0.00001).toFixed(0) is '-0'.
-   *
-   * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
-   */
-  P.toFixed = function (dp, rm) {
-    if (dp != null) {
-      intCheck(dp, 0, MAX);
-      dp = dp + this.e + 1;
-    }
-    return format(this, dp, rm);
-  };
-
-
-  /*
-   * Return a string representing the value of this BigNumber in fixed-point notation rounded
-   * using rm or ROUNDING_MODE to dp decimal places, and formatted according to the properties
-   * of the format or FORMAT object (see BigNumber.set).
-   *
-   * The formatting object may contain some or all of the properties shown below.
-   *
-   * FORMAT = {
-   *   prefix: '',
-   *   groupSize: 3,
-   *   secondaryGroupSize: 0,
-   *   groupSeparator: ',',
-   *   decimalSeparator: '.',
-   *   fractionGroupSize: 0,
-   *   fractionGroupSeparator: '\xA0',      // non-breaking space
-   *   suffix: ''
-   * };
-   *
-   * [dp] {number} Decimal places. Integer, 0 to MAX inclusive.
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   * [format] {object} Formatting options. See FORMAT pbject above.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {dp|rm}'
-   * '[BigNumber Error] Argument not an object: {format}'
-   */
-  P.toFormat = function (dp, rm, format) {
-    var str,
-      x = this;
-
-    if (format == null) {
-      if (dp != null && rm && typeof rm == 'object') {
-        format = rm;
-        rm = null;
-      } else if (dp && typeof dp == 'object') {
-        format = dp;
-        dp = rm = null;
-      } else {
-        format = FORMAT;
-      }
-    } else if (typeof format != 'object') {
-      throw Error
-        (bignumberError + 'Argument not an object: ' + format);
-    }
-
-    str = x.toFixed(dp, rm);
-
-    if (x.c) {
-      var i,
-        arr = str.split('.'),
-        g1 = +format.groupSize,
-        g2 = +format.secondaryGroupSize,
-        groupSeparator = format.groupSeparator || '',
-        intPart = arr[0],
-        fractionPart = arr[1],
-        isNeg = x.s < 0,
-        intDigits = isNeg ? intPart.slice(1) : intPart,
-        len = intDigits.length;
-
-      if (g2) i = g1, g1 = g2, g2 = i, len -= i;
-
-      if (g1 > 0 && len > 0) {
-        i = len % g1 || g1;
-        intPart = intDigits.substr(0, i);
-        for (; i < len; i += g1) intPart += groupSeparator + intDigits.substr(i, g1);
-        if (g2 > 0) intPart += groupSeparator + intDigits.slice(i);
-        if (isNeg) intPart = '-' + intPart;
-      }
-
-      str = fractionPart
-       ? intPart + (format.decimalSeparator || '') + ((g2 = +format.fractionGroupSize)
-        ? fractionPart.replace(new RegExp('\\d{' + g2 + '}\\B', 'g'),
-         '$&' + (format.fractionGroupSeparator || ''))
-        : fractionPart)
-       : intPart;
-    }
-
-    return (format.prefix || '') + str + (format.suffix || '');
-  };
-
-
-  /*
-   * Return an array of two BigNumbers representing the value of this BigNumber as a simple
-   * fraction with an integer numerator and an integer denominator.
-   * The denominator will be a positive non-zero value less than or equal to the specified
-   * maximum denominator. If a maximum denominator is not specified, the denominator will be
-   * the lowest value necessary to represent the number exactly.
-   *
-   * [md] {number|string|BigNumber} Integer >= 1, or Infinity. The maximum denominator.
-   *
-   * '[BigNumber Error] Argument {not an integer|out of range} : {md}'
-   */
-  P.toFraction = function (md) {
-    var d, d0, d1, d2, e, exp, n, n0, n1, q, r, s,
-      x = this,
-      xc = x.c;
-
-    if (md != null) {
-      n = new BigNumber(md);
-
-      // Throw if md is less than one or is not an integer, unless it is Infinity.
-      if (!n.isInteger() && (n.c || n.s !== 1) || n.lt(ONE)) {
-        throw Error
-          (bignumberError + 'Argument ' +
-            (n.isInteger() ? 'out of range: ' : 'not an integer: ') + valueOf(n));
-      }
-    }
-
-    if (!xc) return new BigNumber(x);
-
-    d = new BigNumber(ONE);
-    n1 = d0 = new BigNumber(ONE);
-    d1 = n0 = new BigNumber(ONE);
-    s = coeffToString(xc);
-
-    // Determine initial denominator.
-    // d is a power of 10 and the minimum max denominator that specifies the value exactly.
-    e = d.e = s.length - x.e - 1;
-    d.c[0] = POWS_TEN[(exp = e % LOG_BASE) < 0 ? LOG_BASE + exp : exp];
-    md = !md || n.comparedTo(d) > 0 ? (e > 0 ? d : n1) : n;
-
-    exp = MAX_EXP;
-    MAX_EXP = 1 / 0;
-    n = new BigNumber(s);
-
-    // n0 = d1 = 0
-    n0.c[0] = 0;
-
-    for (; ;)  {
-      q = div(n, d, 0, 1);
-      d2 = d0.plus(q.times(d1));
-      if (d2.comparedTo(md) == 1) break;
-      d0 = d1;
-      d1 = d2;
-      n1 = n0.plus(q.times(d2 = n1));
-      n0 = d2;
-      d = n.minus(q.times(d2 = d));
-      n = d2;
-    }
-
-    d2 = div(md.minus(d0), d1, 0, 1);
-    n0 = n0.plus(d2.times(n1));
-    d0 = d0.plus(d2.times(d1));
-    n0.s = n1.s = x.s;
-    e = e * 2;
-
-    // Determine which fraction is closer to x, n0/d0 or n1/d1
-    r = div(n1, d1, e, ROUNDING_MODE).minus(x).abs().comparedTo(
-        div(n0, d0, e, ROUNDING_MODE).minus(x).abs()) < 1 ? [n1, d1] : [n0, d0];
-
-    MAX_EXP = exp;
-
-    return r;
-  };
-
-
-  /*
-   * Return the value of this BigNumber converted to a number primitive.
-   */
-  P.toNumber = function () {
-    return +valueOf(this);
-  };
-
-
-  /*
-   * Return a string representing the value of this BigNumber rounded to sd significant digits
-   * using rounding mode rm or ROUNDING_MODE. If sd is less than the number of digits
-   * necessary to represent the integer part of the value in fixed-point notation, then use
-   * exponential notation.
-   *
-   * [sd] {number} Significant digits. Integer, 1 to MAX inclusive.
-   * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
-   *
-   * '[BigNumber Error] Argument {not a primitive number|not an integer|out of range}: {sd|rm}'
-   */
-  P.toPrecision = function (sd, rm) {
-    if (sd != null) intCheck(sd, 1, MAX);
-    return format(this, sd, rm, 2);
-  };
-
-
-  /*
-   * Return a string representing the value of this BigNumber in base b, or base 10 if b is
-   * omitted. If a base is specified, including base 10, round according to DECIMAL_PLACES and
-   * ROUNDING_MODE. If a base is not specified, and this BigNumber has a positive exponent
-   * that is equal to or greater than TO_EXP_POS, or a negative exponent equal to or less than
-   * TO_EXP_NEG, return exponential notation.
-   *
-   * [b] {number} Integer, 2 to ALPHABET.length inclusive.
-   *
-   * '[BigNumber Error] Base {not a primitive number|not an integer|out of range}: {b}'
-   */
-  P.toString = function (b) {
-    var str,
-      n = this,
-      s = n.s,
-      e = n.e;
-
-    // Infinity or NaN?
-    if (e === null) {
-      if (s) {
-        str = 'Infinity';
-        if (s < 0) str = '-' + str;
-      } else {
-        str = 'NaN';
-      }
-    } else {
-      if (b == null) {
-        str = e <= TO_EXP_NEG || e >= TO_EXP_POS
-         ? toExponential(coeffToString(n.c), e)
-         : toFixedPoint(coeffToString(n.c), e, '0');
-      } else if (b === 10 && alphabetHasNormalDecimalDigits) {
-        n = round(new BigNumber(n), DECIMAL_PLACES + e + 1, ROUNDING_MODE);
-        str = toFixedPoint(coeffToString(n.c), n.e, '0');
-      } else {
-        intCheck(b, 2, ALPHABET.length, 'Base');
-        str = convertBase(toFixedPoint(coeffToString(n.c), e, '0'), 10, b, s, true);
-      }
-
-      if (s < 0 && n.c[0]) str = '-' + str;
-    }
-
-    return str;
-  };
-
-
-  /*
-   * Return as toString, but do not accept a base argument, and include the minus sign for
-   * negative zero.
-   */
-  P.valueOf = P.toJSON = function () {
-    return valueOf(this);
-  };
-
-
-  P._isBigNumber = true;
-
-  P[Symbol.toStringTag] = 'BigNumber';
-
-  // Node.js v10.12.0+
-  P[Symbol.for('nodejs.util.inspect.custom')] = P.valueOf;
-
-  if (configObject != null) BigNumber.set(configObject);
-
-  return BigNumber;
 }
-
-
-// PRIVATE HELPER FUNCTIONS
-
-// These functions don't need access to variables,
-// e.g. DECIMAL_PLACES, in the scope of the `clone` function above.
-
-
-function bitFloor(n) {
-  var i = n | 0;
-  return n > 0 || n === i ? i : i - 1;
-}
-
-
-// Return a coefficient array as a string of base 10 digits.
-function coeffToString(a) {
-  var s, z,
-    i = 1,
-    j = a.length,
-    r = a[0] + '';
-
-  for (; i < j;) {
-    s = a[i++] + '';
-    z = LOG_BASE - s.length;
-    for (; z--; s = '0' + s);
-    r += s;
-  }
-
-  // Determine trailing zeros.
-  for (j = r.length; r.charCodeAt(--j) === 48;);
-
-  return r.slice(0, j + 1 || 1);
-}
-
-
-// Compare the value of BigNumbers x and y.
-function compare(x, y) {
-  var a, b,
-    xc = x.c,
-    yc = y.c,
-    i = x.s,
-    j = y.s,
-    k = x.e,
-    l = y.e;
-
-  // Either NaN?
-  if (!i || !j) return null;
-
-  a = xc && !xc[0];
-  b = yc && !yc[0];
-
-  // Either zero?
-  if (a || b) return a ? b ? 0 : -j : i;
-
-  // Signs differ?
-  if (i != j) return i;
-
-  a = i < 0;
-  b = k == l;
-
-  // Either Infinity?
-  if (!xc || !yc) return b ? 0 : !xc ^ a ? 1 : -1;
-
-  // Compare exponents.
-  if (!b) return k > l ^ a ? 1 : -1;
-
-  j = (k = xc.length) < (l = yc.length) ? k : l;
-
-  // Compare digit by digit.
-  for (i = 0; i < j; i++) if (xc[i] != yc[i]) return xc[i] > yc[i] ^ a ? 1 : -1;
-
-  // Compare lengths.
-  return k == l ? 0 : k > l ^ a ? 1 : -1;
-}
-
-
-/*
- * Check that n is a primitive number, an integer, and in range, otherwise throw.
- */
-function intCheck(n, min, max, name) {
-  if (n < min || n > max || n !== mathfloor(n)) {
-    throw Error
-     (bignumberError + (name || 'Argument') + (typeof n == 'number'
-       ? n < min || n > max ? ' out of range: ' : ' not an integer: '
-       : ' not a primitive number: ') + String(n));
-  }
-}
-
-
-// Assumes finite n.
-function isOdd(n) {
-  var k = n.c.length - 1;
-  return bitFloor(n.e / LOG_BASE) == k && n.c[k] % 2 != 0;
-}
-
-
-function toExponential(str, e) {
-  return (str.length > 1 ? str.charAt(0) + '.' + str.slice(1) : str) +
-   (e < 0 ? 'e' : 'e+') + e;
-}
-
-
-function toFixedPoint(str, e, z) {
-  var len, zs;
-
-  // Negative exponent?
-  if (e < 0) {
-
-    // Prepend zeros.
-    for (zs = z + '.'; ++e; zs += z);
-    str = zs + str;
-
-  // Positive exponent
-  } else {
-    len = str.length;
-
-    // Append zeros.
-    if (++e > len) {
-      for (zs = z, e -= len; --e; zs += z);
-      str += zs;
-    } else if (e < len) {
-      str = str.slice(0, e) + '.' + str.slice(e);
-    }
-  }
-
-  return str;
-}
-
-
-// EXPORT
-
-
-var BigNumber = clone();
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BigNumber);
-
+//# sourceMappingURL=createQR.js.map
 
 /***/ }),
 
@@ -117464,7 +107102,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 __webpack_require__(/*! @solana/wallet-adapter-react-ui/styles.css */ "./node_modules/@solana/wallet-adapter-react-ui/styles.css");
 
-__webpack_require__(/*! ./src/styles.css */ "./js/src/styles.css");
+__webpack_require__(/*! ./src/output.css */ "./js/src/output.css");
 
 window.addEventListener('load', function () {
   var config = window.SOLANA_PAYMENT_CONFIG;

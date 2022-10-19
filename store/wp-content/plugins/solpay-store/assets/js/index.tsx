@@ -6,7 +6,7 @@ import Main from "./src/main";
 declare const window: SolanaPaymentWindow;
 
 require('@solana/wallet-adapter-react-ui/styles.css');
-require('./src/styles.css');
+require('./src/output.css');
 
 window.addEventListener('load', () => {
   const config = window.SOLANA_PAYMENT_CONFIG;
