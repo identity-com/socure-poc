@@ -3,7 +3,7 @@
  * Plugin Name: solpay.store
  * Plugin URI: https://solpay.store
  * Description: Solana Pay for your online WooCommerce store. Help customers pay instantly with a QR code or their Web 3.0 wallet, no fees.
- * Version: 1.3.1
+ * Version: 1.3.2
  * Author: Soma Social
  * Author URI: https://somasocial.com
  * License: GPLv3

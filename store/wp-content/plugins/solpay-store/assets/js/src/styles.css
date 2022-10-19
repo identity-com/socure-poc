@@ -14,7 +14,7 @@
     background-color: #fff;
     border-width: 1px;
     border-color: #2C3D6A;
-    color: #2C3D6A;
+    color: #2C3D6A !important;
     border-style: solid;
 }
 

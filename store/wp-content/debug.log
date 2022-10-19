@@ -1,0 +1,15 @@
+[13-Oct-2022 13:09:27 UTC] PHP Deprecated:  Function The wc_add_to_cart_message filter is <strong>deprecated</strong> since version 3.0! Use wc_add_to_cart_message_html instead. in /Users/william/Work/socure-poc/store/wp-includes/functions.php on line 5379
+[13-Oct-2022 13:17:48 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[13-Oct-2022 13:51:33 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 10:56:48 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 10:57:10 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 11:13:46 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 13:22:50 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 13:44:15 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 14:31:46 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[17-Oct-2022 22:52:19 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[18-Oct-2022 11:20:02 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[18-Oct-2022 14:08:50 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[18-Oct-2022 15:37:46 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[18-Oct-2022 15:46:22 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
+[19-Oct-2022 09:10:33 UTC] The The wc_add_to_cart_message filter function is deprecated since version 3.0. Replace with wc_add_to_cart_message_html.
