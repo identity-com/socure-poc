@@ -1,13 +1,12 @@
-name: Socure POC Frontend
+name: Build Solana Pay API
 on:
   push:
     branches:
       - develop
-      - main
-      - IDCOM-2019__socure_poc_frontend
+
 jobs:
-  deploy:
-    name: Build and deploy the Socure poc frontend on Node ${{ matrix.node }} and ${{ matrix.os }}
+  frontend:
+    name: Build and deploy the Solana Pay API on Node ${{ matrix.node }} and ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}
     strategy:
@@ -30,18 +29,23 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install
-        run: yarn install --ignore-scripts --frozen-lockfile
-
-      - name: Build Frontend
-        run: yarn workspace @identity.com/socure-poc-frontend build
-
-      - name: Configure AWS Credentials
+      - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
 
-      - name: Deploy
-        run: STAGE=${STAGE:-prod} yarn workspace @identity.com/socure-poc-frontend deploy
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: solana-pay-api
+          IMAGE_TAG: latest
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./solana-pay-ext
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
