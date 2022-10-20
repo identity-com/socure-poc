@@ -5,6 +5,7 @@ import {API_URL} from "./solpay/components/SolanaPay/constants";
 import SocureModal from "./solpay/components/Socure/SocureModal";
 import {clusterApiUrl, Connection, PublicKey} from "@solana/web3.js";
 import {confirmAndRedirect} from "../lib/utils";
+import {GatewayToken} from "@identity.com/solana-gateway-ts";
 
 export type SolanaPayProps = {
   amount: number,
@@ -50,26 +51,15 @@ export default function SolanaPay({
   }
 
   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
-  // {
-  //   "id": "84ec7a73-3e45-4764-9053-e0cc7940337c",
-  //     "url": "https://pay-demo-api.identity.com/payments/84ec7a73-3e45-4764-9053-e0cc7940337c/solana",
-  //     "paymentInfo": {
-  //   "type": "spl",
-  //       "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
-  //       "toWallet": "FuRbm4WDM83to4w25ZwiYfVz1f5TNwkZiMHV8cH9hDtR",
-  //       "amount": 900,
-  //       "toTokenAccount": "FJQDsHW4JCo36cWiAB6BDbdCjdJ4DT46yXQrZhjt7g6q",
-  //       "toTokenAccountBalanceBefore": "709127",
-  //       "gatekeeperNetwork": "tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf",
-  //       "fromWallet": "8tYN1Msbk2rnoeGSAAHQKDEJzjU3BsjR2ZUeR7ud7tHd"
-  // },
-  //   "status": "tx_confirmed",
-  //     "createdAt": "2022-10-19T20:39:05.188Z"
-  // }
+
   const statusUpdate = (session: PaymentSession) => {
     if (session.status === 'tx_confirmed' && session.paymentInfo.fromWallet) {
       confirmAndRedirect(new PublicKey(session.paymentInfo.fromWallet));
     }
+  }
+  const onSocureComplete = (token: GatewayToken) => {
+    alert("complete?");
+    onClick();
   }
 
   return (
@@ -94,7 +84,7 @@ export default function SolanaPay({
 
         <SocureModal verificationPublicKey={verificationPublicKey}
                      setVerificationPublicKey={setVerificationPublicKey}
-                     onComplete={onClick}
+                     onComplete={() => onSocureComplete}
                      connection={connection}/>
       </>
   )

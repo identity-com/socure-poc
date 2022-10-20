@@ -7,19 +7,20 @@ import {GatewayToken, onGatewayToken} from "@identity.com/solana-gateway-ts";
 interface SocureFrameProps {
   verificationPublicKey: string | undefined;
   setVerificationPublicKey: (verificationPublicKey?: string) => void;
-  onComplete: (token: GatewayToken) => void;
+  onComplete: (token?: GatewayToken) => void;
   connection: Connection;
 }
 
 export default function SocureModal({verificationPublicKey, setVerificationPublicKey, onComplete, connection}: SocureFrameProps) {
-  useEffect(() => {
-    if(verificationPublicKey) {
-      onGatewayToken(connection, new PublicKey(verificationPublicKey), GATEKEEPER_NETWORK, (token) => {
-        setVerificationPublicKey(undefined);
-        onComplete(token);
-      })
-    }
-  }, []);
+
+  if(verificationPublicKey) {
+    useEffect(() => {
+        onGatewayToken(connection, new PublicKey(verificationPublicKey), GATEKEEPER_NETWORK, (token) => {
+          setVerificationPublicKey(undefined);
+          onComplete(token);
+        })
+    }, []);
+  }
 
   return (
     <Transition.Root show={!!verificationPublicKey} as={Fragment}>

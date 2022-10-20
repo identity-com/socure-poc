@@ -41,6 +41,7 @@ export default function SolanaPayModal({
   }, [paymentSession])
 
   const onVerificationClick = () => {
+    setPaymentSession(undefined);
     setVerificationPublicKey(paymentSession?.paymentInfo.fromWallet)
   }
 

@@ -14,20 +14,6 @@
     margin-left: 1em;
 }
 
-.verify-button {
-    background-color: #fff;
-    border-width: 1px;
-    border-color: #2C3D6A;
-    color: #2C3D6A !important;
-    border-style: solid;
-}
-
-.verify-button:hover {
-    background-color: #2C3D6A !important;
-    color: #fff;
-}
-
-
 .socure-iframe-background {
     position: fixed;
     top: 0;
@@ -71,4 +57,21 @@
     line-height: 1.4 !important;;
     font-weight: 400 !important;;
     max-width: 100% !important;;
+}
+
+.c-post__container {
+    max-width: 100%;
+}
+
+.verify-button {
+    background-color: #fff !important;;
+    border-width: 1px !important;;
+    border-color: #2C3D6A !important;
+    color: #2C3D6A !important;
+    border-style: solid !important;;
+}
+
+.verify-button:hover {
+    background-color: #2C3D6A !important;
+    color: #fff !important;;
 }

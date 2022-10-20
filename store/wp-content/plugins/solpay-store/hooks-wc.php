@@ -10,18 +10,8 @@ add_filter('woocommerce_payment_gateways', function ($gateways = []) {
 });
 
 add_action('wp_enqueue_scripts', function () {
-//  echo '<pre>';
-//  $wc_endpoints = WC()->query->get_query_vars();
-//  print_r($wc_endpoints);
-//
-//  foreach ($wc_endpoints as $ep) {
-//    echo $ep . ':' . (is_wc_endpoint_url($ep) ? 'true' : 'false') . "\n";
-//  }
-//  die();
-
-
-  if (!is_wc_endpoint_url('order-received')) {
-//    return;
+  if (!isset($_GET['solpay'])) {
+    return;
   }
 
   wp_enqueue_script(
@@ -87,6 +77,7 @@ function remove_place_order_button_for_specific_payments($button)
 function identity_solana_pay()
 {
   $order_id = $_GET['order_id'];
+  if (!$order_id) return;
 
   $payment_config = (new SolanaPayWooCommerceGateway())->get_solana_payment_config($order_id);
 

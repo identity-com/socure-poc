@@ -36,8 +36,8 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway
   public function __construct()
   {
     $this->id = 'solana_pay_gateway';
-//    $this->icon = apply_filters('wc_solana_icon_url', SP_WC_URI . '/assets/images/solpay-logo.svg?v=1');
-    $this->has_fields = true;
+    $this->icon = apply_filters('wc_solana_icon_url', SP_WC_URI . '/assets/images/solpay-logo.svg?v=1');
+    $this->has_fields = false;
     $this->method_title = 'Solana Payment';
     $this->method_description = __(
         'Allows payments using SolanaPay SDK using USD Coin as a default SPL token. When in development mode, payments will be made in SOL ($1 = 1SOL)',
@@ -54,7 +54,6 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway
     $this->init_settings();
 
     add_action("woocommerce_update_options_payment_gateways_$this->id", [$this, 'process_admin_options']);
-//    add_action("woocommerce_thankyou_$this->id", [$this, 'thank_you_page']);
     add_action("woocommerce_api_$this->id", [$this, 'check_solana_payment']);
     add_action('woocommerce_email_before_order_table', [$this, 'email_instructions'], 10, 3);
   }
@@ -157,47 +156,33 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway
     return ob_get_clean();
   }
 
-//    public function thank_you_page( $order_id ): void {
-//        /** @var WC_Order $order */
-//        $order               = wc_get_order( $order_id );
-//        $solanaPaymentConfig = $this->get_solana_payment_config( $order );
-//
-//        ob_start();
-//        include( SP_WC_DIR . '/templates/wc-solana-payment.php' );
-//        $html = ob_get_clean();
-//
-//        echo "<script>SOLANA_PAYMENT_CONFIG = " . wp_json_encode( $solanaPaymentConfig ) . ";</script>"
-//             . wp_kses(
-//                 apply_filters( 'wc_solana_payment_html', $html, $order, $solanaPaymentConfig ),
-//                 'post'
-//             );
-//    }
-
   public function process_payment($order_id): array
   {
     $order = wc_get_order($order_id);
     $order->update_status('pending-payment', __('Awaiting payment confirmation', 'solana-pay-woocommerce-gateway'));
 
-    update_post_meta( $order->get_id(), self::SOLANA_REFERENCE_META_KEY, WC()->session->get(self::SOLANA_REFERENCE_META_KEY));
+    update_post_meta($order->get_id(), self::SOLANA_REFERENCE_META_KEY, WC()->session->get(self::SOLANA_REFERENCE_META_KEY));
 
 
     wc_empty_cart();
 
     return [
         'result' => 'success',
-//        'redirect' => $this->get_return_url($order),
-        'redirect' => 'http://localhost:8888/socure/?page_id=136&order_id=' . $order_id,
+        'redirect' => add_query_arg([
+            'order_id' => $order_id,
+            'solpay' => ''
+        ], get_permalink(140))
     ];
   }
 
   public function payment_fields()
   {
-    echo '<script>SOLANA_PAYMENT_CONFIG = ' . wp_json_encode($this->get_solana_payment_config()) . ';</script>';
-    echo '<div class="wc-solana-payment-root">
-    <div class="wc-solana-final-confirmation js-final-confirmation-message"></div>
-    <div class="wc-solana-wallet-container js-solana-wallet-container"></div>
-    <div class="wc-solana-error-container js-solana-error-container"></div>
-</div>';
+//    echo '<script>SOLANA_PAYMENT_CONFIG = ' . wp_json_encode($this->get_solana_payment_config()) . ';</script>';
+//    echo '<div class="wc-solana-payment-root">
+//    <div class="wc-solana-final-confirmation js-final-confirmation-message"></div>
+//    <div class="wc-solana-wallet-container js-solana-wallet-container"></div>
+//    <div class="wc-solana-error-container js-solana-error-container"></div>
+//</div>';
   }
 
   /**
@@ -326,7 +311,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway
 
   public function get_solana_payment_config($order_id): array
   {
-      $order = wc_get_order($order_id);
+    $order = wc_get_order($order_id);
 
     if (
         ($solanaReference = WC()->session->get(self::SOLANA_REFERENCE_META_KEY))
@@ -340,7 +325,7 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway
 
     $merchantWallet = esc_html($this->get_option('merchant_wallet'));
     $splToken = $this->get_option('devmode') === 'yes' ? '' : self::DEFAULT_SPL_TOKEN;
-    $amount = $order->get_total()  * 100;
+    $amount = $order->get_total() * 100;
     $label = 'label'; //esc_html( $this->get_solana_transaction_label( $order ) );
     $message = 'message';// esc_html( $this->get_solana_transaction_message( $order ) );
     $memo = 'memo'; //esc_html( $this->get_solana_transaction_memo( $order ) );
