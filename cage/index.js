@@ -4,12 +4,11 @@ const axios = require("axios");
 const ALGORITHM = "aes-256-cbc";
 
 exports.handler = async (input) => {
-    // const imageUrl = `https://upload.socure.com/api/3.0/documents/${input.documentUuid}`;
-    const imageUrl = 'https://picsum.photos/200/300';
+    const imageUrl = `https://upload.socure.com/api/3.0/documents/${input.documentUuid}`;
     let image = await axios.get(imageUrl, {
         responseType: 'arraybuffer',
         headers: {
-        // Authorization: `SocureApiKey ${process.env.SOCURE_API_KEY}`
+            Authorization: `SocureApiKey ${process.env.SOCURE_API_KEY}`
         }
     });
 
