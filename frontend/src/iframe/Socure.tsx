@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
 import {Navigate, useParams} from 'react-router-dom';
+import config from '../config';
 
 declare const SocureInitializer: any;
-const API_KEY = 'adcd2fe2-b49c-4d20-ba72-4fa582c2c53d';
+const API_KEY = config.socure.api_key;
 
 export default function Socure() {
     let { token } = useParams();
@@ -35,6 +36,12 @@ export default function Socure() {
 
             qrCodeNeeded: true
         }
+        await new Promise(r => setTimeout(() => {
+            window.parent.postMessage({
+                target: "tokenUpdate"
+            },"*" );
+        }, 2000));
+
 
         SocureInitializer.init(API_KEY)
             .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number, p?: { customerUserId: string | undefined }) => Promise<any>; }) => {
@@ -53,10 +60,6 @@ export default function Socure() {
                 });
             });
     }
-    window.postMessage({
-        target: 'verification',
-        success: true
-    });
 
     let initialized = false;
     useEffect(() => {
