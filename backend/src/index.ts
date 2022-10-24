@@ -1,19 +1,25 @@
 import express, {Request, Response} from "express";
 import Evervault from '@evervault/sdk';
 import cors from "cors";
+import {Wallet} from "@project-serum/anchor";
 
 import {Keypair, PublicKey, Connection, clusterApiUrl, LAMPORTS_PER_SOL} from '@solana/web3.js';
-import {GatekeeperService} from '@identity.com/solana-gatekeeper-lib';
+import {GatekeeperService as GatekeeperServiceLib} from '@identity.com/solana-gatekeeper-lib';
 import {findGatewayToken} from "@identity.com/solana-gateway-ts";
 import Storage from "./lib/Storage";
+import {GatekeeperService, NetworkService} from '@identity.com/gateway-solana-client';
 
 const bs58 = require('bs58');
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 80;
 
-const gatekeeperAuthority = Keypair.fromSecretKey(bs58.decode('QzSdRKirjb3Dq64ZoWkxyNwmNVgefWNrAcUGwJF6pVx9ZeiXYCWWc4eBFBYwgP5qBnwmX3nA6PYQqLuqSuuuFsx'));
-const gatekeeperNetwork = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
-const SOLANA_CLUSTER = 'devnet';
+const OLD_GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('QzSdRKirjb3Dq64ZoWkxyNwmNVgefWNrAcUGwJF6pVx9ZeiXYCWWc4eBFBYwgP5qBnwmX3nA6PYQqLuqSuuuFsx'));
+const OLD_GATEKEEPER_NETWORK = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
+const OLD_SOLANA_CLUSTER = 'devnet';
+
+const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('45Bd8aXnMLHhA3jPixQX5A3vjysqtmRVP2YixiViB5tN16uWHeqo8vpFWov54Z5MhH8DR68dsPFJZYRyw92U7m9B'));
+const GATEKEEPER_NETWORK = new PublicKey('4SfmBQj6rpk4p4iTjs3kghwA88PV4pjcC6nbA8FrbS6t');
+const SOLANA_CLUSTER = 'localnet';
 
 const storage = new Storage('us-east-2', 'socure-pii-storage');
 
@@ -23,7 +29,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (request: Request, response: Response) => {
-    response.send('Identity.com');
+  response.send('Identity.com');
 });
 
 const handleDocumentUpload = async (request: Request, response: Response) => {
@@ -54,25 +60,52 @@ const handleVerificationComplete = async (request: Request, response: Response) 
         return;
     }
 
-    const address = new PublicKey(request.body.event.customerUserId);
-    const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
-    let token = await findGatewayToken(connection, address, gatekeeperNetwork);
+  const address = new PublicKey(request.body.event.customerUserId);
 
-    // Store PII
-    await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
+  // Store PII
+  await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
-    // If the token is found, something may have gone wrong in the process. Ignore token creation ?
-    if (!token) {
-        const service = new GatekeeperService(
-            connection,
-            gatekeeperNetwork,
-            gatekeeperAuthority,
-        );
+  const oldConnection = new Connection(clusterApiUrl(OLD_SOLANA_CLUSTER), 'confirmed');
+  const networkPda = GATEKEEPER_NETWORK;
+  const [gatekeeperPda] = await NetworkService.createGatekeeperAddress(GATEKEEPER_AUTHORITY.publicKey, networkPda);
 
-        token = await service.issue(address) // create the transaction
-            .then((tx: any) => tx.send()) // send the transaction
-            .then((tx: any) => tx.confirm()); // confirm the transaction
-    }
+  const gatekeeper = await GatekeeperService.build(
+    GATEKEEPER_NETWORK,
+    gatekeeperPda,
+    new Wallet(GATEKEEPER_AUTHORITY),
+    'localnet'
+  );
+
+  let pass = await gatekeeper.getPassAccount(address);
+
+  if (!pass) {
+    console.log("Creating GWv2 Pass");
+    const passPda = await GatekeeperService.createPassAddress(
+      address,
+      networkPda
+    );
+    await gatekeeper.issue(passPda, address).rpc();
+
+    pass = await gatekeeper.getPassAccount(address);
+  }
+
+  console.log("FOUND GWv2 PASS", JSON.stringify(pass, null, 2));
+
+  let v1Token = await findGatewayToken(oldConnection, address, OLD_GATEKEEPER_NETWORK);
+
+  // If the token is found, something may have gone wrong in the process. Ignore token creation ?
+  if (!v1Token) {
+    console.log("Creating GWv1 Pass");
+    const service = new GatekeeperServiceLib(
+      oldConnection,
+      OLD_GATEKEEPER_NETWORK,
+      OLD_GATEKEEPER_AUTHORITY,
+    );
+
+    v1Token = await service.issue(address) // create the transaction
+      .then((tx: any) => tx.send()) // send the transaction
+      .then((tx: any) => tx.confirm()); // confirm the transaction
+  }
 
 }
 
