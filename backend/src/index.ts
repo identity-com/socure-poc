@@ -19,7 +19,7 @@ const OLD_SOLANA_CLUSTER = 'devnet';
 
 const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('45Bd8aXnMLHhA3jPixQX5A3vjysqtmRVP2YixiViB5tN16uWHeqo8vpFWov54Z5MhH8DR68dsPFJZYRyw92U7m9B'));
 const GATEKEEPER_NETWORK = new PublicKey('4SfmBQj6rpk4p4iTjs3kghwA88PV4pjcC6nbA8FrbS6t');
-const SOLANA_CLUSTER = 'localnet';
+const SOLANA_CLUSTER = 'devnet';
 
 const storage = new Storage('us-east-2', 'socure-pii-storage');
 
@@ -188,7 +188,7 @@ app.post("/poc/verify", async (request: Request, response: Response) => {
             return failed("Invalid amount");
         }
 
-        let token = await findGatewayToken(connection, new PublicKey(foundSource), gatekeeperNetwork);
+        let token = await findGatewayToken(connection, new PublicKey(foundSource), OLD_GATEKEEPER_NETWORK);
         if (token === null) {
             return failed("Identity token not found");
         }
