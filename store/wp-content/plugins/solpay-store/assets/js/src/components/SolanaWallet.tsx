@@ -5,7 +5,7 @@ import {WalletAdapterNetwork, WalletNotConnectedError} from "@solana/wallet-adap
 import {clusterApiUrl, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/web3.js";
 import supportedWallets from "../config/wallets";
 import {SolanaPaymentWindow} from "../types";
-import {findGatewayToken, GatewayToken} from "@identity.com/solana-gateway-ts";
+import {findGatewayToken, PassAccount} from "@identity.com/gateway-solana-client";
 import {GATEKEEPER_NETWORK, MINT_ADDRESS, SOCURE_UI_BASE_URL} from "../config/constants";
 import IFrameContainer from "./IFrameContainer";
 import {
@@ -21,7 +21,7 @@ declare const window: SolanaPaymentWindow;
 
 
 function ConnectedApp() {
-  const [token, setToken] = useState<GatewayToken | null | undefined>(undefined);
+  const [token, setToken] = useState<PassAccount | null | undefined>(undefined);
   let [tokenCheck, setTokenCheck] = useState<boolean | undefined>(undefined);
   let [paying, setPaying] = useState<boolean>(false);
   const [verificationPublicKey, setVerificationPublicKey] = useState<string | undefined>()
