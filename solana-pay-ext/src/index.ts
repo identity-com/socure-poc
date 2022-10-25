@@ -150,9 +150,9 @@ app.get(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, (request: Request, response:
 });
 
 app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, response: Response) => {
-  // console.log(JSON.stringify(request.headers));
-  // console.log(JSON.stringify(request.body));
-  // console.log(`Received POST request for account ${request.body.account}`);
+  console.log(JSON.stringify(request.headers));
+  console.log(JSON.stringify(request.body));
+  console.log(`Received v2 POST request for account ${request.body.account}`);
 
   const session = paymentSessionStore.get(request.params.id);
   if (!session) {
