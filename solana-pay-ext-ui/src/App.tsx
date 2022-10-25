@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import SolanaPayModal from "./components/SolanaPay/SolanaPayModal";
-import { PaymentInfo, PaymentSession, PaymentStatus, PaymentType } from "./components/SolanaPay/types";
+import { PaymentInfo, PaymentSession, PaymentType } from "./components/SolanaPay/types";
 import { API_URL } from "./components/SolanaPay/constants";
 import SolanaPayInput from "./components/SolanaPay/SolanaPayInput";
 import SocureModal from "./components/Socure/SocureModal";

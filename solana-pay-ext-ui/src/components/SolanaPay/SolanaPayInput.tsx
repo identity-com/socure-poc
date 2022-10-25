@@ -23,13 +23,13 @@ export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayI
     }
   }
 
-  const setMint = (value: string) => {
-    try {
-      const mint = new PublicKey(value);
-      setPaymentInfo({...paymentInfo, mint: mint.toBase58()})
-    } catch (e) {
-    }
-  }
+  // const setMint = (value: string) => {
+  //   try {
+  //     const mint = new PublicKey(value);
+  //     setPaymentInfo({...paymentInfo, mint: mint.toBase58()})
+  //   } catch (e) {
+  //   }
+  // }
 
   const setAmount = (value: string) => {
     const valueAsNumber = parseFloat(value);
