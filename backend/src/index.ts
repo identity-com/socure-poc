@@ -73,7 +73,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
     GATEKEEPER_NETWORK,
     gatekeeperPda,
     new Wallet(GATEKEEPER_AUTHORITY),
-    'localnet'
+    SOLANA_CLUSTER
   );
 
   let pass = await gatekeeper.getPassAccount(address);

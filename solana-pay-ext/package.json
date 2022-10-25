@@ -20,7 +20,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@identity.com/solana-gateway-ts": "^0.10.0",
+    "@identity.com/gateway-solana-client": "^2.0.0-beta.1",
     "@solana/spl-token": "^0.3.5",
     "@solana/web3.js": "^1.64.0",
     "cors": "^2.8.5",
