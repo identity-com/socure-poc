@@ -2,12 +2,12 @@ import { Fragment, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {GATEKEEPER_NETWORK, SOCURE_UI_BASE_URL} from "../../../../config/constants";
 import {Connection, PublicKey} from "@solana/web3.js";
-import {GatewayToken, onGatewayToken} from "@identity.com/solana-gateway-ts";
+import {PassAccount, onGatewayToken} from "@identity.com/gateway-solana-client";
 
 interface SocureFrameProps {
   verificationPublicKey: string | undefined;
   setVerificationPublicKey: (verificationPublicKey?: string) => void;
-  onComplete: (token?: GatewayToken) => void;
+  onComplete: (token?: PassAccount) => void;
   connection: Connection;
 }
 
@@ -15,7 +15,7 @@ export default function SocureModal({verificationPublicKey, setVerificationPubli
 
   if(verificationPublicKey) {
     useEffect(() => {
-        onGatewayToken(connection, new PublicKey(verificationPublicKey), GATEKEEPER_NETWORK, (token) => {
+        onGatewayToken(connection, GATEKEEPER_NETWORK, new PublicKey(verificationPublicKey), 0,(token) => {
           setVerificationPublicKey(undefined);
           onComplete(token);
         })
