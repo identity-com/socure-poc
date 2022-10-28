@@ -63,7 +63,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
   const address = new PublicKey(request.body.event.customerUserId);
 
   // Store PII
-  await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
+  // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
   const oldConnection = new Connection(clusterApiUrl(OLD_SOLANA_CLUSTER), 'confirmed');
   const networkPda = GATEKEEPER_NETWORK;
@@ -73,7 +73,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
     GATEKEEPER_NETWORK,
     gatekeeperPda,
     new Wallet(GATEKEEPER_AUTHORITY),
-    'localnet'
+    SOLANA_CLUSTER
   );
 
   let pass = await gatekeeper.getPassAccount(address);

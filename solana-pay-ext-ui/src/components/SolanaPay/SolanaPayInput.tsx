@@ -1,5 +1,6 @@
 import { PaymentInfo } from "./types";
 import { PublicKey } from "@solana/web3.js";
+import {GATEKEEPER_NETWORK} from "./constants";
 
 interface SolanaPayInputProps {
   paymentInfo: PaymentInfo;
@@ -9,7 +10,7 @@ interface SolanaPayInputProps {
 export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayInputProps) {
 
   const setGatekeeperNetwork = (checked: boolean) => {
-    const gatekeeperNetwork = checked ? 'tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf' : undefined;
+    const gatekeeperNetwork = checked ? GATEKEEPER_NETWORK : undefined;
     setPaymentInfo({...paymentInfo, gatekeeperNetwork});
   }
 
@@ -22,13 +23,13 @@ export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayI
     }
   }
 
-  const setMint = (value: string) => {
-    try {
-      const mint = new PublicKey(value);
-      setPaymentInfo({...paymentInfo, mint: mint.toBase58()})
-    } catch (e) {
-    }
-  }
+  // const setMint = (value: string) => {
+  //   try {
+  //     const mint = new PublicKey(value);
+  //     setPaymentInfo({...paymentInfo, mint: mint.toBase58()})
+  //   } catch (e) {
+  //   }
+  // }
 
   const setAmount = (value: string) => {
     const valueAsNumber = parseFloat(value);

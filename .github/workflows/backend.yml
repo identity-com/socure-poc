@@ -2,8 +2,8 @@ name: Socure POC Backend
 on:
   push:
     branches:
-      - feature/gateway_v2
-      - dev
+      - feature/IDCOM-2178__update_payment_api_for_gw2
+      - develop
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}

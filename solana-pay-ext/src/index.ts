@@ -4,7 +4,7 @@ import cors from "cors";
 import { PaymentInfo, PaymentSession, PaymentStatus } from "./types";
 import { v4 as uuidv4 } from 'uuid';
 import { paymentSessionStore, purgeOldSessions } from "./simple-store";
-import { findGatewayToken } from "@identity.com/solana-gateway-ts";
+import { findGatewayToken } from "@identity.com/gateway-solana-client";
 import {
   ASSOCIATED_TOKEN_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
@@ -150,9 +150,9 @@ app.get(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, (request: Request, response:
 });
 
 app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, response: Response) => {
-  // console.log(JSON.stringify(request.headers));
-  // console.log(JSON.stringify(request.body));
-  // console.log(`Received POST request for account ${request.body.account}`);
+  console.log(JSON.stringify(request.headers));
+  console.log(JSON.stringify(request.body));
+  console.log(`Received v2 POST request for account ${request.body.account}`);
 
   const session = paymentSessionStore.get(request.params.id);
   if (!session) {
@@ -166,10 +166,9 @@ app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, re
   session.paymentInfo.fromWallet = account;
   paymentSessionStore.set(session.id, session);
 
-  // TODO: Implement Gateway V2
-  // check if Account has a valid Gatekeeper token.
   if (session.paymentInfo.gatekeeperNetwork) {
-    const token = await findGatewayToken(connection, account, session.paymentInfo.gatekeeperNetwork);
+    const token = await findGatewayToken(connection, session.paymentInfo.gatekeeperNetwork, account);
+
     // no Gateway Token
     if (!token) {
       session.status = PaymentStatus.ERROR;
