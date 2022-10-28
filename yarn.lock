@@ -2310,7 +2310,7 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@identity.com/gateway-solana-client@^2.0.0-beta.1", "@identity.com/gateway-solana-client@^2.0.0-beta.4":
+"@identity.com/gateway-solana-client@^2.0.0-beta.4":
   version "2.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@identity.com/gateway-solana-client/-/gateway-solana-client-2.0.0-beta.4.tgz#200a815606b5a6b7ad0c2c5540e335dd5e9094d9"
   integrity sha512-S9VkKTU9uFXJxD02kzAe/2+3rQy4I30CJW6XFTZbXJYOf1uHilaJM59zVnf/Sjw9xCCr0LDZKiRJKYkTNb38GQ==
