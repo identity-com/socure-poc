@@ -8,8 +8,7 @@ mix
         fallback: {
           'stream': require.resolve('stream-browserify'),
           "crypto": require.resolve("crypto-browserify"),
-          "assert": require.resolve("assert/"),
-          "process": false,
+          "assert": require.resolve("assert/")
         }
       },
       module: {
@@ -28,9 +27,6 @@ mix
         }),
         new webpack.ProvidePlugin({
           Buffer: ["buffer", "Buffer"],
-        }),
-        new webpack.ProvidePlugin({
-          process: 'process/browser'
         }),
       ],
     };

@@ -13,12 +13,8 @@ const bs58 = require('bs58');
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 80;
 
-const OLD_GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('QzSdRKirjb3Dq64ZoWkxyNwmNVgefWNrAcUGwJF6pVx9ZeiXYCWWc4eBFBYwgP5qBnwmX3nA6PYQqLuqSuuuFsx'));
-const OLD_GATEKEEPER_NETWORK = new PublicKey('tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf');
-const OLD_SOLANA_CLUSTER = 'devnet';
-
-const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('45Bd8aXnMLHhA3jPixQX5A3vjysqtmRVP2YixiViB5tN16uWHeqo8vpFWov54Z5MhH8DR68dsPFJZYRyw92U7m9B'));
-const GATEKEEPER_NETWORK = new PublicKey('4SfmBQj6rpk4p4iTjs3kghwA88PV4pjcC6nbA8FrbS6t');
+const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('62L7Kqt9zn6UTXoyhEF6tZydWkRpZyLTGMhxdgmWE99ouMhHDEyxPtXwGNfeATEpzu8xXrkKmASkrDtYCbmsQ5bq'));
+const GATEKEEPER_NETWORK = new PublicKey('tgkn9prkXdqrVbX73Sxqk18iru35gTwC5sXRTx1Sv1B');
 const SOLANA_CLUSTER = 'devnet';
 
 const storage = new Storage('us-east-2', 'socure-pii-storage');
@@ -65,7 +61,6 @@ const handleVerificationComplete = async (request: Request, response: Response) 
   // Store PII
   // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
-  const oldConnection = new Connection(clusterApiUrl(OLD_SOLANA_CLUSTER), 'confirmed');
   const networkPda = GATEKEEPER_NETWORK;
   const [gatekeeperPda] = await NetworkService.createGatekeeperAddress(GATEKEEPER_AUTHORITY.publicKey, networkPda);
 
@@ -90,23 +85,6 @@ const handleVerificationComplete = async (request: Request, response: Response) 
   }
 
   console.log("FOUND GWv2 PASS", JSON.stringify(pass, null, 2));
-
-  let v1Token = await findGatewayToken(oldConnection, address, OLD_GATEKEEPER_NETWORK);
-
-  // If the token is found, something may have gone wrong in the process. Ignore token creation ?
-  if (!v1Token) {
-    console.log("Creating GWv1 Pass");
-    const service = new GatekeeperServiceLib(
-      oldConnection,
-      OLD_GATEKEEPER_NETWORK,
-      OLD_GATEKEEPER_AUTHORITY,
-    );
-
-    v1Token = await service.issue(address) // create the transaction
-      .then((tx: any) => tx.send()) // send the transaction
-      .then((tx: any) => tx.confirm()); // confirm the transaction
-  }
-
 }
 
 app.post('/result', async (request: Request, response: Response) => {
