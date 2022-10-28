@@ -4,10 +4,8 @@ import cors from "cors";
 import {Wallet} from "@project-serum/anchor";
 
 import {Keypair, PublicKey, Connection, clusterApiUrl, LAMPORTS_PER_SOL} from '@solana/web3.js';
-import {GatekeeperService as GatekeeperServiceLib} from '@identity.com/solana-gatekeeper-lib';
-import {findGatewayToken} from "@identity.com/solana-gateway-ts";
 import Storage from "./lib/Storage";
-import {GatekeeperService, NetworkService} from '@identity.com/gateway-solana-client';
+import {GatekeeperService, NetworkService, findGatewayToken} from '@identity.com/gateway-solana-client';
 
 const bs58 = require('bs58');
 
@@ -166,7 +164,7 @@ app.post("/poc/verify", async (request: Request, response: Response) => {
             return failed("Invalid amount");
         }
 
-        let token = await findGatewayToken(connection, new PublicKey(foundSource), OLD_GATEKEEPER_NETWORK);
+        let token = await findGatewayToken(connection, GATEKEEPER_NETWORK, new PublicKey(foundSource));
         if (token === null) {
             return failed("Identity token not found");
         }
