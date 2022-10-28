@@ -12,6 +12,7 @@ const bs58 = require('bs58');
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 80;
 
 const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('62L7Kqt9zn6UTXoyhEF6tZydWkRpZyLTGMhxdgmWE99ouMhHDEyxPtXwGNfeATEpzu8xXrkKmASkrDtYCbmsQ5bq'));
+const GATEKEEPER = new PublicKey('AnDvwso9fAyiWiZSLa4UisbdbkLoLyqQawHqP3bJfKey');
 const GATEKEEPER_NETWORK = new PublicKey('tgkn9prkXdqrVbX73Sxqk18iru35gTwC5sXRTx1Sv1B');
 const SOLANA_CLUSTER = 'devnet';
 
@@ -59,12 +60,9 @@ const handleVerificationComplete = async (request: Request, response: Response) 
   // Store PII
   // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
 
-  const networkPda = GATEKEEPER_NETWORK;
-  const [gatekeeperPda] = await NetworkService.createGatekeeperAddress(GATEKEEPER_AUTHORITY.publicKey, networkPda);
-
   const gatekeeper = await GatekeeperService.build(
     GATEKEEPER_NETWORK,
-    gatekeeperPda,
+    GATEKEEPER,
     {
       wallet: new Wallet(GATEKEEPER_AUTHORITY),
       clusterType: SOLANA_CLUSTER
@@ -77,7 +75,7 @@ const handleVerificationComplete = async (request: Request, response: Response) 
     console.log("Creating GWv2 Pass");
     const passPda = await GatekeeperService.createPassAddress(
       address,
-      networkPda
+      GATEKEEPER_NETWORK
     );
     await gatekeeper.issue(passPda, address).rpc();
 

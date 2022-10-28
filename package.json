@@ -1,6 +1,7 @@
 {
   "private": true,
   "workspaces": [
+    "backend",
     "frontend",
     "solana-pay-ext-ui",
     "solana-pay-ext"
