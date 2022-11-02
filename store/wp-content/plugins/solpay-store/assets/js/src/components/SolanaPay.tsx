@@ -5,7 +5,8 @@ import {API_URL} from "./solpay/components/SolanaPay/constants";
 import SocureModal from "./solpay/components/Socure/SocureModal";
 import {clusterApiUrl, Connection, PublicKey} from "@solana/web3.js";
 import {confirmAndRedirect} from "../lib/utils";
-import {GatewayToken} from "@identity.com/solana-gateway-ts";
+import {PassAccount} from "@identity.com/gateway-solana-client";
+import {MINT_ADDRESS} from "../config/constants";
 
 export type SolanaPayProps = {
   amount: number,
@@ -20,7 +21,7 @@ export default function SolanaPay({
                                     amount,
                                     toWallet,
                                     reference,
-                                    mint = '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU',
+                                    mint = MINT_ADDRESS,
                                   }: SolanaPayProps) {
   const providedPaymentInfo: PaymentInfo = {
     amount,
@@ -57,7 +58,7 @@ export default function SolanaPay({
       confirmAndRedirect(new PublicKey(session.paymentInfo.fromWallet));
     }
   }
-  const onSocureComplete = (token: GatewayToken) => {
+  const onSocureComplete = (pass: PassAccount) => {
     alert("complete?");
     onClick();
   }

@@ -15,7 +15,9 @@ export default function SocureModal({verificationPublicKey, setVerificationPubli
 
   if(verificationPublicKey) {
     useEffect(() => {
+      console.log("LISTENING FOR TOKEN");
         onGatewayToken(connection, GATEKEEPER_NETWORK, new PublicKey(verificationPublicKey), 0,(token) => {
+          console.log("FOUND GW TAKEN ?!?!?");
           setVerificationPublicKey(undefined);
           onComplete(token);
         })

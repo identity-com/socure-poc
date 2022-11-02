@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class SolanaPayWooCommerceGatewayPlugin {
-    public const VERSION = '1.3.4';
+    public const VERSION = '1.3.5';
 
     /**
      * Stores the reference to the instance of this class

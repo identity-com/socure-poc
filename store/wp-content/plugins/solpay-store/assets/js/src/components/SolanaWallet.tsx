@@ -2,7 +2,7 @@ import {ConnectionProvider, useConnection, useWallet, WalletProvider} from "@sol
 import {WalletModalProvider, WalletMultiButton} from "@solana/wallet-adapter-react-ui";
 import React, {useEffect, useMemo, useState} from "react";
 import {WalletAdapterNetwork, WalletNotConnectedError} from "@solana/wallet-adapter-base";
-import {clusterApiUrl, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/web3.js";
+import {clusterApiUrl, Keypair, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/web3.js";
 import supportedWallets from "../config/wallets";
 import {SolanaPaymentWindow} from "../types";
 import {findGatewayToken, PassAccount} from "@identity.com/gateway-solana-client";
@@ -36,7 +36,8 @@ function ConnectedApp() {
 
         let token;
         try {
-          token = await findGatewayToken(connection, publicKey, GATEKEEPER_NETWORK);
+          token = await findGatewayToken(connection, GATEKEEPER_NETWORK, publicKey);
+          console.log("TOKEN: " + JSON.stringify(token))
         } catch (e) {
           console.log("Error fetching token", e);
         }
@@ -64,7 +65,7 @@ function ConnectedApp() {
   useEffect(() => {
     (async () => {
       if (publicKey) {
-        const token = await findGatewayToken(connection, publicKey, GATEKEEPER_NETWORK);
+        const token = await findGatewayToken(connection,GATEKEEPER_NETWORK, publicKey);
         setToken(token);
       }
     })();
@@ -78,6 +79,7 @@ function ConnectedApp() {
 
       const toTokenAccount = await getAssociatedTokenAddress(
           new PublicKey(MINT_ADDRESS),
+          // Keypair.generate().publicKey,
           new PublicKey(window.SOLANA_PAYMENT_CONFIG.transaction.recipient),
           false,
           TOKEN_PROGRAM_ID,
@@ -91,9 +93,6 @@ function ConnectedApp() {
           TOKEN_PROGRAM_ID,
           ASSOCIATED_TOKEN_PROGRAM_ID
       );
-
-      console.log("From token account: " + fromTokenAccount);
-      console.log("To token account: " + toTokenAccount);
 
       const optionalCreateAssociatedTokenAccountInstructions = await createAssociatedTokenAccountInstructionIfNeeded(
           connection,
@@ -116,7 +115,7 @@ function ConnectedApp() {
           ...optionalCreateAssociatedTokenAccountInstructions,
           transferInstruction
       )
-
+      
       const {
         context: {slot: minContextSlot},
         value: {blockhash, lastValidBlockHeight}
@@ -165,6 +164,7 @@ export default function SolanaWallet() {
   );
 
   return (
+
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets}>
           <WalletModalProvider>

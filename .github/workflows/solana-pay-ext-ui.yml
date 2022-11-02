@@ -4,7 +4,6 @@ on:
     branches:
       - develop
       - main
-      - feature/IDCOM-2178__update_payment_api_for_gw2
 
 jobs:
   frontend:
