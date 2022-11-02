@@ -9,7 +9,7 @@ interface SolanaPayInputProps {
 export default function SolanaPayInput({paymentInfo, setPaymentInfo}: SolanaPayInputProps) {
 
   const setGatekeeperNetwork = (checked: boolean) => {
-    const gatekeeperNetwork = checked ? 'tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf' : undefined;
+    const gatekeeperNetwork = checked ? 'tgkn9prkXdqrVbX73Sxqk18iru35gTwC5sXRTx1Sv1B' : undefined;
     setPaymentInfo({...paymentInfo, gatekeeperNetwork});
   }
 

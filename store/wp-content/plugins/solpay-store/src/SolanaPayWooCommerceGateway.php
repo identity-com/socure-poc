@@ -161,8 +161,9 @@ class SolanaPayWooCommerceGateway extends WC_Payment_Gateway
     $order = wc_get_order($order_id);
     $order->update_status('pending-payment', __('Awaiting payment confirmation', 'solana-pay-woocommerce-gateway'));
 
-    update_post_meta($order->get_id(), self::SOLANA_REFERENCE_META_KEY, WC()->session->get(self::SOLANA_REFERENCE_META_KEY));
+    $reference = WC()->session->get(self::SOLANA_REFERENCE_META_KEY);
 
+    update_post_meta($order->get_id(), self::SOLANA_REFERENCE_META_KEY, $reference );
 
     wc_empty_cart();
 

@@ -6,9 +6,9 @@ mix
     return {
       resolve: {
         fallback: {
-          'stream': require.resolve('stream-browserify'),
-          "crypto": require.resolve("crypto-browserify"),
-          "assert": require.resolve("assert/")
+          // 'stream': require.resolve('stream-browserify'),
+          // "crypto": require.resolve("crypto-browserify"),
+          // "assert": require.resolve("assert/")
         }
       },
       module: {
@@ -25,9 +25,9 @@ mix
         new webpack.optimize.LimitChunkCountPlugin({
           maxChunks: 1,
         }),
-        new webpack.ProvidePlugin({
-          Buffer: ["buffer", "Buffer"],
-        }),
+        // new webpack.ProvidePlugin({
+        //   Buffer: ["buffer", "Buffer"],
+        // }),
       ],
     };
   })
