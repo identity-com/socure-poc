@@ -31,7 +31,10 @@ const handleDocumentUpload = async (request: Request, response: Response) => {
   console.log("Encrypting and uploading documents")
   const documentUuid = request.body.event.data.uuid;
 
-  const evervault = new Evervault(process.env.EVERVAULT_API_KEY);
+  const evervault =
+
+
+    new Evervault(process.env.EVERVAULT_API_KEY);
 
   const result = await evervault.run('socure-poc-cage', {
     documentUuid
