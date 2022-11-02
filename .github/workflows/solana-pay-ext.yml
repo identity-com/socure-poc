@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - develop
+      - feature/add_reference_to_payment_api
 
 jobs:
   frontend:

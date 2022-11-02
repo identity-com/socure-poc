@@ -1,17 +1,17 @@
-import express, { Request, Response } from "express";
-import { clusterApiUrl, Connection, PublicKey, Transaction } from '@solana/web3.js';
+import express, {Request, Response} from "express";
+import {clusterApiUrl, Connection, PublicKey, Transaction} from '@solana/web3.js';
 import cors from "cors";
-import { PaymentInfo, PaymentSession, PaymentStatus } from "./types";
-import { v4 as uuidv4 } from 'uuid';
-import { paymentSessionStore, purgeOldSessions } from "./simple-store";
-import { findGatewayToken } from "@identity.com/gateway-solana-client";
+import {PaymentInfo, PaymentSession, PaymentStatus} from "./types";
+import {v4 as uuidv4} from 'uuid';
+import {paymentSessionStore, purgeOldSessions} from "./simple-store";
+import {findGatewayToken} from "@identity.com/gateway-solana-client";
 import {
   ASSOCIATED_TOKEN_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
   createTransferInstruction,
   getAssociatedTokenAddress
 } from "@solana/spl-token";
-import { createAssociatedTokenAccountInstructionIfNeeded, getTokenBalance } from "./solana";
+import {createAssociatedTokenAccountInstructionIfNeeded, getTokenBalance} from "./solana";
 
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
@@ -19,7 +19,7 @@ const PAYMENTS_PATH = '/payments';
 const SOLANA_URL_SUFFIX = '/solana';
 
 // @ts-ignore
-BigInt.prototype.toJSON = function() {
+BigInt.prototype.toJSON = function () {
   return this.toString()
 }
 
@@ -61,18 +61,22 @@ app.post(PAYMENTS_PATH, async (request: Request, response: Response) => {
   const mint = new PublicKey(request.body.mint);
   const toWallet = new PublicKey(request.body.toWallet);
   const gatekeeperNetwork = request.body.gatekeeperNetwork ? new PublicKey(request.body.gatekeeperNetwork) : undefined;
-
+  // TODO: (recommendation) If not reference is provided, generate a new one (Keypair.generate().publicKey)
+  // See other TODOs for context
+  const reference = new request.body.reference;
 
   const toTokenAccount = await getAssociatedTokenAddress(
-    mint,
-    toWallet,
-    false,
-    TOKEN_PROGRAM_ID,
-    ASSOCIATED_TOKEN_PROGRAM_ID
+      mint,
+      toWallet,
+      false,
+      TOKEN_PROGRAM_ID,
+      ASSOCIATED_TOKEN_PROGRAM_ID
   );
+
+  // TODO: this wouldn't be needed when using a reference
   const toTokenAccountBalanceBefore = await getTokenBalance(connection, toTokenAccount);
 
-  const paymentInfo : PaymentInfo = {
+  const paymentInfo: PaymentInfo = {
     type: request.body.type,
     mint,
     toWallet,
@@ -80,6 +84,7 @@ app.post(PAYMENTS_PATH, async (request: Request, response: Response) => {
     toTokenAccount,
     toTokenAccountBalanceBefore,
     gatekeeperNetwork,
+    reference
   };
 
 
@@ -111,6 +116,7 @@ app.get(`${PAYMENTS_PATH}/:id`, async (request: Request, response: Response) => 
 
   // TODO: It's hacky to update state in a GET request, but it's the easiest way to do it for now
   if (session.status === PaymentStatus.TX_SEND) {
+    // TODO: replace with reference lookup instead
     const balance = await getTokenBalance(connection, session.paymentInfo.toTokenAccount);
     if (balance === (BigInt(session.paymentInfo.toTokenAccountBalanceBefore) + BigInt(session.paymentInfo.amount))) {
       // Payment received
@@ -182,43 +188,53 @@ app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, re
   }
 
   const fromTokenAccount = await getAssociatedTokenAddress(
-    session.paymentInfo.mint,
-    account,
-    false,
-    TOKEN_PROGRAM_ID,
-    ASSOCIATED_TOKEN_PROGRAM_ID
+      session.paymentInfo.mint,
+      account,
+      false,
+      TOKEN_PROGRAM_ID,
+      ASSOCIATED_TOKEN_PROGRAM_ID
   );
 
   // current balance
   const fromTokenAccountBalanceBefore = await getTokenBalance(connection, fromTokenAccount);
 
   if (fromTokenAccountBalanceBefore < session.paymentInfo.amount) {
-      session.status = PaymentStatus.ERROR;
-      session.errorMessage = 'Account balance too low!';
-      paymentSessionStore.set(session.id, session);
-      response.status(400).send({
-        message: session.errorMessage,
-      });
-      return;
+    session.status = PaymentStatus.ERROR;
+    session.errorMessage = 'Account balance too low!';
+    paymentSessionStore.set(session.id, session);
+    response.status(400).send({
+      message: session.errorMessage,
+    });
+    return;
   }
 
   // TODO: Only SPL Supported right now
   const optionalCreateAssociatedTokenAccountInstructions = await createAssociatedTokenAccountInstructionIfNeeded(
-    connection,
-    account,
-    session.paymentInfo.toTokenAccount,
-    session.paymentInfo.mint,
-    session.paymentInfo.toWallet
+      connection,
+      account,
+      session.paymentInfo.toTokenAccount,
+      session.paymentInfo.mint,
+      session.paymentInfo.toWallet
   )
 
   const lastestBlockhash = await connection.getLatestBlockhash();
+  const transferIx = createTransferInstruction(
+      fromTokenAccount, session.paymentInfo.toTokenAccount, account, session.paymentInfo.amount, [], TOKEN_PROGRAM_ID);
+
+  if(session.paymentInfo.reference) {
+    transferIx.keys.push({
+      pubkey: new PublicKey(session.paymentInfo.reference),
+      isWritable: false,
+      isSigner: false
+    });
+  }
+
   const transaction = new Transaction({
     feePayer: account,
     ...lastestBlockhash,
   }).add(
-    ...optionalCreateAssociatedTokenAccountInstructions,
-    createTransferInstruction(
-      fromTokenAccount, session.paymentInfo.toTokenAccount, account, session.paymentInfo.amount, [], TOKEN_PROGRAM_ID)
+      ...optionalCreateAssociatedTokenAccountInstructions,
+      transferIx
   )
 
   const serializedTransaction = transaction.serialize({
@@ -232,7 +248,7 @@ app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, re
   session.status = PaymentStatus.TX_SEND;
   paymentSessionStore.set(session.id, session);
 
-  response.status(200).send({ transaction: base64Transaction, message });
+  response.status(200).send({transaction: base64Transaction, message});
 })
 
 app.listen(PORT, () => {

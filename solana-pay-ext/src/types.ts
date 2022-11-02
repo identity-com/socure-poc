@@ -22,6 +22,7 @@ export type PaymentInfo = {
   amount: number | bigint,
   toTokenAccount: PublicKey,
   toTokenAccountBalanceBefore: number | bigint,
+  reference?: string,
 }
 
 export type PaymentSession = {
