@@ -3,9 +3,17 @@ import Evervault from '@evervault/sdk';
 import cors from "cors";
 import {Wallet} from "@project-serum/anchor";
 
-import {Keypair, PublicKey, Connection, clusterApiUrl, LAMPORTS_PER_SOL} from '@solana/web3.js';
+import {
+  Keypair,
+  PublicKey,
+  Connection,
+  clusterApiUrl,
+  LAMPORTS_PER_SOL,
+  ParsedInstruction,
+  PartiallyDecodedInstruction
+} from '@solana/web3.js';
 import Storage from "./lib/Storage";
-import {GatekeeperService, NetworkService, findGatewayToken} from '@identity.com/gateway-solana-client';
+import {GatekeeperService, NetworkService, findGatewayPass} from '@identity.com/gateway-solana-client';
 
 const bs58 = require('bs58');
 
@@ -167,7 +175,7 @@ app.post("/poc/verify", async (request: Request, response: Response) => {
       return failed("Invalid amount");
     }
 
-    let token = await findGatewayToken(connection, GATEKEEPER_NETWORK, new PublicKey(foundSource));
+    let token = await findGatewayPass(connection, GATEKEEPER_NETWORK, new PublicKey(foundSource));
     if (token === null) {
       return failed("Identity token not found");
     }
