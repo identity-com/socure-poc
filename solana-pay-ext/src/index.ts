@@ -4,7 +4,7 @@ import cors from "cors";
 import { PaymentInfo, PaymentSession, PaymentStatus } from "./types";
 import { v4 as uuidv4 } from 'uuid';
 import { paymentSessionStore, purgeOldSessions } from "./simple-store";
-import { findGatewayToken } from "@identity.com/gateway-solana-client";
+import { findGatewayPass } from "@identity.com/gateway-solana-client";
 import {
   ASSOCIATED_TOKEN_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
@@ -167,7 +167,7 @@ app.post(`${PAYMENTS_PATH}/:id${SOLANA_URL_SUFFIX}`, async (request: Request, re
   paymentSessionStore.set(session.id, session);
 
   if (session.paymentInfo.gatekeeperNetwork) {
-    const token = await findGatewayToken(connection, session.paymentInfo.gatekeeperNetwork, account);
+    const token = await findGatewayPass(connection, session.paymentInfo.gatekeeperNetwork, account);
 
     // no Gateway Token
     if (!token) {
