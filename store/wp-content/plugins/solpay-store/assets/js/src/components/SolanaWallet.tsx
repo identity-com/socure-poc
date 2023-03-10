@@ -5,7 +5,7 @@ import {WalletAdapterNetwork, WalletNotConnectedError} from "@solana/wallet-adap
 import {clusterApiUrl, Keypair, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/web3.js";
 import supportedWallets from "../config/wallets";
 import {SolanaPaymentWindow} from "../types";
-import {findGatewayToken, PassAccount} from "@identity.com/gateway-solana-client";
+import {findGatewayPass, PassAccount} from "@identity.com/gateway-solana-client";
 import {GATEKEEPER_NETWORK, MINT_ADDRESS, SOCURE_UI_BASE_URL} from "../config/constants";
 import IFrameContainer from "./IFrameContainer";
 import {
@@ -36,7 +36,7 @@ function ConnectedApp() {
 
         let token;
         try {
-          token = await findGatewayToken(connection, GATEKEEPER_NETWORK, publicKey);
+          token = await findGatewayPass(connection, GATEKEEPER_NETWORK, publicKey);
           console.log("TOKEN: " + JSON.stringify(token))
         } catch (e) {
           console.log("Error fetching token", e);
@@ -65,7 +65,7 @@ function ConnectedApp() {
   useEffect(() => {
     (async () => {
       if (publicKey) {
-        const token = await findGatewayToken(connection,GATEKEEPER_NETWORK, publicKey);
+        const token = await findGatewayPass(connection,GATEKEEPER_NETWORK, publicKey);
         setToken(token);
       }
     })();
@@ -115,7 +115,7 @@ function ConnectedApp() {
           ...optionalCreateAssociatedTokenAccountInstructions,
           transferInstruction
       )
-      
+
       const {
         context: {slot: minContextSlot},
         value: {blockhash, lastValidBlockHeight}

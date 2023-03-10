@@ -33,7 +33,7 @@ Create a symlink so the webserver can access the store:
 `sudo ln -s <repo>/store /Applications/MAMP/htdocs/socure`
 
 Create database (default pass is `root`)
-`mysql -h 127.0.0.1 -P 8889 -u root -p -e "CREATE DATABASE socure"`
+`mysql -h 127.0.0.1 -P 8889 -u root -p -e "CREATE DATABASE test"`
 
 Import data (default pass is `root`). From the repo root:
 `mysql -h 127.0.0.1 -P 8889 -u root -p socure < store/database.sql`

@@ -12,6 +12,7 @@ import {
   ParsedInstruction,
   PartiallyDecodedInstruction
 } from '@solana/web3.js';
+import {getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID} from '@solana/spl-token';
 import Storage from "./lib/Storage";
 import {GatekeeperService, NetworkService, findGatewayPass} from '@identity.com/gateway-solana-client';
 
@@ -19,10 +20,11 @@ const bs58 = require('bs58');
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 80;
 
-const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(bs58.decode('62L7Kqt9zn6UTXoyhEF6tZydWkRpZyLTGMhxdgmWE99ouMhHDEyxPtXwGNfeATEpzu8xXrkKmASkrDtYCbmsQ5bq'));
-const GATEKEEPER = new PublicKey('AnDvwso9fAyiWiZSLa4UisbdbkLoLyqQawHqP3bJfKey');
-const GATEKEEPER_NETWORK = new PublicKey('tgkn9prkXdqrVbX73Sxqk18iru35gTwC5sXRTx1Sv1B');
+const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(new Uint8Array());
+const GATEKEEPER = new PublicKey('');
+const GATEKEEPER_NETWORK = new PublicKey('');
 const SOLANA_CLUSTER = 'devnet';
+const MINT_ADDRESS = new PublicKey('');
 
 const storage = new Storage('us-east-2', 'socure-pii-storage');
 
@@ -34,6 +36,10 @@ app.use(express.json());
 app.get('/', (request: Request, response: Response) => {
   response.send('Identity.com');
 });
+
+const isParsedTransaction = (transaction: (ParsedInstruction | PartiallyDecodedInstruction)): transaction  is ParsedInstruction => {
+  return (transaction as ParsedInstruction).parsed !== undefined;
+}
 
 const handleDocumentUpload = async (request: Request, response: Response) => {
   console.log("Encrypting and uploading documents")
@@ -88,7 +94,21 @@ const handleVerificationComplete = async (request: Request, response: Response) 
       address,
       GATEKEEPER_NETWORK
     );
-    await gatekeeper.issue(passPda, address).rpc();
+
+    const connection = gatekeeper.getConnection();
+
+    const funderAta = await getOrCreateAssociatedTokenAccount(
+      connection,
+      GATEKEEPER_AUTHORITY,
+      MINT_ADDRESS,
+      GATEKEEPER_AUTHORITY.publicKey,
+      true
+    );
+
+    const gatekeeperTA = await getOrCreateAssociatedTokenAccount(connection, GATEKEEPER_AUTHORITY, MINT_ADDRESS, GATEKEEPER);
+    const networkTA = await getOrCreateAssociatedTokenAccount(connection, GATEKEEPER_AUTHORITY, MINT_ADDRESS, GATEKEEPER_NETWORK);
+
+    await gatekeeper.issue(passPda, address, TOKEN_PROGRAM_ID, MINT_ADDRESS, networkTA.address, gatekeeperTA.address, funderAta.address).rpc();
 
     pass = await gatekeeper.getPassAccount(address);
   }
@@ -148,7 +168,7 @@ app.post("/poc/verify", async (request: Request, response: Response) => {
     const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
 
     const signatures = await connection.getSignaturesForAddress(new PublicKey(request.body.reference));
-    const transactionInfo = await connection.getParsedConfirmedTransaction(signatures[0].signature);
+    const transactionInfo = await connection.getParsedTransaction(signatures[0].signature);
 
     if (transactionInfo === null) {
       return failed("Invalid reference");
@@ -156,11 +176,12 @@ app.post("/poc/verify", async (request: Request, response: Response) => {
 
     const instruction = transactionInfo.transaction.message.instructions[0];
 
-    // @ts-ignore
-    const foundDestination: string = instruction?.parsed.info.destination;
-    // @ts-ignore
+    if (!isParsedTransaction(instruction)) return failed("Transaction not parsed");
+
+    const foundDestination: string = instruction.parsed.info.destination;
+
     const foundSource: string = instruction.parsed.info.source;
-    // @ts-ignore
+
     const foundLamports: number = instruction.parsed.info.lamports;
 
     if (foundDestination !== request.body.recipient) {

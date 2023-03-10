@@ -1,8 +1,8 @@
-import { Fragment, useEffect } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import {Fragment, useEffect} from 'react'
+import {Dialog, Transition} from '@headlessui/react'
 import {GATEKEEPER_NETWORK, SOCURE_UI_BASE_URL} from "../../../../config/constants";
 import {Connection, PublicKey} from "@solana/web3.js";
-import {PassAccount, onGatewayToken} from "@identity.com/gateway-solana-client";
+import {PassAccount, onGatewayPass} from "@identity.com/gateway-solana-client";
 
 interface SocureFrameProps {
   verificationPublicKey: string | undefined;
@@ -11,16 +11,21 @@ interface SocureFrameProps {
   connection: Connection;
 }
 
-export default function SocureModal({verificationPublicKey, setVerificationPublicKey, onComplete, connection}: SocureFrameProps) {
-
-  if(verificationPublicKey) {
+export default function SocureModal(
+  {
+    verificationPublicKey,
+    setVerificationPublicKey,
+    onComplete,
+    connection
+  }: SocureFrameProps) {
+  if (verificationPublicKey) {
     useEffect(() => {
       console.log("LISTENING FOR TOKEN");
-        onGatewayToken(connection, GATEKEEPER_NETWORK, new PublicKey(verificationPublicKey), 0,(token) => {
-          console.log("FOUND GW TAKEN ?!?!?");
-          setVerificationPublicKey(undefined);
-          onComplete(token);
-        })
+      onGatewayPass(connection, GATEKEEPER_NETWORK, new PublicKey(verificationPublicKey), 0, (token) => {
+        console.log("FOUND GW TAKEN ?!?!?");
+        setVerificationPublicKey(undefined);
+        onComplete(token);
+      })
     }, []);
   }
 
@@ -50,9 +55,11 @@ export default function SocureModal({verificationPublicKey, setVerificationPubli
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform rounded-lg bg-white px-4 pt-5 pb-4 text-center shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl sm:p-6">
+              <Dialog.Panel
+                className="relative transform rounded-lg bg-white px-4 pt-5 pb-4 text-center shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl sm:p-6">
                 <div className="w-full h-full">
-                  <iframe className="w-full h-[38rem]" src={`${SOCURE_UI_BASE_URL}${verificationPublicKey}`} title="Socure"/>
+                  <iframe className="w-full h-[38rem]" src={`${SOCURE_UI_BASE_URL}${verificationPublicKey}`}
+                          title="Socure"/>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

@@ -36,12 +36,6 @@ export default function Socure() {
 
             qrCodeNeeded: true
         }
-        await new Promise(r => setTimeout(() => {
-            window.parent.postMessage({
-                target: "tokenUpdate"
-            },"*" );
-        }, 2000));
-
 
         SocureInitializer.init(API_KEY)
             .then((lib: { init: (arg0: string, arg1: string, arg2: { onProgress: (progress: any) => void; onSuccess: (success: any) => void; onError: (error: any) => void; qrCodeNeeded: boolean; }) => Promise<any>; start: (arg0: number, p?: { customerUserId: string | undefined }) => Promise<any>; }) => {
