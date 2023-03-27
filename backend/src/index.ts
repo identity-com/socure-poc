@@ -1,215 +1,332 @@
-import express, {Request, Response} from "express";
-import Evervault from '@evervault/sdk';
+import express from "express";
 import cors from "cors";
 import {Wallet} from "@project-serum/anchor";
+import {Account} from '@solana/spl-token/src/state/account';
 
 import {
   Keypair,
   PublicKey,
   Connection,
-  clusterApiUrl,
   LAMPORTS_PER_SOL,
-  ParsedInstruction,
-  PartiallyDecodedInstruction
+  Signer,
 } from '@solana/web3.js';
-import {getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID} from '@solana/spl-token';
+import {getOrCreateAssociatedTokenAccount, createMint, mintTo} from '@solana/spl-token';
 import Storage from "./lib/Storage";
-import {GatekeeperService, NetworkService, findGatewayPass} from '@identity.com/gateway-solana-client';
-
-const bs58 = require('bs58');
+import {
+  GatekeeperService,
+  NetworkService,
+  airdrop,
+  AdminService,
+  FeeStructure,
+  NetworkKeyFlags
+} from '@identity.com/gateway-solana-client';
+import {NetworkFeatures} from "@identity.com/gateway-solana-client/dist/lib/constants";
+import {healthCheck, result, verify} from "./handlers";
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 80;
 
-const GATEKEEPER_AUTHORITY = Keypair.fromSecretKey(new Uint8Array());
-const GATEKEEPER = new PublicKey('');
-const GATEKEEPER_NETWORK = new PublicKey('');
-const SOLANA_CLUSTER = 'devnet';
-const MINT_ADDRESS = new PublicKey('');
+export const storage = new Storage('us-east-2', 'socure-pii-storage');
 
-const storage = new Storage('us-east-2', 'socure-pii-storage');
+// Making these global for now, but we should probably move them into a class / config
+// Only some of these get populated when it is not devnet use with caution
+export let adminService: AdminService | undefined;
+export let gatekeeperService: GatekeeperService | undefined;
+export let networkService: NetworkService | undefined;
 
-const app = express();
+export let gatekeeperPDA: PublicKey | undefined;
+export let stakingPDA: PublicKey | undefined;
+export let mint: PublicKey | undefined;
 
-app.use(cors());
-app.use(express.json());
+export let adminAuthority: Keypair | undefined;
+export let networkAuthority: Keypair | undefined;
+export let gatekeeperAuthority: Keypair | undefined;
+export let mintAuthority: Keypair | undefined;
+export let mintAccount: Keypair | undefined;
 
-app.get('/', (request: Request, response: Response) => {
-  response.send('Identity.com');
-});
+export let gatekeeperAta: Account | undefined;
+export let networkAta: Account | undefined;
+export let funderAta: Account | undefined;
+export let funderKeypair: Keypair | undefined;
 
-const isParsedTransaction = (transaction: (ParsedInstruction | PartiallyDecodedInstruction)): transaction  is ParsedInstruction => {
-  return (transaction as ParsedInstruction).parsed !== undefined;
-}
+let net: 'devnet' | 'localnet' = 'localnet';
+export const connection = new Connection('http://127.0.0.1:8899', 'confirmed');
 
-const handleDocumentUpload = async (request: Request, response: Response) => {
-  console.log("Encrypting and uploading documents")
-  const documentUuid = request.body.event.data.uuid;
+const main = async () => {
+  const app = express();
 
-  const evervault =
+  app.use(cors());
+  app.use(express.json());
 
+  app.get('/', healthCheck);
+  app.post("/poc/verify", verify);
+  app.post('/result', result);
 
-    new Evervault(process.env.EVERVAULT_API_KEY);
+  app.listen(PORT, preServerSetup);
+};
 
-  const result = await evervault.run('socure-poc-cage', {
-    documentUuid
-  });
-
-  await storage.store(request.body.event.customerUserId, 'image-data.json',
-    JSON.stringify({
-      iv: result.result.iv,
-      key: result.result.key
-    })
-  );
-
-  await storage.store(request.body.event.customerUserId, 'image.zip.enc', Buffer.from(result.result.data.data));
-}
-
-const handleVerificationComplete = async (request: Request, response: Response) => {
-  console.log("Uploading PII and issuing token");
-
-  if (request.body.event.data.documentVerification.decision.value !== 'accept') {
-    console.log("Validation failed");
-    return;
+const preServerSetup = async () => {
+  // Set up gateway for localnet | devnet
+  switch (net) {
+    case 'localnet':
+      // Set up localnet
+      ({
+        adminService,
+        gatekeeperService,
+        gatekeeperPDA,
+        mint,
+        adminAuthority,
+        networkAuthority,
+        gatekeeperAuthority,
+        mintAuthority,
+        mintAccount,
+        stakingPDA,
+        networkService,
+      } = await setUpAdminNetworkGatekeeper());
+      ({gatekeeperAta, networkAta, funderAta, funderKeypair} =
+        await makeAssociatedTokenAccounts(
+          connection,
+          adminAuthority,
+          mintAuthority,
+          networkAuthority.publicKey,
+          gatekeeperAuthority.publicKey,
+          mintAccount.publicKey,
+          gatekeeperPDA
+        ));
+      break;
+    case 'devnet':
+      // Set up devnet
+      break;
   }
 
-  const address = new PublicKey(request.body.event.customerUserId);
-
-  // Store PII
-  // await storage.store(address.toBase58(), 'pii.json', JSON.stringify(request.body, null, 2));
-
-  const gatekeeper = await GatekeeperService.build(
-    GATEKEEPER_NETWORK,
-    GATEKEEPER,
-    {
-      wallet: new Wallet(GATEKEEPER_AUTHORITY),
-      clusterType: SOLANA_CLUSTER
-    }
-  );
-
-  let pass = await gatekeeper.getPassAccount(address);
-
-  if (!pass) {
-    console.log("Creating GWv2 Pass");
-    const passPda = await GatekeeperService.createPassAddress(
-      address,
-      GATEKEEPER_NETWORK
-    );
-
-    const connection = gatekeeper.getConnection();
-
-    const funderAta = await getOrCreateAssociatedTokenAccount(
-      connection,
-      GATEKEEPER_AUTHORITY,
-      MINT_ADDRESS,
-      GATEKEEPER_AUTHORITY.publicKey,
-      true
-    );
-
-    const gatekeeperTA = await getOrCreateAssociatedTokenAccount(connection, GATEKEEPER_AUTHORITY, MINT_ADDRESS, GATEKEEPER);
-    const networkTA = await getOrCreateAssociatedTokenAccount(connection, GATEKEEPER_AUTHORITY, MINT_ADDRESS, GATEKEEPER_NETWORK);
-
-    await gatekeeper.issue(passPda, address, TOKEN_PROGRAM_ID, MINT_ADDRESS, networkTA.address, gatekeeperTA.address, funderAta.address).rpc();
-
-    pass = await gatekeeper.getPassAccount(address);
-  }
-
-  console.log("FOUND GWv2 PASS", JSON.stringify(pass, null, 2));
-}
-
-app.post('/result', async (request: Request, response: Response) => {
-  console.log(new Date());
-  console.log(JSON.stringify(request.body, null, 2));
-
-  try {
-    if (!request.body.event || !request.body.event.eventType) {
-      return response.json({
-        valid: false,
-        data: request.body,
-      });
-    }
-
-    switch (request.body.event.eventType as String) {
-      case 'VERIFICATION_COMPLETED':
-        await handleVerificationComplete(request, response);
-        break;
-      case 'DOCUMENTS_UPLOADED':
-        await handleDocumentUpload(request, response);
-        break;
-    }
-  } catch (e) {
-    console.log(e);
-    return response.json({
-      valid: false,
-      data: request.body,
-    });
-  }
-
-  return response.json({
-    valid: true,
-    data: request.body,
-  });
-});
-
-app.get('/poc/reference', async (request: Request, response: Response) => {
-  return response.json({
-    reference: Keypair.generate().publicKey.toBase58()
-  });
-});
-
-app.post("/poc/verify", async (request: Request, response: Response) => {
-  const failed = (message: string) => {
-    return response.json({
-      valid: false,
-      message
-    });
-  }
-
-  try {
-    const connection = new Connection(clusterApiUrl(SOLANA_CLUSTER), 'confirmed');
-
-    const signatures = await connection.getSignaturesForAddress(new PublicKey(request.body.reference));
-    const transactionInfo = await connection.getParsedTransaction(signatures[0].signature);
-
-    if (transactionInfo === null) {
-      return failed("Invalid reference");
-    }
-
-    const instruction = transactionInfo.transaction.message.instructions[0];
-
-    if (!isParsedTransaction(instruction)) return failed("Transaction not parsed");
-
-    const foundDestination: string = instruction.parsed.info.destination;
-
-    const foundSource: string = instruction.parsed.info.source;
-
-    const foundLamports: number = instruction.parsed.info.lamports;
-
-    if (foundDestination !== request.body.recipient) {
-      return failed("Invalid recipient address");
-    }
-
-    if (foundSource !== request.body.sender) {
-      return failed("Invalid sender address");
-    }
-
-    if (foundLamports !== request.body.amount * LAMPORTS_PER_SOL) {
-      return failed("Invalid amount");
-    }
-
-    let token = await findGatewayPass(connection, GATEKEEPER_NETWORK, new PublicKey(foundSource));
-    if (token === null) {
-      return failed("Identity token not found");
-    }
-
-    return response.json({
-      valid: true,
-      signature: transactionInfo.transaction.signatures[0]
-    });
-  } catch (e) {
-    return failed("Unknown");
-  }
-});
-
-app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
-});
+}
+
+main().catch((err) => {
+  throw new Error(err)
+})
+
+const setGatekeeperFlagsAndFees = async (
+  stakingAccount: PublicKey,
+  service: NetworkService,
+  flags: number,
+  feesToAdd: FeeStructure[] = []
+): Promise<void> => {
+  await service
+    .updateGatekeeper(
+      {
+        authThreshold: 1,
+        tokenFees: {
+          remove: [],
+          add: feesToAdd,
+        },
+        authKeys: {
+          add: [
+            {
+              key: service.getWallet().publicKey,
+              flags: flags,
+            },
+          ],
+          remove: [],
+        },
+      },
+      stakingAccount
+    )
+    .rpc();
+};
+
+const generateFundedKey = async (): Promise<Keypair> => {
+  const keypair = Keypair.generate();
+  await airdrop(
+    connection,
+    keypair.publicKey,
+    LAMPORTS_PER_SOL
+  );
+  return keypair;
+};
+
+const setUpAdminNetworkGatekeeper = async (): Promise<{
+  adminService: AdminService;
+  networkService: NetworkService;
+  gatekeeperService: GatekeeperService;
+  gatekeeperPDA: PublicKey;
+  stakingPDA: PublicKey;
+  mint: PublicKey;
+  adminAuthority: Keypair;
+  networkAuthority: Keypair;
+  gatekeeperAuthority: Keypair;
+  mintAuthority: Keypair;
+  mintAccount: Keypair;
+}> => {
+  const adminAuthority = await generateFundedKey();
+  const networkAuthority = await generateFundedKey();
+  const gatekeeperAuthority = await generateFundedKey();
+  const mintAuthority = await generateFundedKey();
+  const mintAccount = Keypair.generate();
+
+  const mint = await createMint(
+    connection,
+    mintAuthority,
+    mintAuthority.publicKey,
+    null,
+    0,
+    mintAccount
+  );
+
+  const [gatekeeperPDA] = await NetworkService.createGatekeeperAddress(
+    gatekeeperAuthority.publicKey,
+    networkAuthority.publicKey
+  );
+
+  const [stakingPDA] = await NetworkService.createStakingAddress(
+    gatekeeperAuthority.publicKey
+  );
+
+  const adminService = await AdminService.build(
+    networkAuthority.publicKey,
+    {
+      clusterType: 'localnet',
+      wallet: new Wallet(adminAuthority),
+    },
+  );
+
+  const networkService = await NetworkService.build(
+    gatekeeperAuthority.publicKey,
+    gatekeeperPDA,
+    {
+      clusterType: 'localnet',
+      wallet: new Wallet(gatekeeperAuthority),
+    },
+  );
+
+  await adminService
+    .createNetwork({
+      authThreshold: 1,
+      passExpireTime: 10000,
+      fees: [
+        {
+          token: mint,
+          issue: 10,
+          refresh: 10,
+          expire: 10,
+          verify: 10,
+        },
+      ],
+      authKeys: [
+        {flags: NetworkKeyFlags.AUTH | NetworkKeyFlags.CREATE_GATEKEEPER, key: gatekeeperAuthority.publicKey},
+      ],
+      supportedTokens: [{key: mint}],
+      networkFeatures: NetworkFeatures.CHANGE_PASS_GATEKEEPER,
+    })
+    .withPartialSigners(networkAuthority)
+    .rpc();
+
+  await networkService
+    .createGatekeeper(
+      networkAuthority.publicKey,
+      stakingPDA,
+      adminAuthority.publicKey
+    )
+    .withPartialSigners(adminAuthority)
+    .rpc();
+
+  await setGatekeeperFlagsAndFees(stakingPDA, networkService, 65535, [
+    {
+      token: mint,
+      issue: 5000,
+      refresh: 5000,
+      expire: 5000,
+      verify: 5000,
+    },
+  ]);
+
+  const gatekeeperService = await GatekeeperService.build(
+    networkAuthority.publicKey,
+    gatekeeperPDA,
+    {
+      clusterType: 'localnet',
+      wallet: new Wallet(gatekeeperAuthority),
+    }
+  );
+
+  return {
+    adminService,
+    networkService,
+    gatekeeperService,
+    gatekeeperPDA,
+    stakingPDA,
+    mint,
+    adminAuthority,
+    networkAuthority,
+    gatekeeperAuthority,
+    mintAuthority,
+    mintAccount,
+  };
+};
+
+const makeAssociatedTokenAccounts = async (
+  connection: Connection,
+  adminAuthority: Signer,
+  mintAuthority: Signer,
+  networkPublicKey: PublicKey,
+  gatekeeperPublicKey: PublicKey,
+  mintPublicKey: PublicKey,
+  gatekeeperPDA: PublicKey,
+  funderMintAmount = 200000000
+): Promise<{
+  gatekeeperAta: Account;
+  networkAta: Account;
+  funderAta: Account;
+  funderKeypair: Keypair;
+}> => {
+  const generateFundedKey = async (): Promise<Keypair> => {
+    const keypair = Keypair.generate();
+    await airdrop(
+      connection,
+      keypair.publicKey,
+      LAMPORTS_PER_SOL
+    );
+    return keypair;
+  };
+
+  const funderKeypair = await generateFundedKey();
+
+  const gatekeeperAta = await getOrCreateAssociatedTokenAccount(
+    connection,
+    adminAuthority,
+    mintPublicKey,
+    gatekeeperPDA,
+    true
+  );
+
+  const networkAta = await getOrCreateAssociatedTokenAccount(
+    connection,
+    adminAuthority,
+    mintPublicKey,
+    networkPublicKey,
+    true
+  );
+
+  const funderAta = await getOrCreateAssociatedTokenAccount(
+    connection,
+    adminAuthority,
+    mintPublicKey,
+    funderKeypair.publicKey,
+    true
+  );
+
+  await mintTo(
+    connection,
+    funderKeypair,
+    mintPublicKey,
+    funderAta.address,
+    mintAuthority,
+    funderMintAmount
+  );
+
+  return {
+    gatekeeperAta,
+    networkAta,
+    funderAta,
+    funderKeypair,
+  };
+};
