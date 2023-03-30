@@ -10,7 +10,7 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
-imagePullSecrets: []
+imagePullSecrets: [ ]
 nameOverride: "socure-poc"
 fullnameOverride: "socure-poc-chart"
 
@@ -18,23 +18,23 @@ serviceAccount:
   # Specifies whether a service account should be created
   create: true
   # Annotations to add to the service account
-  annotations: {}
+  annotations: { }
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-podAnnotations: {}
+podAnnotations: { }
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext: { }
+# fsGroup: 2000
 
-securityContext: {}
+securityContext: { }
   # capabilities:
   #   drop:
   #   - ALL
   # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+# runAsNonRoot: true
+# runAsUser: 1000
 
 service:
   type: ClusterIP
@@ -53,12 +53,12 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
+  tls: [ ]
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources: { }
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -67,8 +67,8 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
   # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+#   cpu: 100m
+#   memory: 128Mi
 
 autoscaling:
   enabled: false
@@ -77,8 +77,55 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {}
+nodeSelector: { }
 
-tolerations: []
+tolerations: [ ]
 
-affinity: {}
+affinity: { }
+
+env:
+  - name: CLUSTER_URL
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: CLUSTER_URL
+  - name: FUNDER_AUTHORITY
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: FUNDER_AUTHORITY
+  - name: GATEKEEPER_AUTHORITY
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: GATEKEEPER_AUTHORITY
+  - name: NETWORK
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: NETWORK
+  - name: GATEKEEPER
+    valueFrom:
+     secretKeyRef:
+       name: socure-poc
+       key: GATEKEEPER
+  - name: MINT
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: MINT
+  - name: GATEKEEPER_ATA
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: GATEKEEPER_ATA
+  - name: NETWORK_ATA
+    valueFrom:
+      secretKeyRef:
+        name: socure-poc
+        key: NETWORK_ATA
+  - name: FUNDER_ATA
+    valueFrom:
+      secretKeyRef:
+        name: solana-ociv-usage
+        key: FUNDER_ATA
