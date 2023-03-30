@@ -5,15 +5,19 @@ import Evervault from "@evervault/sdk";
 import {TOKEN_PROGRAM_ID} from "@solana/spl-token";
 import {
   connection,
-  funderAta,
-  funderKeypair,
-  gatekeeperAta,
-  gatekeeperService,
-  mint,
-  networkAta,
-  networkAuthority,
   storage
 } from "./index";
+import {
+  FUNDER_ATA,
+  FUNDER_AUTHORITY,
+  GATEKEEPER,
+  GATEKEEPER_ATA,
+  GATEKEEPER_AUTHORITY,
+  MINT,
+  NETWORK,
+  NETWORK_ATA
+} from "./config";
+import {Wallet} from "@project-serum/anchor";
 
 const handleDocumentUpload = async (request: Request, _: Response) => {
   console.log("Encrypting and uploading documents")
@@ -42,10 +46,19 @@ const handleVerificationComplete = async (request: Request, _response: Response)
     return;
   }
 
+  const gatekeeperService = await GatekeeperService.build(
+    NETWORK,
+    GATEKEEPER,
+    {
+      clusterType: 'devnet',
+      wallet: new Wallet(GATEKEEPER_AUTHORITY),
+    }
+  );
+
   const subject = new PublicKey(request.body.event.customerUserId);
   const passAccount = await GatekeeperService.createPassAddress(
     subject,
-    networkAuthority.publicKey
+    NETWORK
   );
 
   // Store PII
@@ -60,12 +73,12 @@ const handleVerificationComplete = async (request: Request, _response: Response)
       passAccount,
       subject,
       TOKEN_PROGRAM_ID,
-      mint,
-      networkAta.address,
-      gatekeeperAta.address,
-      funderAta.address,
-      funderKeypair.publicKey)
-      .withPartialSigners(funderKeypair)
+      MINT,
+      GATEKEEPER_ATA,
+      NETWORK_ATA,
+      FUNDER_ATA,
+      FUNDER_AUTHORITY.publicKey)
+      .withPartialSigners(FUNDER_AUTHORITY)
       .rpc();
 
     pass = await gatekeeperService.getPassAccount(subject);
@@ -120,7 +133,7 @@ export const verify = async (request: Request, response: Response) => {
       return failed("Invalid amount");
     }
 
-    let token = await findGatewayPass(connection, networkAuthority.publicKey
+    let token = await findGatewayPass(connection, NETWORK
       , new PublicKey(foundSource));
     if (token === null) {
       return failed("Identity token not found");
@@ -168,5 +181,3 @@ export const result = async (request: Request, response: Response) => {
     data: request.body,
   });
 }
-
-
