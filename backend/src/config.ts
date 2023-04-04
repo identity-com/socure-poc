@@ -1,12 +1,14 @@
 import {Keypair, PublicKey} from "@solana/web3.js";
-import {decode} from "bs58";
+import {decode, encode} from "bs58";
 
 const parseEnv = <T>(x: T | undefined, name: string): T => {
   if (x === undefined) {
-    throw new Error(`${name} config variable has not been provided`);
+    // throw new Error(`${name} config variable has not been provided`);
   }
-  return x;
+  return x as T;
 };
+
+console.log('====================================>', process.env)
 
 export const NETWORK = new PublicKey(parseEnv(process.env.NETWORK, 'NETWORK'));
 export const GATEKEEPER = new PublicKey(parseEnv(process.env.GATEKEEPER, 'GATEKEEPER'));
