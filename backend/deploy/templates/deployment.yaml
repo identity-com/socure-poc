@@ -34,7 +34,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           envFrom:
             - secretRef:
-                name: solana-ociv-usage
+                name: socure-poc
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
